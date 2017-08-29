@@ -186,6 +186,8 @@
     <Content Include="Modelos\DatosProyecto\DatosProyectoService.js" />
     <Content Include="Modelos\Filter.js" />
     <Content Include="Modelos\General.js" />
+    <Content Include="Modelos\Involucrados\Involucrados.js" />
+    <Content Include="Modelos\Involucrados\InvolucradosService.js" />
     <Content Include="Modelos\Login\Login.js" />
     <Content Include="Modelos\Login\LoginService.js" />
     <Content Include="Modelos\Matriz\Matriz.js" />
@@ -251,6 +253,7 @@
     <Compile Include="Controllers\ArbolProblemaController.cs" />
     <Compile Include="Controllers\DatosProyectoController.cs" />
     <Compile Include="Controllers\DetalleMatrizController.cs" />
+    <Compile Include="Controllers\InvolucradosController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Global.asax.cs">

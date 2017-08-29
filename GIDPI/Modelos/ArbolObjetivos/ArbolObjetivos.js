@@ -848,13 +848,14 @@
 
                                     }
                                 })
+                                $("#guardarObjetivos").css({ "display": "none" });
                             }
                         })
                     }
 
                     //$scope.Objetivos.ObjetivoCentral = $scope.Objetivos.ObjetivoCentral;
                 }
-                $("#guardarObjetivos").css({ "display": "none" });
+              
                 contador++;
             }
 

@@ -64,8 +64,6 @@
             //Función para agregar la cantidad de problemas
             $scope.Agregar = function (Cantidad) {
 
-            
-              
                 $scope.Problemas = [
                  {
                      Problema: "",

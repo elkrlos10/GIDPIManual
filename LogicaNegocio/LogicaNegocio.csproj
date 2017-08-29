@@ -52,6 +52,7 @@
     <Compile Include="LogicaNegocio\ArbolObjetivoBl.cs" />
     <Compile Include="LogicaNegocio\ArbolProblemaBl.cs" />
     <Compile Include="LogicaNegocio\DatosProyectoBl.cs" />
+    <Compile Include="LogicaNegocio\InvolucradosBL.cs" />
     <Compile Include="LogicaNegocio\MatrizBl.cs" />
     <Compile Include="LogicaNegocio\MenuBl.cs" />
     <Compile Include="LogicaNegocio\PersonaNaturalBl.cs" />

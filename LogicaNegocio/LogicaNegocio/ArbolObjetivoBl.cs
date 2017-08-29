@@ -155,7 +155,7 @@ namespace LogicaNegocio.LogicaNegocio
             for (int i = 0; i < oObjetivosDTO.Objetivos.Count; i++)
             {
                 var especificos = (from f in entity.ObejetivosEspecificos
-                                   orderby f.ObjetivoEsp descending
+                                   orderby f.IdObjetivoEsp descending
                                    select f).FirstOrDefault();
                 //ObejetivosEspecificos especificos;
 
@@ -163,6 +163,8 @@ namespace LogicaNegocio.LogicaNegocio
                 {
                     if (oObjetivosDTO.Objetivos[i].ObjetivoEsp != "")
                     {
+                        
+
                         ObejetivosEspecificos objetivoEspecifico = new ObejetivosEspecificos();
                         objetivoEspecifico.IdObjetivoGeneral = objetivoGen.IdObjetivoGeneral;
                         objetivoEspecifico.ObjetivoEsp = oObjetivosDTO.Objetivos[i].ObjetivoEsp;
@@ -170,7 +172,7 @@ namespace LogicaNegocio.LogicaNegocio
                         entity.ObejetivosEspecificos.Add(objetivoEspecifico);
                         entity.SaveChanges();
 
-                         especificos = (from f in entity.ObejetivosEspecificos
+                        especificos = (from f in entity.ObejetivosEspecificos
                                        orderby f.IdObjetivoEsp descending
                                        select f).FirstOrDefault();
                     }
@@ -193,59 +195,13 @@ namespace LogicaNegocio.LogicaNegocio
 
             }
 
-            //foreach (var item in oObjetivosDTO.Objetivos)
-            //{
+            var Proyecto = (from i in entity.Proyecto
+                            where i.IdProyecto== oObjetivosDTO.IdProyecto
+                            select i ).FirstOrDefault();
+            Proyecto.Etapa = 5;
+            entity.SaveChanges();
 
-            //    var especificos = (from i in entity.ObejetivosEspecificos
-            //                       //where i.IdObjetivoGeneral == objetivoGen.IdObjetivoGeneral
-            //                       orderby i.IdObjetivoGeneral descending
-            //                       select i).FirstOrDefault();
-
-
-            //    if (especificos == null)
-            //    {
-            //        ObejetivosEspecificos objetivoEspecifico = new ObejetivosEspecificos();
-            //        objetivoEspecifico.IdObjetivoGeneral = objetivoGen.IdObjetivoGeneral;
-            //        objetivoEspecifico.ObjetivoEsp = item.ObjetivoEsp;
-
-            //        entity.ObejetivosEspecificos.Add(objetivoEspecifico);
-            //        entity.SaveChanges();
-
-            //         especificos = (from i in entity.ObejetivosEspecificos
-            //                           orderby i.IdObjetivoGeneral descending
-            //                           select i).FirstOrDefault();
-            //    }
-            //    else
-            //    {
-            //        if (item.ObjetivoEsp != especificos.ObjetivoEsp)
-            //        {
-            //            ObejetivosEspecificos objetivoEspecifico = new ObejetivosEspecificos();
-            //            objetivoEspecifico.IdObjetivoGeneral = objetivoGen.IdObjetivoGeneral;
-            //            objetivoEspecifico.ObjetivoEsp = item.ObjetivoEsp;
-
-            //            entity.ObejetivosEspecificos.Add(objetivoEspecifico);
-            //            entity.SaveChanges();
-
-            //            especificos = (from i in entity.ObejetivosEspecificos
-            //                           orderby i.IdObjetivoGeneral descending
-            //                           select i).FirstOrDefault();
-            //        }
-            //    }
-
-
-            //    if (item.Resultado1!= "")
-            //    {
-            //        Resultados ResultadosObjetivos = new Resultados();
-            //        ResultadosObjetivos.IdObjetivoEsp = especificos.IdObjetivoEsp;
-            //        ResultadosObjetivos.Resultado = item.Resultado1;
-            //        ResultadosObjetivos.MedidaResultado = item.MedidaResultado;
-            //        ResultadosObjetivos.HerramientaResultado = item.HerramientaResultado;
-            //        ResultadosObjetivos.ProductoResultado = item.ProductoResultado;
-
-            //        entity.Resultados.Add(ResultadosObjetivos);
-            //        entity.SaveChanges();
-            //    }
-            //}
+      
         }
 
         public Tuple<ObjetivosDTO,List<ObejetivosEspecificos>> ConsultarDatosObjetivos(int idProyecto)

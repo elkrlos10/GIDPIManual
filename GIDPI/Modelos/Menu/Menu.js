@@ -44,6 +44,20 @@
                 }
             };
 
+            $scope.Involucrados = function () {
+                var color = $("#iconoCinco").attr('value');
+                //console.log(cosa);
+                if (color == "1") {
+                    alertify.alert("<b>Debe abrir un proyecto o  crear uno nuevo</b>", function () {
+                        $("#misProyectos").toggle("slow");
+                    });
+                } else {
+                    $location.url("/Involucrados");
+                }
+
+            };
+
+
 
             $(".icono-menu").click(function () {
 

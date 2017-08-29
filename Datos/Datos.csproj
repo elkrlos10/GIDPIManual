@@ -67,6 +67,7 @@
     <Compile Include="Modelos\EfectoIndirecto.cs" />
     <Compile Include="Modelos\FinesDirectos.cs" />
     <Compile Include="Modelos\FinesIndirectos.cs" />
+    <Compile Include="Modelos\Involucrados.cs" />
     <Compile Include="Modelos\MatrizVester.cs" />
     <Compile Include="Modelos\MedioDirecto.cs" />
     <Compile Include="Modelos\MediosIndirectos.cs" />

@@ -48,7 +48,7 @@ ManualApp.config(function ($routeProvider) {
          
             .when('/Involucrados', {
                 templateUrl: 'Views/involucrados.html',
-                controller: 'MenuController'
+                controller: 'InvolucradosController'
             })
 
             .when('/PerfilProyecto', {

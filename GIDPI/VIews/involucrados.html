@@ -22,44 +22,27 @@
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><textarea class="form-control"></textarea></th>
-                            <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><textarea class="form-control"></textarea></th>
-                            <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center"><textarea class="form-control"></textarea></th>
-                            <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center"><textarea class="form-control"></textarea></th>
-                            <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><textarea class="form-control"></textarea></th>
+                        <tr ng-repeat="Inv in Involucrados">
+                            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><textarea class="form-control" ng-model="Inv.Involucrado"></textarea></td>
+                            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><textarea class="form-control" ng-model="Inv.Interes"></textarea></td>
+                            <td class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center"><textarea class="form-control" ng-model="Inv.Problema"></textarea></td>
+                            <td class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center"><textarea class="form-control" ng-model="Inv.Recursos"></textarea></td>
+                            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><textarea class="form-control"ng-model="Inv.Estrategia"></textarea></td>
                         </tr>
-
-                        <tr>
-                            <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><textarea class="form-control"></textarea></th>
-                            <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><textarea class="form-control"></textarea></th>
-                            <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center"><textarea class="form-control"></textarea></th>
-                            <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center"><textarea class="form-control"></textarea></th>
-                            <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><textarea class="form-control"></textarea></th>
-                        </tr>
-
-                        <tr>
-                            <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><textarea class="form-control"></textarea></th>
-                            <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><textarea class="form-control"></textarea></th>
-                            <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center"><textarea class="form-control"></textarea></th>
-                            <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center"><textarea class="form-control"></textarea></th>
-                            <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><textarea class="form-control"></textarea></th>
-                        </tr>
-
-                        <tr>
-                            <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><textarea class="form-control"></textarea></th>
-                            <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><textarea class="form-control"></textarea></th>
-                            <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center"><textarea class="form-control"></textarea></th>
-                            <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center"><textarea class="form-control"></textarea></th>
-                            <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><textarea class="form-control"></textarea></th>
-                        </tr>
-
 
                     </tbody>
+                   
                 </table>
             </center>
 
-
+            <div>
+                <button class="btn btn-success" id="botonCampos"  ng-click="AgregarCampos1()">+</button>
+                <button class="btn btn-danger" id="botonQuitar" ng-click="EliminarCampos()">X</button>
+            </div>
+           
+            <div>
+                <button id="guardarInvo" style="margin-left:90%; margin-top:-5%;" class="btn btn-success" ng-click="GuardarInvolucrados()">guardar</button>
+            </div>
 
         </div>
 

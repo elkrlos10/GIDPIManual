@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicaNegocio", "LogicaNego
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{BD734995-FF1B-4FCD-B4CC-96264DBACB88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GIDPI", "..\Proyectos\GIDPI\GIDPI.csproj", "{D4D21EDB-7CEA-4C24-B308-0AFE8E5354A2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GIDPI", "GIDPI\GIDPI.csproj", "{D4D21EDB-7CEA-4C24-B308-0AFE8E5354A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
