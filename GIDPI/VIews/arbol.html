@@ -1,0 +1,135 @@
+﻿<style type="text/css">
+
+*{
+    padding:0;
+    margin:0;
+
+}
+
+    textarea {
+        text-align: center;
+        resize:none;
+    }
+
+    #problema {
+        width: 445px;
+        height:61.5px;
+    }
+
+    .azul, .rojo {
+        width: 138px;
+        height: 61.5px;
+        position: absolute;
+    }
+
+    .azul {
+        background-color: #33c;
+    }
+
+    .rojo {
+        background-color: #ccc;
+    }
+
+    .suelta {
+        padding: 10px;
+        border: 1px solid #ddd;
+        width: 200px;
+        float: right;
+        text-align: center;
+        margin: 10px;
+    }
+
+    #sueltarojo {
+        background-color: #f99;
+    }
+
+    #sueltaazul {
+        background-color: #99f;
+        clear: both;
+    }
+</style>
+
+<script type="text/javascript">
+		function aleatorio(inferior,superior){
+			numPosibilidades = superior - inferior
+			aleat = Math.random() * numPosibilidades
+			aleat = Math.floor(aleat)
+			return parseInt(inferior) + aleat
+		}
+
+		$(document).ready(function(){
+			//defino los elementos que se pueden arrastrar
+			$(".arrastrable").draggable();
+			$(".arrastrable").data("soltado", false);
+
+			//voy a crear una variable para contar los elementos que estoy soltando
+			$(".suelta").data("numsoltar", 0);
+			//defino elementos donde se puede soltar
+			$(".suelta").droppable({
+				drop: function( event, ui ) {
+					if (!ui.draggable.data("soltado")){
+						ui.draggable.data("soltado", true);
+						var elem = $(this);
+						elem.data("numsoltar", elem.data("numsoltar") + 1)
+						elem.html("Llevo " + elem.data("numsoltar") + " elementos soltados");
+					}
+				},
+				out: function( event, ui ) {
+					if (ui.draggable.data("soltado")){
+						ui.draggable.data("soltado", false);
+						var elem = $(this);
+						elem.data("numsoltar", elem.data("numsoltar") - 1);
+						elem.html("Llevo " + elem.data("numsoltar") + " elementos soltados");
+					}
+				}
+			});
+
+			//soltar solo elementos rojos
+			$("#sueltarojo").droppable("option", "accept", ".rojo");
+			//soltar solo elementos azules
+			$("#sueltaazul").droppable("option", "accept", ".azul");
+
+			//enlaces para crear nuevos elementos rojos y azules
+			$(".creaelemento").click(function(e){
+				e.preventDefault();
+				var posx = aleatorio(10, 500);
+				var posy = aleatorio(80, 200);
+				var nuevoElemento = $('<div class="' + $(this).attr("href") + ' arrastrable" style="top: ' + posy + 'px; left: ' + posx + 'px;"><textarea class="arrastrable" cols="16" rows="3"></textarea></div>');
+				nuevoElemento.draggable();
+				$(document.body).append(nuevoElemento);
+			})
+		})
+
+
+// 		$(document).ready(function(){
+//    	$(".arrastrable").mousedown(function(e){
+//    		//1: izquierda, 2: medio/scroll, 3: derecho
+//         	if(e.which == 3)
+//         		{
+//            		 $(this).css({'display':'none'});
+//         		}
+//     	});
+// });
+
+</script>
+
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:95vh; background:#0094ff; position:absolute; left:30%; top:-180px;">
+
+                <div>
+                    <h1>Árbol</h1>
+                    <a href="rojo" class="creaelemento">Crea un elemento</a>
+                </div>
+
+                <div class="rojo arrastrable" id="problema" style="top: 98px; left: 100px;">
+                    <textarea minlength="1" maxlength="100" class="arrastrable" cols="60" rows="3" placeholder="Objetivo Central"></textarea>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

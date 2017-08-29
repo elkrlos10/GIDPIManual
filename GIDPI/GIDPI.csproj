@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D4D21EDB-7CEA-4C24-B308-0AFE8E5354A2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GIDPI</RootNamespace>
+    <AssemblyName>GIDPI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <ApplicationInsightsResourceId>/subscriptions/f8a72fd1-13ac-4341-92b9-561cd378ec32/resourcegroups/Default-ApplicationInsights-EastUS/providers/microsoft.insights/components/GIDPI</ApplicationInsightsResourceId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.3.490, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Css\alertify.core.css" />
+    <Content Include="Css\alertify.default.css" />
+    <Content Include="Css\bootstrap-datepicker.css" />
+    <Content Include="Css\bootstrap-datetimepicker-standalone.css" />
+    <Content Include="Css\bootstrap-datetimepicker.css" />
+    <Content Include="Css\bootstrap-grid.min.css" />
+    <Content Include="Css\bootstrap.min.css" />
+    <Content Include="Css\estilos.css" />
+    <Content Include="Css\EstilosArbol.css" />
+    <Content Include="Css\estilosMenu.css" />
+    <Content Include="Css\estilosPlataforma.css" />
+    <Content Include="Css\highlight.css" />
+    <Content Include="Css\jQuery-svg-popup.css" />
+    <Content Include="Css\jquery-ui.min.css" />
+    <Content Include="Css\style.css" />
+    <Content Include="Global.asax" />
+    <Content Include="images\arbol.png" />
+    <Content Include="images\arbolAct.png" />
+    <Content Include="images\arbolProb.png" />
+    <Content Include="images\arbolProbAct.png" />
+    <Content Include="images\calendario.png" />
+    <Content Include="images\calendarioAct.png" />
+    <Content Include="images\carga.gif" />
+    <Content Include="images\centro.png" />
+    <Content Include="images\circulo.png" />
+    <Content Include="images\datosBasicos.png" />
+    <Content Include="images\datosBasicosAct.png" />
+    <Content Include="images\flechaUno.png" />
+    <Content Include="images\fondo.png" />
+    <Content Include="images\fondolineas.png" />
+    <Content Include="images\grafica.png" />
+    <Content Include="images\graficaAct.png" />
+    <Content Include="images\lineasDos.png" />
+    <Content Include="images\lineasUno.png" />
+    <Content Include="images\lluviaIdeas.png" />
+    <Content Include="images\lluviaIdeasAct.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logoSennova.png" />
+    <Content Include="images\logoSena.png" />
+    <Content Include="images\matriz.png" />
+    <Content Include="images\matrizAct.png" />
+    <Content Include="images\mujer.png" />
+    <Content Include="images\perfil.png" />
+    <Content Include="images\perfilAct.png" />
+    <Content Include="images\plantillaFondo.png" />
+    <Content Include="images\side.png" />
+    <Content Include="images\tick.png" />
+    <Content Include="img\lineaD1.png" />
+    <Content Include="img\lineaD2.png" />
+    <Content Include="img\lineaD3.png" />
+    <Content Include="img\lineaD4.png" />
+    <Content Include="img\lineaD5.png" />
+    <Content Include="img\lineaU1.png" />
+    <Content Include="img\lineaU2.png" />
+    <Content Include="img\lineaU3.png" />
+    <Content Include="img\lineaU4.png" />
+    <Content Include="img\lineaU5.png" />
+    <Content Include="img\sinLinea.png" />
+    <Content Include="Modelos\ArbolObjetivos\ArbolObjetivoService.js" />
+    <Content Include="Modelos\ArbolObjetivos\ArbolObjetivos.js" />
+    <Content Include="Modelos\ArbolObjetivos\BorrarElemento2.js" />
+    <Content Include="Modelos\ArbolProblema\ArbolProblema.js" />
+    <Content Include="Modelos\ArbolProblema\ArbolProblemaService.js" />
+    <Content Include="Modelos\ArbolProblema\BorrarElemento.js" />
+    <Content Include="Modelos\DatosProyecto\DatosProyecto.js" />
+    <Content Include="Modelos\DatosProyecto\DatosProyectoService.js" />
+    <Content Include="Modelos\Filter.js" />
+    <Content Include="Modelos\General.js" />
+    <Content Include="Modelos\Login\Login.js" />
+    <Content Include="Modelos\Login\LoginService.js" />
+    <Content Include="Modelos\Matriz\Matriz.js" />
+    <Content Include="Modelos\Matriz\MatrizService.js" />
+    <Content Include="Modelos\Menu\Menu.js" />
+    <Content Include="Modelos\Menu\MenuService.js" />
+    <Content Include="Modelos\PerfilProyecto\PerfilProyectoService.js" />
+    <Content Include="Modelos\PerfilProyecto\PerfilProyecto.js" />
+    <Content Include="Modelos\Principal.js" />
+    <Content Include="Principal.html" />
+    <Content Include="scripts\ai.0.15.0-build58334.js" />
+    <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="scripts\alertify.js" />
+    <Content Include="scripts\angular-aria.min.js" />
+    <Content Include="scripts\angular-cookies.js" />
+    <Content Include="scripts\angular-material.min.js" />
+    <Content Include="scripts\Angular-Route.js" />
+    <Content Include="scripts\angular.min.js" />
+    <Content Include="scripts\bootstrap-datepicker.es.min.js" />
+    <Content Include="scripts\bootstrap-datepicker.js" />
+    <Content Include="scripts\bootstrap-datetimepicker.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\codigo.js" />
+    <Content Include="scripts\codigoMenu.js" />
+    <Content Include="scripts\easyResponsiveTabs.js" />
+    <Content Include="scripts\flowchart.js" />
+    <Content Include="scripts\go.js" />
+    <Content Include="scripts\goSamples.js" />
+    <Content Include="scripts\grafica.js" />
+    <Content Include="scripts\GraficaCharts.js" />
+    <Content Include="scripts\highcharts.js" />
+    <Content Include="scripts\highchartsExporting.js" />
+    <Content Include="scripts\highlight.js" />
+    <Content Include="scripts\jquery-1.10.2.js" />
+    <Content Include="scripts\jquery-2.1.4.min.js" />
+    <Content Include="scripts\jquery-3.2.1.min.js" />
+    <Content Include="scripts\jQuery-svg-popup.js" />
+    <Content Include="scripts\jquery-ui.min.js" />
+    <Content Include="scripts\jquery.min.js" />
+    <Content Include="scripts\main.js" />
+    <Content Include="scripts\moment.js" />
+    <Content Include="VIews\ArbolView.html" />
+    <Content Include="VIews\cronogramaPresupuesto.html" />
+    <Content Include="VIews\DatosProyecto.html" />
+    <Content Include="VIews\arbol.html" />
+    <Content Include="VIews\MarcoLogico.html" />
+    <Content Include="VIews\ingreso.html" />
+    <Content Include="VIews\involucrados.html" />
+    <Content Include="VIews\login.html" />
+    <Content Include="VIews\MatrizView.html" />
+    <Content Include="VIews\menuPricinpal.html" />
+    <Content Include="VIews\nombreProyecto.html" />
+    <Content Include="VIews\Objetivos.html" />
+    <Content Include="VIews\ObjetivosView.html" />
+    <Content Include="VIews\perfilProyecto.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ArbolObjetivoController.cs" />
+    <Compile Include="Controllers\ArbolProblemaController.cs" />
+    <Compile Include="Controllers\DatosProyectoController.cs" />
+    <Compile Include="Controllers\DetalleMatrizController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Parametros\ParametrosDTO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Service References\Application Insights\ConnectedService.json" />
+    <Content Include="Fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Properties\PublishProfiles\gidpi.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="audios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.csproj">
+      <Project>{bd734995-ff1b-4fcd-b4cc-96264dbacb88}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaNegocio\LogicaNegocio.csproj">
+      <Project>{89237133-6cf7-4e99-9184-3b3b453d0e31}</Project>
+      <Name>LogicaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61609</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61609/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

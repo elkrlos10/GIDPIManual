@@ -1,0 +1,281 @@
+﻿<style>
+    #lineaUno {
+        display: none;
+    }
+
+    #lineaDos {
+        display: none;
+    }
+
+    textarea .txtBloque2 {
+        font-size: 80px;
+    }
+</style>
+
+<div id="ArbolObjetivos">
+    <!-- ALERTAS -->
+    <div id="alerta">
+        <h3></h3>
+        <p></p>
+    </div>
+
+    <!-- VENTANAS MODALES -->
+    <div id="modal">
+        <div id="crearProblemaCentral" class="contenidoModal">
+            <h2 style="font-weight:600;">Define tu problema central</h2>
+            <hr>
+            <p>Nota: Maximo 140 caracteres.</p>
+            <textarea id="txtProblemaInicial" name="name" maxlength="140"></textarea>
+            <input id="btnProblemaCentral" class="btn" type="button" name="problemaCentral" value="Listo">
+        </div>
+    </div>
+
+    <!-- MOSTRAR Y OCULTAR EL PANEL -->
+    <div id="mostrarPanel" ng-click="mostrarPanel()">
+        <h6 id="textoPanel">Ocultar</h6>
+    </div>
+
+    <!-- PANEL -->
+    <div id="panel">
+        <h4>Agregar</h4>
+        <hr>
+        <!-- ELEMENTO -->
+        <select class="form-control" name="elemento" id="elemento" ng-change="cambioElemento()" ng-model="probando">
+            <option value="vacio">Seleccionar...</option>
+            <option value="efecto">Fines</option>
+            <option value="causa">Medios</option>
+            <option value="efectoIndirecto">Fines Indirectos</option>
+            <option value="causaIndirecta">Medios Indirectos</option>
+        </select>
+        <!-- ASIGNAR INDIRECTA -->
+        <div id="indirecta">
+            <h5 style="font-weight:600;">Asignar a <span id="txtIndirecta">Causa</span></h5>
+            <select class="form-control" name="asiganrIndirecta" id="asignarIndirecta">
+                <option value="vacio">Seleccionar...</option>
+            </select>
+        </div>
+        <!-- BOTON CREAR ELEMENTO -->
+        <input id="btnCrear" class="btn" type="button" name="crearElemento" value="Crear" ng-click="crear()">
+
+    </div>
+
+    <div id="guardar"><p>Guardar</p></div>
+
+    <!-- ARBOL -->
+    <div id="arbolContenedor">
+        <!-- EFECTOS INDIRECTOS -->
+        <ul id="efectoIndirecto" class="nivel3"></ul>
+        <!-- IMG3 -->
+        <div id="imgEfecto3" class="img3"></div>
+        <!-- EFECTOS -->
+        <ul id="efecto" class="nivel2"></ul>
+        <!-- IMG2 -->
+        <img id="imgEfecto" src="" class="img2">
+        <!-- PROBLEMA CENTRAL -->
+        <ul id="problemaCentral" class="nivel1">
+            <li class="bloque">
+                <textarea id="txtProblema" class="txtBloque" name="txtProblema" maxlength="140"></textarea>
+            </li>
+        </ul>
+        <!-- IMG2 -->
+        <img id="imgCausa" src="" class="img2">
+        <!-- CAUSAS -->
+        <ul id="causa" class="nivel2"></ul>
+        <!-- IMG3 -->
+        <div id="imgCausa3" class="img3"></div>
+        <!-- CAUSAS INDIRECTAS -->
+        <ul id="causaIndirecta" class="nivel3"></ul>
+    </div>
+
+</div>
+<div class="container-fluid" id="VistaObjetivos" style="height: auto; margin-top:-10%;">
+
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:12vh;">
+        <h1 class="titulovistaObjetivos">Árbol de objetivos</h1>
+    </div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:12vh;">
+        <h1 class="titulovistaObjetivos">Objetivos</h1>
+    </div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 60vh;">
+
+
+        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height: 47vh;">
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 6vh;"><p class="textos"  id="tituloObjetivoGeneral" >OBJETIVO GENERAL</p></div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height: 6vh;">
+
+                <select class="form-control" id="verbo">
+
+                    <option>Establecer</option>
+                    <option>Averiguar</option>
+                    <option>Identificar</option>
+                    <option>Recopilar</option>
+                    <option>Investigar</option>
+                    <option>Revelar</option>
+                    <option>Descubrir</option>
+                    <option>Indagar</option>
+                    <option>Inquirir</option>
+                    <option>Diseñar</option>
+                    <option>Desarrollar</option>
+                    <option>Analizar</option>
+                    <option>Calcular</option>
+                    <option>Categorizar</option>
+                    <option>Comparar</option>
+                    <option>Definir</option>
+                    <option>Demostrar</option>
+                    <option>Describir</option>
+                    <option>Diagnosticar</option>
+                    <option>Diseñar</option>
+                    <option>Efectuar</option>
+                    <option>Enumerar</option>
+                    <option>Evaluar</option>
+                    <option>Explicar</option>
+                    <option>Examinar</option>
+                    <option>Exponer</option>
+                    <option>Formular</option>
+                    <option>Fundamentar</option>
+                    <option>Generar</option>
+                    <option>Identificar</option>
+                    <option>Ingerir</option>
+                    <option>Mostrar</option>
+                    <option>Orientar</option>
+                    <option>Oponer</option>
+                    <option>Reconstruir</option>
+                    <option>Identificar</option>
+                    <option>Ingerir</option>
+                    <option>Mostrar</option>
+                    <option>Orientar</option>
+                    <option>Oponer</option>
+                    <option>Reconstruir</option>
+                    <option>Relatar</option>
+                    <option>Replicar</option>
+                    <option>Reproducir</option>
+                    <option>Revelar</option>
+                    <option>Planear</option>
+                    <option>Presentar</option>
+                    <option>Probar</option>
+                    <option>Producir</option>
+                    <option>Proponer</option>
+                    <option>Situar</option>
+                    <option>Tasar</option>
+                    <option>Trazar</option>
+                    <option>Valuar</option>
+                </select>
+
+            </div>
+
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="height: 6vh;">
+                <input id="campoObjetivoGeneral" class="form-control" type="text" ng-model="Objetivos.ObjetivoCentral" />
+            </div>
+
+
+
+
+
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 3vh"></div>
+
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 6vh"><p class="textos">OBJETIVOS ESPECÍFICOS</p></div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 16vh;">
+
+                <div class="input-group" ng-repeat="Medios in medios">
+                    <span class="input-group-addon">{{$index+1}}</span>
+                    <input type="text" class="form-control" name="msg" ng-model="Medios.Medio" />
+                </div>
+            </div>
+           
+        </div>
+
+
+
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 47vh; background: #8196be">ICONO INFORMACIÓN</div>
+
+
+    </div>
+
+</div>
+<div class="container-fluid" id="vistaResultados" style="height: auto; margin-top:-10%;">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:12vh;">
+        <h1 class="titulovistaObjetivos">RESULTADOS OBJETIVOS</h1>
+    </div>
+
+    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height: auto; margin-bottom:1%; margin-top:2%">
+
+        <table class="table table-bordered col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+
+            <thead class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <tr>
+
+                    <th class="text-center col-lg-4 col-md-4 col-sm-4 col-xs-4" style="vertical-align:text-top;">Resultados esperados de cada uno de los objetivos específicos</th>
+                    <th class="text-center col-lg-3 col-md-3 col-sm-3 col-xs-3" style="vertical-align:text-top;">¿Cómo va a medir los resultados?</th>
+                    <th class="text-center col-lg-2 col-md-2 col-sm-2 col-xs-2" style="vertical-align:text-top;">¿Qué herramienta va a utilizar para medir los resultados?</th>
+                    <th class="text-center col-lg-3 col-md-3 col-sm-3 col-xs-3" style="vertical-align:text-top;">Producto de los resultados</th>
+                </tr>
+            </thead>
+
+            <tbody class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="tbl">
+
+                <tr ng-repeat="Indirectos in medios">
+                    <th class="col-lg-1">
+                        <center><h1 style="margin-top:50%;"> {{$index+1}}</h1></center>
+
+                    </th>
+                    <th class="col-lg-3 col-md-4 col-sm-4 col-xs-4">
+                        <textarea style="width:100%;" class="block" z ng-repeat="m in mediosIndirectos" ng-model="m.medioIndirectos" ng-if="m.idMedio == Indirectos.Medio"></textarea>
+                        <!--<textarea style="width:100%;" ng-if="$index==1"></textarea>
+                        <textarea style="width:100%;" ng-if="$index==2"></textarea>-->
+                    </th>
+
+                    <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                        <textarea style="width:100%;" class="block" ng-repeat="m in mediosIndirectos" ng-if="m.idMedio == Indirectos.Medio" ng-model="m.Resultado"></textarea>
+               
+                    </th>
+
+                    <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                        <textarea style="width:100%;" class="block" ng-repeat="m in mediosIndirectos" ng-if="m.idMedio == Indirectos.Medio" ng-model="m.Herramienta"></textarea>
+                     
+                    </th>
+                    <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                        <textarea style="width:100%;"  id="resultados" ng-repeat="m in mediosIndirectos" ng-if="m.idMedio == Indirectos.Medio" ng-model="m.Producto"></textarea>
+               
+                    </th>
+
+                </tr>
+
+
+
+            </tbody>
+        </table>
+        <button id="guardarObjetivos" style="margin-left:95%; margin-bottom:12px;" class="btn btn-success" ng-click="guardarObjetivos()">Guardar</button>
+    </div>
+ 
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 55vh; background: #8196be">ICONO INFORMACIÓN</div>
+    
+</div>
+
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="position:relative; height: 12vh; margin-left:3%;  ">
+
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 12vh;"><center><button ng-click="ocultarObjetivos()" class="btn btn-success" style="border-radius:40%; margin-top:23%;"><i class="fa fa-sitemap" style="font-size:55px;"></i></button></center></div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="height: 12vh;"><hr style="height:2px; background:#238276; margin-top:11%;" /></div>
+
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 12vh; background: #fff"><center><button id="TabObjetivos" ng-click="ocultarArbol()" class="btn btn-success" style="border-radius:40%; margin-top:23%;"><i class="fa fa-location-arrow" style="font-size:55px;"></i></button></center></div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="height: 12vh;"><hr style="height:2px; background:#238276; margin-top:11%;" /></div>
+
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 12vh; background: #fff"><center><button id="resultados" ng-click="mostrarResultados()" class="btn btn-success" style="border-radius:40%; margin-top:23%;"><i class="fa fa-pencil-square-o" style="font-size:55px;"></i></button></center></div>
+
+</div>
+
+
+
+
+
+<script src="../Modelos/ArbolObjetivos/BorrarElemento2.js"></script>

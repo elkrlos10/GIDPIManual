@@ -1,0 +1,86 @@
+﻿
+<style>
+    #lineaUno{
+        display:none;
+    }
+
+    #lineaDos{
+        display:none;
+    }
+
+</style>
+
+ <!-- ALERTAS -->
+<div id="alerta">
+    <h3></h3>
+    <p></p>
+</div>
+
+<!-- VENTANAS MODALES -->
+<div id="modal">
+    <div id="crearProblemaCentral" class="contenidoModal">
+        <h2 style="font-weight:600;">Define tu problema central</h2>
+        <hr>
+        <p>Nota: Maximo 140 caracteres.</p>
+        <textarea id="txtProblemaInicial" name="name" maxlength="140"></textarea>
+        <input id="btnProblemaCentral" class="btn" type="button" name="problemaCentral" value="Listo">
+    </div>
+</div>
+
+<!-- MOSTRAR Y OCULTAR EL PANEL -->
+<div id="mostrarPanel" ng-click="mostrarPanel()">
+    <h6 id="textoPanel">Ocultar</h6>
+</div>
+
+<!-- PANEL -->
+<div id="panel">
+    <h4>Agregar</h4>
+    <hr>
+    <!-- ELEMENTO -->
+    <select class="form-control" name="elemento" id="elemento" ng-change="cambioElemento()" ng-model="probando">
+        <option value="vacio">Seleccionar...</option>
+        <option value="efecto">Efecto</option>
+        <option value="causa">Causa</option>
+        <option value="efectoIndirecto">Efecto Indirecto</option>
+        <option value="causaIndirecta">Causa Indirecta</option>
+    </select>
+    <!-- ASIGNAR INDIRECTA -->
+    <div id="indirecta">
+        <h5 style="font-weight:600;">Asignar a <span id="txtIndirecta">Causa</span></h5>
+        <select class="form-control" name="asiganrIndirecta" id="asignarIndirecta">
+            <option value="vacio">Seleccionar...</option>
+        </select>
+    </div>
+    <!-- BOTON CREAR ELEMENTO -->
+    <input id="btnCrear" class="btn" type="button" name="crearElemento" value="Crear" ng-click="crear()">
+
+</div>
+
+<div id="guardar"><p id="guardarTexto">Guardar</p></div>
+
+<!-- ARBOL -->
+<div id="arbolContenedor">
+    <!-- EFECTOS INDIRECTOS -->
+    <ul id="efectoIndirecto" class="nivel3"></ul>
+    <!-- IMG3 -->
+    <div id="imgEfecto3" class="img3"></div>
+    <!-- EFECTOS -->
+    <ul id="efecto" class="nivel2"></ul>
+    <!-- IMG2 -->
+    <img id="imgEfecto" src="" class="img2">
+    <!-- PROBLEMA CENTRAL -->
+    <ul id="problemaCentral" class="nivel1">
+        <li class="bloque">
+            <textarea id="txtProblema" class="txtBloque" name="txtProblema" maxlength="140"></textarea>
+        </li>
+    </ul>
+    <!-- IMG2 -->
+    <img id="imgCausa" src="" class="img2">
+    <!-- CAUSAS -->
+    <ul id="causa" class="nivel2"></ul>
+    <!-- IMG3 -->
+    <div id="imgCausa3" class="img3"></div>
+    <!-- CAUSAS INDIRECTAS -->
+    <ul id="causaIndirecta" class="nivel3"></ul>
+</div>
+<script src="../Modelos/ArbolProblema/BorrarElemento.js"></script>

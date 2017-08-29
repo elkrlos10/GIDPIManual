@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicaNegocio", "LogicaNegocio\LogicaNegocio.csproj", "{89237133-6CF7-4E99-9184-3B3B453D0E31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{BD734995-FF1B-4FCD-B4CC-96264DBACB88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GIDPI", "..\Proyectos\GIDPI\GIDPI.csproj", "{D4D21EDB-7CEA-4C24-B308-0AFE8E5354A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89237133-6CF7-4E99-9184-3B3B453D0E31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89237133-6CF7-4E99-9184-3B3B453D0E31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89237133-6CF7-4E99-9184-3B3B453D0E31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89237133-6CF7-4E99-9184-3B3B453D0E31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD734995-FF1B-4FCD-B4CC-96264DBACB88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD734995-FF1B-4FCD-B4CC-96264DBACB88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD734995-FF1B-4FCD-B4CC-96264DBACB88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD734995-FF1B-4FCD-B4CC-96264DBACB88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4D21EDB-7CEA-4C24-B308-0AFE8E5354A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4D21EDB-7CEA-4C24-B308-0AFE8E5354A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4D21EDB-7CEA-4C24-B308-0AFE8E5354A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4D21EDB-7CEA-4C24-B308-0AFE8E5354A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

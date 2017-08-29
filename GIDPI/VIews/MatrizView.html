@@ -1,0 +1,196 @@
+﻿<div class="container-fluid" style="height:100vh; margin-top:-10%;">
+
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:auto;">
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:36.3vh;"></div>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:auto;">
+                <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="problema">{{ProblemaComparante}}</h3>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="height:auto;">
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:12vh;">
+            <h1 id="matrizVester">Matriz de Vester</h1>
+        </div>
+
+        <div id="divProblematica" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:12vh;">
+
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="height:12vh;">
+
+                <input id="problematicaCampo" ng-model="DatosProyecto.ProblemaGeneral" class="form-control" disabled placeholder="Problemática general" />
+
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="height:12vh;">
+                <button id="botonGuardar" class="btn btn-success" ng-click="Guardar()">Guardar</button>
+            </div>
+
+        </div>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h1 style="display:none;" id="influeniciaTitulo">¿Qué influencia tiene en?</h1>
+        </div>
+
+        <div id="problemasMatriz" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:auto; border:3px solid #4fa19c;">
+
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="height:10vh;">
+                <label class="form-check-label" style="margin-top:4%; margin-left:40%;">
+                    <input style="width:16px;height: 16px" class="form-check-input" title="Sin ralación" type="radio" name={{$index+1}} ng-model="Cantidad" value="4"> 5
+                    <input style="width:16px;height: 16px" class="form-check-input" title="Baja Influencia" type="radio" name={{$index+1}} ng-model="Cantidad" value="9"> 10
+                    <input style="width:16px;height: 16px" class="form-check-input" title="Mediana Influencia" type="radio" name={{$index+1}} ng-model="Cantidad" value="14"> 15
+                    <input style="width:16px;height: 16px" class="form-check-input" title="Alta Influencia" type="radio" name={{$index+1}} ng-model="Cantidad" value="19"> 20
+                </label>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="height:10vh;">
+
+                <button id="agregar_btn" class="btn btn-success" ng-click="Agregar(Cantidad)">Agregar</button>
+
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:auto;">
+
+                <form name="listaestibas" id="listaestibas">
+                    <ul id="Problematicas">
+                        <li ng-repeat="problemas in Problemas | orderBy:'$index'" class="row" style="padding-bottom:5px;">
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <label>{{$index+1}}</label>
+                                    </span>
+                                    <input class="form-control" placeholder="Ingrese problema {{$index+1}}" ng-model="problemas.Problema" />
+                                    <!-- <span ng-if="estiba.Alto>2" class="help-block">EL alto máximo estiba es 2 Mt </span>-->
+                                </div>
+                            </div>
+
+                            <div>
+                                <button class="bnt btn-danger btn-circle" ng-click="EliminarCampos($index)">
+                                    <i class="material-icons">&times;</i>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+
+                  
+            </div>
+
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="height:10vh;"></div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="height:10vh;">
+                <button id="compararBoton" class="btn btn-success" ng-click="mostrar()">Comparar</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:auto;">
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:36.3vh;"></div>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:auto;">
+
+            <form name="listaestibas" id="listaestibas">
+                <ul id="comparar">
+                    <li ng-repeat="problemasCalificar in ProblemasCalificar | orderBy:'$index'" class="row">
+
+                        <div id="problemaDos">
+                            <h3 style="margin-left:4%;" ng-model="problemasCalificar.Problema">{{problemasCalificar.Problema}}</h3>
+
+                            <label class="form-check-label" style="margin-left: 4%;">
+                                <input style="width:16px;height: 16px" class="form-check-input" title="Sin ralación" type="radio" ng-click="HabilitarEnviar()" name={{$index+1}} ng-model="valorEjeX.valor" value="0"> 0
+                                <input style="width:16px;height: 16px" class="form-check-input" title="Baja Influencia" type="radio" ng-click="HabilitarEnviar()" name={{$index+1}} ng-model="valorEjeX.valor" value="1"> 1
+                                <input style="width:16px;height: 16px" class="form-check-input" title="Mediana Influencia" type="radio" ng-click="HabilitarEnviar()" name={{$index+1}} ng-model="valorEjeX.valor" value="2"> 2
+                                <input style="width:16px;height: 16px" class="form-check-input" title="Alta Influencia" type="radio" ng-click="HabilitarEnviar()" name={{$index+1}} ng-model="valorEjeX.valor" value="3"> 3
+                            </label>
+                            <div style="float:right; margin-right:45%;">
+                                <button disabled id="Calificar" class="btn btn-success" ng-click="Calificar($index,valorEjeX.valor,ProblemaComparante)">Enviar</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+
+    </div>
+
+
+    <!--Modal confirmar-->
+
+    <div class="modal fade" id="ModalConfirmar" data-backdrop=”static” data-keyboard=”false” role="dialog">
+        <div class="modal-dialog" style="width: 400px;">
+            <!--Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+                    <center>
+                        <h4 style="color:#1C75BB;">
+                            CONFIRMAR CALIFICACIÓN
+                        </h4>
+                    </center>
+
+                </div>
+                <div class="modal-body" style="height: 100px; overflow: auto;">
+                    <div class="form-group">
+                        <label>¿Está seguro que desea corfirmar la calificación? </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success  btn-default" data-dismiss="modal" ng-click="ConfirmarCalificacion(1)">Aceptar</button>
+                    <button type="button" class="btn btn-default btn-danger" data-dismiss="modal" ng-click="ConfirmarCalificacion(2)">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="grafica" class="col-md-6">
+        <div id="cuadrante1" class="cuadrantes">PASIVOS</div>
+        <div id="cuadrante2" class="cuadrantes">CRÍTICO</div>
+        <div id="cuadrante3" class="cuadrantes">INDIFERENTES</div>
+        <div id="cuadrante4" class="cuadrantes">ACTIVOS</div>
+        <div id="container" style="min-width: 310px; height: 400px; max-width: 800px; margin: 0 auto"></div>
+    </div>
+
+
+<div id="Panel2">
+        <!--<center>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="height:12vh;">
+                <input id="problematicaCampoDos" ng-model="DatosProyecto.ProblemaGeneral" class="form-control" disabled placeholder="Problemática general" />
+            </div>
+        </center>-->
+        <table class="table table-responsive table-striped table-bordered" id="tablaResultados" style="width:48%;">
+            <thead>
+                <tr>
+
+                    <th>Problema</th>
+                    <th>Calificación eje X</th>
+                    <th>Calificación eje Y</th>
+                    <th>Criterio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="datosMatriz in DatosMatriz">
+                    <td>{{ datosMatriz.Problema | uppercase}}</td>
+                    <td>{{ datosMatriz.EjeX | uppercase}}</td>
+                    <td>{{ datosMatriz.EjeY | uppercase}}</td>
+                    <td>{{ datosMatriz.Criterio | uppercase}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <img id="personajeDos" src="../images/mujer.png" />
+        <button id="btn_regresar" class="btn btn-success" ng-click="Regresar()" >Atrás</button>
+    </div>
+
+
+</div>

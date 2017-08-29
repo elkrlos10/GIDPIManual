@@ -1,0 +1,205 @@
+﻿
+<div class="container">
+
+    <div class="row" style="margin-bottom: 30px">
+
+
+        <!-- INICIA COLUMNA IZQUIERDA -->
+
+        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+
+
+            <!-- INICIA COLUMNA IZQUIERDA SUPERIOR-->
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                <img src="images/logo.png" style="width:140%">
+
+            </div>
+            <!-- FINALIZA COLUMNA IZQUIERDA SUPERIOR -->
+            <!-- INICIA COLUMNA IZQUIERDA DIVISOR-->
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:60px"></div>
+
+            <!-- FINALIZA COLUMNA IZQUIERDA DIVISOR -->
+            <!-- INICIA COLUMNA IZQUIERDA INFERIOR-->
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-left:20%;">
+
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height: 200px;">
+
+                    <img class="img" src="images/logoSena.png" style="width:100%; margin-top: -20px">
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height: 200px">
+
+                    <img src="images/centro.png" style="width:150%">
+
+                </div>
+
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:60px"></div>
+
+
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height: 200px">
+
+                    <img src="images/logoSennova.png" style="width:150%">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FINALIZA COLUMNA IZQUIERDA -->
+        <!-- INICIA COLUMNA DERECHA -->
+
+        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+
+
+            <!-- INICIA FORMULARIO -->
+
+            <div class="inset agile">
+                <div class="sap_tabs">
+                    <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+
+
+                        <!-- INICIA MENÚ FORMULARIO -->
+
+                        <ul class="resp-tabs-list">
+                            <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>Ingresar</span></li>
+                            <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><label>/</label><span>Regístrate</span></li>
+                        </ul>
+
+                        <!-- FINALIZA MENÚ FORMULARIO -->
+                        <!-- INICIA FORMULARIO INGRESO-->
+
+                        <div>
+                            <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+                                <div class="login-agileits-top">
+                                    <form action="#" method="post">
+
+                                        <p>Usuario</p>
+                                        <input type="text" name="User Name" ng-model="Usuario.Usuario1" />
+
+                                        <p>Contraseña</p>
+                                        <input type="password" name="Password" ng-model="Usuario.Contrasena" />
+
+                                        <input type="checkbox" id="brand" value="">
+                                        <label for="brand"><span style="background-color: #00877E"></span> Recordarme</label>
+                                        <input id="ingresar" type="button" value="Ingresar" ng-click="ConsultarUsuario()">
+                                    </form>
+                                </div>
+
+                                <div class="login-agileits-bottom">
+                                    <h2><a href="#">Olvide mi contraseña</a></h2>
+                                </div>
+
+                            </div>
+
+                            <!-- FINALIZA FORMULARIO INGRESO-->
+                            <!-- data-toggle="collapse" data-target="#form_persona"
+                            data-toggle="collapse" data-target="#form_empresa" -->
+                            <!-- INICIA FORMULARIO REGISTRO-->
+
+                            <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+                                <div class="login-agileits-top sign-up">
+
+                                    <input class="botones" id="btn_persona" type="submit" value="Persona natural">
+
+                                    <input class="botones" id="btn_juridica" type="submit" value="Persona jurídica">
+
+
+                                    <!-- INICIA FORMULARIO PERSONA NATURAL-->
+
+                                    <form id="form_persona" class="collapse out" action="#">
+
+                                        <p>Nombres*</p>
+                                        <input type="text" name="Nombre_Registro" ng-model="PersonaNatural.Nombre" required>
+
+                                        <p>Apellidos*</p>
+                                        <input type="text" name="Apellido" ng-model="PersonaNatural.Apellidos" required>
+
+                                        <p>Documento*</p>
+                                        <input type="text" name="Documento" ng-model="PersonaNatural.Documento" required>
+
+                                        <p>Usuario*</p>
+                                        <input type="text" name="Usuario_Registro" ng-model="PersonaNatural.Usuario" required>
+
+                                        <p>Contraseña*</p>
+                                        <input type="password" name="Password_Registro" ng-model="PersonaNatural.Contrasena" required>
+
+                                        <p>Email*</p>
+                                        <input type="email" name="Email_Registro" ng-model="PersonaNatural.Email" required>
+
+                                        <p>Teléfono</p>
+                                        <input type="text" name="Telefono_Registro" ng-model="PersonaNatural.Telefono">
+
+                                        <input type="checkbox" id="brand1" value="">
+
+
+                                        <input class="registro" type="button" value="Registrarme" ng-click="RegistroPersonaNatural()">
+
+                                    </form>
+
+                                    <!-- FINALIZA FORMULARIO PERSONA NATURAL-->
+                                    <!-- INICIA FORMULARIO PERSONA JURÍDICA-->
+
+                                    <form id="form_empresa" class="collapse out" action="#" method="post">
+
+                                        <p>Razón social*</p>
+                                        <input type="text" name="Nombre_Juridica" ng-model="PersonaJuridica.RazonSocial" required>
+
+                                        <p>NIT*</p>
+                                        <input type="text" name="NIT_Juridica" ng-model="PersonaJuridica.NIT" required>
+
+                                        <p>Sector económico*</p>
+                                        <input type="text" name="Sector" ng-model="PersonaJuridica.SectorEconomico" required>
+
+                                        <p>Responsable*</p>
+                                        <input type="text" name="Responsable" ng-model="PersonaJuridica.Responsable" required>
+
+                                        <p>Email*</p>
+                                        <input type="email" name="Email_juridica" ng-model="PersonaJuridica.Email" required>
+
+                                        <p>Teléfono</p>
+                                        <input type="text" name="Telefono_Juridica" ng-model="PersonaJuridica.Telefono">
+
+                                        <p>Usuario*</p>
+                                        <input type="text" name="Usuario_Juridica" ng-model="PersonaJuridica.Usuario" required>
+
+                                        <p>Contraseña*</p>
+                                        <input type="password" name="Password_Juridica" ng-model="PersonaJuridica.Contrasena" required>
+
+
+
+                                        <input type="checkbox" id="brand1" value="">
+
+                                        <input class="registro" type="button" value="Registrarme" ng-click="RegistroPersonaJuridica()">
+
+                                    </form>
+
+                                    <!-- FINALIZA FORMULARIO PERSONA JURÍDICA-->
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FINALIZA FORMULARIO REGISTRO-->
+
+
+
+
+                    </div>
+                </div>
+
+                <!-- FINALIZA FORMULARIO -->
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="scripts/codigoMenu.js"></script>

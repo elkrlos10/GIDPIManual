@@ -1,0 +1,259 @@
+﻿<div id="demo5">
+    <div class="svg-popup-content">
+        <h3 class="title-plagin">Texto</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint repellendus, porro repudiandae, sit dicta nobis dolores nostrum consequuntur molestiae amet commodi? Minus nobis minima ex adipisci deleniti. Aliquam, magni, rem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi magnam eos ullam! Veniam, modi, et. Molestiae doloribus ab voluptate natus voluptas dolorem, ut beatae vitae harum placeat praesentium, ullam est.</p>
+    </div>
+</div>
+
+<div id="demo6">
+    <div class="svg-popup-content">
+        <h3 class="title-plagin">Video</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/QA6eLUTgAFE" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+    <!--<audio controls id="audio" style="position:absolute;">
+        <source src="../audios/Don Tetto - Yo Estaré Bien (Con Letra).mp3" type="audio/mpeg">
+    </audio>-->
+
+<section id="menuAyuda" class="menuAyuda menuAyuda--circle">
+  <input type="checkbox" id="menu__active"/>
+  <label for="menu__active" class="menu__active">
+    <div class="menu__toggle">
+      <div class="icon">
+        <div class="hamburger"></div>
+      </div>
+    </div>
+    <input type="radio" name="arrow--up" id="degree--up-0"/>
+    <input type="radio" name="arrow--up" id="degree--up-1" />
+    <input type="radio" name="arrow--up" id="degree--up-2" />
+    <div class="menu__listings">
+      <ul class="circle">
+        <li>
+          <div class="placeholder">
+            <div class="upside demo-item">
+              <a class="button demo-btn demo6" data-svg-popup="demo6"><i class="fa fa-video-camera"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+              <div class="upside">
+                  <a class="button"><i class="fa fa-volume-up"></i></a>
+              </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="#">&nbsp</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a class="button" id="texto"><i class="fa fa-file"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="#" class="button"><i class="fa fa-binoculars"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="#" class="button"><i class="fa fa-battery-4"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="#" class="button"><i class="fa fa-calendar"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="#" class="button"><i class="fa fa-cloud"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside demo-item">
+              <a class="button demo-btn demo5" data-svg-popup="demo5"><i class="fa fa-file"></i></a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  
+  </label>
+</section>
+
+
+<div id="proyecto" style="margin-left:1%; z-index:5;">
+        <button id="proyectos" title="Mis proyectos">Mis proyectos</button><br /><br />
+
+        <div id="misProyectos" style="height:auto; width:15%; background:rgba(35, 130, 118, 0.4); position:absolute; margin-left:1%; display:none; margin-top:6%; z-index:9999;">
+            <h3 style="text-align:center; color:white; font-weight:600;">Mis proyectos</h3>
+
+            <a ng-click="CrearProyecto()" style="text-align:center; color:white; cursor:pointer; ">
+                <h3 id="nuevoProyecto">Nuevo proyecto <i style="margin-top:2%;" id="iconoNuevoProyecto" class="material-icons">&#xE147;</i></h3>
+            </a><br /><br /><br />
+
+            <div ng-repeat="proyectos in Proyectos">
+                <span>
+                    <a style="color:white; font-weight:600; margin-left:5%;  cursor:pointer; " ng-click="AbrirProyecto(proyectos.IdProyecto)" value="{{proyectos.IdProyecto}}">
+                        <i>-</i>
+                        {{proyectos.TemaProyecto | uppercase}}
+                    </a>
+                </span>
+
+                <br />
+            </div>
+        </div>
+
+    </div>
+
+
+
+<div id="contenedor">
+    <center><img id="logoMenu" src="../images/logo.png" /></center> 
+
+    <section class="secciones">
+        <ul id="menu">
+            <li class="campo">
+                <div class="circulos" id="circuloUno" ng-click="DatosBasicos()">
+                    <img class="iconos" value="1" title="Datos Básicos" id="iconoUno" src="images/datosBasicos.png">
+                </div>
+            </li>
+
+            <li class="campo">
+                <img class="flechas" id="flechaUno" src="images/flechaUno.png">
+            </li>
+
+            <li class="campo">
+                <div class="circulos" id="circuloDos" ng-click="Matriz()">
+                    <img class="iconos" value="1" title="Matriz de Vester" id="iconoDos" src="images/lluviaIdeas.png" style="top:10%;">
+                </div>
+            </li>
+
+            <li class="campo">
+                <img class="flechas" id="flechaDos" src="images/flechaUno.png">
+            </li>
+
+            <li class="campo">
+                <div class="circulos" id="circuloTres" ng-click="Arbol()">
+                    <img class="iconos" id="iconoTres" title="Árbol de problemas" value="1" src="images/arbolProb.png" style="top:10%">
+                </div>
+            </li>
+
+
+            <li class="campo">
+                <img class="flechas" id="flechaTres" src="images/flechaUno.png">
+            </li>
+
+            <li class="campo">
+                <div class="circulos" id="circuloCuatro" ng-click="ArbolObjetivos()">
+                    <img class="iconos" id="iconoCuatro" title="Árbol de objetivos" value="1" src="images/arbol.png" style="top:10%">
+                </div>
+            </li>
+
+            <li class="campo">
+                <img class="flechas" id="flechaCuatro" src="images/flechaUno.png">
+            </li>
+
+            <li class="campo">
+                <div class="circulos" id="circuloCinco">
+                    <img class="iconos" id="iconoCinco" title="Árbol de objetivos" value="1" src="images/perfil.png" style="top:10%">
+                </div>
+            </li>
+
+            <li class="campo">
+                <img class="flechas" id="flechaCinco" src="images/flechaUno.png">
+            </li>
+
+            <li class="campo">
+                <div class="circulos" id="circuloSeis">
+                    <img class="iconos" id="iconoSeis" value="1" src="images/grafica.png" style="top:10%">
+                </div>
+            </li>
+
+            <li class="campo">
+                <img class="flechas" id="flechaSeis" src="images/flechaUno.png">
+            </li>
+
+            <li class="campo">
+                <div class="circulos" id="circuloSiete">
+                    <img class="iconos" id="iconoSiete" value="1" src="images/calendario.png" style="top:10%">
+                </div>
+            </li>
+
+            <li class="campo">
+                <img class="flechas" id="flechaSiete" src="images/flechaUno.png">
+            </li>
+
+            <li class="campo">
+                <div class="circulos" id="circuloOcho">
+                    <img class="iconos" id="iconoOcho" value="1" src="images/matriz.png" style="top:10%">
+                </div>
+            </li>
+
+        </ul>
+    </section>
+
+</div>
+
+
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+
+    $(function () {
+
+        $('.demo5').svgpopup({
+            stepX: 6,
+            stepY: 4,
+            figure: 'triangle',
+            fill: '#238276',
+            strokeFill: 'rgba(255,255,255, .2)',
+            opacity: 0.8,
+            visible: false,
+            speed: 1,
+            randomize: false
+        });
+
+        $('.demo6').svgpopup({
+            stepX: 6,
+            stepY: 4,
+            figure: 'triangle',
+            fill: '#238276',
+            strokeFill: 'rgba(255,255,255, .2)',
+            opacity: 0.8,
+            visible: false,
+            speed: 1,
+            randomize: false
+        });
+
+    }());
+
+
+</script>
+
