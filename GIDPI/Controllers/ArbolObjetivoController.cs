@@ -36,7 +36,13 @@ namespace GIDPI.Controllers
                 ArbolObjetivoBl oArbol = new ArbolObjetivoBl();
                 var ArbolFinal = oArbol.ConsultarArbolObjetivosFinal(int.Parse(oParametros.Parametro1));
 
-               return Ok(new { success = true, ArbolFinal });
+                List<string> Especificos = new List<string>();
+                foreach (var item in ArbolFinal.Medios)
+                {
+                    Especificos.Add(item.Medio);
+                }
+
+               return Ok(new { success = true, ArbolFinal, Especificos });
             }
             catch (Exception e)
             {

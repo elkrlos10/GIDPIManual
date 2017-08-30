@@ -696,10 +696,6 @@
                     }
                     datosCausasIndirectos.push(cadaLiIndirecto);
                 }
-                //console.log(datosEfectosIndirectos);
-                //console.log(datosCausasIndirectos);
-                //console.log(datosEfectos);
-                //console.log(datosCausas);
 
                 $scope.ObjArbol.ObjetivoCentral = datosProblema;
                 $.each(datosCausas, function (index, value) {
@@ -717,17 +713,20 @@
                 ArbolObjetivoService.GuardarDatosArbol($scope.ObjArbol, function (response) {
                     if (response.success) {
                         alertify.alert("<b>Registro Exitoso</b>");
-                        $location.url("/Menu");
+                        //$scope.ocultarArbol();
+                        $("#TabObjetivos").attr("disabled", false);
+                        //ArbolObjetivoService.ConsultarArbolObjetivosFinal($rootScope.proyecto.datos.id, function (response) {
+                        //    if (response.success) {
+                        //        $scope.Objetivos = response.ArbolFinal;
+                        //        $scope.medios = response.ArbolFinal.Medios
+                        //    }
+                        //})
 
                     }
                 })
-                console.log($scope.ObjArbol);
-                console.log(datosProblema);
             });
 
-            //VARIABLE PARA VALIDAR CUANDO YA INGRESO LA PRIMERA VEZ A LA VISTA DE RESULTADOS
-            var contador = 0;
-
+           
             //CONSULTA PARA LLENAR OBJETIVO GENERAL Y ESPECIFICOS 
             //ArbolObjetivoService.ConsultarArbolObjetivosFinal($rootScope.proyecto.datos.id, function (response) {
             //    if (response.success) {
@@ -736,19 +735,31 @@
             //    }
             //})
 
+            //VARIABLE PARA VALIDAR CUANDO YA INGRESO LA PRIMERA VEZ A LA VISTA DE RESULTADOS
+            var contador = 0;
+            var medios10 = [];
+             $scope.medios1 = []
             //FUNCION PARA PASAR DEL ABROL A LA VISTA DE OBJETIVO GENERAL Y ESPECIFICO.
             $scope.ocultarArbol = function () {
                 $("#ArbolObjetivos").hide();
                 $("#vistaResultados").hide();
                 $("#VistaObjetivos").show();
                 $("#resultados").attr("disabled", false);
-
+             
                 if (contador == 0) {
                     if ($rootScope.proyecto.datos.Etapa < 5) {
                         ArbolObjetivoService.ConsultarArbolObjetivosFinal($rootScope.proyecto.datos.id, function (response) {
                             if (response.success) {
                                 $scope.Objetivos = response.ArbolFinal;
-                                $scope.medios = response.ArbolFinal.Medios
+                                $scope.medios = response.ArbolFinal.Medios;
+                                //$scope.medios1 = response.Especificos;
+                                $.each(response.Especificos, function (index, value) {
+
+                                    $scope.medios1.push({ medio: value });
+
+                                })
+
+                                console.log(response.Especificos);
                             }
                         })
                     } else {
@@ -756,13 +767,14 @@
                             if (response.success) {
                                 $scope.Objetivos.ObjetivoCentral = response.DatosObjetivos.ObjetivoCentral;
                               
-                                $scope.medios = [];
-
+                                $scope.medios1 = [];
+                                //$scope.medios1 = response.Especificos;
                                 $.each(response.Especificos, function (index, value) {
 
-                                    $scope.medios.push({ Medio: value.ObjetivoEsp, MediosIndirectos: [index] });
+                                    $scope.medios1.push({ medio: value.ObjetivoEsp });
 
                                 })
+                                console.log(response.Especificos);
                             }
                         })
 
@@ -770,7 +782,6 @@
                         $("#campoObjetivoGeneral").css({ "margin-left": "-10%" });
                         $("#tituloObjetivoGeneral").css({ "margin-left": "18%" });
                        
-
                     }
 
                 }
@@ -785,7 +796,7 @@
                 $("#vistaResultados").hide();
             }
 
-            $scope.medio1 = "";
+            //$scope.medio1 = "";
 
             //FUNCION PARA PASAR DE LA VISTA OBJETIVOS A RESULTADOS.
             $scope.mostrarResultados = function () {
@@ -793,18 +804,20 @@
                 $("#ArbolObjetivos").hide();
                 $("#VistaObjetivos").hide();
                 $("#vistaResultados").show();
-
+           
                 if (contador == 0) {
                     if ($rootScope.proyecto.datos.Etapa < 5) {
                         ArbolObjetivoService.ConsultarArbolObjetivosFinal($rootScope.proyecto.datos.id, function (response) {
                             if (response.success) {
                                 //$scope.medios = response.ArbolFinal.Medios;
                                 $scope.mediosIndirectos = [];
+                                  
+                                  $.each($scope.medios, function (index, value) {
 
-                                $.each($scope.medios, function (index, value) {
                                     for (var i = 0; i < 3; i++) {
                                         if (value.MediosIndirectos[i] != "") {
-                                            $scope.mediosIndirectos.push({ idMedio: value.Medio, medioIndirectos: value.MediosIndirectos[i], Resultado: "", Herramienta: "", Producto: "" })
+                                           
+                                            $scope.mediosIndirectos.push({ idMedio: response.Especificos[index], medioIndirectos: value.MediosIndirectos[i], Resultado: "", Herramienta: "", Producto: "" })
 
                                         } else {
                                             $scope.mediosIndirectos.push({ idMedio: value.Medio, medioIndirectos: "", Resultado: "", Herramienta: "", Producto: "" })
@@ -813,6 +826,7 @@
 
                                     }
                                 })
+                                  console.log($scope.mediosIndirectos);
                                 $("#guardarObjetivos").css({ "display": "block" });
                             }
                         })
@@ -822,38 +836,30 @@
                             if (response.success) {
                                 $scope.Objetivos.ObjetivoCentral = response.DatosObjetivos.ObjetivoCentral;
                                 $scope.prueba = response.DatosObjetivos.Objetivos
-                                //$scope.medios = [];
-                                //$.each($scope.prueba, function (index, value) {
-                                //    if (index == 0 || index == 3 || index == 6 || index == 9 || index == 12 || index == 15) {
-                                //        $scope.medios.push({ Medio: value.ObjetivoEsp, MediosIndirectos: [index] });
-                                //    }
-                                //})
-
+                             
                                 $scope.medios = [];
-
+                              
                                 $.each(response.Especificos, function (index, value) {
 
                                     $scope.medios.push({ Medio: value.ObjetivoEsp, MediosIndirectos: [index] });
 
                                 })
 
-                                console.log($scope.prueba);
-
                                 $scope.mediosIndirectos = [];
 
-                                console.log($scope.prueba);
+                              
                                 $.each($scope.prueba, function (index, value) {
                                     if (value.ObjetivoEsp != null) {
                                         $scope.mediosIndirectos.push({ idMedio: value.ObjetivoEsp, medioIndirectos: value.Resultado1, Resultado: value.MedidaResultado, Herramienta: value.HerramientaResultado, Producto: value.ProductoResultado })
 
                                     }
                                 })
+
+                                console.log($scope.prueba);
                                 $("#guardarObjetivos").css({ "display": "none" });
                             }
                         })
                     }
-
-                    //$scope.Objetivos.ObjetivoCentral = $scope.Objetivos.ObjetivoCentral;
                 }
               
                 contador++;
@@ -862,23 +868,39 @@
 
             //FUNCION PARA GUARDAR TODOS LOS DATOS DE OBJETIVOS.
             $scope.guardarObjetivos = function () {
+
                 var verbo = $("#verbo").val();
                 $scope.ObjetivosFinales.ObjetivoCentral = verbo + " " + $scope.Objetivos.ObjetivoCentral;
-
+               
 
                 $scope.ObjetivosFinales1 = [];
                 $.each($scope.mediosIndirectos, function (index, value) {
 
-                    if (value.medioIndirectos != undefined) {
+                    if (index < 3) {
+                        var posicion = 0;
+                    } if (index >= 3 && index <6) {
+                        var posicion = 1;
+                    } if (index >= 6 && index < 9) {
+                        var posicion = 2;
+                    } if (index >= 9 && index < 12) {
+                        var posicion = 3;
+                    } if (index >= 12) {
+                        var posicion = 4;
+                    }
 
-                        $scope.ObjetivosFinales1.push({ ObjetivoEsp: value.idMedio, Resultado1: value.medioIndirectos, MedidaResultado: value.Resultado, HerramientaResultado: value.Herramienta, ProductoResultado: value.Producto })
+                    if (value.medioIndirectos != undefined) {
+                       
+
+                        $scope.ObjetivosFinales1.push({ ObjetivoEsp: $scope.medios1[posicion].medio.toString(), Resultado1: value.medioIndirectos, MedidaResultado: value.Resultado, HerramientaResultado: value.Herramienta, ProductoResultado: value.Producto })
 
                     } else {
-                        $scope.ObjetivosFinales1.push({ ObjetivoEsp: value.idMedio, Resultado1: "", MedidaResultado: value.Resultado, HerramientaResultado: value.Herramienta, ProductoResultado: value.Producto })
+                        $scope.ObjetivosFinales1.push({ ObjetivoEsp: $scope.medios1[posicion].medio.toString(), Resultado1: "", MedidaResultado: value.Resultado, HerramientaResultado: value.Herramienta, ProductoResultado: value.Producto })
 
                     }
                 })
 
+                
+                console.log($scope.ObjetivosFinales1)
                 $scope.ObjetivosFinales.Objetivos = $scope.ObjetivosFinales1;
 
                 var con = 0;
@@ -902,6 +924,7 @@
                 } else {
                     alertify.success("Ups! Debes completar los campos de cada resultado esperado.");
                 }
+                console.log($scope.ObjetivosFinales)
                 
             }
         }]);

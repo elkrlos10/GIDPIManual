@@ -60,6 +60,7 @@
                 "Investigación",
                 "Levantamiento",
                 "Mantenimiento",
+                "Modernización",
                 "Mejoramiento",
                 "Nacionalización",
                 "Normalización",
