@@ -12,127 +12,127 @@
     </div>
 </div>
 
-    <!--<audio controls id="audio" style="position:absolute;">
-        <source src="../audios/Don Tetto - Yo Estaré Bien (Con Letra).mp3" type="audio/mpeg">
-    </audio>-->
+
+<div id="audioWrap" style="position: fixed; width: 60%; margin-left: 20%; top: 90%; display:none;"></div>
+
 
 <section id="menuAyuda" class="menuAyuda menuAyuda--circle">
-  <input type="checkbox" id="menu__active"/>
-  <label for="menu__active" class="menu__active">
-    <div class="menu__toggle">
-      <div class="icon">
-        <div class="hamburger"></div>
-      </div>
-    </div>
-    <input type="radio" name="arrow--up" id="degree--up-0"/>
-    <input type="radio" name="arrow--up" id="degree--up-1" />
-    <input type="radio" name="arrow--up" id="degree--up-2" />
-    <div class="menu__listings">
-      <ul class="circle">
-        <li>
-          <div class="placeholder">
-            <div class="upside demo-item">
-              <a class="button demo-btn demo6" data-svg-popup="demo6"><i class="fa fa-video-camera"></i></a>
+    <input type="checkbox" id="menu__active" />
+    <label for="menu__active" class="menu__active">
+        <div class="menu__toggle">
+            <div class="icon">
+                <div class="hamburger"></div>
             </div>
-          </div>
-        </li>
-        <li>
-          <div class="placeholder">
-              <div class="upside">
-                  <a class="button"><i class="fa fa-volume-up"></i></a>
-              </div>
-          </div>
-        </li>
-        <li>
-          <div class="placeholder">
-            <div class="upside">
-              <a href="#">&nbsp</a>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="placeholder">
-            <div class="upside">
-              <a class="button" id="texto"><i class="fa fa-file"></i></a>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="placeholder">
-            <div class="upside">
-              <a href="#" class="button"><i class="fa fa-binoculars"></i></a>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="placeholder">
-            <div class="upside">
-              <a href="#" class="button"><i class="fa fa-battery-4"></i></a>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="placeholder">
-            <div class="upside">
-              <a href="#" class="button"><i class="fa fa-calendar"></i></a>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="placeholder">
-            <div class="upside">
-              <a href="#" class="button"><i class="fa fa-cloud"></i></a>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="placeholder">
-            <div class="upside">
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="placeholder">
-            <div class="upside demo-item">
-              <a class="button demo-btn demo5" data-svg-popup="demo5"><i class="fa fa-file"></i></a>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  
-  </label>
+        </div>
+        <input type="radio" name="arrow--up" id="degree--up-0" />
+        <input type="radio" name="arrow--up" id="degree--up-1" />
+        <input type="radio" name="arrow--up" id="degree--up-2" />
+        <div class="menu__listings">
+            <ul class="circle">
+                <li>
+                    <div class="placeholder">
+                        <div class="upside demo-item">
+                            <a class="button demo-btn demo6" data-svg-popup="demo6"><i class="fa fa-video-camera"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="placeholder">
+                        <div class="upside">
+                            <a class="button" id="audio"><i class="fa fa-volume-up"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="placeholder">
+                        <div class="upside">
+                            <a href="#">&nbsp</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="placeholder">
+                        <div class="upside">
+                            <a class="button" id="texto"><i class="fa fa-file"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="placeholder">
+                        <div class="upside">
+                            <a href="#" class="button"><i class="fa fa-binoculars"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="placeholder">
+                        <div class="upside">
+                            <a href="#" class="button"><i class="fa fa-battery-4"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="placeholder">
+                        <div class="upside">
+                            <a href="#" class="button"><i class="fa fa-calendar"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="placeholder">
+                        <div class="upside">
+                            <a href="#" class="button"><i class="fa fa-cloud"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="placeholder">
+                        <div class="upside">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="placeholder">
+                        <div class="upside demo-item">
+                            <a class="button demo-btn demo5" data-svg-popup="demo5"><i class="fa fa-file"></i></a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </label>
 </section>
 
 
 <div id="proyecto" style="margin-left:1%; z-index:5;">
-        <button id="proyectos" title="Mis proyectos">Mis proyectos</button><br /><br />
+    <button id="proyectos" title="Mis proyectos">Mis proyectos</button><br /><br />
 
-        <div id="misProyectos" style="height:auto; width:15%; background:rgba(35, 130, 118, 0.4); position:absolute; margin-left:1%; display:none; margin-top:6%; z-index:9999;">
-            <h3 style="text-align:center; color:white; font-weight:600;">Mis proyectos</h3>
+    <div id="misProyectos" style="height:400px; width:16%; background:rgba(35, 130, 118, 0.4); position:absolute; margin-left:1%; display:none; margin-top:6.2%; z-index:9999; overflow-y:auto">
+        <h3 style="text-align:center; color:white; font-weight:600;">Mis proyectos</h3>
 
-            <a ng-click="CrearProyecto()" style="text-align:center; color:white; cursor:pointer; ">
-                <h3 id="nuevoProyecto">Nuevo proyecto <i style="margin-top:2%;" id="iconoNuevoProyecto" class="material-icons">&#xE147;</i></h3>
-            </a><br /><br /><br />
+        <a ng-click="CrearProyecto()" style="text-align:center; color:white; cursor:pointer; ">
+            <h3 id="nuevoProyecto">Nuevo proyecto <i style="margin-top:2%;" id="iconoNuevoProyecto" class="fa fa-plus"></i></h3>
+        </a><br />
 
-            <div ng-repeat="proyectos in Proyectos">
-                <span>
-                    <a style="color:white; font-weight:600; margin-left:5%;  cursor:pointer; " ng-click="AbrirProyecto(proyectos.IdProyecto)" value="{{proyectos.IdProyecto}}">
-                        <i>-</i>
-                        {{proyectos.TemaProyecto | uppercase}}
-                    </a>
-                </span>
+        <div ng-repeat="proyectos in Proyectos">
+            <span>
+                <a style="color:white; font-weight:600; margin-left:5%;  cursor:pointer; " ng-click="AbrirProyecto(proyectos.IdProyecto)" value="{{proyectos.IdProyecto}}">
+                    <i>-</i>
+                    {{proyectos.TemaProyecto | uppercase}}
+                </a>
+            </span>
 
-                <br />
-            </div>
+            <br />
         </div>
-
     </div>
+
+</div>
 
 
 
 <div id="contenedor">
-    <center><img id="logoMenu" src="../images/logo.png" /></center> 
+    <center><img id="logoMenu" src="../images/logo.png" /></center>
 
     <section class="secciones">
         <ul id="menu">
@@ -168,7 +168,7 @@
             </li>
 
             <li class="campo">
-                <div class="circulos" id="circuloCuatro" ng-click="ArbolObjetivos()">
+                <div class="circulos" id="circuloCuatro">
                     <img class="iconos" id="iconoCuatro" title="Árbol de objetivos" value="1" src="images/arbol.png" style="top:10%">
                 </div>
             </li>
@@ -178,7 +178,7 @@
             </li>
 
             <li class="campo">
-                <div class="circulos" id="circuloCinco" ng-click="Involucrados()">
+                <div class="circulos" id="circuloCinco">
                     <img class="iconos" id="iconoCinco" title="Árbol de objetivos" value="1" src="images/perfil.png" style="top:10%">
                 </div>
             </li>
@@ -220,10 +220,30 @@
 
 
 <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
+ $('#menu-toggle').click(function () {
+        $('#wrapper').slideToggle({
+            direction: "up"
+        }, 300);
+        $(this).toggleClass('clientsClose');
     });
+
+
+  $(document).ready(function(){
+$("#audio").click(function () {
+    $("#audioWrap").each(function () {
+        displaying = $(this).css("display");
+        if(displaying == "block") {
+          $(this).fadeOut('slow',function() {
+           $(this).css("display","none");
+          });
+        } else {
+          $(this).fadeIn('slow',function() {
+            $(this).css("display","block");
+          });
+        }
+      });
+    });
+  });
 
 
     $(function () {
@@ -255,5 +275,23 @@
     }());
 
 
-</script>
 
+    $(function() {
+        var player = $.AudioPlayer;
+        player.init({
+            container: '#audioWrap'
+            ,source: '../audios/Don Tetto - Yo Estaré Bien (Con Letra).mp3'
+            ,imagePath: '../images'
+            ,debuggers: false
+            ,allowSeek: true
+        });
+
+        $('[data-url]').on('click', function(event) {
+            event.preventDefault();
+
+            player.updateSource({
+                source: $(this).data('url')
+            });
+        });
+    });
+</script>

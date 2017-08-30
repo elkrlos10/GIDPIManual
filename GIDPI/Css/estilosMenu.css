@@ -395,13 +395,13 @@ body{
 }
 
 #flechaSeis{
-    margin-left: -15%;
+    margin-left: -50%;
     margin-top: 26%;
     transform: rotateZ(232deg);
 }
 
 #flechaSiete{
-    margin-left: -15%;
+    margin-left: -63%;
     margin-top: 26%;
     transform: rotateZ(285deg);
 }
@@ -535,7 +535,7 @@ body{
   height: 243.33333333333334px;
   overflow: hidden;
   transform:rotate(90deg);
-  margin-left:87%;
+  margin-left:85.5%;
   margin-top:-9.5%;
 }
 }

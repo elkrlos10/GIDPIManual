@@ -118,6 +118,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="audios\Don Tetto - Yo Estaré Bien %28Con Letra%29.mp3" />
     <Content Include="Css\alertify.core.css" />
     <Content Include="Css\alertify.default.css" />
     <Content Include="Css\bootstrap-datepicker.css" />
@@ -129,10 +130,13 @@
     <Content Include="Css\EstilosArbol.css" />
     <Content Include="Css\estilosMenu.css" />
     <Content Include="Css\estilosPlataforma.css" />
+    <Content Include="Css\font-awesome.css" />
     <Content Include="Css\highlight.css" />
     <Content Include="Css\jQuery-svg-popup.css" />
     <Content Include="Css\jquery-ui.min.css" />
+    <Content Include="Css\jQuery.AudioPlayer.css" />
     <Content Include="Css\style.css" />
+    <Content Include="Fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="images\arbol.png" />
     <Content Include="images\arbolAct.png" />
@@ -160,11 +164,15 @@
     <Content Include="images\matriz.png" />
     <Content Include="images\matrizAct.png" />
     <Content Include="images\mujer.png" />
+    <Content Include="images\mute.png" />
+    <Content Include="images\pause.png" />
     <Content Include="images\perfil.png" />
     <Content Include="images\perfilAct.png" />
     <Content Include="images\plantillaFondo.png" />
+    <Content Include="images\play.png" />
     <Content Include="images\side.png" />
     <Content Include="images\tick.png" />
+    <Content Include="images\volume.png" />
     <Content Include="img\lineaD1.png" />
     <Content Include="img\lineaD2.png" />
     <Content Include="img\lineaD3.png" />
@@ -226,6 +234,7 @@
     <Content Include="scripts\jquery-3.2.1.min.js" />
     <Content Include="scripts\jQuery-svg-popup.js" />
     <Content Include="scripts\jquery-ui.min.js" />
+    <Content Include="scripts\jQuery.AudioPlayer.js" />
     <Content Include="scripts\jquery.min.js" />
     <Content Include="scripts\main.js" />
     <Content Include="scripts\moment.js" />
@@ -271,6 +280,11 @@
     <Content Include="Fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Fonts\fontawesome-webfont.eot" />
+    <Content Include="Fonts\fontawesome-webfont.ttf" />
+    <Content Include="Fonts\fontawesome-webfont.woff" />
+    <Content Include="Fonts\fontawesome-webfont.woff2" />
+    <Content Include="Fonts\FontAwesome.otf" />
     <None Include="Properties\PublishProfiles\gidpi.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -281,7 +295,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="audios\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
