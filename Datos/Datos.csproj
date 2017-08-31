@@ -57,6 +57,7 @@
     <Compile Include="DTO\ObjetivosDTO.cs" />
     <Compile Include="DTO\PersonaJuridicaDTO.cs" />
     <Compile Include="DTO\PersonaNaturalDTO.cs" />
+    <Compile Include="DTO\ProyectoDTO.cs" />
     <Compile Include="Modelos\ArbolObjetivos.cs" />
     <Compile Include="Modelos\ArbolProblema.cs" />
     <Compile Include="Modelos\CausaDirecta.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Modelos\Municipio.cs" />
     <Compile Include="Modelos\ObejetivosEspecificos.cs" />
     <Compile Include="Modelos\ObjetivoGeneral.cs" />
+    <Compile Include="Modelos\PerfilProyecto.cs" />
     <Compile Include="Modelos\PersonaJuridica.cs" />
     <Compile Include="Modelos\PersonaNatural.cs" />
     <Compile Include="Modelos\Proyecto.cs" />

@@ -55,6 +55,7 @@
     <Compile Include="LogicaNegocio\InvolucradosBL.cs" />
     <Compile Include="LogicaNegocio\MatrizBl.cs" />
     <Compile Include="LogicaNegocio\MenuBl.cs" />
+    <Compile Include="LogicaNegocio\PerfilProyectoBL.cs" />
     <Compile Include="LogicaNegocio\PersonaNaturalBl.cs" />
     <Compile Include="LogicaNegocio\UsuarioBl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

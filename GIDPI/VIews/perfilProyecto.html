@@ -10,24 +10,11 @@
 
           <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height: auto;">
 
-
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 6vh;"><p class="textos">SUGERENCIA DE NOMBRE</p></div>
-
-              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="height: 6vh;">
-                  <select class="form-control"></select>
-              </div>
-
-              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="height: 6vh;">
-                  <select class="form-control"></select>
-              </div>
-
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 3vh;"></div>
-
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 6vh;"><p class="textos">NOMBRE DEL PROYECTO</p></div>
 
 
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 6vh;">
-                  <input class="form-control" type="text" />
+                  <input class="form-control" type="text"  ng-model="PerfilProyecto.NombreProyecto"/>
               </div>
 
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 3vh;"></div>
@@ -38,11 +25,19 @@
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="height: 6vh;"><p class="textos">NÚMERO DEL ÁREA DE CONOCIMIENTO</p></div>
 
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="height: 6vh;">
-                  <select class="form-control"></select>
+                  <select class="form-control" ng-model="area.id" ng-change="datos(area.id)" id="NombreArea">
+                      <option ng-repeat="area in AreaConocimiento.Areas" value="{{area.id}}"> {{area.nombreArea}} </option>
+
+                  </select>
+
+                  
               </div>
 
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="height: 6vh;">
-                  <select class="form-control"></select>
+                  <select class="form-control" ng-model="a" id="NumeroArea">
+                      <option ng-repeat="a in numeroAreas" value="{{a}}">{{a}}</option>
+
+                  </select>
               </div>
 
 
@@ -56,9 +51,12 @@
 
               <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height: 40vh;">
 
-                  <textarea style="margin-left:50%; transform:translateX(-48%);" cols="90" rows="18"></textarea>
+                  <textarea style="margin-left:50%; width:100%;  transform:translateX(-48%);"  ng-model="PerfilProyecto.Justificacion" rows="18"></textarea>
 
               </div>
+            
+                  <button class="btn btn-success" style="margin-top:37%;   margin-bottom:3%;" id="btnGuardarPerfil" ng-click="GuardarProyecto()">Guardar</button>
+                  <button class="btn btn-success" style="margin-top:37%;  margin-bottom:3%;"  id="btnEditarPerfil" ng-click="editarPerfilProyecto()">Editar</button>
          </div>  
        </div>
 <!--TERMINA CONTAINER DE NOMBRE DEL PROYECTO -->
@@ -197,12 +195,12 @@
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="position:relative; height: 12vh;   ">
 
-            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 12vh; background: #fff"><center><button ng-click="ocultarPerilProyecto()">Nombre del proyecto</button></center></div>
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 12vh; background: #fff"><center><button ng-click="MostrarNombre()">Nombre del proyecto</button></center></div>
 
             <div class="col-lg-10 col-md-4 col-sm-4 col-xs-4" style="height: 12vh;"><hr style="height:2px; background:#238276; margin-top:11%;" /></div>
 
           
-            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 12vh; background: #ccc"><center><button ng-click="ocultarNombre()">Perfil del proyecto</button></center></div>
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 12vh; background: #ccc"><center><button ng-click="MostrarPerilProyecto()">Perfil del proyecto</button></center></div>
         </div>
 
     </div>

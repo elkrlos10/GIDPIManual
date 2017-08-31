@@ -15,18 +15,40 @@ namespace LogicaNegocio.LogicaNegocio
 
         public void GuardarInvolucrados(List<Involucrados> oListInvolucrados)
         {
+           
             foreach (var item in oListInvolucrados)
             {
-                entity.Involucrados.Add(item);
+                if (item.IdInvolucrado == 0)
+                {
+                    entity.Involucrados.Add(item);
+                    entity.SaveChanges();
+                }
+                else
+                {
+                    var involucrado = (from i in entity.Involucrados
+                                       where i.IdInvolucrado == item.IdInvolucrado
+                                       select i).FirstOrDefault();
+                    involucrado.Involucrado = item.Involucrado;
+                    involucrado.Interes = item.Interes;
+                    involucrado.Problema = item.Problema;
+                    involucrado.Recursos = item.Recursos;
+                    involucrado.Estrategia = item.Estrategia;
+                    entity.SaveChanges();
+                    
+                }
+            }
+           
+                var id = oListInvolucrados[0].IdProyecto;
+                var Proyecto = (from i in entity.Proyecto
+                                where i.IdProyecto == id
+                                select i).FirstOrDefault();
+
+            if (Proyecto.Etapa<=6)
+            {
+                Proyecto.Etapa = 6;
                 entity.SaveChanges();
             }
-
-            var id = oListInvolucrados[0].IdProyecto;
-            var Proyecto = (from i in entity.Proyecto
-                            where i.IdProyecto == id 
-                            select i).FirstOrDefault();
-            Proyecto.Etapa = 6;
-            entity.SaveChanges();
+          
 
 
         }

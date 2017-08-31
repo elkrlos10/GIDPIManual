@@ -34,6 +34,7 @@
         public virtual DbSet<Resultados> Resultados { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<Involucrados> Involucrados { get; set; }
+        public virtual DbSet<PerfilProyecto> PerfilProyecto { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

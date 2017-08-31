@@ -92,7 +92,7 @@ namespace GIDPI.Controllers
 
                 return Ok(new { success = true, usuario});
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
                 return Ok(new { success = false });

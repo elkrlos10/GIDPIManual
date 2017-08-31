@@ -171,60 +171,6 @@
 
                 });
             
-                //if (response.proyecto.Etapa >= 1) {
-                //    $("#circuloUno").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
-                //    $("#iconoUno").attr("src", "images/datosBasicosAct.png");
-                //    $("#iconoUno").attr('value', 2);
-                //    $('#flechaUno').fadeIn("slow");
-
-                //    $("#circuloDos").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
-                //    $("#iconoDos").attr("src", "images/lluviaIdeasAct.png");
-                //    $("#iconoDos").attr('value', 2);
-                //    $('#flechaDos').fadeIn("slow");
-                //}
-                //if ($rootScope.proyecto.datos.Etapa >= 2) {
-
-                //    $("#circuloTres").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
-                //    $("#iconoTres").attr("src", "images/arbolProbAct.png");
-                //    $("#iconoTres").attr('value', 2);
-                //    $('#flechaTres').fadeIn("slow");
-                //}
-
-                //if ($rootScope.proyecto.datos.Etapa >= 3) {
-
-                //    $("#circuloCuatro").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
-                //    $("#iconoCuatro").attr("src", "images/arbolAct.png");
-                //    $("#iconoCuatro").attr('value', 2);
-                //    $('#flechaCuatro').fadeIn("slow");
-                //}
-
-                //if ($rootScope.proyecto.datos.Etapa >= 4) {
-
-                //    $("#circuloCinco").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
-                //    $("#iconoCinco").attr("src", "images/perfilAct.png");
-                //    $("#iconoCinco").attr('value', 2);
-                //    $('#flechaCinco').fadeIn("slow");
-                //}
-
-                //if ($rootScope.proyecto.datos.Etapa >= 5) {
-                //    $("#circuloSeis").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
-                //    $("#circuloSeis").attr("src", "images/graficaAct.png");
-                //    $("#circuloSeis").attr('value', 2);
-                //    $('#flechaSeis').fadeIn("slow");
-                //}
-
-                //if ($rootScope.proyecto.datos.Etapa >= 6) {
-                //    $("#circuloSiete").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
-                //    $("#circuloSiete").attr("src", "images/calendarioAct.png");
-                //    $("#circuloSiete").attr('value', 2);
-                //    $('#flechaSiete').fadeIn("slow");
-                //}
-                //if ($rootScope.proyecto.datos.Etapa >= 7) {
-                //    $("#circuloOcho").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
-                //    $("#circuloOcho").attr("src", "images/matrizAct.png");
-                //    $("#circuloOcho").attr('value', 2);
-                //    $('#flechaOcho').fadeIn("slow");
-                //}
               
             }
 

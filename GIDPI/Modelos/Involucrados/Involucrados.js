@@ -49,10 +49,10 @@
                         InvolucradosService.ConsultarInvolucrados($rootScope.proyecto.datos.id, function (response) {
                             if (response.success) {
                                 $scope.Involucrados = response.involucrados;
-
-                                $("#guardarInvo").hide();
-                                $("#botonCampos").hide();
-                                $("#botonQuitar").hide();
+                                console.log($scope.Involucrados);
+                                //$("#guardarInvo").hide();
+                                //$("#botonCampos").hide();
+                                //$("#botonQuitar").hide();
 
                             }
 
