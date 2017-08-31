@@ -2,7 +2,7 @@
     ['$scope', '$rootScope', '$location', 'MenuService', '$cookies', '$cookieStore', '$routeParams', '$sce',
         function ($scope, $rootScope, $location, MenuService, $cookies, $cookieStore, $routeParams, $sce) {
 
-
+            //Funciones para direccionar a las vistas 
             $scope.DatosBasicos = function () {
                 var color = $("#iconoUno").attr('value');
                 //console.log(cosa);
@@ -34,7 +34,6 @@
                 }
             };
 
-
             $scope.ArbolObjetivos = function () {
                 var color = $("#iconoCuatro").attr('value');
                 if (color == 1) {
@@ -57,6 +56,7 @@
 
             };
 
+            //------------------------------------------------------------//
 
 
             $(".icono-menu").click(function () {
@@ -88,36 +88,35 @@
             //Función para crear un nuevo proyecto
             $scope.CrearProyecto = function () {
                 //location.reload();
+
                 $("#circuloUno").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
                 $("#iconoUno").attr("src", "images/datosBasicosAct.png");
                 $("#iconoUno").attr('value', 2);
                 $('#flechaUno').fadeIn("slow");
                 
-                MenuService.AbrirProyecto($rootScope.proyecto.datos.id, function (response) {
-                    if (response.success) {
-
-                        $rootScope.Proyecto = {
-                            datos: {
-                                id: response.proyecto.IdProyecto,
-                                Tema: response.proyecto.TemaProyecto,
-                                IdUsuario: response.proyecto.IdUsuario,
-                                Etapa: response.proyecto.Etapa
-                            }
-                        };
-
-                        $scope.EtapasProyecto(response.proyecto.Etapa);
-                    }
-
-                });
+                //MenuService.AbrirProyecto($rootScope.proyecto.datos.id, function (response) {
+                //    if (response.success) {
+                //        $rootScope.Proyecto = {
+                //            datos: {
+                //                id: response.proyecto.IdProyecto,
+                //                Tema: response.proyecto.TemaProyecto,
+                //                IdUsuario: response.proyecto.IdUsuario,
+                //                Etapa: response.proyecto.Etapa
+                //            }
+                //        };
+                //        $scope.EtapasProyecto(response.proyecto.Etapa);
+                //    }
+                //});
                
                 $cookies.remove("datosProyecto");
-               
+                $scope.DeshabilitarCirculos();
 
             }
 
             //Función para cargar todos los datos de un proyecto ya iniciado
             $scope.AbrirProyecto = function (IdProyecto) {
-               
+                $scope.DeshabilitarCirculos();
+
                 MenuService.AbrirProyecto(IdProyecto, function (response) {
                     if (response.success) {
 
@@ -237,9 +236,28 @@
                 $("#flechaDos").fadeOut("fast");
 
                 $("#circuloTres").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
-                $("#circuloTres").attr("src", "images/lluviaIdeas.png");
+                $("#circuloTres").attr("src", "images/arbolProb.png");
                 $("#flechaTres").fadeOut("fast");
 
+                $("#circuloCuatro").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
+                $("#circuloCuatro").attr("src", "images/arbol.png");
+                $("#flechaCuatro").fadeOut("fast");
+
+                $("#circuloCinco").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
+                $("#circuloCinco").attr("src", "images/perfil.png");
+                $("#flechaCinco").fadeOut("fast");
+
+                $("#circuloSeis").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
+                $("#circuloSeis").attr("src", "images/grafica.png");
+                $("#flechaSeis").fadeOut("fast");
+
+                $("#circuloSiete").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
+                $("#circuloSiete").attr("src", "images/calendario.png");
+                $("#flechaSiete").fadeOut("fast");
+
+                $("#circuloOcho").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
+                $("#circuloOcho").attr("src", "images/matriz.png");
+                $("#flechaOcho").fadeOut("fast");
             }
 
             //Función para activar los circulos ejecutados de un proyecto
