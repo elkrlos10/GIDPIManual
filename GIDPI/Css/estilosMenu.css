@@ -327,7 +327,7 @@ body{
     width:20%;
     position:absolute;
     transform:translateX(-52%);
-    margin-top:4%;
+    margin-top:6%;
 }
 
 #menu{
@@ -360,50 +360,49 @@ body{
 }
 
 .flechas{
-    position: absolute;
     width: 100%;
     display:none;
 }
 
-#flechaUno{
+/*#flechaUno{
     margin-top: 45%;
     margin-left: -52%;
-}
+}*/
 
 #flechaDos{
-    margin-left: -119%;
-    margin-top: 45%;
+    /*margin-left: -74%;
+    margin-top: 45%;*/
     transform: rotateZ(37deg);
 }
 
 #flechaTres{
-    margin-left: -50%;
-    margin-top: 29%;
+    /*margin-left: -2%;
+    margin-top: 29%;*/
     transform: rotateZ(84deg);
 }
 
 #flechaCuatro{
-    margin-left: -28%;
-    margin-top: 73%;
+    /*margin-left: 14%;
+    margin-top: 73%;*/
     transform: rotateZ(127deg);
 }
 
 #flechaCinco{
-    margin-left: -85%;
-    margin-top: 54%;
+    /*margin-left: -39%;
+    margin-top: 54%;*/
     transform: rotateZ(184deg);
 }
 
 #flechaSeis{
-    margin-left: -50%;
-    margin-top: 26%;
+    /*margin-left: -50%;
+    margin-top: 26%;*/
     transform: rotateZ(232deg);
 }
 
 #flechaSiete{
-    margin-left: -63%;
-    margin-top: 26%;
-    transform: rotateZ(285deg);
+    /*margin-left: -63%;
+    margin-top: 26%;*/
+    transform: rotateZ(276deg);
 }
 
 #circuloUno{
@@ -458,8 +457,8 @@ body{
 }
 
 .campo:nth-child(2){
-  top: 6.75%;
-  right: 30.75%;
+    top: 11.75%;
+    right: 32%;
 }
 
 .campo:nth-child(3){
@@ -468,8 +467,8 @@ body{
 }
 
 .campo:nth-child(4){
-  top: 29%;
-  right: 2.7%;
+    top: 34%;
+    right: 10%;
 }
 
 .campo:nth-child(5){
@@ -478,8 +477,8 @@ body{
 }
 
 .campo:nth-child(6){
-  bottom: 28%;
-  right: 9%;
+    bottom: 25%;
+    right: 9%;
 }
 
 .campo:nth-child(7){
@@ -488,8 +487,8 @@ body{
 }
 
 .campo:nth-child(8){
-  bottom: 8.75%;
-  left: 55%;
+    bottom: 1.75%;
+    left: 56%;
 }
 
 .campo:nth-child(9){
@@ -498,18 +497,18 @@ body{
 }
 
 .campo:nth-child(10){
-  top: 82%;
-  left: 28%;
+    top: 87%;
+    left: 24%;
 }
 
 .campo:nth-child(11){
-  top: 73%;
+  top: 75%;
   left: 13%;
 }
 
 .campo:nth-child(12){
-    top: 60%;
-    left: 4%;
+    top: 64%;
+    left: 5%;
 }
 
 .campo:nth-child(13){
@@ -518,7 +517,7 @@ body{
 }
 
 .campo:nth-child(14){
-    top: 27.75%;
+    top: 32.75%;
     left: 8.75%;
 }
 
