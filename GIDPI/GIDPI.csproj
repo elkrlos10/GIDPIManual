@@ -238,6 +238,7 @@
     <Content Include="scripts\jquery.min.js" />
     <Content Include="scripts\main.js" />
     <Content Include="scripts\moment.js" />
+    <Content Include="scripts\prefixfree.min.js" />
     <Content Include="VIews\ArbolView.html" />
     <Content Include="VIews\cronogramaPresupuesto.html" />
     <Content Include="VIews\DatosProyecto.html" />
