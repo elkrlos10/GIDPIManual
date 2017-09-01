@@ -8,11 +8,27 @@
 
             $scope.PerfilProyecto = {
                 IdProyecto: $rootScope.proyecto.datos.id,
-                idPerfilProyecto:"",
+                idPerfilProyecto: "",
                 NombreProyecto: "",
                 NombreArea: "",
                 NumeroProyecto: "",
                 Justificacion: ""
+            }
+
+            $scope.PerfilProyecto2 = {
+                IdProyecto: $rootScope.proyecto.datos.id,
+                Planteamiento:"",
+                Impacto: "",
+                Poblacion: "",
+                Variables: "",
+                Tecnicas: "",
+                Enfoque: "",
+                TipoInvestigacion: "",
+                Metodo: "",
+                Metodologia: ""
+
+
+
             }
 
             //FUNCIONES DE CAMBIO DE TAP
@@ -22,6 +38,46 @@
             $scope.MostrarPerilProyecto = function () {
                 $("#containerNombre").hide();
                 $("#containerPerfilProyect").show();
+
+
+                PerfilProyectoService.ConsultarProyecto($rootScope.proyecto.datos.id, function (response) {
+                    if (response.success) {
+                        if (response.Proyecto.Etapa >= 7) {
+
+                            PerfilProyectoService.ConsultarPerfil2($rootScope.proyecto.datos.id, function (response) {
+                                if (response.success) {
+                                    $scope.PerfilProyecto2 = response.perfilProyecto2;
+
+
+                                    var text1 = response.perfilProyecto2.Enfoque;
+                                    $("#enfoque option").filter(function () {
+                                        //may want to use $.trim in here
+                                        return $(this).text() == text1;
+                                    }).attr('selected', true);
+
+                                    var text2 = response.perfilProyecto2.TipoInvestigacion;
+                                    $("#tipoInve option").filter(function () {
+                                        //may want to use $.trim in here
+                                        return $(this).text() == text2;
+                                    }).attr('selected', true);
+
+                                    var text3 = response.perfilProyecto2.Metodo;
+                                    $("#metodo option").filter(function () {
+                                        //may want to use $.trim in here
+                                        return $(this).text() == text3;
+                                    }).attr('selected', true);
+
+
+                                    console.log("ekfjkdv");
+                                }
+
+                            })
+                        }
+
+
+                    }
+                })
+
             }
             //NOMBRE DEL PROYECTO
 
@@ -155,7 +211,7 @@
                 })
             }
 
-
+            //Funciones de consultar el proyecto
             PerfilProyectoService.ConsultarProyecto($rootScope.proyecto.datos.id, function (response) {
                 if (response.success) {
                     if (response.Proyecto.Etapa < 7) {
@@ -196,6 +252,7 @@
                 }
             })
 
+            //FUNCION PARA GUARDAR EL PERFIL
             $scope.GuardarProyecto = function () {
                 $scope.PerfilProyecto.NombreArea = $("#NombreArea option:selected").text();
                 $scope.PerfilProyecto.NumeroProyecto = $("#NumeroArea").val();
@@ -204,14 +261,16 @@
                 PerfilProyectoService.GuardarPerfilProyecto($scope.PerfilProyecto, function (response) {
                     if (response.success) {
                         alertify.alert("Registro exitoso");
-                        $location.url("/Menu");
+                        //$location.url("/Menu");
                     }
 
                 })
             }
 
+
+            //FUNCION PARA EDITAR EL PERFIL
             $scope.editarPerfilProyecto = function () {
-                    
+
                 $scope.PerfilProyecto.NombreArea = $("#NombreArea option:selected").text();
                 $scope.PerfilProyecto.NumeroProyecto = $("#NumeroArea").val();
 
@@ -224,5 +283,116 @@
 
                 })
             }
+
+            $scope.Enfoque = [
+
+                    {
+                        id: "Cuantitativo",
+                        significado: "Aplica para investigaciones cuyo objetivo principal es la medición o cuantificación de las variables del estudio en función de su magnitud, extensión o cantidad. Utiliza herramientas de las matemáticas y la estadística. Se caracteriza porque implica la identificación de muestras numerosas o de gran tamaño."
+                    },
+                    {
+                        id: "Cualitativo",
+                        significado: "Aplica para investigaciones cuyo objetivo principal es la interpretación o descripción de los fenómenos u objetos de estudio a partir de sus cualidades. Aunque puede apoyarse en algunas mediciones, su propósito central es analizar o caracterizar el objeto de estudio a partir de esas mediciones."
+                    }, {
+                        id: "Mixto",
+                        significado: "Aplica para investigaciones cuyo objetivo principal implica la mezcla de los dos anteriores. Esto es, el objeto de estudio es abordado tanto desde sus cualidades como desde su cantidad."
+                    }
+            ]
+
+            $scope.TipoInvesticion = [
+                {
+                    id: "Analitica",
+                    significado: "Tiene como objetivo principal analizar un evento y comprenderlo en términos de sus aspectos menos evidentes. Los análisis de resultados que usualmente se hacen no convierten a una investigación en analítica."
+
+                }
+                , {
+                    id: "Correlacional",
+                    significado: "Es aquel tipo de estudio que persigue medir el grado de relación existente entre dos o más conceptos o variables."
+
+                }, {
+                    id: "Confirmatoria",
+                    significado: "Verifica hipótesis referidas a la relación entre variables o eventos"
+                }, {
+                    id: "Comparativa",
+                    significado: "Su objetivo es lograr la identificación de diferencias o semejanzas con respecto a la aparición de un evento en dos o más contextos. "
+
+                }, {
+                    id: "Descriptiva",
+                    significado: "Tiene como objetivo central lograr la descripción o caracterización de un evento de estudio dentro de un contexto, sin pretender establecer explicaciones o relaciones entre variables"
+
+                }, {
+                    id: "Explorativa",
+                    significado: "Se utiliza cuando se aborda pro primera vez un problema o tema de investigación, o cuando éste aún no ha sido suficientemente estudiado y las condiciones existentes no son aún determinantes."
+                }, {
+                    id: "Explicativa",
+                    significado: "Se ocupa de la generación de teorías, determina las causas de un evento. En la investigación explicativa se pretende detectar las relaciones entre eventos mediante relaciones causa/efecto."
+                }, {
+                    id: "Predictiva",
+                    significado: "Tiene como propósito central prever o anticipar situaciones futuras, a partir de fenómenos actuales."
+                }, {
+                    id: "Proyectiva",
+                    significado: "Consiste en la elaboración de una propuesta o modelo para solucionar un problema. Es la opción propia de los estudios para empresas específicas."
+                }
+
+            ]
+
+            $scope.Metodo= [
+                {
+                    id: "Historico",
+                    significado: "Se abordan los fenómenos de estudio como productos de un proceso de desarrollo histórico y se tienen en consideración las condiciones de su aparición y evolución hasta el estado actual."
+                },
+                {
+                    id: "Antes-Despues",
+                    significado: "Consiste en realizar las mediciones del objeto antes y después de la aplicación del estímulo. Puede ser con un solo grupo o con un grupo experimental y otro de control"
+                },
+                {
+                    id: "Expost-Facto",
+                    significado:"A partir de la descripción del fenómeno actual, se hace una retrospectiva hasta el momento de su aparición para encontrar sus causas."
+                },
+                {
+                    id: "Estudio de caso",
+                    significado: "Este método es típico de las investigaciones o estudios desarrollados para una empresa específica"
+
+                },
+                {
+                    id: "Fenomenològico",
+                    significado: "Pretende interpretar y comprender el fenómeno de estudio dentro de un contexto."
+                }
+
+            ]
+
+
+            $scope.cambioEnfoque = function (Significado) {
+                $scope.Significado = Significado;
+            }
+
+            $scope.CambioTipoInvesticacion = function (sig) {
+                $scope.Sig = sig;
+            }
+
+            $scope.CambioMetodo = function (significado) {
+                $scope.sigMetodo = significado;
+            }
+
+
+
+            $scope.guardarPerfil2 = function () {
+                $scope.PerfilProyecto2.Enfoque = $("#enfoque option:selected").text();
+                $scope.PerfilProyecto2.TipoInvestigacion = $("#tipoInve option:selected").text();
+                $scope.PerfilProyecto2.Metodo = $("#metodo option:selected").text();
+               
+
+
+                console.log($scope.PerfilProyecto2);
+                PerfilProyectoService.GuardarPerfilProyecto2($scope.PerfilProyecto2, function (response) {
+                    if (response.success) {
+                        alertify.alert("Registro exitoso");
+                        $location.url("/Menu");
+                    }
+
+                })
+            }
+
+
 
         }])

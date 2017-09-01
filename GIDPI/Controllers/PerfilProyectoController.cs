@@ -79,5 +79,41 @@ namespace GIDPI.Controllers
                 return Ok(new { success = false, e.Message });
             }
         }
+
+
+        [HttpPost]
+        public IHttpActionResult GuardarPerfilProyecto2(Perfil2 Perfil2)
+        {
+            try
+            {
+                PerfilProyectoBL oPerfil2 = new PerfilProyectoBL();
+                oPerfil2.GuardarPerfilProyecto2(Perfil2);
+
+                return Ok(new { success = true });
+            }
+            catch (Exception e)
+            {
+
+                return Ok(new { success = false, e.Message });
+            }
+        }
+
+
+        [HttpPost]
+        public IHttpActionResult ConsultarPerfil2(ParametrosDTO oParametros)
+        {
+            try
+            {
+                PerfilProyectoBL oPerfil2 = new PerfilProyectoBL();
+                var perfilProyecto2 = oPerfil2.ConsultarPerfil2(int.Parse(oParametros.Parametro1));
+
+                return Ok(new { success = true, perfilProyecto2 });
+            }
+            catch (Exception e)
+            {
+
+                return Ok(new { success = false, e.Message });
+            }
+        }
     }
 }

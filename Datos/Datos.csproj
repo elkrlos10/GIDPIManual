@@ -76,6 +76,7 @@
     <Compile Include="Modelos\Municipio.cs" />
     <Compile Include="Modelos\ObejetivosEspecificos.cs" />
     <Compile Include="Modelos\ObjetivoGeneral.cs" />
+    <Compile Include="Modelos\Perfil2.cs" />
     <Compile Include="Modelos\PerfilProyecto.cs" />
     <Compile Include="Modelos\PersonaJuridica.cs" />
     <Compile Include="Modelos\PersonaNatural.cs" />

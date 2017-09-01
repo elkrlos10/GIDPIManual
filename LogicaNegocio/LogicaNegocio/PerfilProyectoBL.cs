@@ -75,5 +75,22 @@ namespace LogicaNegocio.LogicaNegocio
                
         }
 
+
+        public void GuardarPerfilProyecto2(Perfil2 Perfil2)
+        {
+            Perfil2 perfil = new Perfil2();
+            perfil = Perfil2;
+            entity.Perfil2.Add(perfil);
+            entity.SaveChanges();
+
+        }
+
+        public Perfil2 ConsultarPerfil2(int IdProyecto)
+        {
+            var consulta = (from i in entity.Perfil2
+                            where i.idProyecto == IdProyecto
+                            select i).FirstOrDefault();
+            return consulta;    
+        }
     }
 }
