@@ -48,9 +48,7 @@ namespace LogicaNegocio.LogicaNegocio
                             where i.IdProyecto == perfilProyecto.IdProyecto
                             select i).FirstOrDefault();
             proyecto.Etapa = 7;
-           
-
-
+            entity.SaveChanges();
         }
 
         public PerfilProyecto ConsultarPerfilTerminado(int IdProyecto)

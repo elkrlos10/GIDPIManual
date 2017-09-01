@@ -47,14 +47,29 @@
                 var color = $("#iconoCinco").attr('value');
                 //console.log(cosa);
                 if (color == "1") {
-                    alertify.alert("<b>Debe abrir un proyecto o  crear uno nuevo</b>", function () {
-                        $("#misProyectos").toggle("slow");
+                    alertify.alert("<b>Debes culminar el paso anterior</b>", function () {
+                       
                     });
                 } else {
                     $location.url("/Involucrados");
                 }
 
             };
+
+
+            $scope.Perfil = function () {
+                var color = $("#iconoSeis").attr('value');
+                //console.log(cosa);
+                if (color == "1") {
+                    alertify.alert("<b>Debes culminar el paso anterior</b>", function () {
+                     
+                    });
+                } else {
+                    $location.url("/PerfilProyecto");
+                }
+
+            };
+            
 
             //------------------------------------------------------------//
 
@@ -166,7 +181,7 @@
 
                 MenuService.AbrirProyecto($rootScope.proyecto.datos.id, function (response) {
                     if (response.success) {
-                        $scope.EtapasProyecto();
+                        //$scope.EtapasProyecto();
                     }
 
                 });
@@ -245,18 +260,18 @@
 
                 if (Etapa >= 6) {
                     $("#circuloSeis").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
-                    $("#circuloSeis").attr("src", "images/graficaAct.png");
-                    $("#circuloSeis").attr('value', 2);
+                    $("#iconoSeis").attr("src", "images/graficaAct.png");
+                    $("#iconoSeis").attr('value', 2);
                     $('#flechaSeis').fadeIn("slow");
                 }
 
-                if ($rootScope.proyecto.datos.Etapa >= 6) {
+                if (Etapa >= 7) {
                     $("#circuloSiete").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
                     $("#circuloSiete").attr("src", "images/calendarioAct.png");
                     $("#circuloSiete").attr('value', 2);
                     $('#flechaSiete').fadeIn("slow");
                 }
-                if ($rootScope.proyecto.datos.Etapa >= 7) {
+                if (Etapa >= 8) {
                     $("#circuloOcho").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
                     $("#circuloOcho").attr("src", "images/matrizAct.png");
                     $("#circuloOcho").attr('value', 2);
