@@ -43,5 +43,26 @@
             });
         };
 
+        service.GuardarPerfilProyecto2 = function (PerfilProyecto2, callback) {
+
+
+            $http.post(URLServices + "PerfilProyecto/GuardarPerfilProyecto2/", PerfilProyecto2)
+            .success(function (response) {
+                callback(response);
+            });
+        };
+
+        service.ConsultarPerfil2 = function (IdProyecto, callback) {
+
+            item = {
+                Parametro1: IdProyecto
+            }
+
+            $http.post(URLServices + "PerfilProyecto/ConsultarPerfil2/", item)
+            .success(function (response) {
+                callback(response);
+            });
+        };
+
         return service;
     }])

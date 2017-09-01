@@ -70,9 +70,7 @@
 
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 40vh;">
-                <textarea class="form-control" rows="12"></textarea>
-
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 3vh;"></div>
+                <textarea class="form-control" rows="12"  ng-model="PerfilProyecto2.Planteamiento"></textarea>
 
             </div>
 
@@ -81,10 +79,7 @@
 
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 30vh;">
-                    <textarea class="form-control" rows="9"></textarea>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 3vh;"></div>
-
+                    <textarea class="form-control" rows="9"  ng-model="PerfilProyecto2.Impacto"></textarea>
                 </div>
             </div>
 
@@ -102,11 +97,14 @@
                             </th>
 
                             <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                <select class="form-control"></select>
+                                <select class="form-control" id="enfoque"  ng-change="cambioEnfoque(Enfoque.significado)" ng-model="Enfoque.significado">
+                                    <option ng-repeat="E in Enfoque" value="{{E.significado}}">{{E.id}}</option>
+                                    
+                                </select>
                             </th>
 
                             <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                texto
+                                <p style="font-size:10px;" ng-model="Significado">{{Significado}}</p>
                             </th>
                         </tr>
 
@@ -116,11 +114,14 @@
                             </th>
 
                             <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                <select class="form-control"></select>
+                                <select class="form-control" id="tipoInve" ng-change="CambioTipoInvesticacion(TipoInvesticion.significado)" ng-model="TipoInvesticion.significado">
+                                    <option value="{{t.significado}}" ng-repeat="t in TipoInvesticion">{{t.id}}</option>
+                               
+                                </select>
                             </th>
 
                             <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                texto
+                               <p style="font-size:10px;" id="significado" ng-model="Sig" >{{Sig}}</p>
                             </th>
                         </tr>
 
@@ -130,11 +131,14 @@
                             </th>
 
                             <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                <select class="form-control"></select>
+                                <select class="form-control" id="metodo" ng-model="Metodo.significado" ng-change="CambioMetodo(Metodo.significado)">
+                                    <option value="{{m.significado}}" ng-repeat="m in Metodo" >{{m.id}}</option>
+                              
+                                </select>
                             </th>
 
                             <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                texto
+                                <p style="font-size:10px;" ng-model="sigMetodo">{{sigMetodo}}</p>
                             </th>
                         </tr>
                     </tbody>
@@ -148,7 +152,7 @@
                             </th>
 
                             <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <textarea class="form-control"></textarea>
+                                <textarea class="form-control" ng-model="PerfilProyecto2.Poblacion"></textarea>
                             </th>
                         </tr>
 
@@ -158,7 +162,7 @@
                             </th>
 
                             <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <textarea class="form-control"></textarea>
+                                <textarea class="form-control" ng-model="PerfilProyecto2.Variables"></textarea>
                             </th>
                         </tr>
 
@@ -168,7 +172,7 @@
                             </th>
 
                             <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <textarea class="form-control"></textarea>
+                                <textarea class="form-control" ng-model="PerfilProyecto2.Tecnicas"></textarea>
                             </th>
                         </tr>
 
@@ -177,12 +181,9 @@
 
 
 
-                <textarea class="form-control" rows="9"></textarea>
-
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 3vh;"></div>
-
+                <textarea class="form-control" style="height:30%; margin-bottom:2%;" ng-model="PerfilProyecto2.Metodologia"></textarea>
             </div>
-
+            <button class="btn" style="margin-top:2%" ng-click="guardarPerfil2()">guardar</button>
         </div>
         <!-- TERMINA CONTAINER DE PERFIL PROYECTO -->
 

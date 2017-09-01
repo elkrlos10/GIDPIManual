@@ -35,7 +35,7 @@
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<Involucrados> Involucrados { get; set; }
         public virtual DbSet<PerfilProyecto> PerfilProyecto { get; set; }
-
+        public virtual DbSet<Perfil2> Perfil2 { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
         //    modelBuilder.Entity<ArbolObjetivos>()
