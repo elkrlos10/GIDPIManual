@@ -1,4 +1,4 @@
-﻿/// <reference path="Login/Login.js" />
+﻿1/// <reference path="Login/Login.js" />
 /// <reference path="Login/LoginService.js" />
 // script.js
 
@@ -56,9 +56,9 @@ ManualApp.config(function ($routeProvider) {
                 controller: 'PerfilProyectoController'
             })
 
-            .when('/CronogramaPresupuesto', {
+            .when('/Cronograma', {
                 templateUrl: 'Views/cronogramaPresupuesto.html',
-                controller: 'MenuController'
+                controller: 'CronogramaPresupuestoController'
             })
 
             

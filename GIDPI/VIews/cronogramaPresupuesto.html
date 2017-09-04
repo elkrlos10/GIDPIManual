@@ -1,122 +1,125 @@
 ﻿<div class="container-fluid" style="height: auto; margin-top:-10%;">
 
-    <div class="container" style="height: auto; background-color:rgba(192,192,192,0.15);">
+    <div class="container" style="height:200%; background-color:rgba(192,192,192,0.15);">
 
-
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:12vh;">
-            <h1 class="titulovistaObjetivos">CRONOGRAMA</h1>
-        </div>
-
-
-        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height: auto;">
-
-            <center>
-                <table class="table table-responsive table-bordered" style="width:80%;">
-                    <thead>
-                        <tr>
-
-                            <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">Actividad</th>
-                            <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">Fecha inicio</th>
-                            <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">Fecha fin</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td><textarea class="form-control"></textarea></td>
-                            <td>2</td>
-
-                            <td>3</td>
-                        </tr>
-
-                        <tr>
-                            <td><textarea class="form-control"></textarea></td>
-                            <td>2</td>
-
-                            <td>3</td>
-                        </tr>
-
-                        <tr>
-                            <td><textarea class="form-control"></textarea></td>
-                            <td>2</td>
-
-                            <td>3</td>
-                        </tr>
-
-
-                    </tbody>
-                </table>
-            </center>
-
-
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 12vh; margin-left:5%;">
-                <h1 class="titulovistaObjetivos">PRESUPUESTO</h1>
+        <div id="containerCronograma">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:12vh;">
+                <h1 class="titulovistaObjetivos">CRONOGRAMA</h1>
             </div>
 
-            <center>
-                <table class="table table-responsive table-bordered" style="width:100%;">
-                    <thead>
-                        <tr>
-                            <th class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center">Item</th>
-                            <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">Concepto</th>
-                            <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">Descripción</th>
-                            <th class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center">Unidad</th>
-                            <th class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center">Cantidad</th>
-                            <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">Valor unitario</th>
-                            <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">Valor total</th>
-                        </tr>
-                    </thead>
 
-                    <tbody>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height: auto;">
 
-                        <tr>
-                            <td><input class="form-control" type="text" style="margin-top:2%;" /></td>
-                            <td><input class="form-control" type="text" style="margin-top:0%;" /></td>
-                            <td><input class="form-control" type="text" style="margin-top:0%;"/></td>
-                            <td><input class="form-control" type="text" style="margin-top:0%;" /></td>
-                            <td><input class="form-control" type="text" style="margin-top:0%;" /></td>
-                            <td><input class="form-control" type="text" style="margin-top:0%;" /></td>
-                            <td><input class="form-control" type="text" style="margin-top:0%;" /></td>
+                <center>
+                    <table class="table table-responsive table-bordered" style="width:80%;">
+                        <thead>
+                            <tr>
 
-                        </tr>
+                                <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">Actividad</th>
+                                <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">Fecha inicio</th>
+                                <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">Fecha fin</th>
+                            </tr>
+                        </thead>
 
-                        <tr>
-                            <td><input class="form-control" type="text" style="margin-top:2%;" /></td>
-                            <td><input class="form-control" type="text" style="margin-top:0%;" /></td>
-                            <td><input class="form-control" type="text" style="margin-top:0%;" /></td>
-                            <td><input class="form-control" type="text" style="margin-top:0%;" /></td>
-                            <td><input class="form-control" type="text" style="margin-top:0%;" /></td>
-                            <td><input class="form-control" type="text" style="margin-top:0%;" /></td>
-                            <td><input class="form-control" type="text" style="margin-top:0%;" /></td>
-                        </tr>
+                        <tbody>
+                            <tr ng-repeat="crono in Cronograma">
+                                <td><textarea class="form-control"ng-model="crono.Actividad" ></textarea></td>
+                                <td>
+                                   
+                                    <input class="form-control FI" style="width:100%; height:50px;" ng-model="crono.FechaInicio" />
+                                </td>
+
+                                <td>
+                                    <input class="form-control FE" style="width:100%; height:50px;" ng-model="crono.FechaFin"  />
+                                </td>
+                            </tr>
 
 
 
-                    </tbody>
-                </table>
-            </center>
+                        </tbody>
+                    </table>
 
+                </center>
 
+                <div>
+                    <button class="btn btn-success fa fa-plus" style="margin-left:10%" id="agregarPresupuesto" ng-click="agregarCronograma()"></button>
+
+                </div>
+            </div>
         </div>
 
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 88vh; background: #8196be">ICONO INFORMA</div>
+
+           <div id="containerPresupuesto" class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+               <div style="height: 12vh; margin-left:5%;">
+                   <h1 class="titulovistaObjetivos">PRESUPUESTO</h1>
+               </div>
+
+               <center>
+                   <table id="tablita" class="table table-responsive " style="width:100%;">
+                       <thead>
+                           <tr>
+                               <th class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center">Item</th>
+                               <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">Concepto</th>
+                               <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">Descripción</th>
+                               <th class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center">Unidad</th>
+                               <th class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center">Cantidad</th>
+                               <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">Valor unitario</th>
+                               <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">Valor total</th>
+                           </tr>
+                       </thead>
+
+                       <tbody>
+
+                           <tr ng-repeat="presu in Presupuesto">
+                               <td><input  class="form-control" type="text" style="margin-top:2%;" ng-model="presu.item"/></td>
+                               <td><input class="form-control" type="text" style="margin-top:0%;" ng-model="presu.Concepto"/></td>
+                               <td><textarea class="form-control" type="text" style="margin-top:0%;"  ng-model="presu.Descripcion"></textarea> </td>
+                               <td><input class="form-control" type="text" style="margin-top:0%;"  ng-model="presu.Unidad"/></td>
+                               <td><input class="form-control" type="text" style="margin-top:0%;"  ng-model="presu.Cantidad"/></td>
+                               <td><input placeholder="$" class="form-control" type="text" style="margin-top:0%;" ng-model="presu.ValorUnitario"/></td>
+                               <td><input placeholder="$" class="form-control" type="text" style="margin-top:0%;" ng-model="presu.ValorTotal"/></td>
+
+                           </tr>
+                           <tr>
+                               <td><button class="btn btn-success fa fa-plus" style="width:100%;" ng-click="agregarPresupuesto()" id="agregarPresupuesto"></button></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td ><h4>Coste Total:</h4></td>
+                               <td><input placeholder="$" class="form-control" type="text" style="margin-top:2%;" /></td>
+                           </tr>
 
 
 
-        <!--<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 12vh; background: #363636">
+                       </tbody>
+                   </table>
+               </center>
+               
+           </div>
+        
 
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="height: 12vh; background: #fff"></div>
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 8vh; background: #8196be">ICONO INFORMA</div>
 
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height: 12vh; background: #000"></div>
 
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="height: 12vh; background: #fff"></div>
 
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height: 12vh; background: #000"></div>
 
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="height: 12vh; background: #fff"></div>
 
-        </div>-->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="position:relative; height: 12vh;   ">
+
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 12vh; background: #fff"><center><button ng-click="MostrarCronograma()">Cronograma</button></center></div>
+
+            <div class="col-lg-10 col-md-4 col-sm-4 col-xs-4" style="height: 12vh;"><hr style="height:2px; background:#238276; margin-top:11%;" /></div>
+
+
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 12vh; background: #ccc"><center><button ng-click="MostrarPresupuesto()">Presupuesto</button></center></div>
+        </div>
 
     </div>
 
 </div>
+
+
+<script>
+
+</script>

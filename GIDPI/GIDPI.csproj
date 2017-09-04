@@ -121,9 +121,8 @@
     <Content Include="audios\Don Tetto - Yo Estaré Bien %28Con Letra%29.mp3" />
     <Content Include="Css\alertify.core.css" />
     <Content Include="Css\alertify.default.css" />
-    <Content Include="Css\bootstrap-datepicker.css" />
+    <Content Include="Css\bootstrap-datepicker.min.css" />
     <Content Include="Css\bootstrap-datetimepicker-standalone.css" />
-    <Content Include="Css\bootstrap-datetimepicker.css" />
     <Content Include="Css\bootstrap-grid.min.css" />
     <Content Include="Css\bootstrap.min.css" />
     <Content Include="Css\estilos.css" />
@@ -204,6 +203,8 @@
     <Content Include="Modelos\Menu\MenuService.js" />
     <Content Include="Modelos\PerfilProyecto\PerfilProyectoService.js" />
     <Content Include="Modelos\PerfilProyecto\PerfilProyecto.js" />
+    <Content Include="Modelos\Presupuesto\CronogramaPresupuesto.js" />
+    <Content Include="Modelos\Presupuesto\CronogramaPresupuestoService.js" />
     <Content Include="Modelos\Principal.js" />
     <Content Include="Principal.html" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
@@ -214,7 +215,7 @@
     <Content Include="scripts\angular-material.min.js" />
     <Content Include="scripts\Angular-Route.js" />
     <Content Include="scripts\angular.min.js" />
-    <Content Include="scripts\bootstrap-datepicker.es.min.js" />
+    <Content Include="scripts\bootstrap-datepicker.es.js" />
     <Content Include="scripts\bootstrap-datepicker.js" />
     <Content Include="scripts\bootstrap-datetimepicker.js" />
     <Content Include="scripts\bootstrap.js" />
@@ -261,6 +262,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ArbolObjetivoController.cs" />
     <Compile Include="Controllers\ArbolProblemaController.cs" />
+    <Compile Include="Controllers\CronogramaPresupuestoController.cs" />
     <Compile Include="Controllers\DatosProyectoController.cs" />
     <Compile Include="Controllers\DetalleMatrizController.cs" />
     <Compile Include="Controllers\InvolucradosController.cs" />
