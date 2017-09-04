@@ -24,8 +24,12 @@ namespace LogicaNegocio.LogicaNegocio
                             where i.IdProyecto == oMatrizDetalle.IdProyecto
                             select i).FirstOrDefault();
 
-            oproyecto.Etapa = 2;
-            entity.SaveChanges();
+            if (oproyecto.Etapa < 2)
+            {
+                oproyecto.Etapa = 2;
+                entity.SaveChanges();
+            }
+           
 
             var matriz = (from i in entity.MatrizVester
                           where i.IdProyecto == oMatrizDetalle.IdProyecto
@@ -67,6 +71,16 @@ namespace LogicaNegocio.LogicaNegocio
 
             return oMatriz;
 
+        }
+
+        public void OmitirMatriz(int IdProyecto)
+        {
+            var Proyecto = (from i in entity.Proyecto
+                            where i.IdProyecto == IdProyecto
+                            select i).FirstOrDefault();
+
+            Proyecto.Etapa = 2;
+            entity.SaveChanges();
         }
     }
 }

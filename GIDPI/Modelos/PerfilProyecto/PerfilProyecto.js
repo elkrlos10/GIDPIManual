@@ -284,6 +284,7 @@
                 })
             }
 
+            //OBJETOS DE LOS SELECTS ENFOQUE, INVESTIGACION Y METODO 
             $scope.Enfoque = [
 
                     {
@@ -360,8 +361,10 @@
                 }
 
             ]
+            //-----------------------------------------------------
 
 
+            //FUNCIONES PARA MOSTRAR LOS SIGNIFICADOS DE CADA UNO DE LOS ITEMS DE LOS SELECTS ENFOQUE, INVESTIGACION Y METODO 
             $scope.cambioEnfoque = function (Significado) {
                 $scope.Significado = Significado;
             }
@@ -373,16 +376,14 @@
             $scope.CambioMetodo = function (significado) {
                 $scope.sigMetodo = significado;
             }
+            //---------------------------------------------------------------------------------------------------------------
 
-
-
+            //FUNCION PARA GUARDAR LA PARTE 2 DEL PERFIL
             $scope.guardarPerfil2 = function () {
                 $scope.PerfilProyecto2.Enfoque = $("#enfoque option:selected").text();
                 $scope.PerfilProyecto2.TipoInvestigacion = $("#tipoInve option:selected").text();
                 $scope.PerfilProyecto2.Metodo = $("#metodo option:selected").text();
                
-
-
                 console.log($scope.PerfilProyecto2);
                 PerfilProyectoService.GuardarPerfilProyecto2($scope.PerfilProyecto2, function (response) {
                     if (response.success) {
@@ -393,6 +394,21 @@
                 })
             }
 
+            //FUNCION PARA EDITAR LA PARTE 2 DEL PERFIL
+            $scope.editarPerfilProyectoParte2 = function () {
+
+                $scope.PerfilProyecto.NombreArea = $("#NombreArea option:selected").text();
+                $scope.PerfilProyecto.NumeroProyecto = $("#NumeroArea").val();
+
+                console.log($scope.PerfilProyecto);
+                PerfilProyectoService.EditarPerfilProyecto2($scope.PerfilProyecto2, function (response) {
+                    if (response.success) {
+                        alertify.alert("Edición exitosa");
+                        $location.url("/Menu");
+                    }
+
+                })
+            }
 
 
         }])

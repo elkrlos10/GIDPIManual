@@ -92,5 +92,26 @@ namespace LogicaNegocio.LogicaNegocio
                             select i).FirstOrDefault();
             return consulta;    
         }
+
+        public void EditarPerfilProyecto2(Perfil2 PerfilProyecto)
+        {
+            var editarPerfil = (from i in entity.Perfil2
+                          where i.IdPerfilProyecto2 == PerfilProyecto.IdPerfilProyecto2
+                          select i).FirstOrDefault();
+
+            editarPerfil.Planteamiento = PerfilProyecto.Planteamiento;
+            editarPerfil.Impacto = PerfilProyecto.Impacto;
+            editarPerfil.Poblacion = PerfilProyecto.Poblacion;
+            editarPerfil.Variables = PerfilProyecto.Variables;
+            editarPerfil.Tecnicas = PerfilProyecto.Tecnicas;
+            editarPerfil.Enfoque = PerfilProyecto.Enfoque;
+            editarPerfil.TipoInvestigacion = PerfilProyecto.TipoInvestigacion;
+            editarPerfil.Metodo = PerfilProyecto.Metodo;
+            editarPerfil.Metodologia = PerfilProyecto.Metodologia;
+
+            entity.SaveChanges();
+
+            
+        }
     }
 }

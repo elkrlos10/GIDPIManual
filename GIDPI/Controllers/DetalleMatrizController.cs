@@ -47,5 +47,23 @@ namespace GIDPI.Controllers
                 return Ok(new { success = false, e.Message });
             }
         }
+
+        [HttpPost]
+        public IHttpActionResult OmitirMatriz(ParametrosDTO oParamatros)
+        {
+            try
+            {
+               MatrizBl oMatriz = new MatrizBl();
+
+               oMatriz.OmitirMatriz(int.Parse(oParamatros.Parametro1));
+
+                return Ok(new { success = true });
+            }
+            catch (Exception e)
+            {
+
+                return Ok(new { success = false, e.Message });
+            }
+        }
     }
 }

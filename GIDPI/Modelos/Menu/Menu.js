@@ -233,6 +233,11 @@
                     $("#iconoDos").attr("src", "images/lluviaIdeasAct.png");
                     $("#iconoDos").attr('value', 2);
                     $('#flechaDos').fadeIn("slow");
+
+                    //$("#circuloTres").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
+                    //$("#iconoTres").attr("src", "images/arbolProbAct.png");
+                    //$("#iconoTres").attr('value', 2);
+                    //$('#flechaTres').fadeIn("slow");
                 }
                 if (Etapa >= 2) {
 
@@ -240,6 +245,8 @@
                     $("#iconoTres").attr("src", "images/arbolProbAct.png");
                     $("#iconoTres").attr('value', 2);
                     $('#flechaTres').fadeIn("slow");
+
+                    
                 }
 
                 if (Etapa >= 3) {

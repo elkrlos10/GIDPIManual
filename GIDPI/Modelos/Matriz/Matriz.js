@@ -41,11 +41,24 @@
                         $("#problemasMatriz").hide();
                         $("#Panel2").show();
                         $("#problematicaCampo").attr("disabled", "disabled");
+                    } else {
+
+                        $("#ModalOmitir").modal({ backdrop: 'static', keyboard: false });
+                        $("#ModalOmitir").modal("show");
+
                     }
                 })
             }
                
-            
+            $scope.OmitirMatriz = function ()
+            {
+                MatrizService.OmitirMatriz($rootScope.proyecto.datos.id, function (response) {
+                    if (response.success) {
+                        $location.url("/Menu")
+                        $(".modal-backdrop").remove();
+                    } 
+                })
+            }
 
             $scope.AgregarCampos = function () {
 
@@ -533,13 +546,12 @@
                 })
             }
 
-
-
-
             $scope.Regresar = function () {
 
                 $location.url("/Menu");
 
             }
+
+
 
         }]);

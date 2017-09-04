@@ -64,5 +64,15 @@
             });
         };
 
+        service.EditarPerfilProyecto2 = function (PerfilProyecto2, callback) {
+
+
+            $http.post(URLServices + "PerfilProyecto/EditarPerfilProyecto2/", PerfilProyecto2)
+            .success(function (response) {
+                callback(response);
+            });
+        };
+
+
         return service;
     }])

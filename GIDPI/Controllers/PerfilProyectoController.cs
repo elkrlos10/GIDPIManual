@@ -9,7 +9,7 @@ using System.Web.Http;
 
 namespace GIDPI.Controllers
 {
-    public class PerfilProyectoController:ApiController
+    public class PerfilProyectoController : ApiController
     {
         [HttpPost]
         public IHttpActionResult ConsultarProyecto(ParametrosDTO oParametros)
@@ -17,7 +17,7 @@ namespace GIDPI.Controllers
             try
             {
                 PerfilProyectoBL oPerfil = new PerfilProyectoBL();
-                var Proyecto=oPerfil.ConsultarProyecto(int.Parse(oParametros.Parametro1));
+                var Proyecto = oPerfil.ConsultarProyecto(int.Parse(oParametros.Parametro1));
 
                 return Ok(new { success = true, Proyecto });
             }
@@ -51,7 +51,7 @@ namespace GIDPI.Controllers
             try
             {
                 PerfilProyectoBL oPerfil = new PerfilProyectoBL();
-               var perfilProyecto= oPerfil.ConsultarPerfilTerminado(int.Parse(oParametros.Parametro1));
+                var perfilProyecto = oPerfil.ConsultarPerfilTerminado(int.Parse(oParametros.Parametro1));
 
                 return Ok(new { success = true, perfilProyecto });
             }
@@ -108,6 +108,24 @@ namespace GIDPI.Controllers
                 var perfilProyecto2 = oPerfil2.ConsultarPerfil2(int.Parse(oParametros.Parametro1));
 
                 return Ok(new { success = true, perfilProyecto2 });
+            }
+            catch (Exception e)
+            {
+
+                return Ok(new { success = false, e.Message });
+            }
+        }
+
+
+        [HttpPost]
+        public IHttpActionResult EditarPerfilProyecto2(Perfil2 Perfil)
+        {
+            try
+            {
+                PerfilProyectoBL oPerfil = new PerfilProyectoBL();
+                oPerfil.EditarPerfilProyecto2(Perfil);
+
+                return Ok(new { success = true });
             }
             catch (Exception e)
             {

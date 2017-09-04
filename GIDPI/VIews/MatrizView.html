@@ -276,3 +276,32 @@
 
 
 </div>
+
+
+<!--Modal omitir-->
+
+<div class="modal fade" id="ModalOmitir" data-backdrop=”static” data-keyboard=”false” role="dialog">
+    <div class="modal-dialog" style="width: 400px;">
+        <!--Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+                <center>
+                    <h4 style="color:#1C75BB;">
+                        CONFIRMAR CALIFICACIÓN
+                    </h4>
+                </center>
+
+            </div>
+            <div class="modal-body" style="height: 100px; overflow: auto;">
+                <div class="form-group">
+                    <label>¿Está seguro que desea corfirmar la calificación? </label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button"  class="btn btn-success  btn-default" data-dismiss="modal" ng-click="OmitirMatriz()">Aceptar</button>
+                <button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
