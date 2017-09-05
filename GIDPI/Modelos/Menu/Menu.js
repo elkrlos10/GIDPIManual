@@ -151,6 +151,7 @@
                         $cookies.putObject("datosProyecto", $rootScope.Proyecto);
                         $rootScope.proyecto = $cookieStore.get('datosProyecto');
                         
+                        $scope.DeshabilitarCirculos();
                         $scope.EtapasProyecto(response.proyecto.Etapa);
                     }
 
@@ -197,27 +198,33 @@
                 $("#flechaDos").fadeOut("fast");
 
                 $("#circuloTres").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
-                $("#circuloTres").attr("src", "images/arbolProb.png");
+                $("#iconoTres").attr("src", "images/arbolProb.png");
+                $("#iconoTres").attr('value', 1);
                 $("#flechaTres").fadeOut("fast");
 
                 $("#circuloCuatro").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
-                $("#circuloCuatro").attr("src", "images/arbol.png");
+                $("#iconoCuatro").attr("src", "images/arbol.png");
+                $("#iconoCuatro").attr('value', 1);
                 $("#flechaCuatro").fadeOut("fast");
 
                 $("#circuloCinco").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
-                $("#circuloCinco").attr("src", "images/perfil.png");
+                $("#iconoCinco").attr("src", "images/perfil.png");
+                $("#iconoCinco").attr('value', 1);
                 $("#flechaCinco").fadeOut("fast");
 
                 $("#circuloSeis").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
-                $("#circuloSeis").attr("src", "images/grafica.png");
+                $("#iconoSeis").attr("src", "images/grafica.png");
+                $("#iconoSeis").attr('value', 1);
                 $("#flechaSeis").fadeOut("fast");
 
                 $("#circuloSiete").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
-                $("#circuloSiete").attr("src", "images/calendario.png");
+                $("#iconoSiete").attr("src", "images/calendario.png");
+                $("#iconoSiete").attr('value', 1);
                 $("#flechaSiete").fadeOut("fast");
 
                 $("#circuloOcho").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
-                $("#circuloOcho").attr("src", "images/matriz.png");
+                $("#iconoOcho").attr("src", "images/matriz.png");
+                $("#iconoOcho").attr('value', 1);
                 $("#flechaOcho").fadeOut("fast");
             }
 

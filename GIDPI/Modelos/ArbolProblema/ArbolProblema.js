@@ -624,7 +624,8 @@
             }
 
             //FUNCIÓN PARA GUARDAR LOS DATOS DEL ARBOL
-            document.querySelector("#guardar").addEventListener("click", function () {
+            $scope.guardar = function () {
+
 
                 var datosProblema = document.querySelector("#txtProblema").value;
                 var datosEfectos = [];
@@ -634,7 +635,7 @@
 
                 for (var i = 0; i < efectos.length; i++) {
                     var EfectosVacios = document.querySelector("#efecto li:nth-child(" + (i + 1) + ") textarea").value;
-                    if (EfectosVacios!="") {
+                    if (EfectosVacios != "") {
                         datosEfectos[i] = document.querySelector("#efecto li:nth-child(" + (i + 1) + ") textarea").value;
                     } else {
                         alertify.success("Ups! tienes algún efecto vacio");
@@ -654,7 +655,7 @@
 
                 for (var i = 0; i < efectos.length; i++) {
                     var cadaLiIndirecto = [];
-                   
+
                     for (var e = 0; e < document.querySelectorAll("#efecto" + (i + 1) + "indirecto div").length; e++) {
                         var EfectosIndirectasVacias = cadaLiIndirecto[e] = document.querySelector("#efecto" + (i + 1) + "indirecto div:nth-child(" + (e + 1) + ") textarea").value;
 
@@ -664,7 +665,7 @@
                             alertify.success("Ups! tienes algún efecto indirecto vacio");
                             return;
                         }
-                       
+
                     }
                     datosEfectosIndirectos.push(cadaLiIndirecto);
                 }
@@ -674,13 +675,13 @@
 
                     for (var e = 0; e < document.querySelectorAll("#causa" + (i + 1) + "indirecto div").length; e++) {
                         var CausasIndirectasVacias = cadaLiIndirecto[e] = document.querySelector("#causa" + (i + 1) + "indirecto div:nth-child(" + (e + 1) + ") textarea").value;
-                        if (CausasIndirectasVacias!="") {
+                        if (CausasIndirectasVacias != "") {
                             cadaLiIndirecto[e] = document.querySelector("#causa" + (i + 1) + "indirecto div:nth-child(" + (e + 1) + ") textarea").value;
                         } else {
                             alertify.success("Ups! tienes alguna causa indirecta vacia");
                             return;
                         }
-                        
+
                     }
                     datosCausasIndirectos.push(cadaLiIndirecto);
                 }
@@ -706,12 +707,16 @@
                     if (response.success) {
                         alertify.alert("<b>Registro Exitoso</b>");
                         $location.url("/Menu");
-                       
+
                     }
                 })
                 console.log($scope.ObjArbol);
                 console.log(datosProblema);
-            });
+            }
+
+            //document.querySelector("#guardar").addEventListener("click", function () {
+
+            //});
 
 
 

@@ -635,7 +635,7 @@
             }
 
             //FUNCIÓN PARA GUARDAR LOS DATOS DEL ARBOL
-            document.querySelector("#guardar").addEventListener("click", function () {
+            $scope.guardar = function () {
 
                 var datosProblema = document.querySelector("#txtProblema").value;
                 var datosEfectos = [];//ESTE ARREGLO REPRESENTA LOS FINES
@@ -724,16 +724,12 @@
 
                     }
                 })
-            });
+            }
+            //document.querySelector("#guardar").addEventListener("click", function () {
 
-           
-            //CONSULTA PARA LLENAR OBJETIVO GENERAL Y ESPECIFICOS 
-            //ArbolObjetivoService.ConsultarArbolObjetivosFinal($rootScope.proyecto.datos.id, function (response) {
-            //    if (response.success) {
-            //        $scope.Objetivos = response.ArbolFinal;
-            //        $scope.medios1 = response.ArbolFinal.Medios
-            //    }
-            //})
+               
+            //});
+
 
             //VARIABLE PARA VALIDAR CUANDO YA INGRESO LA PRIMERA VEZ A LA VISTA DE RESULTADOS
             var contador = 0;
