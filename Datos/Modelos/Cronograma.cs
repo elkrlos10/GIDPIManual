@@ -8,7 +8,8 @@ using System.Data.Entity.Spatial;
 
 namespace Datos.Modelos
 {
-   public partial class Cronograma
+    [Table("Cronograma")]
+    public partial class Cronograma
     {
 
         [Key]

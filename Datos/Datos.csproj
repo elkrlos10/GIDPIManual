@@ -81,6 +81,7 @@
     <Compile Include="Modelos\PerfilProyecto.cs" />
     <Compile Include="Modelos\PersonaJuridica.cs" />
     <Compile Include="Modelos\PersonaNatural.cs" />
+    <Compile Include="Modelos\Presupuesto.cs" />
     <Compile Include="Modelos\Proyecto.cs" />
     <Compile Include="Modelos\Resultados.cs" />
     <Compile Include="Modelos\Usuario.cs" />

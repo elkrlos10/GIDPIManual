@@ -13,14 +13,70 @@ namespace GIDPI.Controllers
     public class CronogramaPresupuestoController:ApiController
     {
         [HttpPost]
-        public IHttpActionResult GuardarCronograma(List<Involucrados> oListaInvolucrados)
+        public IHttpActionResult GuardarCronograma(List<Cronograma> oListaCronograma)
         {
             try
             {
-                InvolucradosBL oInvolucradosBL = new InvolucradosBL();
-                oInvolucradosBL.GuardarInvolucrados(oListaInvolucrados);
+                CronogramaPresupuestoBL oCronogramaPresupuestoBl = new CronogramaPresupuestoBL();
+                oCronogramaPresupuestoBl.GuardarCronograma(oListaCronograma);
 
                 return Ok(new { success = true });
+
+            }
+            catch (Exception e)
+            {
+
+                return Ok(new { success = false, e.Message });
+
+            }
+        }
+
+        [HttpPost]
+        public IHttpActionResult ConsultarCronograma(ParametrosDTO oParametros)
+        {
+            try
+            {
+                CronogramaPresupuestoBL oCronogramaPresupuestoBl = new CronogramaPresupuestoBL();
+               var Cronograma = oCronogramaPresupuestoBl.ConsultarCronograma(int.Parse(oParametros.Parametro1));
+
+                return Ok(new { success = true,Cronograma });
+
+            }
+            catch (Exception e)
+            {
+
+                return Ok(new { success = false, e.Message });
+
+            }
+        }
+
+        [HttpPost]
+        public IHttpActionResult GuardarPresupuesto(List<Presupuesto> oListaPresupuesto)
+        {
+            try
+            {
+                CronogramaPresupuestoBL oCronogramaPresupuestoBl = new CronogramaPresupuestoBL();
+                oCronogramaPresupuestoBl.GuardarPresupuesto(oListaPresupuesto);
+
+                return Ok(new { success = true });
+
+            }
+            catch (Exception e)
+            {
+
+                return Ok(new { success = false, e.Message });
+
+            }
+        }
+        [HttpPost]
+        public IHttpActionResult ConsultarPresupuesto(ParametrosDTO oParametros)
+        {
+            try
+            {
+                CronogramaPresupuestoBL oCronogramaPresupuestoBl = new CronogramaPresupuestoBL();
+                var Presupuesto = oCronogramaPresupuestoBl.ConsultarPresupuesto(int.Parse(oParametros.Parametro1));
+
+                return Ok(new { success = true, Presupuesto });
 
             }
             catch (Exception e)
