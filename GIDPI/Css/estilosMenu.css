@@ -54,26 +54,22 @@ li {
   display : block;
 }
 
-li:first-child:hover a:after {
+li:first-child:hover a::before {
   content : 'Salir';
 }
 
-li:nth-child(2):hover a:after {
-  content : 'Regresar';
-}
 
-li:nth-child(3):hover a:after {
+li:nth-child(2):hover a:after {
   content : 'Leer ayuda';
 }
 
-li:nth-child(4):hover a:after {
+li:nth-child(3):hover a:after {
   content : 'Ver ayuda';
 }
 
-li:nth-child(5):hover a:after {
+li:nth-child():hover a:after {
   content : 'Escuchar ayuda';
 }*/
-
 
 span {
   display     : inline-block;

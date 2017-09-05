@@ -107,7 +107,7 @@
                 $("#circuloUno").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
                 $("#iconoUno").attr("src", "images/datosBasicosAct.png");
                 $("#iconoUno").attr('value', 2);
-                $('#flechaUno').fadeIn("slow");
+                $('#flechaUno').fadeIn("fast");
                 
                 //MenuService.AbrirProyecto($rootScope.proyecto.datos.id, function (response) {
                 //    if (response.success) {
@@ -151,7 +151,6 @@
                         $cookies.putObject("datosProyecto", $rootScope.Proyecto);
                         $rootScope.proyecto = $cookieStore.get('datosProyecto');
                         
-                        $scope.DeshabilitarCirculos();
                         $scope.EtapasProyecto(response.proyecto.Etapa);
                     }
 
@@ -198,33 +197,27 @@
                 $("#flechaDos").fadeOut("fast");
 
                 $("#circuloTres").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
-                $("#iconoTres").attr("src", "images/arbolProb.png");
-                $("#iconoTres").attr('value', 1);
+                $("#circuloTres").attr("src", "images/arbolProb.png");
                 $("#flechaTres").fadeOut("fast");
 
                 $("#circuloCuatro").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
-                $("#iconoCuatro").attr("src", "images/arbol.png");
-                $("#iconoCuatro").attr('value', 1);
+                $("#circuloCuatro").attr("src", "images/arbol.png");
                 $("#flechaCuatro").fadeOut("fast");
 
                 $("#circuloCinco").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
-                $("#iconoCinco").attr("src", "images/perfil.png");
-                $("#iconoCinco").attr('value', 1);
+                $("#circuloCinco").attr("src", "images/perfil.png");
                 $("#flechaCinco").fadeOut("fast");
 
                 $("#circuloSeis").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
-                $("#iconoSeis").attr("src", "images/grafica.png");
-                $("#iconoSeis").attr('value', 1);
+                $("#circuloSeis").attr("src", "images/grafica.png");
                 $("#flechaSeis").fadeOut("fast");
 
                 $("#circuloSiete").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
-                $("#iconoSiete").attr("src", "images/calendario.png");
-                $("#iconoSiete").attr('value', 1);
+                $("#circuloSiete").attr("src", "images/calendario.png");
                 $("#flechaSiete").fadeOut("fast");
 
                 $("#circuloOcho").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
-                $("#iconoOcho").attr("src", "images/matriz.png");
-                $("#iconoOcho").attr('value', 1);
+                $("#circuloOcho").attr("src", "images/matriz.png");
                 $("#flechaOcho").fadeOut("fast");
             }
 

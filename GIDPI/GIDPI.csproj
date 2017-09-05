@@ -149,6 +149,7 @@
     <Content Include="images\datosBasicos.png" />
     <Content Include="images\datosBasicosAct.png" />
     <Content Include="images\flechaUno.png" />
+    <Content Include="images\flechaUnoD.png" />
     <Content Include="images\fondo.png" />
     <Content Include="images\fondolineas.png" />
     <Content Include="images\grafica.png" />

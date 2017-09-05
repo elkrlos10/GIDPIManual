@@ -71,11 +71,11 @@
         <span class="fa fa-bars" style="font-size:22px;"></span>
     </label>
     <menu style="margin-top:-6%;">
-        <li><a class="fa fa-sign-out menuAyuda" style="font-size:22px;"></a></li>
-        <li><a class="fa fa-arrow-left menuAyuda" style="font-size:22px;"></a></li>
-        <li><a class="fa fa-file button demo-btn demo5 menuAyuda" data-svg-popup="demo5" style="font-size:22px;"></a></li>
-        <li><a class="fa fa-video-camera button demo-btn demo6 menuAyuda" data-svg-popup="demo6" style="font-size:22px;"></a></li>
-        <li><a class="fa fa-volume-up button menuAyuda" id="audio" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-sign-out menuAyuda" style="font-size:22px;" title="Cerrar sesión"></a></li>
+        <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-file button demo-btn demo5 menuAyuda" title="Leer ayuda" data-svg-popup="demo5" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-video-camera button demo-btn demo6 menuAyuda" title="Ver ayuda" data-svg-popup="demo6" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="audio" style="font-size:22px;"></a></li>
 
     </menu>
 </nav>
@@ -280,7 +280,7 @@
 
 <!--Modal omitir-->
 
-<div class="modal fade" id="ModalOmitir" data-backdrop=”static” data-keyboard=”false” role="dialog">
+<div class="modal fade" id="ModalOmitir" data-backdrop=”static” data-keyboard=”false” role="dialog" style="margin-top:15%;">
     <div class="modal-dialog" style="width: 400px;">
         <!--Modal content-->
         <div class="modal-content">
@@ -288,19 +288,19 @@
                 <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
                 <center>
                     <h4 style="color:#1C75BB;">
-                        CONFIRMAR CALIFICACIÓN
+                        MATRIZ DE VESTER
                     </h4>
                 </center>
 
             </div>
             <div class="modal-body" style="height: 100px; overflow: auto;">
                 <div class="form-group">
-                    <label>¿Está seguro que desea corfirmar la calificación? </label>
+                    <center><label>Este paso es opcional y te ayudará a identificar tu problema central ¿Deseas realizarlo?</label></center>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button"  class="btn btn-success  btn-default" data-dismiss="modal" ng-click="OmitirMatriz()">Aceptar</button>
-                <button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="button"  class="btn btn-default btn-danger  btn-default" data-dismiss="modal" ng-click="OmitirMatriz()">Cancelar</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
             </div>
         </div>
     </div>

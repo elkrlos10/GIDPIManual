@@ -1,4 +1,93 @@
-﻿<div class="container-fluid" style="height: auto; margin-top:-10%;">
+﻿<style>
+    #menuAyuda {
+        margin-top: 0%;
+        margin-left: 95.5%;
+        position: fixed;
+        z-index: 300;
+    }
+
+    @media (max-width: 1366px) and (min-width: 1361px) {
+
+        #menuAyuda {
+            margin-top: 0%;
+            margin-left: 95%;
+            position: fixed;
+            z-index: 300;
+        }
+    }
+
+
+    @media (max-width: 1360px) and (max-height: 1281px) {
+
+        #menuAyuda {
+            margin-top: 0%;
+            margin-left: 95%;
+            position: fixed;
+            z-index: 300;
+        }
+    }
+
+    @media (max-width: 1280px) and (min-width: 1153px) {
+
+        #menuAyuda {
+            margin-top: 0%;
+            margin-left: 94%;
+            position: fixed;
+            z-index: 300;
+        }
+    }
+
+    @media(max-width:1152px) {
+
+        #menuAyuda {
+            margin-top: 0%;
+            margin-left: 94%;
+            position: fixed;
+            z-index: 300;
+        }
+    }
+
+    @media (max-width: 1024px) and (max-height: 768px) {
+
+        #menuAyuda {
+            margin-top: 0%;
+            margin-left: 93%;
+            position: fixed;
+            z-index: 300;
+        }
+    }
+</style>
+
+
+<nav class="vertical" id="menuAyuda">
+    <input type="checkbox" id="toggle2" />
+    <label id="menuToggle" for="toggle2">
+        <span class="fa fa-bars" style="font-size:22px;"></span>
+    </label>
+    <menu style="margin-top:-6%;">
+        <li><a class="fa fa-sign-out menuAyuda" style="font-size:22px;" title="Cerrar sesión"></a></li>
+        <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-file button demo-btn demo5 menuAyuda" title="Leer ayuda" data-svg-popup="demo5" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-video-camera button demo-btn demo6 menuAyuda" title="Ver ayuda" data-svg-popup="demo6" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="audio" style="font-size:22px;"></a></li>
+
+    </menu>
+</nav>
+
+<div id="reveal-wrap">
+
+    <div id="hidden-div">
+        <h2 style="font-weight:600;">Consejo</h2>
+        <hr />
+        <p>
+            Su objetivo es lograr la identificación de diferencias o semejanzas con respecto a la aparición de un evento en dos o más contextos.
+        </p>
+    </div>
+</div>
+
+
+
+<div class="container-fluid" style="height: auto; margin-top:-10%;">
 
     <div class="container" style="background-color:rgba(192,192,192,0.15);">
 
@@ -36,8 +125,8 @@
             </center>
 
             <div>
-                <button class="btn btn-success fa fa-plus" id="botonCampos"  ng-click="AgregarCampos1()">  Agregar</button>
-                <button class="btn btn-danger fa fa-times" id="botonQuitar" ng-click="EliminarCampos()">  Eliminar</button>
+                <button class="btn btn-success" id="botonCampos"  ng-click="AgregarCampos1()"><i class="fa fa-plus"></i>  Agregar</button>
+                <button class="btn btn-danger" id="botonQuitar" ng-click="EliminarCampos()"><i class="fa fa-times"></i>  Eliminar</button>
             </div>
            
             <div>
@@ -47,8 +136,25 @@
         </div>
 
 
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 86vh; background: #8196be">ICONO INFORMACIÓN</div>
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 85vh;">
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:5vh;"></div>
+            <div id="ayudaUno" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:5vh;">
+                <center><span><i class="fa fa-info-circle" style="font-size:40px; color:#238276; cursor:pointer;"></i></span></center>
+            </div>
+
+        </div>
 
     </div>
 
 </div>
+
+<script>
+    $('#ayudaUno').click(function () {
+        $('#reveal-wrap #hidden-div').slideToggle({
+            direction: "down"
+        }, 300);
+        $(this).toggleClass('clientsClose');
+    });
+
+</script>
