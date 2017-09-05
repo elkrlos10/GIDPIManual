@@ -12,8 +12,8 @@
               
             }]
 
-            console.log($scope.Involucrados);
-
+         
+            //FUNCIÓN PARA AGREGAR MAS FILAS DE INVOLUCRADOS
             $scope.AgregarCampos1 = function () {
 
                     $scope.Involucrados.push({
@@ -23,24 +23,33 @@
                     });
 
             };
+
+            //FUNCIÓN PARA ELIMINAR FILAS DE INVOLUCRADOS
             $scope.EliminarCampos = function () {
                 
-                if ($scope.Involucrados.length > 1) {
-                    $scope.Involucrados.splice(($scope.Involucrados.length-1), 1);
+                if ($scope.Involucrados[($scope.Involucrados.length - 1)].Involucrado == "" && $scope.Involucrados[($scope.Involucrados.length - 1)].Interes == ""
+                    && $scope.Involucrados[($scope.Involucrados.length - 1)].Problema == "" && $scope.Involucrados[($scope.Involucrados.length - 1)].Recursos == ""
+                    && $scope.Involucrados[($scope.Involucrados.length - 1)].Estrategia == "") {
+
+                    if ($scope.Involucrados.length > 1) {
+                        $scope.Involucrados.splice(($scope.Involucrados.length - 1), 1);
+                    }
                 }
 
             };
 
          
-
+            //FUNCIÓN PARA GUARDAR INVOLUCRADOS
             $scope.GuardarInvolucrados = function() {
                 InvolucradosService.GuardarInvolucrados($scope.Involucrados, function (response) {
                     if (response.success) {
-                        alert("bien");
+                        alertify.alert("<b>Registro Exitoso</b>");
+                        $location.url("/Menu");
                     }
                 })
             }
 
+            //FUNCIÓN PARA CONSULTAR INVOLUCRADOS
             InvolucradosService.AbrirProyecto($rootScope.proyecto.datos.id, function (response) {
                 if (response.success) {
                     $rootScope.proyecto.datos.Etapa = response.proyecto.Etapa;
@@ -49,7 +58,7 @@
                         InvolucradosService.ConsultarInvolucrados($rootScope.proyecto.datos.id, function (response) {
                             if (response.success) {
                                 $scope.Involucrados = response.involucrados;
-                                console.log($scope.Involucrados);
+                               
                                 //$("#guardarInvo").hide();
                                 //$("#botonCampos").hide();
                                 //$("#botonQuitar").hide();

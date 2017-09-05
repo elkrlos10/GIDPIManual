@@ -500,8 +500,6 @@
             })
 
 
-            console.log($rootScope.proyecto.datos);
-
             //FUNCION PARA MOSTRAR Y OCULTAR EL PANEL
             $scope.mostrarPanel = function () {
                 if (panelOn) {
@@ -715,12 +713,7 @@
                         alertify.alert("<b>Registro Exitoso</b>");
                         //$scope.ocultarArbol();
                         $("#TabObjetivos").attr("disabled", false);
-                        //ArbolObjetivoService.ConsultarArbolObjetivosFinal($rootScope.proyecto.datos.id, function (response) {
-                        //    if (response.success) {
-                        //        $scope.Objetivos = response.ArbolFinal;
-                        //        $scope.medios = response.ArbolFinal.Medios
-                        //    }
-                        //})
+                        $scope.ocultarArbol();
 
                     }
                 })
@@ -755,7 +748,7 @@
 
                                 })
 
-                                console.log(response.Especificos);
+                               
                             }
                         })
                     } else {
@@ -770,7 +763,7 @@
                                     $scope.medios1.push({ medio: value.ObjetivoEsp });
 
                                 })
-                                console.log(response.Especificos);
+                               
                             }
                         })
 
