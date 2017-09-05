@@ -62,6 +62,7 @@
     <Compile Include="Modelos\ArbolProblema.cs" />
     <Compile Include="Modelos\CausaDirecta.cs" />
     <Compile Include="Modelos\CausaIndirecta.cs" />
+    <Compile Include="Modelos\Cronograma.cs" />
     <Compile Include="Modelos\Departamento.cs" />
     <Compile Include="Modelos\DetalleMatriz.cs" />
     <Compile Include="Modelos\EfectoDirecto.cs" />

@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="LogicaNegocio\ArbolObjetivoBl.cs" />
     <Compile Include="LogicaNegocio\ArbolProblemaBl.cs" />
+    <Compile Include="LogicaNegocio\CronogramaPresupuestoBL.cs" />
     <Compile Include="LogicaNegocio\DatosProyectoBl.cs" />
     <Compile Include="LogicaNegocio\InvolucradosBL.cs" />
     <Compile Include="LogicaNegocio\MatrizBl.cs" />
