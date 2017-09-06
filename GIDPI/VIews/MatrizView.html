@@ -105,7 +105,7 @@
 
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="height:12vh;">
 
-                <input id="problematicaCampo" ng-model="DatosProyecto.ProblemaGeneral" class="form-control" disabled placeholder="Problemática general" />
+                <input id="problematicaCampo" ng-model="DatosProyecto.ProblemaGeneral" maxlength="150" class="form-control" disabled placeholder="Problemática general" />
 
             </div>
 
@@ -146,7 +146,7 @@
                                     <span class="input-group-addon">
                                         <label>{{$index+1}}</label>
                                     </span>
-                                    <input class="form-control" placeholder="Ingrese problema {{$index+1}}" ng-model="problemas.Problema" />
+                                    <input class="form-control" maxlength="100" placeholder="Ingrese problema {{$index+1}}" ng-model="problemas.Problema" />
                                     <!-- <span ng-if="estiba.Alto>2" class="help-block">EL alto máximo estiba es 2 Mt </span>-->
                                 </div>
                             </div>

@@ -112,11 +112,11 @@
 
                     <tbody>
                         <tr ng-repeat="Inv in Involucrados">
-                            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><textarea class="form-control" ng-model="Inv.Involucrado"></textarea></td>
-                            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><textarea class="form-control" ng-model="Inv.Interes"></textarea></td>
-                            <td class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center"><textarea class="form-control" ng-model="Inv.Problema"></textarea></td>
-                            <td class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center"><textarea class="form-control" ng-model="Inv.Recursos"></textarea></td>
-                            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><textarea class="form-control"ng-model="Inv.Estrategia"></textarea></td>
+                            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center" ><textarea class="form-control" maxlength="100" ng-model="Inv.Involucrado"></textarea></td>
+                            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><textarea class="form-control" maxlength="499" ng-model="Inv.Interes" max></textarea></td>
+                            <td class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center"><textarea class="form-control" maxlength="499"  ng-model="Inv.Problema"></textarea></td>
+                            <td class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center"><textarea class="form-control" maxlength="499" ng-model="Inv.Recursos"></textarea></td>
+                            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><textarea class="form-control" maxlength="699" ng-model="Inv.Estrategia"></textarea></td>
                         </tr>
 
                     </tbody>

@@ -18,15 +18,16 @@
 
                     $scope.Involucrados.push({
                         IdProyecto: $rootScope.proyecto.datos.id,
-                        Involucrado: ""
-                        
+                        Involucrado: "",
+                        Interes: "",
+                        Problema: "",
+                        Recursos: "",
+                        Estrategia: ""
                     });
-
             };
 
             //FUNCIÓN PARA ELIMINAR FILAS DE INVOLUCRADOS
             $scope.EliminarCampos = function () {
-                
                 if ($scope.Involucrados[($scope.Involucrados.length - 1)].Involucrado == "" && $scope.Involucrados[($scope.Involucrados.length - 1)].Interes == ""
                     && $scope.Involucrados[($scope.Involucrados.length - 1)].Problema == "" && $scope.Involucrados[($scope.Involucrados.length - 1)].Recursos == ""
                     && $scope.Involucrados[($scope.Involucrados.length - 1)].Estrategia == "") {

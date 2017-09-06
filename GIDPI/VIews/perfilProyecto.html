@@ -93,7 +93,7 @@
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 6vh;"><p class="textos">NOMBRE DEL PROYECTO</p></div>
 
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 6vh;">
-                  <input class="form-control" type="text" ng-model="PerfilProyecto.NombreProyecto" />
+                  <input class="form-control" maxlength="100" type="text" ng-model="PerfilProyecto.NombreProyecto" />
               </div>
 
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 3vh;"></div>
@@ -124,7 +124,7 @@
               </div>
 
               <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
-                  <center><textarea class="form-control" style="margin-left:3%;" ng-model="PerfilProyecto.Justificacion" rows="18"></textarea></center>
+                  <center><textarea class="form-control" maxlength="7999" style="margin-left:3%;" ng-model="PerfilProyecto.Justificacion" rows="18"></textarea></center>
               </div>
 
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:6vh;">
@@ -148,7 +148,7 @@
 
 
             <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height: 40vh;">
-                <textarea class="form-control" rows="12"  ng-model="PerfilProyecto2.Planteamiento"></textarea>
+                <textarea class="form-control" rows="12" maxlength="5000" ng-model="PerfilProyecto2.Planteamiento"></textarea>
 
             </div>
 
@@ -157,7 +157,7 @@
 
 
                 <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height: 30vh;">
-                    <textarea class="form-control" rows="9"  ng-model="PerfilProyecto2.Impacto"></textarea>
+                    <textarea class="form-control" rows="9" maxlength="5000"  ng-model="PerfilProyecto2.Impacto"></textarea>
                 </div>
             </div>
 
@@ -230,7 +230,7 @@
                             </th>
 
                             <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <textarea class="form-control" ng-model="PerfilProyecto2.Poblacion"></textarea>
+                                <textarea class="form-control" maxlength="150" ng-model="PerfilProyecto2.Poblacion"></textarea>
                             </th>
                         </tr>
 
@@ -240,7 +240,7 @@
                             </th>
 
                             <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <textarea class="form-control" ng-model="PerfilProyecto2.Variables"></textarea>
+                                <textarea class="form-control" maxlength="100" ng-model="PerfilProyecto2.Variables"></textarea>
                             </th>
                         </tr>
 
@@ -250,7 +250,7 @@
                             </th>
 
                             <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <textarea class="form-control" ng-model="PerfilProyecto2.Tecnicas"></textarea>
+                                <textarea class="form-control" maxlength="100" ng-model="PerfilProyecto2.Tecnicas"></textarea>
                             </th>
                         </tr>
 
@@ -259,7 +259,7 @@
 
 
 
-                <textarea class="form-control" rows="10" style="margin-bottom:2%;" ng-model="PerfilProyecto2.Metodologia"></textarea>
+                <textarea class="form-control" maxlength="5000" rows="10" style="margin-bottom:2%;" ng-model="PerfilProyecto2.Metodologia"></textarea>
 
 
                 <button class="btn btn-success" style="margin-top:2%; margin-bottom:3%; float:right;" ng-click="guardarPerfil2()">guardar</button>

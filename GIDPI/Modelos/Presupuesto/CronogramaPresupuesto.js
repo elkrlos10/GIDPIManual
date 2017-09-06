@@ -58,6 +58,19 @@
             }
 
 
+            $scope.EliminarCamposCrononograma = function () {
+            
+                if ($scope.Cronograma[($scope.Cronograma.length - 1)].Actividad == "" && $scope.Cronograma[($scope.Cronograma.length - 1)].FechaInicio == ""
+                    && $scope.Cronograma[($scope.Cronograma.length - 1)].FechaFin =="") {
+
+                    if ($scope.Cronograma.length > 1) {
+                        $scope.Cronograma.splice(($scope.Cronograma.length - 1), 1);
+                    }
+                }
+
+            };
+
+
             var update = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
                         window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
@@ -95,6 +108,21 @@
                 })
 
             }
+
+
+
+            $scope.EliminarCamposPresupuesto = function () {
+
+                if ($scope.Presupuesto[($scope.Presupuesto.length - 1)].Item == "" && $scope.Presupuesto[($scope.Presupuesto.length - 1)].Concepto == ""
+                    && $scope.Presupuesto[($scope.Presupuesto.length - 1)].Descripcion == "" && $scope.Presupuesto[($scope.Presupuesto.length - 1)].Unidad == ""
+                     && $scope.Presupuesto[($scope.Presupuesto.length - 1)].Cantidad == "" && $scope.Presupuesto[($scope.Presupuesto.length - 1)].ValorUnitario == "" && $scope.Presupuesto[($scope.Presupuesto.length - 1)].ValorTotal == "") {
+
+                    if ($scope.Presupuesto.length > 1) {
+                        $scope.Presupuesto.splice(($scope.Presupuesto.length - 1), 1);
+                    }
+                }
+
+            };
             $scope.GuardarCronograma = function () {
 
                 console.log($scope.Cronograma)

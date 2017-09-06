@@ -82,6 +82,18 @@
                 }
 
             };
+            $scope.MarcoLogico = function () {
+                var color = $("#iconoOcho").attr('value');
+                //console.log(cosa);
+                if (color == "1") {
+                    alertify.alert("<b>Debes culminar el paso anterior</b>", function () {
+
+                    });
+                } else {
+                    $location.url("/MarcoL");
+                }
+
+            };
 
             //------------------------------------------------------------//
 
