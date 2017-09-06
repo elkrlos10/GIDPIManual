@@ -70,6 +70,18 @@
 
             };
             
+            $scope.Cronograma = function () {
+                var color = $("#iconoSiete").attr('value');
+                //console.log(cosa);
+                if (color == "1") {
+                    alertify.alert("<b>Debes culminar el paso anterior</b>", function () {
+
+                    });
+                } else {
+                    $location.url("/Cronograma");
+                }
+
+            };
 
             //------------------------------------------------------------//
 
@@ -257,7 +269,7 @@
                     $('#flechaCuatro').fadeIn("slow");
                 }
 
-                if (Etapa >= 4) {
+                if (Etapa >= 5) {
 
                     $("#circuloCinco").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
                     $("#iconoCinco").attr("src", "images/perfilAct.png");
@@ -274,14 +286,14 @@
 
                 if (Etapa >= 7) {
                     $("#circuloSiete").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
-                    $("#circuloSiete").attr("src", "images/calendarioAct.png");
-                    $("#circuloSiete").attr('value', 2);
+                    $("#iconoSiete").attr("src", "images/calendarioAct.png");
+                    $("#iconoSiete").attr('value', 2);
                     $('#flechaSiete').fadeIn("slow");
                 }
-                if (Etapa >= 8) {
+                if (Etapa >= 9) {
                     $("#circuloOcho").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
-                    $("#circuloOcho").attr("src", "images/matrizAct.png");
-                    $("#circuloOcho").attr('value', 2);
+                    $("#iconoOcho").attr("src", "images/matrizAct.png");
+                    $("#iconoOcho").attr('value', 2);
                     $('#flechaOcho').fadeIn("slow");
                 }
             }
