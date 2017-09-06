@@ -174,6 +174,7 @@
 
                     $scope.Presupuesto1.push({
                         IdProyecto: $rootScope.proyecto.datos.id,
+                        IdPresupuesto:value.IdPresupuesto,
                         Item: value.Item,
                         Concepto: value.Concepto,
                         Descripcion: value.Descripcion,
@@ -203,7 +204,7 @@
                         CronogramaPresupuestoService.ConsultarPresupuesto($rootScope.proyecto.datos.id, function (response) {
                             if (response.success) {
                                 $scope.total = 0;
-                                $scope.Presupuesto = [];
+                                //$scope.Presupuesto = [];
 
                                 $scope.Presupuesto = response.Presupuesto;
                                 $.each($scope.Presupuesto, function (index, value) {
