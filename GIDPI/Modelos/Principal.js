@@ -65,7 +65,7 @@ ManualApp.config(function ($routeProvider) {
 
         .when('/MarcoL', {
             templateUrl: 'Views/MarcoLogico.html',
-            controller: 'MenuController'
+            controller: 'MarcoLogicoController'
         })
 
 

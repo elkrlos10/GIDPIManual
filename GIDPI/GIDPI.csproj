@@ -198,6 +198,8 @@
     <Content Include="Modelos\Involucrados\InvolucradosService.js" />
     <Content Include="Modelos\Login\Login.js" />
     <Content Include="Modelos\Login\LoginService.js" />
+    <Content Include="Modelos\MarcoLogico\MarcoLogico.js" />
+    <Content Include="Modelos\MarcoLogico\MarcoLogicoService.js" />
     <Content Include="Modelos\Matriz\Matriz.js" />
     <Content Include="Modelos\Matriz\MatrizService.js" />
     <Content Include="Modelos\Menu\Menu.js" />
@@ -268,6 +270,7 @@
     <Compile Include="Controllers\DetalleMatrizController.cs" />
     <Compile Include="Controllers\InvolucradosController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MarcoLogicoController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\PerfilProyectoController.cs" />
     <Compile Include="Global.asax.cs">

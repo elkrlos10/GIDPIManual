@@ -38,6 +38,7 @@
         public virtual DbSet<Perfil2> Perfil2 { get; set; }
         public virtual DbSet<Cronograma> Cronograma { get; set; }
         public virtual DbSet<Presupuesto> Presupuesto { get; set; }
+        public virtual DbSet<MarcoLogico> MarcoLogico { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
         //    modelBuilder.Entity<ArbolObjetivos>()

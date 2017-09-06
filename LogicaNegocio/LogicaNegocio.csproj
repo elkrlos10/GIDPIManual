@@ -54,6 +54,7 @@
     <Compile Include="LogicaNegocio\CronogramaPresupuestoBL.cs" />
     <Compile Include="LogicaNegocio\DatosProyectoBl.cs" />
     <Compile Include="LogicaNegocio\InvolucradosBL.cs" />
+    <Compile Include="LogicaNegocio\MarcoLogicoBl.cs" />
     <Compile Include="LogicaNegocio\MatrizBl.cs" />
     <Compile Include="LogicaNegocio\MenuBl.cs" />
     <Compile Include="LogicaNegocio\PerfilProyectoBL.cs" />

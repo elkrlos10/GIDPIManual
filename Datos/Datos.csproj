@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="DTO\ArbolObjetivoDTO.cs" />
     <Compile Include="DTO\ArbolProblemaDTO.cs" />
+    <Compile Include="DTO\MarcoLogicoDTO.cs" />
     <Compile Include="DTO\MatrizDTO.cs" />
     <Compile Include="DTO\ObjetivosDTO.cs" />
     <Compile Include="DTO\PersonaJuridicaDTO.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Modelos\FinesDirectos.cs" />
     <Compile Include="Modelos\FinesIndirectos.cs" />
     <Compile Include="Modelos\Involucrados.cs" />
+    <Compile Include="Modelos\MarcoLogico.cs" />
     <Compile Include="Modelos\MatrizVester.cs" />
     <Compile Include="Modelos\MedioDirecto.cs" />
     <Compile Include="Modelos\MediosIndirectos.cs" />
