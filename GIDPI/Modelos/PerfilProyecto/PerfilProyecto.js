@@ -399,7 +399,7 @@
 
             //FUNCION PARA EDITAR LA PARTE 2 DEL PERFIL
             $scope.editarPerfilProyectoParte2 = function () {
-
+                $scope.PerfilProyecto.idPerfilProyecto = $rootScope.proyecto.datos.id;
                 $scope.PerfilProyecto.NombreArea = $("#NombreArea option:selected").text();
                 $scope.PerfilProyecto.NumeroProyecto = $("#NumeroArea").val();
 
