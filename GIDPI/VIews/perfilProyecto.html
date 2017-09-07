@@ -129,7 +129,7 @@
 
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:6vh;">
 
-                  <button class="btn btn-success" style="margin-top:37%;   margin-bottom:3%;" id="btnGuardarPerfil" ng-click="GuardarProyecto()">Guardar</button>
+                  <button class="btn btn-success" style="margin-top:3%;  float:right; margin-bottom:3%;" id="btnGuardarPerfil" ng-click="GuardarProyecto()">Guardar</button>
                   <button class="btn btn-success" style="margin-top:3%;  margin-bottom:3%; float:right;" id="btnEditarPerfil" ng-click="editarPerfilProyecto()">Editar</button>
               </div>
 
@@ -262,8 +262,8 @@
                 <textarea class="form-control" maxlength="5000" rows="10" style="margin-bottom:2%;" ng-model="PerfilProyecto2.Metodologia"></textarea>
 
 
-                <button class="btn btn-success" style="margin-top:2%; margin-bottom:3%; float:right;" ng-click="guardarPerfil2()">guardar</button>
-                <button class="btn btn-success" style="margin-top:2%; margin-bottom:3%; float:right; margin-right:2%;" ng-click="editarPerfilProyectoParte2()">Editar</button>
+                <button class="btn btn-success" style="margin-top:2%; margin-bottom:3%; float:right;" id="guardarPerfil2" ng-click="guardarPerfil2()">guardar</button>
+                <button class="btn btn-success" style="margin-top:2%; margin-bottom:3%; float:right;  margin-right:2%;" id="editarPerfil2" ng-click="editarPerfilProyectoParte2()">Editar</button>
                 
             </div>
            
@@ -277,12 +277,12 @@
 
 
 
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="position:relative; height: 12vh;   ">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="position:relative; height: 12vh; margin-top:-1%  ">
 
            
             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 12vh;">
                 <center>
-                    <button ng-click="MostrarNombre()" class="btn btn-success" title="Nombre del proyecto" style="border-radius:40%; margin-top:23%;">
+                    <button ng-click="MostrarNombre()" class="btn btn-success" title="Nombre del proyecto" style="border-radius:40%; margin-top:15%;">
                         <i class="fa fa-id-badge" style="font-size:55px;"></i>
                     </button>
                 </center>
@@ -291,9 +291,9 @@
             <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="height: 12vh;"><hr class="lineaTab" style="height:2px; background:#238276; margin-top:5%;" /></div>
 
 
-          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 12vh;">
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 12vh; ">
                 <center>
-                    <button ng-click="MostrarPerilProyecto()" class="btn btn-success" title="Perfil del proyecto" style="border-radius:40%; margin-top:23%;">
+                    <button ng-click="MostrarPerilProyecto()" class="btn btn-success" title="Perfil del proyecto" style="border-radius:40%; margin-top:15%;">
                         <i class="fa fa-user" style="font-size:55px;"></i>
                     </button>
               </center>
