@@ -134,6 +134,7 @@
     <Content Include="Css\jQuery-svg-popup.css" />
     <Content Include="Css\jquery-ui.min.css" />
     <Content Include="Css\jQuery.AudioPlayer.css" />
+    <Content Include="Css\notify.css" />
     <Content Include="Css\style.css" />
     <Content Include="Fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
@@ -218,6 +219,7 @@
     <Content Include="scripts\angular-material.min.js" />
     <Content Include="scripts\Angular-Route.js" />
     <Content Include="scripts\angular.min.js" />
+    <Content Include="scripts\AnimacionTips.js" />
     <Content Include="scripts\bootstrap-datepicker.es.js" />
     <Content Include="scripts\bootstrap-datepicker.js" />
     <Content Include="scripts\bootstrap-datetimepicker.js" />
@@ -242,6 +244,7 @@
     <Content Include="scripts\jquery.min.js" />
     <Content Include="scripts\main.js" />
     <Content Include="scripts\moment.js" />
+    <Content Include="scripts\notify.js" />
     <Content Include="scripts\prefixfree.min.js" />
     <Content Include="VIews\ArbolView.html" />
     <Content Include="VIews\cronogramaPresupuesto.html" />

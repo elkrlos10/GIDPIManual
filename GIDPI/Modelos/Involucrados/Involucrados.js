@@ -60,9 +60,6 @@
                             if (response.success) {
                                 $scope.Involucrados = response.involucrados;
                                
-                                //$("#guardarInvo").hide();
-                                //$("#botonCampos").hide();
-                                //$("#botonQuitar").hide();
 
                             }
 
@@ -70,5 +67,4 @@
                     }
                 }
             })
-
         }]);

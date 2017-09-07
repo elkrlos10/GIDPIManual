@@ -140,7 +140,7 @@
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:5vh;"></div>
             <div id="ayudaUno" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:5vh;">
-                <center><span><i class="fa fa-info-circle" style="font-size:40px; color:#238276; cursor:pointer;"></i></span></center>
+                <center><span><i class="fa fa-info-circle" style="font-size:40px; color:#238276; cursor:pointer;" onclick="usage()"></i></span></center>
             </div>
 
         </div>
@@ -149,12 +149,3 @@
 
 </div>
 
-<script>
-    $('#ayudaUno').click(function () {
-        $('#reveal-wrap #hidden-div').slideToggle({
-            direction: "down"
-        }, 300);
-        $(this).toggleClass('clientsClose');
-    });
-
-</script>
