@@ -32,7 +32,7 @@ namespace GIDPI.Controllers
         }
 
         [HttpPost]
-        public IHttpActionResult GuardarMarco(MarcoLogico oMarco)
+        public IHttpActionResult GuardarMarco( MarcoLogico oMarco)
         {
             try
             {

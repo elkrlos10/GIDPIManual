@@ -3,7 +3,7 @@
         function ($scope, $rootScope, $location, CronogramaPresupuestoService, $cookies, $cookieStore, MenuService, $routeParams, $sce) {
 
             $("#containerPresupuesto").hide();
-
+            $("#btnPresupuesto").attr("disabled", "disabled");
 
 
             $scope.Cronograma = [{
@@ -138,9 +138,11 @@
             CronogramaPresupuestoService.AbrirProyecto($rootScope.proyecto.datos.id, function (response) {
                 if (response.success) {
                     $rootScope.proyecto.datos.Etapa = response.proyecto.Etapa;
-
+                   
                     if ($rootScope.proyecto.datos.Etapa >= 8) {
+                        $("#btnPresupuesto").removeAttr("disabled", "disabled");
                         CronogramaPresupuestoService.ConsultarCronograma($rootScope.proyecto.datos.id, function (response) {
+
                             if (response.success) {
                                 $scope.Cronograma = response.Cronograma;
                             
@@ -190,7 +192,7 @@
                 CronogramaPresupuestoService.GuardarPresupuesto($scope.Presupuesto1, function (response) {
                     if (response.success) {
                         alertify.alert("<b>Registro Exitoso</b>");
-
+                        $location.url("/Menu");
 
                     }
                 })
@@ -201,6 +203,7 @@
                     $rootScope.proyecto.datos.Etapa = response.proyecto.Etapa;
 
                     if ($rootScope.proyecto.datos.Etapa >= 9) {
+                     
                         CronogramaPresupuestoService.ConsultarPresupuesto($rootScope.proyecto.datos.id, function (response) {
                             if (response.success) {
                                 $scope.total = 0;

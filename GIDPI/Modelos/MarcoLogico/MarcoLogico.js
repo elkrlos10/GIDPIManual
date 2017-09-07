@@ -1,7 +1,7 @@
 ﻿ManualApp.controller('MarcoLogicoController',
     ['$scope', '$rootScope', '$location', 'MarcoLogicoService', '$cookies', '$cookieStore', '$routeParams', '$sce',
         function ($scope, $rootScope, $location, MarcoLogicoService, $cookies, $cookieStore, $routeParams, $sce) {
-
+            $("#btnEditarMarco").hide();
             $scope.Marco = {
                 IdMarco:"", 
                 IdProyecto: "",
@@ -28,11 +28,17 @@
             
 
             $scope.guardarMarco = function () {
+                console.log($scope.Marco);
                 $scope.Marco.IdProyecto = $rootScope.proyecto.datos.id;
-                if ($scope.Marco.Fin1==""|| $scope.Marco.Fin2==null || $scope.Marco.Fin3 == null  || $scope.Marco.Fin4 == null 
+                if ($scope.Marco.Fin1==null|| $scope.Marco.Fin2==null || $scope.Marco.Fin3 == null  || $scope.Marco.Fin4 == null 
                    || $scope.Marco.Proposito1 == null || $scope.Marco.Proposito2 == null || $scope.Marco.Proposito3 == null || $scope.Marco.Proposito4 == null
                     || $scope.Marco.Resultado1 == null || $scope.Marco.Resultado2 == null || $scope.Marco.Resultado3 == null || $scope.Marco.Resultado4 == null
                      || $scope.Marco.Actividad1 == null || $scope.Marco.Actividad2 == null || $scope.Marco.Actividad2 == null || $scope.Marco.Actividad4 == null
+                    || $scope.Marco.Fin1 == "" || $scope.Marco.Fin2 == "" || $scope.Marco.Fin3 == "" || $scope.Marco.Fin4 == ""
+                   || $scope.Marco.Proposito1 == "" || $scope.Marco.Proposito2 == "" || $scope.Marco.Proposito3 == "" || $scope.Marco.Proposito4 == ""
+                    || $scope.Marco.Resultado1 == "" || $scope.Marco.Resultado2 == "" || $scope.Marco.Resultado3 == "" || $scope.Marco.Resultado4 == ""
+                     || $scope.Marco.Actividad1 == "" || $scope.Marco.Actividad2 == "" || $scope.Marco.Actividad2 == "" || $scope.Marco.Actividad4 == ""
+
                     ) {
                     alertify.alert("<b>Faltan campos por completar</b>");
                     return false;
@@ -41,10 +47,12 @@
 
                         if (response.success) {
                             alertify.alert("<b>Registro Exitoso</b>");
+                            $location.url("/Menu");
                         }
                     })
+                   
                 }
-                $location.url("/Menu");
+               
             }
 
 
@@ -63,6 +71,8 @@
                         MarcoLogicoService.ConsultarMarco($rootScope.proyecto.datos.id, function (response) {
 
                             if (response.success) {
+                                $("#btnEditarMarco").show();
+                                $("#btnGuardarMarco").hide();
                                 $scope.Marco = response.marco;
                             }
                         })

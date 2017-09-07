@@ -41,7 +41,8 @@
 
          
             //FUNCIÓN PARA GUARDAR INVOLUCRADOS
-            $scope.GuardarInvolucrados = function() {
+            $scope.GuardarInvolucrados = function () {
+               
                 InvolucradosService.GuardarInvolucrados($scope.Involucrados, function (response) {
                     if (response.success) {
                         alertify.alert("<b>Registro Exitoso</b>");

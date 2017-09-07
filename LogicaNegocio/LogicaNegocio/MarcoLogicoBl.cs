@@ -84,17 +84,48 @@ namespace LogicaNegocio.LogicaNegocio
 
         }
 
+
         public void GuardarMarco(MarcoLogico oMarco)
         {
-            entity.MarcoLogico.Add(oMarco);
-            entity.SaveChanges();
 
-            var Proyecto = (from i in entity.Proyecto
-                            where i.IdProyecto == oMarco.IdProyecto
-                            select i).FirstOrDefault();
+            if (oMarco.IdMarco == 0)
+            {
+                entity.MarcoLogico.Add(oMarco);
+                entity.SaveChanges();
+                var Proyecto = (from i in entity.Proyecto
+                                where i.IdProyecto == oMarco.IdProyecto
+                                select i).FirstOrDefault();
 
-            Proyecto.Etapa = 10;
-            entity.SaveChanges();
+                Proyecto.Etapa = 10;
+                entity.SaveChanges();
+            }
+            else
+            {
+                var marco = (from i in entity.MarcoLogico
+                             where i.IdMarco == oMarco.IdMarco
+                             select i).FirstOrDefault();
+                marco.Fin1 = oMarco.Fin1;
+                marco.Fin2 = oMarco.Fin2;
+                marco.Fin3 = oMarco.Fin3;
+                marco.Fin4 = oMarco.Fin4;
+                marco.Proposito1 = oMarco.Proposito1;
+                marco.Proposito2 = oMarco.Proposito2;
+                marco.Proposito3 = oMarco.Proposito3;
+                marco.Proposito4 = oMarco.Proposito4;
+                marco.Resultado1 = oMarco.Resultado1;
+                marco.Resultado2 = oMarco.Resultado2;
+                marco.Resultado3 = oMarco.Resultado3;
+                marco.Resultado4 = oMarco.Resultado4;
+                marco.Actividad1 = oMarco.Actividad1;
+                marco.Actividad2 = oMarco.Actividad2;
+                marco.Actividad3 = oMarco.Actividad3;
+                marco.Actividad4 = oMarco.Actividad4;
+                entity.SaveChanges();
+
+
+
+               
+            }
         }
 
 

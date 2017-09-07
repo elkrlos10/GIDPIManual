@@ -5,6 +5,8 @@
             $("#containerNombre").show
             $("#containerPerfilProyect").hide();
             $("#btnEditarPerfil").hide();
+            $("#editarPerfil2").hide();
+
 
             $scope.PerfilProyecto = {
                 IdProyecto: $rootScope.proyecto.datos.id,
@@ -43,7 +45,8 @@
                 PerfilProyectoService.ConsultarProyecto($rootScope.proyecto.datos.id, function (response) {
                     if (response.success) {
                         if (response.Proyecto.Etapa >= 7) {
-
+                            $("#guardarPerfil2").hide();
+                            $("#editarPerfil2").show();
                             PerfilProyectoService.ConsultarPerfil2($rootScope.proyecto.datos.id, function (response) {
                                 if (response.success) {
                                     $scope.PerfilProyecto2 = response.perfilProyecto2;
