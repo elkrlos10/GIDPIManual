@@ -124,15 +124,42 @@
                 </table>
             </center>
 
-            <div>
-                <button class="btn btn-success" id="botonCampos"  ng-click="AgregarCampos1()"><i class="fa fa-plus"></i>  Agregar</button>
-                <button class="btn btn-danger" id="botonQuitar" ng-click="EliminarCampos()"><i class="fa fa-times"></i>  Eliminar</button>
-            </div>
-           
-            <div>
-                <button id="guardarInvo" style="margin-left:90%; margin-top:-5%;" class="btn btn-success" ng-click="GuardarInvolucrados()">Guardar</button>
-            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:6vh;">
 
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:6vh;">
+
+                    <center>
+                        <div id="botonCampos" ng-click="AgregarCampos1()" style="margin-left:3%;">
+                            <i id="iconEditar" class="fa fa-plus-square-o" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
+                        </div>
+                        <p style="font-size:10px;">Agregar</p>
+                    </center>
+
+                </div>
+
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:6vh;">
+
+                    <center>
+                        <div id="botonQuitar" ng-click="EliminarCampos()" style="margin-left:3%;">
+                            <i id="iconEditar" class="fa fa-trash-o" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
+                        </div>
+                        <p style="font-size:10px;">Eliminar</p>
+                    </center>
+
+                </div>
+
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="height:6vh;"></div>
+
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:6vh;">
+
+                    <div id="guardarInvo" style="margin-left:92%; margin-top:-5%;" ng-click="GuardarInvolucrados()">
+                        <i id="iconGuardar" class="fa fa-floppy-o" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
+                        <p style="font-size:10px; text-align:center; margin-left:-60%;">Guardar</p>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
 
 

@@ -263,7 +263,8 @@
         </ul>
 
         <div id="guardar" style="position:absolute; z-index:9;" title="Guardar" ng-click="guardar()">
-            <i class="fa fa-floppy-o" style="cursor:pointer; font-size:50px; color:#238276;" aria-hidden="true"></i>
+            <i id="iconGuardar" class="fa fa-floppy-o" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
+            <p style="font-size:10px; margin-left:-15%; text-align:center">Guardar</p>
         </div>
 
 
@@ -440,8 +441,18 @@
 
             </tbody>
         </table>
-        <button id="guardarObjetivos" style="margin-left:95%; margin-bottom:12px;" class="btn btn-success" ng-click="guardarObjetivos()">Guardar</button>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 colxs-12" style="height:6vh;">
+
+            <div id="Btnguardar" style="position:absolute; z-index:9; margin-left:95%;" title="Guardar" ng-click="guardarObjetivos()">
+                <i id="iconGuardar" class="fa fa-floppy-o" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
+                <p style="font-size:10px; margin-left:-15%; text-align:center">Guardar</p>
+            </div>
+
+        </div>
+
     </div>
+
  
     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 55vh; background: #8196be">ICONO INFORMACIÓN</div>
     

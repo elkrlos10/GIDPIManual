@@ -129,8 +129,30 @@
 
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:6vh;">
 
-                  <button class="btn btn-success" style="margin-top:3%;  float:right; margin-bottom:3%;" id="btnGuardarPerfil" ng-click="GuardarProyecto()">Guardar</button>
-                  <button class="btn btn-success" style="margin-top:3%;  margin-bottom:3%; float:right;" id="btnEditarPerfil" ng-click="editarPerfilProyecto()">Editar</button>
+                  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="height:6vh;"></div>
+
+                  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:6vh;">
+
+
+                  </div>
+
+                  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:6vh;">
+
+                      <div id="btnGuardarPerfil" ng-click="GuardarProyecto()">
+
+                          <i id="iconGuardar" class="fa fa-floppy-o" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
+
+                          <p style="font-size:10px; text-align:center; margin-left:-51%;">Guardar</p>
+                      </div>
+
+
+                      <div id="BtnModificar" style="margin-top:5%;  margin-bottom:3%; float:left;" id="btnEditarPerfil" ng-click="editarPerfilProyecto()">
+                          <i id="iconEditar" class="fa fa-pencil-square-o" title="Editar" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
+                          <p style="font-size:10px; text-align:center; margin-left:-25%;">Editar</p>
+                      </div>
+
+                  </div>
+
               </div>
 
           </div>
@@ -147,7 +169,7 @@
             <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height: 6vh;"><p class="textos">PLANTEAMIENTO DEL PROBLEMA</p></div>
 
 
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height: 40vh;">
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height: 30vh;">
                 <textarea class="form-control" rows="12" maxlength="5000" ng-model="PerfilProyecto2.Planteamiento"></textarea>
 
             </div>
@@ -156,7 +178,7 @@
                 <div class="col-lg-12 col-md-11 col-sm-11 col-xs-11" style="height: 6vh;"><p class="textos">IMPACTO</p></div>
 
 
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height: 30vh;">
+                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height: 25vh;">
                     <textarea class="form-control" rows="9" maxlength="5000"  ng-model="PerfilProyecto2.Impacto"></textarea>
                 </div>
             </div>
@@ -262,9 +284,43 @@
                 <textarea class="form-control" maxlength="5000" rows="10" style="margin-bottom:2%;" ng-model="PerfilProyecto2.Metodologia"></textarea>
 
 
-                <button class="btn btn-success" style="margin-top:2%; margin-bottom:3%; float:right;" id="guardarPerfil2" ng-click="guardarPerfil2()">guardar</button>
-                <button class="btn btn-success" style="margin-top:2%; margin-bottom:3%; float:right;  margin-right:2%;" id="editarPerfil2" ng-click="editarPerfilProyectoParte2()">Editar</button>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:6vh;">
+
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="height:6vh;"></div>
+
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:6vh;">
+
+
+                    </div>
+
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:6vh;">
+
+                        <div id="guardarPerfil2" ng-click="guardarPerfil2()">
+
+                            <i id="iconGuardar" class="fa fa-floppy-o" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
+
+                            <p style="font-size:10px; text-align:center; margin-left:-51%;">Guardar</p>
+                        </div>
+
+
+                        <div id="BtnModificar" style="margin-top:5%;  margin-bottom:3%; float:left;" id="editarPerfil2" ng-click="editarPerfilProyectoParte2()">
+                            <i id="iconEditar" class="fa fa-pencil-square-o" title="Editar" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
+                            <p style="font-size:10px; text-align:center; margin-left:-25%;">Editar</p>
+                        </div>
+
+                    </div>
+
+                </div>
                 
+
+                <!--<div style="margin-top:2%; margin-bottom:6%; float:right;" id="guardarPerfil2" ng-click="guardarPerfil2()">
+                    <i id="iconGuardar" class="fa fa-floppy-o" title="Guardar" style="cursor:pointer; font-size:50px; color:#238276;" aria-hidden="true"></i>
+                </div>
+
+                <div id="BtnModificar" style="margin-top:2%; margin-bottom:3%; float:right;  margin-right:2%;" id="editarPerfil2" ng-click="editarPerfilProyectoParte2()">
+                    <i id="iconEditar" class="fa fa-pencil-square-o" title="Editar" style="cursor:pointer; font-size:50px; color:#238276;" aria-hidden="true"></i>
+                </div>-->
+
             </div>
            
         </div>

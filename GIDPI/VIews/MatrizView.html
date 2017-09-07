@@ -72,7 +72,7 @@
     </label>
     <menu style="margin-top:-6%;">
         <li><a class="fa fa-sign-out menuAyuda" style="font-size:22px;" title="Cerrar sesión"></a></li>
-        <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" ng-click="Regresar()" style="font-size:22px;"></a></li>
         <li><a class="fa fa-file button demo-btn demo5 menuAyuda" title="Leer ayuda" data-svg-popup="demo5" style="font-size:22px;"></a></li>
         <li><a class="fa fa-video-camera button demo-btn demo6 menuAyuda" title="Ver ayuda" data-svg-popup="demo6" style="font-size:22px;"></a></li>
         <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="audio" style="font-size:22px;"></a></li>
@@ -110,8 +110,12 @@
             </div>
 
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="height:12vh;">
-                <button id="botonGuardar" class="btn btn-success" ng-click="Guardar()">Guardar</button>
+                <div id="BtnGuardar" data-dismiss="modal" ng-click="Guardar()">
+                    <i id="iconGuardar" class="fa fa-floppy-o" title="Guardar" style="cursor:pointer; font-size:30px; color:#238276; margin-top:8%; margin-left:2%;" aria-hidden="true"></i>
+                </div>
+                <p style="font-size:10px;">Guardar</p>
             </div>
+
 
         </div>
 
@@ -132,8 +136,10 @@
 
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="height:10vh;">
 
-                <button id="agregar_btn" class="btn btn-success" ng-click="Agregar(Cantidad)">Agregar</button>
-
+                <div id="agregar_btn" ng-click="Agregar(Cantidad)" style="margin-left:3%;">
+                    <i id="iconEditar" class="fa fa-plus-square-o" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
+                </div>
+                <p style="font-size:10px;">Agregar</p>
             </div>
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:auto;">
@@ -150,12 +156,6 @@
                                     <!-- <span ng-if="estiba.Alto>2" class="help-block">EL alto máximo estiba es 2 Mt </span>-->
                                 </div>
                             </div>
-
-                            <div>
-                                <button class="bnt btn-danger btn-circle" ng-click="EliminarCampos($index)">
-                                    <i class="material-icons">&times;</i>
-                                </button>
-                            </div>
                         </li>
                     </ul>
                 </form>
@@ -165,9 +165,10 @@
 
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="height:10vh;"></div>
 
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="height:10vh;">
-                <button id="compararBoton" class="btn btn-success" ng-click="mostrar()">Comparar</button>
+            <div id="agregar_btn" ng-click="mostrar()" style="margin-left:3%;">
+                <i id="iconEditar" class="fa fa-exchange" style="cursor:pointer; font-size:30px; color:#238276; margin-left:1%;" aria-hidden="true"></i>
             </div>
+            <p style="font-size:10px;">Comparar</p>
 
         </div>
 
@@ -271,7 +272,6 @@
         </table>
 
         <img id="personajeDos" src="../images/mujer.png" />
-        <button id="btn_regresar" class="btn btn-success" ng-click="Regresar()" >Atrás</button>
     </div>
 
 
@@ -299,8 +299,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button"  class="btn btn-default btn-danger  btn-default" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="OmitirMatriz()">Aceptar</button>
+                <button type="button"  class="btn btn-success" data-dismiss="modal">Aceptar</button>
+                <button type="button" class="btn btn-default btn-danger  btn-default" data-dismiss="modal" ng-click="OmitirMatriz()">Cancelar</button>
             </div>
         </div>
     </div>

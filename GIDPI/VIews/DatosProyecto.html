@@ -89,7 +89,7 @@
         </label>
         <menu style="margin-top:-6%;">
             <li><a class="fa fa-sign-out menuAyuda" style="font-size:22px;" title="Cerrar sesión"></a></li>
-            <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" style="font-size:22px;"></a></li>
+            <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" ng-click="atras()" style="font-size:22px;"></a></li>
             <li><a class="fa fa-file button demo-btn demo5 menuAyuda" title="Leer ayuda" data-svg-popup="demo5" style="font-size:22px;"></a></li>
             <li><a class="fa fa-video-camera button demo-btn demo6 menuAyuda" title="Ver ayuda" data-svg-popup="demo6" style="font-size:22px;"></a></li>
             <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="audio" style="font-size:22px;"></a></li>
@@ -109,7 +109,7 @@
                     <div ng-class="{'has-error':sede.codigo.$invalid && sede.codigo.$touched, 'has-error2':sede.codigo.$error.maxlength}">
                         <label>TIPO DE PROYECTO</label>
                         <select class="form-control" id="TipoSede" ng-required="true" ng-model="DatosProyecto.TipoProyecto" style="float:right;">
-                            <option value="INOVACIÓN">INOVACIÓN</option>
+                            <option value="INNOVACIÓN">INNOVACIÓN</option>
                             <option value="SERVICIOS TECNOLÓGICOS">SERVICIOS TECNOLÓGICOS</option>
                             <option value="INVESTIGACIÓN">INVESTIGACIÓN</option>
                         </select>
@@ -166,10 +166,24 @@
 
             <div class="modal-footer">
                 <br />
-                <button class="btn btn-success btn-default" id="BtnAtras" data-dismiss="modal" ng-click="atras()">Atrás</button>
-                <button class="btn btn-success btn-default" id="BtnGuardar" data-dismiss="modal" ng-click="GuardarDatosProyecto()">Aceptar</button>
-                <button class="btn btn-success btn-default" id="BtnModificar" data-dismiss="modal" ng-click="ModificarProyecto()">Editar</button>
+                <!--<button class="btn btn-success btn-default" id="BtnAtras" data-dismiss="modal" ng-click="atras()">Atrás</button>-->
+
+
+                <div id="BtnGuardar" data-dismiss="modal" ng-click="GuardarDatosProyecto()">
+                    <i id="iconGuardar" class="fa fa-floppy-o" title="Guardar" style="cursor:pointer; font-size:30px; color:#238276; margin-top:8%;" aria-hidden="true"></i>
+                    <p style="font-size:10px; margin-right:-1%;">Guardar</p>
+                </div>
+                
+
+
+
+                <div id="BtnModificar" data-dismiss="modal" ng-click="ModificarProyecto()">
+                    <i id="iconEditar" class="fa fa-pencil-square-o" title="Editar" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
+                    <p style="font-size:10px; margin-right:1%;">Editar</p>
+                </div>
             </div>
+
+
         </div>
     </div>
 </div>
