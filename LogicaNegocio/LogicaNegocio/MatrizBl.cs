@@ -19,6 +19,7 @@ namespace LogicaNegocio.LogicaNegocio
             oMatriz.IdProyecto = oMatrizDetalle.IdProyecto;
             oMatriz.ProblemaGeneral = oMatrizDetalle.ProblemaGeneral;
             entity.MatrizVester.Add(oMatriz);
+            entity.SaveChanges();
 
             var oproyecto = (from i in entity.Proyecto
                             where i.IdProyecto == oMatrizDetalle.IdProyecto
