@@ -129,6 +129,7 @@
                 CronogramaPresupuestoService.GuardarCronograma($scope.Cronograma, function (response) {
                     if (response.success) {
                         alertify.alert("<b>Registro Exitoso</b>");
+                        $("#btnPresupuesto").removeAttr("disabled", "disabled");
 
 
                     }

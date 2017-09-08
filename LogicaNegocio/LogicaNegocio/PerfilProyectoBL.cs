@@ -44,10 +44,8 @@ namespace LogicaNegocio.LogicaNegocio
             obj = perfilProyecto;
             entity.PerfilProyecto.Add(obj);
             entity.SaveChanges();
-            var proyecto = (from i in entity.Proyecto
-                            where i.IdProyecto == perfilProyecto.IdProyecto
-                            select i).FirstOrDefault();
-            proyecto.Etapa = 7;
+            
+            
             entity.SaveChanges();
         }
 
@@ -81,6 +79,10 @@ namespace LogicaNegocio.LogicaNegocio
             Perfil2 perfil = new Perfil2();
             perfil = Perfil2;
             entity.Perfil2.Add(perfil);
+            var proyecto = (from i in entity.Proyecto
+                            where i.IdProyecto == Perfil2.idProyecto
+                            select i).FirstOrDefault();
+            proyecto.Etapa = 7;
             entity.SaveChanges();
 
         }
