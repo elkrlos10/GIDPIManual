@@ -89,6 +89,9 @@
         </div>
 
 
+
+<!--container de Presupuesto-->
+        
            <div id="containerPresupuesto" class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
                <div style="height: 12vh; margin-left:5%;">
                    <h1 class="titulovistaObjetivos">PRESUPUESTO</h1>
@@ -101,7 +104,7 @@
                                <th class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center">Item</th>
                                <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">Concepto</th>
                                <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">Descripción</th>
-                               <th class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center">Unidad</th>
+                               <th class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center">Unidad de medida</th>
                                <th class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center">Cantidad</th>
                                <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">Valor unitario</th>
                                <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">Valor total</th>
@@ -111,7 +114,7 @@
                        <tbody>
 
                            <tr ng-repeat="presu in Presupuesto">
-                               <td><input  class="form-control" type="text" style="margin-top:11%; "  maxlength="3" placeholder="#"  ng-model="presu.Item"/></td>
+                               <td><input  class="form-control" type="number" style="margin-top:11%;" min="1"  max="3" placeholder="#"  ng-model="presu.Item"/></td>
                                <td><input class="form-control" type="text" style="margin-top:5%; " maxlength="100" ng-model="presu.Concepto"/></td>
                                <td><textarea class="form-control" type="text" maxlength="200" ng-model="presu.Descripcion"></textarea> </td>
                                <td><input class="form-control" type="text" style="margin-top:10%; " maxlength="50" ng-model="presu.Unidad"/></td>
@@ -140,9 +143,21 @@
                                        <p style="font-size:10px;">Eliminar</p>
                                    </center>
                                </td>
-                               <td></td>
-                               <td></td>
-                               <td></td>
+                               <td> 
+                                     <input type="number" placeholder="IVA" class="form-control" style="width:45%; margin-left:0%;"/>
+                                   <input type="number" placeholder="%" class="form-control" style="width:45%; margin-left:51%; margin-top:-20%" />
+                                   
+
+                               </td>
+                               <td >
+                                   <input type="number"placeholder="%" class="form-control" style="width:100%; " />
+                                   
+                                 
+                               </td>
+                               <td> 
+                                   <input type="number"  placeholder="%" class="form-control" style="width:100%; " />
+                       
+                                </td>
                                <td ><h4 >Coste Total:</h4></td>
                                <td><input value="$" ng-model="total" disabled class="form-control" type="text" style="margin-top:2%;" /></td>
                            </tr>
@@ -151,7 +166,13 @@
 
                        </tbody>
                    </table>
+
+                  
                </center>
+
+               <div>
+                  
+               </div>
                <div>
                    <!--<button class="btn btn-success" ng-click="GuardarPresupuesto()" style="margin-left:90%;">Guardar</button>-->
 
