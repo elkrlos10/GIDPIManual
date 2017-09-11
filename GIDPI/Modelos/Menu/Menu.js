@@ -82,6 +82,7 @@
                 }
 
             };
+
             $scope.MarcoLogico = function () {
                 var color = $("#iconoOcho").attr('value');
                 //console.log(cosa);
@@ -171,6 +172,7 @@
                                 Etapa: response.proyecto.Etapa
                             }
                         };
+                        $rootScope.nombreProyecto = response.proyecto.TemaProyecto;
 
                         $cookies.putObject("datosProyecto", $rootScope.Proyecto);
                         $rootScope.proyecto = $cookieStore.get('datosProyecto');
@@ -238,10 +240,10 @@
 
                 $("#circuloSiete").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
                 $("#iconoSiete").attr("src", "images/calendario.png");
-                $("#iconoSiete").fadeOut("fast");
+                $("#flechaSiete").fadeOut("fast");
 
                 $("#circuloOcho").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
-                $("#circuloOcho").attr("src", "images/matriz.png");
+                $("#iconoOcho").attr("src", "images/matriz.png");
                 $("#flechaOcho").fadeOut("fast");
             }
 
