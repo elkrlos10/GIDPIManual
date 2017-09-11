@@ -132,7 +132,7 @@
                         <!--<select class="form-control" id="TipoSede" ng-required="true" ng-model="DatosProyecto.AccionProyecto" style="float:right;">
                             <option ng-repeat="accionProyecto in AccionProyecto" class="{{accionProyecto}}" value="{{accionProyecto}}">{{accionProyecto | uppercase}}</option>
                         </select>-->
-                        <input id="" class="form-control" style="float:right; width:100%" ng-model="DatosProyecto.TemaProyecto" maxlength="70" />
+                        <input id="" class="form-control" style="float:right; width:100%; text-transform:uppercase;" ng-model="DatosProyecto.TemaProyecto" maxlength="70" />
                         <span ng-if="sede.nombreSede.$error.maxlength" class="help-block">El nombre de la sede puede tener máximo 50 caracteres</span>
                     </div>
                 </div>
