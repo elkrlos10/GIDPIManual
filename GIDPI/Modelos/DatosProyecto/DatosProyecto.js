@@ -202,6 +202,7 @@
                         DatosProyectoService.ConsultarDepartamentoxMunicipio(IdMunicipio, function (response1) {
                             if (response1.success) {
                                 $("#Departamento > option[value='" + response1.departamento.IdDepartamento + "']").attr('selected', 'selected');
+
                                 $scope.ConsultarMunicipiosDepartamento(response1.departamento.IdDepartamento);
                                 setTimeout(function () {
                                     $("#Municipio > option[value='" + response.proyecto.IdMunicipio + "']").attr('selected', 'selected');

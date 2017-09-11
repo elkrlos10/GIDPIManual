@@ -742,11 +742,14 @@
                                 $scope.Objetivos = response.ArbolFinal;
                                 $scope.medios = response.ArbolFinal.Medios;
                                 //$scope.medios1 = response.Especificos;
-                                $.each(response.Especificos, function (index, value) {
+                                if ($scope.medios1.length == 0) {
+                                    $.each(response.Especificos, function (index, value) {
 
-                                    $scope.medios1.push({ medio: value });
+                                        $scope.medios1.push({ medio: value });
 
-                                })
+                                    })
+                                }
+                                
 
                                
                             }
@@ -816,7 +819,7 @@
                                     }
                                 })
                                   console.log($scope.mediosIndirectos);
-                                $("#guardarObjetivos").css({ "display": "block" });
+                                  $("#Btnguardar").css({ "display": "block" });
                             }
                         })
                     } else {
@@ -845,7 +848,7 @@
                                 })
 
                                 console.log($scope.prueba);
-                                $("#guardarObjetivos").css({ "display": "none" });
+                                $("#Btnguardar").css({ "display": "none" });
                             }
                         })
                     }
