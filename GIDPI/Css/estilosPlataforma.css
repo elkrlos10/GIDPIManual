@@ -20,37 +20,6 @@ textarea{
       background-color: #51aba6;
 } 
 
-#reveal-wrap {
-  position: absolute;
-  width: 75%;
-  margin-top: 1%;
-  padding-bottom: 0;
-  z-index: 100;
-}
-#reveal-wrap{
-  color: #fff;
-  font-size: 26px;
-  margin: 0px 0 0 10%;
-  padding: 5px 9px;
-  text-decoration: none;
-  display: inline-block;
-}
-
-#reveal-wrap #hidden-div {
-  width: 26%;
-  margin-left: -15%;
-  margin-top: 31%;
-  background: rgba(89, 181, 72, .7);
-  color: #fff;
-  font-size: 16px;
-  line-height: 22px;
-  padding: 20px;
-}
-
-#reveal-wrap #hidden-div {
-  display: none;
-}
-
 #ayudaUno{
 z-index:997;
 }
@@ -58,7 +27,6 @@ z-index:997;
 #tablaResultados{
     margin-left:-20%;
 }
-
 
 #lineaDos{
     margin-top:77vh;
