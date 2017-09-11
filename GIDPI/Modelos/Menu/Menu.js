@@ -221,24 +221,24 @@
                 $("#flechaDos").fadeOut("fast");
 
                 $("#circuloTres").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
-                $("#circuloTres").attr("src", "images/arbolProb.png");
+                $("#iconoTres").attr("src", "images/arbolProb.png");
                 $("#flechaTres").fadeOut("fast");
 
                 $("#circuloCuatro").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
-                $("#circuloCuatro").attr("src", "images/arbol.png");
+                $("#iconoCuatro").attr("src", "images/arbol.png");
                 $("#flechaCuatro").fadeOut("fast");
 
                 $("#circuloCinco").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
-                $("#circuloCinco").attr("src", "images/perfil.png");
+                $("#iconoCinco").attr("src", "images/perfil.png");
                 $("#flechaCinco").fadeOut("fast");
 
                 $("#circuloSeis").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
-                $("#circuloSeis").attr("src", "images/grafica.png");
+                $("#iconoSeis").attr("src", "images/grafica.png");
                 $("#flechaSeis").fadeOut("fast");
 
                 $("#circuloSiete").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
-                $("#circuloSiete").attr("src", "images/calendario.png");
-                $("#flechaSiete").fadeOut("fast");
+                $("#iconoSiete").attr("src", "images/calendario.png");
+                $("#iconoSiete").fadeOut("fast");
 
                 $("#circuloOcho").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
                 $("#circuloOcho").attr("src", "images/matriz.png");

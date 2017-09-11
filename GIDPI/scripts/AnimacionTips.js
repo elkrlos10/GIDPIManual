@@ -6,6 +6,7 @@ function usage() {
 
         {
             type: "success", align: "center", verticalAlign: "bottom",
-            delay: 20000, animation: true, animationType: "scale", close: true
+            delay: 10000, animation: true, animationType: "scale", close: true
+
         });
 }

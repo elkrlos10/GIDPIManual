@@ -41,6 +41,7 @@
                         $("#problemasMatriz").hide();
                         $("#Panel2").show();
                         $("#problematicaCampo").attr("disabled", "disabled");
+                        $("#BtnGuardar").hidde();
                     } else {
 
                         $("#ModalOmitir").modal({ backdrop: 'static', keyboard: false });
