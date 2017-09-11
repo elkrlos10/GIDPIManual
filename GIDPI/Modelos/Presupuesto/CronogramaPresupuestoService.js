@@ -15,7 +15,7 @@
 
             item =
             {
-                Parametro1:IdProyecto
+                Parametro1: IdProyecto
             }
             $http.post(URLServices + "CronogramaPresupuesto/ConsultarCronograma/", item)
             .success(function (response) {
@@ -43,6 +43,23 @@
             });
         };
 
+        service.GuardarAIU = function (AIU, callback) {
+            $http.post(URLServices + "CronogramaPresupuesto/GuardarAIU/", AIU)
+            .success(function (response) {
+                callback(response);
+            });
+        };
+
+        service.ConsultarAIU = function (IdProyecto, callback) {
+            item =
+          {
+              Parametro1: IdProyecto
+          }
+            $http.post(URLServices + "CronogramaPresupuesto/ConsultarAIU/", item)
+            .success(function (response) {
+                callback(response);
+            });
+        };
 
         service.ConsultarPresupuesto = function (IdProyecto, callback) {
 

@@ -80,8 +80,12 @@ namespace LogicaNegocio.LogicaNegocio
                             where i.IdProyecto == IdProyecto
                             select i).FirstOrDefault();
 
-            Proyecto.Etapa = 2;
-            entity.SaveChanges();
+            if (Proyecto.Etapa<2)
+            {
+                Proyecto.Etapa = 2;
+                entity.SaveChanges();
+            }
+            
         }
     }
 }

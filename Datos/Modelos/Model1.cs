@@ -39,6 +39,7 @@
         public virtual DbSet<Cronograma> Cronograma { get; set; }
         public virtual DbSet<Presupuesto> Presupuesto { get; set; }
         public virtual DbSet<MarcoLogico> MarcoLogico { get; set; }
+        public virtual DbSet<Aiu> AIU { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
         //    modelBuilder.Entity<ArbolObjetivos>()

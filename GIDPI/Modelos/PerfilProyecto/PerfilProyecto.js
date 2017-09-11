@@ -41,7 +41,6 @@
                 $("#containerNombre").hide();
                 $("#containerPerfilProyect").show();
 
-
                 PerfilProyectoService.ConsultarProyecto($rootScope.proyecto.datos.id, function (response) {
                     if (response.success) {
                         if (response.Proyecto.Etapa >= 7) {
@@ -69,9 +68,6 @@
                                         //may want to use $.trim in here
                                         return $(this).text() == text3;
                                     }).attr('selected', true);
-
-
-                                    console.log("ekfjkdv");
                                 }
 
                             })
@@ -263,6 +259,8 @@
                 console.log($scope.PerfilProyecto);
                 PerfilProyectoService.GuardarPerfilProyecto($scope.PerfilProyecto, function (response) {
                     if (response.success) {
+                        $("#containerNombre").hide();
+                        $("#containerPerfilProyect").show();
                         alertify.alert("Registro exitoso");
                         //$location.url("/Menu");
                     }
@@ -277,11 +275,11 @@
                 $scope.PerfilProyecto.NombreArea = $("#NombreArea option:selected").text();
                 $scope.PerfilProyecto.NumeroProyecto = $("#NumeroArea").val();
 
-                console.log($scope.PerfilProyecto);
                 PerfilProyectoService.EditarPerfilProyecto($scope.PerfilProyecto, function (response) {
                     if (response.success) {
+                    
                         alertify.alert("Edición exitosa");
-                        $location.url("/Menu");
+                      
                     }
 
                 })

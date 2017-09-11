@@ -59,6 +59,7 @@
     <Compile Include="DTO\PersonaJuridicaDTO.cs" />
     <Compile Include="DTO\PersonaNaturalDTO.cs" />
     <Compile Include="DTO\ProyectoDTO.cs" />
+    <Compile Include="Modelos\Aiu.cs" />
     <Compile Include="Modelos\ArbolObjetivos.cs" />
     <Compile Include="Modelos\ArbolProblema.cs" />
     <Compile Include="Modelos\CausaDirecta.cs" />

@@ -22,16 +22,19 @@
                 Unidad: "",
                 Cantidad: "",
                 ValorUnitario: "",
-                ValorTotal:""
+                ValorTotal: ""
 
             }]
 
-         
 
-            
-
-
-
+            $scope.AIU = {
+                A: "",
+                I: "",
+                U: "",
+                Iva: "",
+                ValorTotal: "",
+                IdProyecto: ""
+            }
 
             $scope.MostrarCronograma = function () {
                 $("#containerCronograma").show();
@@ -42,7 +45,7 @@
             $scope.MostrarPresupuesto = function () {
                 $("#containerCronograma").hide();
                 $("#containerPresupuesto").show();
-                
+
             }
 
             $scope.agregarCronograma = function (index) {
@@ -59,9 +62,9 @@
 
 
             $scope.EliminarCamposCrononograma = function () {
-            
+
                 if ($scope.Cronograma[($scope.Cronograma.length - 1)].Actividad == "" && $scope.Cronograma[($scope.Cronograma.length - 1)].FechaInicio == ""
-                    && $scope.Cronograma[($scope.Cronograma.length - 1)].FechaFin =="") {
+                    && $scope.Cronograma[($scope.Cronograma.length - 1)].FechaFin == "") {
 
                     if ($scope.Cronograma.length > 1) {
                         $scope.Cronograma.splice(($scope.Cronograma.length - 1), 1);
@@ -93,8 +96,6 @@
             }
             update(repetir);
 
-
-
             $scope.agregarPresupuesto = function () {
                 $scope.Presupuesto.push({
                     IdProyecto: $rootScope.proyecto.datos.id,
@@ -109,8 +110,6 @@
 
             }
 
-
-
             $scope.EliminarCamposPresupuesto = function () {
 
                 if ($scope.Presupuesto[($scope.Presupuesto.length - 1)].Item == "" && $scope.Presupuesto[($scope.Presupuesto.length - 1)].Concepto == ""
@@ -123,6 +122,7 @@
                 }
 
             };
+
             $scope.GuardarCronograma = function () {
 
                 console.log($scope.Cronograma)
@@ -130,7 +130,8 @@
                     if (response.success) {
                         alertify.alert("<b>Registro Exitoso</b>");
                         $("#btnPresupuesto").removeAttr("disabled", "disabled");
-
+                        $("#containerPresupuesto").show();
+                        $("#containerCronograma").hide();
 
                     }
                 })
@@ -139,14 +140,14 @@
             CronogramaPresupuestoService.AbrirProyecto($rootScope.proyecto.datos.id, function (response) {
                 if (response.success) {
                     $rootScope.proyecto.datos.Etapa = response.proyecto.Etapa;
-                   
+
                     if ($rootScope.proyecto.datos.Etapa >= 8) {
                         $("#btnPresupuesto").removeAttr("disabled", "disabled");
                         CronogramaPresupuestoService.ConsultarCronograma($rootScope.proyecto.datos.id, function (response) {
 
                             if (response.success) {
                                 $scope.Cronograma = response.Cronograma;
-                            
+
 
                             }
 
@@ -155,18 +156,69 @@
                 }
             })
 
-    
-                
+
+
             $scope.total = 0;
 
-            $scope.CalcularValorTotal = function() {
+            $scope.CalcularValorTotal = function () {
                 //$scope.Presupuesto[0].ValorTotal = $scope.Presupuesto[0].Cantidad * $scope.Presupuesto[0].ValorUnitario;
-                 $scope.total = 0;
-                $.each($scope.Presupuesto, function (index, value){
-                    value.ValorTotal= value.Cantidad * value.ValorUnitario;
+                $scope.total = 0;
+                $.each($scope.Presupuesto, function (index, value) {
+                    value.ValorTotal = value.Cantidad * value.ValorUnitario;
                     $scope.total = value.ValorTotal + $scope.total;
                 })
-               
+
+                var u = 1;
+                var a = 1;
+                var i = 1;
+                var A = 1;
+                var U = 1;
+                var I = 1;
+
+
+                if (parseFloat($scope.AIU.A) < 10) {
+
+                    a = "0.0" + ($scope.AIU.A);
+                    A = parseFloat(a) * $scope.total;
+
+                } else {
+
+                    a = "0." + ($scope.AIU.A);
+                    A = parseFloat(a) * $scope.total;
+                }
+
+                if (parseFloat($scope.AIU.I) < 10) {
+
+                    i = "0.0" + ($scope.AIU.I);
+                    I = parseFloat(i) * $scope.total;
+
+                } else {
+                    i = "0." + ($scope.AIU.I);
+                    I = parseFloat(i) * $scope.total;
+                }
+
+
+                if (parseFloat($scope.AIU.U) < 10) {
+
+                    u = "0.0" + ($scope.AIU.U);
+                    U = parseFloat(u) * $scope.total;
+
+                } else {
+                    u = "0." + ($scope.AIU.U);
+                    U = parseFloat(u) * $scope.total;
+                }
+
+                if (parseFloat($scope.AIU.Iva) < 10) {
+
+                    ivaString = "0.0" + ($scope.AIU.Iva);
+                    iva = parseFloat(ivaString) * $scope.total;
+
+                } else {
+                    ivaString = "0." + ($scope.AIU.Iva);
+                    iva = parseFloat(ivaString) * $scope.total;
+                }
+
+                $scope.total = ($scope.total + iva + A + I + U).toFixed(2);
 
             }
 
@@ -177,24 +229,31 @@
 
                     $scope.Presupuesto1.push({
                         IdProyecto: $rootScope.proyecto.datos.id,
-                        IdPresupuesto:value.IdPresupuesto,
+                        IdPresupuesto: value.IdPresupuesto,
                         Item: value.Item,
                         Concepto: value.Concepto,
                         Descripcion: value.Descripcion,
                         Unidad: value.Unidad,
                         Cantidad: value.Cantidad,
                         ValorUnitario: value.ValorUnitario
-                        
-                    }) 
+
+                    })
 
                 })
 
-                console.log($scope.Presupuesto1);
                 CronogramaPresupuestoService.GuardarPresupuesto($scope.Presupuesto1, function (response) {
                     if (response.success) {
-                        alertify.alert("<b>Registro Exitoso</b>");
-                        $location.url("/Menu");
 
+                        $scope.AIU.ValorTotal = $scope.total;
+                        $scope.AIU.IdProyecto = $rootScope.proyecto.datos.id;
+
+                        CronogramaPresupuestoService.GuardarAIU($scope.AIU, function (response) {
+                            if (response.success) {
+                                alertify.alert("<b>Registro Exitoso</b>");
+                                $location.url("/Menu");
+
+                            }
+                        })
                     }
                 })
             }
@@ -204,7 +263,7 @@
                     $rootScope.proyecto.datos.Etapa = response.proyecto.Etapa;
 
                     if ($rootScope.proyecto.datos.Etapa >= 9) {
-                     
+
                         CronogramaPresupuestoService.ConsultarPresupuesto($rootScope.proyecto.datos.id, function (response) {
                             if (response.success) {
                                 $scope.total = 0;
@@ -214,13 +273,24 @@
                                 $.each($scope.Presupuesto, function (index, value) {
                                     value.ValorTotal = value.Cantidad * value.ValorUnitario;
                                     $scope.total = value.ValorTotal + $scope.total;
+                                    $scope.Presupuesto[index].Item = parseFloat(value.Item);
+                                })
+
+                                CronogramaPresupuestoService.ConsultarAIU($rootScope.proyecto.datos.id, function (response) {
+                                    if (response.success) {
+
+                                        $scope.AIU = response.AIU;
+                                        $scope.total = $scope.AIU.ValorTotal;
+                                    }
 
                                 })
-                                console.log(response.Presupuesto);
-                      
+
                             }
 
                         })
+
+
+
                     }
                 }
             })

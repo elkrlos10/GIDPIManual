@@ -113,5 +113,36 @@ namespace LogicaNegocio.LogicaNegocio
             return Presupuesto;
         }
 
+        public void GuardarAIU(Aiu AUI)
+        {
+            
+
+            if (AUI.IdAIU == 0)
+            {
+                entity.AIU.Add(AUI);
+                entity.SaveChanges();
+            }
+            else
+            {
+                var aiu = ConsultarAIU(AUI.IdProyecto);
+
+                aiu.Iva = AUI.Iva;
+                aiu.A = AUI.A;
+                aiu.I = AUI.I;
+                aiu.U = AUI.U;
+                aiu.ValorTotal = AUI.ValorTotal;
+                entity.SaveChanges();
+            }
+        }
+
+        public Aiu ConsultarAIU(int IdProyecto)
+        {
+            var aiu = (from i in entity.AIU
+                       where i.IdProyecto == IdProyecto
+                       select i).FirstOrDefault();
+
+            return aiu;
+        }
+
     }
 }
