@@ -120,7 +120,8 @@
                                         <input type="text" name="Apellido" ng-model="PersonaNatural.Apellidos" required>
 
                                         <p>Documento*</p>
-                                        <input type="text" name="Documento" ng-model="PersonaNatural.Documento" required>
+                                        <input style="outline: none; font-size: 1em; color: #000; padding: .8em 1em; margin: 0;width: 100%; border: none;-webkit-appearance: none; display: block; background: #fff;" type="number"  name="Documento" ng-model="PersonaNatural.Documento" required>
+
 
                                         <p>Usuario*</p>
                                         <input type="text" name="Usuario_Registro" ng-model="PersonaNatural.Usuario" required>
@@ -150,7 +151,7 @@
                                         <input type="text" name="Nombre_Juridica" ng-model="PersonaJuridica.RazonSocial" required>
 
                                         <p>NIT*</p>
-                                        <input type="text" name="NIT_Juridica" ng-model="PersonaJuridica.NIT" required>
+                                        <input style="outline: none; font-size: 1em; color: #000; padding: .8em 1em; margin: 0;width: 100%; border: none;-webkit-appearance: none; display: block; background: #fff;" type="number" name="NIT_Juridica" ng-model="PersonaJuridica.Nit" required>
 
                                         <p>Sector económico*</p>
                                         <input type="text" name="Sector" ng-model="PersonaJuridica.SectorEconomico" required>
@@ -162,7 +163,7 @@
                                         <input type="email" name="Email_juridica" ng-model="PersonaJuridica.Email" required>
 
                                         <p>Teléfono</p>
-                                        <input type="text" name="Telefono_Juridica" ng-model="PersonaJuridica.Telefono">
+                                        <input style="outline: none; font-size: 1em; color: #000; padding: .8em 1em; margin: 0;width: 100%; border: none;-webkit-appearance: none; display: block; background: #fff;" type="number" name="Telefono_Juridica" ng-model="PersonaJuridica.Telefono">
 
                                         <p>Usuario*</p>
                                         <input type="text" name="Usuario_Juridica" ng-model="PersonaJuridica.Usuario" required>
@@ -200,3 +201,16 @@
 
 </div>
 <script src="scripts/codigoMenu.js"></script>
+<style>
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+
+
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+</style>
