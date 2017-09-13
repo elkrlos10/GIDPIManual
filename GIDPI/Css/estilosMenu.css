@@ -161,7 +161,7 @@ body{
     width:20%;
     position:absolute;
     transform:translateX(-41%);
-    margin-top:6%;
+    margin-top:8%;
 }
 
 #menu{
@@ -169,8 +169,8 @@ body{
   left: 50%;
   top: -7vh;
   transform: translateX(-50%);
-  width: 600px;
-  height: 600px;
+  width: 620px;
+  height: 620px;
   display: block;
   color: white;
   text-align: center;
@@ -198,21 +198,22 @@ body{
     display:none;
 }
 
-/*#flechaUno{
-    margin-top: 45%;
-    margin-left: -52%;
-}*/
+#flechaUno{
+    /*margin-top: 45%;
+    margin-left: -52%;*/
+    transform: rotateZ(2deg);
+}
 
 #flechaDos{
     /*margin-left: -74%;
     margin-top: 45%;*/
-    transform: rotateZ(37deg);
+    transform: rotateZ(41deg);
 }
 
 #flechaTres{
     /*margin-left: -2%;
     margin-top: 29%;*/
-    transform: rotateZ(84deg);
+    transform: rotateZ(87deg);
 }
 
 #flechaCuatro{
@@ -376,8 +377,8 @@ body{
 #logoMenu{
     width:20%;
     position:absolute;
-    transform:translateX(-55%);
-    margin-top:6%;
+    transform:translateX(-55.5%);
+    margin-top:6.5%;
 }
 
 #nombreProyectoMenu{

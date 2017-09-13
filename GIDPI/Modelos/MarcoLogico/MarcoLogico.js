@@ -1,6 +1,10 @@
 ﻿ManualApp.controller('MarcoLogicoController',
     ['$scope', '$rootScope', '$location', 'MarcoLogicoService', '$cookies', '$cookieStore', '$routeParams', '$sce',
         function ($scope, $rootScope, $location, MarcoLogicoService, $cookies, $cookieStore, $routeParams, $sce) {
+            
+            $("#ContainerFinal ").hide();
+            //$("#ContainerFinal").hide();
+            $("#btnFinalizar").hide();
             $("#btnEditarMarco").hide();
             $scope.Marco = {
                 IdMarco:"", 
@@ -47,7 +51,8 @@
 
                         if (response.success) {
                             alertify.alert("<b>Registro Exitoso</b>");
-                            $location.url("/Menu");
+                            $("#btnFinalizar").show();
+                            //$location.url("/Menu");
                         }
                     })
                    
@@ -71,6 +76,7 @@
                         MarcoLogicoService.ConsultarMarco($rootScope.proyecto.datos.id, function (response) {
 
                             if (response.success) {
+                                $("#btnFinalizar").show();
                                 $("#btnEditarMarco").show();
                                 $("#btnGuardarMarco").hide();
                                 $scope.Marco = response.marco;
@@ -79,5 +85,12 @@
                     }
                 }
             })
+
+            $scope.Finalizar = function() {
+                $("#containerMarcoLogico ").hide();
+                $("#ContainerFinal ").show();
+            }
+
+
 
         }]);

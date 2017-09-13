@@ -1,39 +1,119 @@
-﻿<div class="container-fluid" style="height: auto; margin-top:-10%;">
+﻿<style>
+    #menuAyuda {
+        margin-top: 0%;
+        margin-left: 95.5%;
+        position: fixed;
+        z-index: 300;
+    }
 
-    <div class="container col-lg-9 col-md-11 col-sm-11 col-xs-11" style="height:auto; margin-left:50%; transform:translate(-50%); background-color:rgba(192,192,192,0.15);">
+    @media (max-width: 1366px) and (min-width: 1361px) {
+
+        #menuAyuda {
+            margin-top: 0%;
+            margin-left: 95%;
+            position: fixed;
+            z-index: 300;
+        }
+    }
 
 
-        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="height:12vh;">
-            <h1 class="titulovistaObjetivos">MATRIZ DE MARCO LÓGICO</h1>
-        </div>
-      
+    @media (max-width: 1360px) and (max-height: 1281px) {
+
+        #menuAyuda {
+            margin-top: 0%;
+            margin-left: 95%;
+            position: fixed;
+            z-index: 300;
+        }
+    }
+
+    @media (max-width: 1280px) and (min-width: 1153px) {
+
+        #menuAyuda {
+            margin-top: 0%;
+            margin-left: 94%;
+            position: fixed;
+            z-index: 300;
+        }
+    }
+
+    @media(max-width:1152px) {
+
+        #menuAyuda {
+            margin-top: 0%;
+            margin-left: 94%;
+            position: fixed;
+            z-index: 300;
+        }
+    }
+
+    @media (max-width: 1024px) and (max-height: 768px) {
+
+        #menuAyuda {
+            margin-top: 0%;
+            margin-left: 93%;
+            position: fixed;
+            z-index: 300;
+        }
+    }
+</style>
+
+
+<nav class="vertical" id="menuAyuda">
+    <input type="checkbox" id="toggle2" />
+    <label id="menuToggle" for="toggle2">
+        <span class="fa fa-bars" style="font-size:22px;"></span>
+    </label>
+    <menu style="margin-top:-6%;">
+        <li><a class="fa fa-sign-out menuAyuda" style="font-size:22px;" title="Cerrar sesión"></a></li>
+        <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" ng-click="Regresar()" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-file button demo-btn demo5 menuAyuda" title="Leer ayuda" data-svg-popup="demo5" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-video-camera button demo-btn demo6 menuAyuda" title="Ver ayuda" data-svg-popup="demo6" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="audio" style="font-size:22px;"></a></li>
+
+    </menu>
+</nav>
+
+
+<div class="container-fluid" style="height: auto; margin-top:-10%;">
+    <div id="containerMarcoLogico">
+        <div class="container col-lg-9 col-md-11 col-sm-11 col-xs-11" style="height:auto; margin-left:50%; transform:translate(-50%); background-color:rgba(192,192,192,0.15);">
+
+
+            <!-- COntainer para la vista del marco logico -->
+
+
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="height:12vh;">
+                <h1 class="titulovistaObjetivos">MATRIZ DE MARCO LÓGICO</h1>
+            </div>
+
 
             <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
 
-                <table class="table  col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                <table class="table  col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <thead>
                         <tr>
                             <th></th>
                             <th style="text-align:center"><p>Narrativo</p></th>
                             <th style="text-align:center"><p>Indicadores</p></th>
                             <th style="text-align:center"><p>Medios de verificacion</p></th>
-                            <th style="text-align:center" ><p>Supuestos</p></th>
+                            <th style="text-align:center"><p>Supuestos</p></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
 
                             <th>
-                               <p class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:50px; text-align:center"> Fin</p>
+                                <p class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:50px; text-align:center"> Fin</p>
                             </th>
-                            <th  class="col-lg-3 col-md-2 col-sm-2 col-xs-2">
-                                <textarea class="form-control marc col-lg-12 col-md-12 col-sm-12 col-xs-12 " placeholder="13" ng-model="Marco.Fin1"  style="height:150px;"></textarea>                          
+                            <th class="col-lg-3 col-md-2 col-sm-2 col-xs-2">
+                                <textarea class="form-control marc col-lg-12 col-md-12 col-sm-12 col-xs-12 " placeholder="13" ng-model="Marco.Fin1" style="height:150px;"></textarea>
                             </th>
                             <th class="col-lg-3 col-md-2 col-sm-2 col-xs-2">
                                 <textarea class="form-control marc col-lg-12 col-md-12 col-sm-12 col-xs-12 " placeholder="14" ng-model="Marco.Fin2" style="height:150px;"></textarea>
                             </th>
                             <th class="col-lg-3 col-md-2 col-sm-2 col-xs-2">
-                                <textarea class="form-control marc col-lg-12 col-md-12 col-sm-12 col-xs-12 " placeholder="15" ng-model="Marco.Fin3"  style="height:150px;"></textarea>
+                                <textarea class="form-control marc col-lg-12 col-md-12 col-sm-12 col-xs-12 " placeholder="15" ng-model="Marco.Fin3" style="height:150px;"></textarea>
                             </th>
                             <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                                 <textarea class="form-control marc col-lg-12 col-md-12 col-sm-12 col-xs-12 " placeholder="16" ng-model="Marco.Fin4" style="height:150px;"></textarea>
@@ -50,10 +130,10 @@
                                 <textarea class="form-control marc col-lg-12 col-md-12 col-sm-12 col-xs-12 " placeholder="9" ng-model="Marco.Proposito1" style="height:200px;"></textarea>
                             </th>
                             <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                                <textarea class="form-control marc col-lg-12 col-md-12 col-sm-12 col-xs-12"  placeholder="10" ng-model="Marco.Proposito2" style="height:200px"></textarea>
+                                <textarea class="form-control marc col-lg-12 col-md-12 col-sm-12 col-xs-12" placeholder="10" ng-model="Marco.Proposito2" style="height:200px"></textarea>
                             </th>
                             <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                                <textarea class="form-control marc col-lg-12 col-md-12 col-sm-12 col-xs-12" placeholder="11"  ng-model="Marco.Proposito3" style="height:200px"></textarea>
+                                <textarea class="form-control marc col-lg-12 col-md-12 col-sm-12 col-xs-12" placeholder="11" ng-model="Marco.Proposito3" style="height:200px"></textarea>
                             </th>
                             <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                                 <textarea class="form-control marc col-lg-12 col-md-12 col-sm-12 col-xs-12 " placeholder="12" ng-model="Marco.Proposito4" style="height:200px"></textarea>
@@ -64,7 +144,7 @@
 
                         <tr>
                             <th class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                              <p  style="height:50px;">Resultados</p>
+                                <p style="height:50px;">Resultados</p>
                             </th>
 
                             <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
@@ -74,7 +154,7 @@
                                 <textarea class="form-control marc col-lg-12 col-md-12 col-sm-12 col-xs-12 " placeholder="6" ng-model="Marco.Resultado2" style="height:300px;"></textarea>
                             </th>
                             <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                                <textarea class="form-control marc  col-lg-12 col-md-12 col-sm-12 col-xs-12 " placeholder="7"  ng-model="Marco.Resultado3" style="height:300px;"></textarea>
+                                <textarea class="form-control marc  col-lg-12 col-md-12 col-sm-12 col-xs-12 " placeholder="7" ng-model="Marco.Resultado3" style="height:300px;"></textarea>
                             </th>
                             <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                                 <textarea class="form-control marc col-lg-12 col-md-12 col-sm-12 col-xs-12 " placeholder="8" ng-model="Marco.Resultado4" style="height:300px;"></textarea>
@@ -85,7 +165,7 @@
 
                         <tr>
                             <th class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                <p  style="height:50px;">Actividades</p>
+                                <p style="height:50px;">Actividades</p>
                             </th>
 
                             <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
@@ -95,17 +175,17 @@
                                 <textarea class="form-control marc col-lg-12 col-md-12 col-sm-12 col-xs-12 " placeholder="2" ng-model="Marco.Actividad2" style="height:300px;"></textarea>
                             </th>
                             <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                                <textarea class="form-control marc col-lg-12 col-md-12 col-sm-12 col-xs-12" placeholder="3"  ng-model="Marco.Actividad3" style="height:300px;"></textarea>
+                                <textarea class="form-control marc col-lg-12 col-md-12 col-sm-12 col-xs-12" placeholder="3" ng-model="Marco.Actividad3" style="height:300px;"></textarea>
                             </th>
                             <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                                 <textarea class="form-control marc col-lg-12 col-md-12 col-sm-12 col-xs-12" placeholder="4" ng-model="Marco.Actividad4" style="height:300px;"></textarea>
-                            </th> 
+                            </th>
 
                         </tr>
 
-                        
 
-                     
+
+
 
                     </tbody>
                 </table>
@@ -118,29 +198,74 @@
                 </div>
 
 
-                <div  style="float:right;" id="btnEditarMarco" ng-click="guardarMarco()">
+                <div style="float:right;" id="btnEditarMarco" ng-click="guardarMarco()">
                     <i id="iconEditar" class="fa fa-pencil-square-o" title="Editar" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
                     <p style="font-size:10px; text-align:center; margin-left:-30%;">Editar</p>
                 </div>
 
+                <div id="btnFinalizar" ng-click="Finalizar()" style="float:right;">
 
-            
+                    <i id="iconGuardar" class="fa fa-flag-checkered" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
+
+                    <p style="font-size:10px; text-align:center; margin-left:-50%">Finalizar Proyecto</p>
+                </div>
+
+
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 3vh;"></div>
 
             </div>
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:50%; background:#8196be;">
-            espacio para iconos info
+            <!--<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:50%; background:#8196be;">
+                espacio para iconos info
+
+            </div>-->
 
         </div>
-            
+    </div>
+
+        <!-- container para la vista de proyecto finalizado -->
+        <div id="ContainerFinal">
+            <div class="container col-lg-9 col-md-11 col-sm-11 col-xs-11" style="height:100vh; margin-left:50%; transform:translate(-50%); background-color:rgba(192,192,192,0.15);">
+                <div class="col-lg-12" style="margin-top:10%;">
+
+                    <h1 class="text-center">GRACIAS POR USAR GIDPI </h1>
+                </div>
+
+                <div class="col-lg-10 text-center">
+                    <h3>Ingrese su texto de celebracion aqui </h3>
+
+                </div>
+                
+
+                <div class="col-lg-12">
+
+                    <div class="col-lg-4" style="height:500px; margin-top:10%; background-color:gainsboro; float:left">
+                        Thomas
+                    </div>
+
+
+
+                    <div class="col-lg-4">
+                        <input  type="checkbox" title="word"/>
+                        <input type="checkbox" title="PDF" />
+                        <button class="btn" style="height:100px; width:150px; margin-top:30%; margin-left:50%; transform:translateX(-50%)">boton de descargas
+                            <br />
+                            <i id="iconGuardar" class="fa fa-download" title="Guardar" style="cursor:pointer; font-size:30px; color:#238276; margin-top:8%;" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="col-lg-4" style="height:500px; margin-top:10%; background-color:lightgray; float:right" >
+                        Adriana
+
+                    </div>
+                </div>
+
+
+            </div>
         </div>
-
-
-
-
-
 
     </div>
+
+
 
 <style>
 .marc::-webkit-input-placeholder { color:rgba(128, 128, 128,0.3) ; font-size:30px; } 

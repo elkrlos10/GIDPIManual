@@ -1,4 +1,152 @@
-﻿<div class="container-fluid" style="height: auto; margin-top:-10%;">
+﻿<style>
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+
+
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    #menuAyuda {
+        margin-top: 0%;
+        margin-left: 95.5%;
+        position: fixed;
+        z-index: 300;
+    }
+
+.lineaTab {
+        margin-top: 12%;
+        margin-left: -1%;
+}
+
+
+@media (min-width: 1440px) and (max-width: 1600px) {
+
+.lineaTab {
+    margin-top: 12%;
+    margin-left: -1%;
+}
+    
+}
+
+@media (min-width: 1402px) and (max-width: 1440px) {
+
+.lineaTab {
+    margin-top: 12%;
+    margin-left: -0.5%;
+}
+
+}
+
+@media (max-width: 1366px) and (min-width: 1361px) {
+
+#menuAyuda {
+    margin-top: 0%;
+    margin-left: 95%;
+    position: fixed;
+    z-index: 300;
+}
+
+.lineaTab {
+    margin-top: 12%;
+    margin-left: 0%;
+}
+    }
+
+
+@media (max-width: 1360px) and (max-height: 1281px) {
+
+#menuAyuda {
+    margin-top: 0%;
+    margin-left: 95%;
+    position: fixed;
+    z-index: 300;
+}
+
+.lineaTab {
+    margin-top: 12%;
+    margin-left:-0.5%;
+}
+
+}
+
+@media (max-width: 1280px) and (min-width: 1153px) {
+
+#menuAyuda {
+    margin-top: 0%;
+    margin-left: 94%;
+    position: fixed;
+    z-index: 300;
+}
+
+.lineaTab {
+    margin-top: 15%;
+    margin-left: 0%;
+}
+
+}
+
+
+@media(max-width:1152px) {
+
+#menuAyuda {
+    margin-top: 0%;
+    margin-left: 94%;
+    position: fixed;
+    z-index: 300;
+}
+
+.lineaTab {
+    margin-top: 15%;
+    margin-left: 5%;
+}
+
+}
+
+
+@media (max-width: 1024px) and (max-height: 768px) {
+
+#menuAyuda {
+    margin-top: 0%;
+    margin-left: 93%;
+    position: fixed;
+    z-index: 300;
+}
+
+.lineaTab {
+    margin-top: 13%;
+    margin-left: 5%;
+}
+
+
+}
+
+</style>
+
+
+<nav class="vertical" id="menuAyuda">
+    <input type="checkbox" id="toggle2" />
+    <label id="menuToggle" for="toggle2">
+        <span class="fa fa-bars" style="font-size:22px;"></span>
+    </label>
+    <menu style="margin-top:-6%;">
+        <li><a class="fa fa-sign-out menuAyuda" style="font-size:22px;" title="Cerrar sesión"></a></li>
+        <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" ng-click="atras()" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-file button demo-btn demo5 menuAyuda" title="Leer ayuda" data-svg-popup="demo5" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-video-camera button demo-btn demo6 menuAyuda" title="Ver ayuda" data-svg-popup="demo6" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="audio" style="font-size:22px;"></a></li>
+
+    </menu>
+</nav>
+
+
+
+
+<div class="container-fluid" style="height: auto; margin-top:-10%;">
 
     <div class="container" style="height:200%; background-color:rgba(192,192,192,0.15);">
 
@@ -186,7 +334,7 @@
            </div>
         
 
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 8vh; background: #8196be">ICONO INFORMA</div>
+        <!--<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 8vh; background: #8196be">ICONO INFORMA</div>-->
 
 
 
@@ -197,7 +345,7 @@
             
             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 12vh;"><center><button  id="btnCronograma" ng-click="MostrarCronograma()" class="btn btn-success" title="Cronograma" style="border-radius:40%; margin-top:23%;"><i class="fa fa-calendar-check-o" style="font-size:55px;"></i></button></center></div>
 
-            <div class="col-lg-10 col-md-4 col-sm-4 col-xs-4" style="height: 12vh;"><hr style="height:2px; background:#238276; margin-top:5%;" /></div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="height: 12vh;"><hr class="lineaTab" style="height:2px; background:#238276; margin-top:5%;" /></div>
 
 
             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 12vh;"><center><button id="btnPresupuesto" ng-click="MostrarPresupuesto()" class="btn btn-success" title="Presupuesto" style="border-radius:40%; margin-top:23%;"><i class="fa fa-usd" style="font-size:55px;"></i></button></center></div>
@@ -207,18 +355,3 @@
     </div>
 
 </div>
-
-
-<style>
-    input[type=number]::-webkit-outer-spin-button,
-    input[type=number]::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
-
-
-    input[type=number] {
-        -moz-appearance: textfield;
-    }
-</style>

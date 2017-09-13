@@ -1,4 +1,4 @@
-﻿ManualApp.controller('ArbolProblemaController',
+﻿anualApp.controller('ArbolProblemaController',
     ['$scope', '$rootScope', '$location', 'ArbolProblemaService', '$cookies','$cookieStore', 'MenuService', '$routeParams', '$sce',
         function ($scope, $rootScope, $location, ArbolProblemaService, $cookies, $cookieStore, MenuService, $routeParams, $sce) {
 
@@ -718,6 +718,10 @@
 
             //});
 
+            $scope.atras = function () {
 
+                $location.url("/Menu");
+
+            }
 
         }]);
