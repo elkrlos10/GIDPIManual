@@ -109,6 +109,7 @@ ManualApp.controller('PrincipalController',
         $rootScope.cerrarSesion = function () {
             $cookies.remove("datosProyecto");
             $cookies.remove("username");
+            $rootScope.nombreProyecto = "";
             $location.url("/Login");
         }
 

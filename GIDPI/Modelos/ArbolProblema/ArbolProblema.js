@@ -1,4 +1,4 @@
-﻿anualApp.controller('ArbolProblemaController',
+﻿ManualApp.controller('ArbolProblemaController',
     ['$scope', '$rootScope', '$location', 'ArbolProblemaService', '$cookies','$cookieStore', 'MenuService', '$routeParams', '$sce',
         function ($scope, $rootScope, $location, ArbolProblemaService, $cookies, $cookieStore, MenuService, $routeParams, $sce) {
 
