@@ -124,17 +124,28 @@
             };
 
             $scope.GuardarCronograma = function () {
+                var cont = 0;
+                $.each($scope.Cronograma, function (index, value) {
+                    if (value.Actividad == "" || value.FechaInicio == "" || value.FechaFin == "" ) {
 
-                console.log($scope.Cronograma)
-                CronogramaPresupuestoService.GuardarCronograma($scope.Cronograma, function (response) {
-                    if (response.success) {
-                        alertify.alert("<b>Registro Exitoso</b>");
-                        $("#btnPresupuesto").removeAttr("disabled", "disabled");
-                        $("#containerPresupuesto").show();
-                        $("#containerCronograma").hide();
-
+                        cont++;
                     }
+
                 })
+                if (cont == 0) {
+                    CronogramaPresupuestoService.GuardarCronograma($scope.Cronograma, function (response) {
+                        if (response.success) {
+                            alertify.alert("<b>Registro Exitoso</b>");
+                            $("#btnPresupuesto").removeAttr("disabled", "disabled");
+                            $("#containerPresupuesto").show();
+                            $("#containerCronograma").hide();
+
+                        }
+                    })
+                } else {
+                    alertify.success("Ups! Faltan campos por completar");
+                    return;
+                }
             }
 
             CronogramaPresupuestoService.AbrirProyecto($rootScope.proyecto.datos.id, function (response) {
@@ -225,8 +236,14 @@
 
             $scope.GuardarPresupuesto = function () {
                 $scope.Presupuesto1 = [];
-                $.each($scope.Presupuesto, function (index, value) {
 
+                var contador1 = 0;
+                $.each($scope.Presupuesto, function (index, value) {
+                    
+                    if (value.Item == "" || value.Concepto == "" || value.Descripcion == "" || value.Unidad=="" || value.Cantidad=="" || value.ValorUnitario=="") {
+                        alertify.success("Ups! Faltan campos por completar");
+                        contador1++;
+                    }
                     $scope.Presupuesto1.push({
                         IdProyecto: $rootScope.proyecto.datos.id,
                         IdPresupuesto: value.IdPresupuesto,
@@ -241,21 +258,30 @@
 
                 })
 
-                CronogramaPresupuestoService.GuardarPresupuesto($scope.Presupuesto1, function (response) {
-                    if (response.success) {
 
-                        $scope.AIU.ValorTotal = $scope.total;
-                        $scope.AIU.IdProyecto = $rootScope.proyecto.datos.id;
+               
+                if (contador1 == 0) {
+                    CronogramaPresupuestoService.GuardarPresupuesto($scope.Presupuesto1, function (response) {
+                        if (response.success) {
 
-                        CronogramaPresupuestoService.GuardarAIU($scope.AIU, function (response) {
-                            if (response.success) {
-                                alertify.alert("<b>Registro Exitoso</b>");
-                                $location.url("/Menu");
+                            $scope.AIU.ValorTotal = $scope.total;
+                            $scope.AIU.IdProyecto = $rootScope.proyecto.datos.id;
 
-                            }
-                        })
-                    }
-                })
+                            CronogramaPresupuestoService.GuardarAIU($scope.AIU, function (response) {
+                                if (response.success) {
+                                    alertify.alert("<b>Registro Exitoso</b>");
+                                    $location.url("/Menu");
+
+                                }
+                            })
+                        }
+                    })
+                } else {
+                    alertify.success("Ups! Faltan campos por completar");
+                    return;
+                }
+
+                
             }
 
             CronogramaPresupuestoService.AbrirProyecto($rootScope.proyecto.datos.id, function (response) {

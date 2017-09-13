@@ -42,13 +42,28 @@
          
             //FUNCIÓN PARA GUARDAR INVOLUCRADOS
             $scope.GuardarInvolucrados = function () {
-               
-                InvolucradosService.GuardarInvolucrados($scope.Involucrados, function (response) {
-                    if (response.success) {
-                        alertify.alert("<b>Registro Exitoso</b>");
-                        $location.url("/Menu");
+                var contadotr = 0;
+                $.each($scope.Involucrados, function (index,value) {
+                    if (value.Involucrado == "" || value.Interes == "" || value.Problema == "" || value.Recursos == "" || value.Estrategia == "") {
+                    
+                        contadotr++;
                     }
                 })
+
+                if(contadotr==0){
+                    InvolucradosService.GuardarInvolucrados($scope.Involucrados, function (response) {
+                        if (response.success) {
+                            alertify.alert("<b>Registro Exitoso</b>");
+                            $location.url("/Menu");
+                        }
+                    })
+                } else {
+                    alertify.success("Ups! Faltan campos por completar");
+                    return;
+                }
+         
+
+                
             }
 
             //FUNCIÓN PARA CONSULTAR INVOLUCRADOS

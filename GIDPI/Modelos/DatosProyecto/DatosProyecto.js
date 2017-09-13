@@ -136,7 +136,26 @@
                 Etapa:""
             }
             
+
+            $scope.ValidacionDatos = function() {
+                if ($scope.DatosProyecto.TipoProyecto == "" || $scope.DatosProyecto.TipoProyecto == null || $scope.DatosProyecto.AccionProyecto == "" || $scope.DatosProyecto.AccionProyecto == null || 
+                    $scope.DatosProyecto.Sector == "" || $scope.DatosProyecto.Sector == null || $scope.DatosProyecto.IdMunicipio == "" || $scope.DatosProyecto.IdMunicipio == null ||
+                    $scope.DatosProyecto.TemaProyecto == "" || $scope.DatosProyecto.TemaProyecto == null ){
+
+                    alertify.success("Faltan campos por completar");
+                    return false;
+
+                }
+            }
+            
+
+
+
             //Consulta de todos los departamentos para llenar el select
+
+         
+
+
             DatosProyectoService.ConsultarDepartamentos(function (response) {
                 if (response.success) {
 
@@ -158,39 +177,44 @@
             };
 
             //Función para guardar los datos del proyecto
-            $scope.GuardarDatosProyecto = function () {
-                $scope.DatosProyecto.Etapa = 1;
-                $scope.DatosProyecto.IdUsuario = $rootScope.globals.currentUser.id;
 
-                DatosProyectoService.GuardarDatosProyecto($scope.DatosProyecto, function (response) {
+           
 
-                    if (response.success) {
-                        alertify.alert("<b>Registro Exitoso</b>");
+                $scope.GuardarDatosProyecto = function () {
+                    $scope.DatosProyecto.Etapa = 1;
+                    $scope.DatosProyecto.IdUsuario = $rootScope.globals.currentUser.id;
+                    if (!$scope.ValidacionDatos() ) {
+                        DatosProyectoService.GuardarDatosProyecto($scope.DatosProyecto, function (response) {
 
-                        if ($rootScope.proyecto != undefined) {
-                            $cookies.remove("datosProyecto");
-                        }
+                            if (response.success) {
+                                alertify.alert("<b>Registro Exitoso</b>");
 
-                        $rootScope.Proyecto = {
-                            datos: {
-                                id: response.proyecto.IdProyecto,
-                                Tema: response.proyecto.TemaProyecto,
-                                IdUsuario: response.proyecto.IdUsuario,
-                                Etapa: response.proyecto.Etapa
+                                if ($rootScope.proyecto != undefined) {
+                                    $cookies.remove("datosProyecto");
+                                }
+
+                                $rootScope.Proyecto = {
+                                    datos: {
+                                        id: response.proyecto.IdProyecto,
+                                        Tema: response.proyecto.TemaProyecto,
+                                        IdUsuario: response.proyecto.IdUsuario,
+                                        Etapa: response.proyecto.Etapa
+                                    }
+                                };
+
+                                $cookies.putObject("datosProyecto", $rootScope.Proyecto);
+                                $("#circuloDos").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
+                                $("#iconoDos").attr("src", "images/lluviaIdeasAct.png");
+                                $('#flechaDos').fadeIn("slow");
+
+                                $location.url("/Menu");
+
                             }
-                        };
-                      
-                        $cookies.putObject("datosProyecto", $rootScope.Proyecto);
-                        $("#circuloDos").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
-                        $("#iconoDos").attr("src", "images/lluviaIdeasAct.png");
-                        $('#flechaDos').fadeIn("slow");
-
-                        $location.url("/Menu");
-                      
+                        });
                     }
-                });
+                }
+            
 
-            }
 
 
             //Validación para establecer si el usurio tiene un proyecto activo
@@ -223,14 +247,17 @@
 
             //Función para editar los datos del proyecto
             $scope.ModificarProyecto = function () {
+                if ($scope.ValidacionDatos()!=false) {
                 $scope.DatosProyecto.IdProyecto = $rootScope.proyecto.datos.id;
-                DatosProyectoService.ModificarProyecto($scope.DatosProyecto, function (response) {
-                    if (response.success) {
+               
+                    DatosProyectoService.ModificarProyecto($scope.DatosProyecto, function (response) {
+                        if (response.success) {
 
-                        alertify.alert("Modificacion exitosa");
-                        $location.url("/Menu");
-                    }
-                })
+                            alertify.alert("Modificacion exitosa");
+                            $location.url("/Menu");
+                        }
+                    })
+                }
             }
 
                

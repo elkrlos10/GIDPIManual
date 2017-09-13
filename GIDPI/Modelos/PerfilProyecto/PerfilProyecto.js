@@ -33,6 +33,26 @@
 
             }
 
+
+
+            $scope.ValidarPerfilProyecto = function () {
+                if ($scope.PerfilProyecto.NombreProyecto == "" || $scope.PerfilProyecto.NombreArea == "" || $scope.PerfilProyecto.NumeroProyecto == "" || $scope.PerfilProyecto.Justificacion == "") {
+                    alertify.success("Faltan campos por completar");
+                    return false;
+                }
+            }
+
+
+            $scope.ValidarPerfilProyecto2 = function () {
+
+                if ($scope.PerfilProyecto2.Planteamiento == "" || $scope.PerfilProyecto2.Impacto == "" || $scope.PerfilProyecto2.Poblacion == "" || $scope.PerfilProyecto2.Variables == "" ||
+                    $scope.PerfilProyecto2.Tecnicas == "" || $scope.PerfilProyecto2.Enfoque == "" || $scope.PerfilProyecto2.TipoInvestigacion == "" || $scope.PerfilProyecto2.Metodo == "" || $scope.PerfilProyecto2.Metodologia == "") {
+
+                    alertify.success("Faltan campos por completar");
+                    return false;
+                }
+            }
+
             //FUNCIONES DE CAMBIO DE TAP
 
             //PERFIL DE PROYECTO 
@@ -257,15 +277,19 @@
                 $scope.PerfilProyecto.NumeroProyecto = $("#NumeroArea").val();
 
                 console.log($scope.PerfilProyecto);
-                PerfilProyectoService.GuardarPerfilProyecto($scope.PerfilProyecto, function (response) {
-                    if (response.success) {
-                        $("#containerNombre").hide();
-                        $("#containerPerfilProyect").show();
-                        alertify.alert("Registro exitoso");
-                        //$location.url("/Menu");
-                    }
 
-                })
+                if($scope.ValidarPerfilProyecto()!=false){
+                    PerfilProyectoService.GuardarPerfilProyecto($scope.PerfilProyecto, function (response) {
+                        if (response.success) {
+                            $("#containerNombre").hide();
+                            $("#containerPerfilProyect").show();
+                            alertify.alert("Registro exitoso");
+                            //$location.url("/Menu");
+                        }
+
+                    })
+                }
+               
             }
 
 
@@ -274,15 +298,16 @@
 
                 $scope.PerfilProyecto.NombreArea = $("#NombreArea option:selected").text();
                 $scope.PerfilProyecto.NumeroProyecto = $("#NumeroArea").val();
+                if ($scope.ValidarPerfilProyecto()!=false) {
+                    PerfilProyectoService.EditarPerfilProyecto($scope.PerfilProyecto, function (response) {
+                        if (response.success) {
 
-                PerfilProyectoService.EditarPerfilProyecto($scope.PerfilProyecto, function (response) {
-                    if (response.success) {
-                    
-                        alertify.alert("Edición exitosa");
-                      
-                    }
+                            alertify.alert("Edición exitosa");
 
-                })
+                        }
+
+                    })
+                }
             }
 
             //OBJETOS DE LOS SELECTS ENFOQUE, INVESTIGACION Y METODO 
@@ -385,14 +410,16 @@
                 $scope.PerfilProyecto2.TipoInvestigacion = $("#tipoInve option:selected").text();
                 $scope.PerfilProyecto2.Metodo = $("#metodo option:selected").text();
                
-                console.log($scope.PerfilProyecto2);
-                PerfilProyectoService.GuardarPerfilProyecto2($scope.PerfilProyecto2, function (response) {
-                    if (response.success) {
-                        alertify.alert("Registro exitoso");
-                        $location.url("/Menu");
-                    }
+                if($scope.ValidarPerfilProyecto2() !=false){
+                    PerfilProyectoService.GuardarPerfilProyecto2($scope.PerfilProyecto2, function (response) {
+                        if (response.success) {
+                            alertify.alert("Registro exitoso");
+                            $location.url("/Menu");
+                        }
 
-                })
+                    })
+                }
+              
             }
 
             //FUNCION PARA EDITAR LA PARTE 2 DEL PERFIL
@@ -401,14 +428,15 @@
                 $scope.PerfilProyecto.NombreArea = $("#NombreArea option:selected").text();
                 $scope.PerfilProyecto.NumeroProyecto = $("#NumeroArea").val();
 
-                console.log($scope.PerfilProyecto);
-                PerfilProyectoService.EditarPerfilProyecto2($scope.PerfilProyecto2, function (response) {
-                    if (response.success) {
-                        alertify.alert("Edición exitosa");
-                        $location.url("/Menu");
-                    }
+                if ($scope.ValidarPerfilProyecto2() != false) {
+                    PerfilProyectoService.EditarPerfilProyecto2($scope.PerfilProyecto2, function (response) {
+                        if (response.success) {
+                            alertify.alert("Edición exitosa");
+                            $location.url("/Menu");
+                        }
 
-                })
+                    })
+                }
             }
 
 
