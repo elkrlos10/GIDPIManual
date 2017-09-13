@@ -919,4 +919,11 @@
                 console.log($scope.ObjetivosFinales)
                 
             }
+
+            $scope.atras = function () {
+
+                $location.url("/Menu");
+
+            }
+
         }]);

@@ -412,4 +412,10 @@
             }
 
 
+            $scope.atras = function () {
+
+                $location.url("/Menu");
+
+            }
+
         }])

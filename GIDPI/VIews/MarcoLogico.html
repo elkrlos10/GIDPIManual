@@ -1,4 +1,81 @@
-﻿<div class="container-fluid" style="height: auto; margin-top:-10%;">
+﻿<style>
+    #menuAyuda {
+        margin-top: 0%;
+        margin-left: 95.5%;
+        position: fixed;
+        z-index: 300;
+    }
+
+    @media (max-width: 1366px) and (min-width: 1361px) {
+
+        #menuAyuda {
+            margin-top: 0%;
+            margin-left: 95%;
+            position: fixed;
+            z-index: 300;
+        }
+    }
+
+
+    @media (max-width: 1360px) and (max-height: 1281px) {
+
+        #menuAyuda {
+            margin-top: 0%;
+            margin-left: 95%;
+            position: fixed;
+            z-index: 300;
+        }
+    }
+
+    @media (max-width: 1280px) and (min-width: 1153px) {
+
+        #menuAyuda {
+            margin-top: 0%;
+            margin-left: 94%;
+            position: fixed;
+            z-index: 300;
+        }
+    }
+
+    @media(max-width:1152px) {
+
+        #menuAyuda {
+            margin-top: 0%;
+            margin-left: 94%;
+            position: fixed;
+            z-index: 300;
+        }
+    }
+
+    @media (max-width: 1024px) and (max-height: 768px) {
+
+        #menuAyuda {
+            margin-top: 0%;
+            margin-left: 93%;
+            position: fixed;
+            z-index: 300;
+        }
+    }
+</style>
+
+
+<nav class="vertical" id="menuAyuda">
+    <input type="checkbox" id="toggle2" />
+    <label id="menuToggle" for="toggle2">
+        <span class="fa fa-bars" style="font-size:22px;"></span>
+    </label>
+    <menu style="margin-top:-6%;">
+        <li><a class="fa fa-sign-out menuAyuda" style="font-size:22px;" title="Cerrar sesión"></a></li>
+        <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" ng-click="Regresar()" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-file button demo-btn demo5 menuAyuda" title="Leer ayuda" data-svg-popup="demo5" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-video-camera button demo-btn demo6 menuAyuda" title="Ver ayuda" data-svg-popup="demo6" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="audio" style="font-size:22px;"></a></li>
+
+    </menu>
+</nav>
+
+
+<div class="container-fluid" style="height: auto; margin-top:-10%;">
     <div id="containerMarcoLogico">
         <div class="container col-lg-9 col-md-11 col-sm-11 col-xs-11" style="height:auto; margin-left:50%; transform:translate(-50%); background-color:rgba(192,192,192,0.15);">
 
@@ -137,10 +214,10 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 3vh;"></div>
 
             </div>
-            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:50%; background:#8196be;">
+            <!--<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:50%; background:#8196be;">
                 espacio para iconos info
 
-            </div>
+            </div>-->
 
         </div>
     </div>

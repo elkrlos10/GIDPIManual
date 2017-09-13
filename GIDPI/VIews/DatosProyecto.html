@@ -80,7 +80,7 @@
 
 </style>
 
-<div class="container-fluid" style="height:100vh; margin-top:-10%;">
+<div class="container-fluid"style="height:100vh; margin-top:-10%;">
 
     <nav class="vertical" id="menuAyuda">
         <input type="checkbox" id="toggle2" />
@@ -97,93 +97,105 @@
         </menu>
     </nav>
 
-    <div id="contenido" class="container" style="background:rgba(192,192,192,0.15);">
+    <div id="contenido" class="container" style="background:rgba(192,192,192,0.15); height:100vh;">
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:100vh;">
-            <h1 id="datosGenerales" style="margin-top:5%;">DATOS GENERALES</h1>
+            <h1 id="datosGenerales" style="margin-top:5%;">DATOS GENERALES</h1><br />
 
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:30vh; width:600px; margin-left:50%; transform:translateX(-50%); margin-top:5%;">
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height:60vh;">
 
-            <form name="sede" id="sede">
-                <div class="form-group">
-                    <div ng-class="{'has-error':sede.codigo.$invalid && sede.codigo.$touched, 'has-error2':sede.codigo.$error.maxlength}">
-                        <label>TIPO DE PROYECTO</label>
-                        <select class="form-control" id="TipoSede" ng-required="true" ng-model="DatosProyecto.TipoProyecto" style="float:right;">
-                            <option value="INNOVACIÓN">INNOVACIÓN</option>
-                            <option value="SERVICIOS TECNOLÓGICOS">SERVICIOS TECNOLÓGICOS</option>
-                            <option value="INVESTIGACIÓN">INVESTIGACIÓN</option>
-                        </select>
-                        <span ng-if="sede.codigo.$error.maxlength" class="help-block">El código puede tener máximo 10 caracteres </span>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="margin-left:20%;">
+                    <form name="sede" id="sede">
+                        <div class="form-group">
+                            <div ng-class="{'has-error':sede.codigo.$invalid && sede.codigo.$touched, 'has-error2':sede.codigo.$error.maxlength}">
+                                <label>TIPO DE PROYECTO</label>
+                                <select class="form-control" id="TipoSede" ng-required="true" ng-model="DatosProyecto.TipoProyecto" style="float:right;">
+                                    <option value="INNOVACIÓN">INNOVACIÓN</option>
+                                    <option value="SERVICIOS TECNOLÓGICOS">SERVICIOS TECNOLÓGICOS</option>
+                                    <option value="INVESTIGACIÓN">INVESTIGACIÓN</option>
+                                </select>
+                                <span ng-if="sede.codigo.$error.maxlength" class="help-block">El código puede tener máximo 10 caracteres </span>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <div ng-class="{'has-error':sede.nombreSede.$invalid && sede.nombreSede.$touched, 'has-error2':sede.nombreSede.$error.maxlength}">
+                                <label style="padding-top:20px;">ACCIÓN A REALIZAR EN EL PROYECTO</label>
+                                <select class="form-control" id="TipoSede" ng-required="true" ng-model="DatosProyecto.AccionProyecto" style="float:right;">
+                                    <option ng-repeat="accionProyecto in AccionProyecto" class="{{accionProyecto}}" value="{{accionProyecto}}">{{accionProyecto | uppercase}}</option>
+                                </select>
+                                <span ng-if="sede.nombreSede.$error.maxlength" class="help-block">El nombre de la sede puede tener máximo 50 caracteres</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div ng-class="{'has-error':sede.nombreSede.$invalid && sede.nombreSede.$touched, 'has-error2':sede.nombreSede.$error.maxlength}">
+                                <label style="padding-top:20px;">TEMA PRINCIPAL DEL PROYECTO</label>
+                                <!--<select class="form-control" id="TipoSede" ng-required="true" ng-model="DatosProyecto.AccionProyecto" style="float:right;">
+                    <option ng-repeat="accionProyecto in AccionProyecto" class="{{accionProyecto}}" value="{{accionProyecto}}">{{accionProyecto | uppercase}}</option>
+                </select>-->
+                                <input id="" class="form-control" style="float:right; width:100%; text-transform:uppercase;" ng-model="DatosProyecto.TemaProyecto" maxlength="70" />
+                                <span ng-if="sede.nombreSede.$error.maxlength" class="help-block">El nombre de la sede puede tener máximo 50 caracteres</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label style="padding-top:20px;">SELECCIONE DEPARTAMENTO</label>
+                            <select class="form-control" id="Departamento" ng-required="true" ng-model="departamento" ng-change="ConsultarMunicipiosDepartamento(departamento)" style="float:right;">
+                                <!--<option value="" disabled selected>Seleccione el Área</option>-->
+                                <option ng-repeat="departamento in Departamentos" class="{{departamento.NombreDepartamento}}" value="{{departamento.IdDepartamento}}">{{departamento.NombreDepartamento}}</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label style="padding-top:20px;">SELECCIONE MUNICIPIO</label>
+                            <select class="form-control" id="Municipio" ng-required="true" ng-model="DatosProyecto.IdMunicipio" style="float:right;">
+                                <!--<option value="" disabled selected>Seleccione el Área</option>-->
+                                <option ng-repeat="municipio in Municipio" class="{{municipio.NombreMunicipio}}" value="{{municipio.IdMunicipio}}">{{municipio.NombreMunicipio}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label style="padding-top:20px;">SECTOR</label>
+                            <select class="form-control" id="TipoSede" ng-required="true" ng-model="DatosProyecto.Sector" style="float:right;">
+                                <option ng-repeat="sector in Sector" class="{{sector}}" value="{{sector}}">{{sector}}</option>
+                            </select>
+                        </div>
+                        <!--<div class="form-group">
+
+            <label>¿La sede es un colegio?</label>
+            <input style="margin-left:5px;" type="checkbox" ng-model="Sede.Colegio" />
+        </div>-->
+                    </form>
+
+                    <div class="modal-footer">
+                        <br />
+                        <!--<button class="btn btn-success btn-default" id="BtnAtras" data-dismiss="modal" ng-click="atras()">Atrás</button>-->
+
+
+                        <div id="BtnGuardar" data-dismiss="modal" ng-click="GuardarDatosProyecto()">
+                            <i id="iconGuardar" class="fa fa-floppy-o" title="Guardar" style="cursor:pointer; font-size:30px; color:#238276; margin-top:8%;" aria-hidden="true"></i>
+                            <p style="font-size:10px; margin-right:-1%;">Guardar</p>
+                        </div>
+
+
+
+
+                        <div id="BtnModificar" data-dismiss="modal" ng-click="ModificarProyecto()">
+                            <i id="iconEditar" class="fa fa-pencil-square-o" title="Editar" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
+                            <p style="font-size:10px; margin-right:1%;">Editar</p>
+                        </div>
                     </div>
 
                 </div>
-                <div class="form-group">
-                    <div ng-class="{'has-error':sede.nombreSede.$invalid && sede.nombreSede.$touched, 'has-error2':sede.nombreSede.$error.maxlength}">
-                        <label style="padding-top:20px;">ACCIÓN A REALIZAR EN EL PROYECTO</label>
-                        <select class="form-control" id="TipoSede" ng-required="true" ng-model="DatosProyecto.AccionProyecto" style="float:right;">
-                            <option ng-repeat="accionProyecto in AccionProyecto" class="{{accionProyecto}}" value="{{accionProyecto}}">{{accionProyecto | uppercase}}</option>
-                        </select>
-                        <span ng-if="sede.nombreSede.$error.maxlength" class="help-block">El nombre de la sede puede tener máximo 50 caracteres</span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div ng-class="{'has-error':sede.nombreSede.$invalid && sede.nombreSede.$touched, 'has-error2':sede.nombreSede.$error.maxlength}">
-                        <label style="padding-top:20px;">TEMA PRINCIPAL DEL PROYECTO</label>
-                        <!--<select class="form-control" id="TipoSede" ng-required="true" ng-model="DatosProyecto.AccionProyecto" style="float:right;">
-                            <option ng-repeat="accionProyecto in AccionProyecto" class="{{accionProyecto}}" value="{{accionProyecto}}">{{accionProyecto | uppercase}}</option>
-                        </select>-->
-                        <input id="" class="form-control" style="float:right; width:100%; text-transform:uppercase;" ng-model="DatosProyecto.TemaProyecto" maxlength="70" />
-                        <span ng-if="sede.nombreSede.$error.maxlength" class="help-block">El nombre de la sede puede tener máximo 50 caracteres</span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label style="padding-top:20px;">SELECCIONE DEPARTAMENTO</label>
-                    <select class="form-control" id="Departamento" ng-required="true" ng-model="departamento" ng-change="ConsultarMunicipiosDepartamento(departamento)" style="float:right;">
-                        <!--<option value="" disabled selected>Seleccione el Área</option>-->
-                        <option ng-repeat="departamento in Departamentos" class="{{departamento.NombreDepartamento}}" value="{{departamento.IdDepartamento}}">{{departamento.NombreDepartamento}}</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label style="padding-top:20px;">SELECCIONE MUNICIPIO</label>
-                    <select class="form-control" id="Municipio" ng-required="true" ng-model="DatosProyecto.IdMunicipio" style="float:right;">
-                        <!--<option value="" disabled selected>Seleccione el Área</option>-->
-                        <option ng-repeat="municipio in Municipio" class="{{municipio.NombreMunicipio}}" value="{{municipio.IdMunicipio}}">{{municipio.NombreMunicipio}}</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label style="padding-top:20px;">SECTOR</label>
-                    <select class="form-control" id="TipoSede" ng-required="true" ng-model="DatosProyecto.Sector" style="float:right;">
-                        <option ng-repeat="sector in Sector" class="{{sector}}" value="{{sector}}">{{sector}}</option>
-                    </select>
-                </div>
-                <!--<div class="form-group">
-
-                    <label>¿La sede es un colegio?</label>
-                    <input style="margin-left:5px;" type="checkbox" ng-model="Sede.Colegio" />
-                </div>-->
-            </form>
-
-            <div class="modal-footer">
-                <br />
-                <!--<button class="btn btn-success btn-default" id="BtnAtras" data-dismiss="modal" ng-click="atras()">Atrás</button>-->
-
-
-                <div id="BtnGuardar" data-dismiss="modal" ng-click="GuardarDatosProyecto()">
-                    <i id="iconGuardar" class="fa fa-floppy-o" title="Guardar" style="cursor:pointer; font-size:30px; color:#238276; margin-top:8%;" aria-hidden="true"></i>
-                    <p style="font-size:10px; margin-right:-1%;">Guardar</p>
-                </div>
-                
 
 
 
-                <div id="BtnModificar" data-dismiss="modal" ng-click="ModificarProyecto()">
-                    <i id="iconEditar" class="fa fa-pencil-square-o" title="Editar" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
-                    <p style="font-size:10px; margin-right:1%;">Editar</p>
-                </div>
             </div>
 
 
+            <!--<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:60%; background:#ddd;"></div>-->
+
+
         </div>
+
     </div>
+
 </div>
