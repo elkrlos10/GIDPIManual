@@ -103,13 +103,14 @@ ManualApp.config(function ($routeProvider) {
 
 // create the controller and inject Angular's $scope
 ManualApp.controller('PrincipalController',
-    ['$scope', '$rootScope', '$http', '$location',
-    function ($scope, $rootScope, $http, $location) {
+    ['$scope', '$rootScope', '$http', '$location', '$cookies', '$cookieStore',
+    function ($scope, $rootScope, $http, $location, $cookies, $cookieStore) {
 
-        //$scope.CerrarSesion = function () {
-        //    $cookies.remove("username");
-        //    $location.url('/Login');
-        //};
+        $rootScope.cerrarSesion = function () {
+            $cookies.remove("datosProyecto");
+            $cookies.remove("username");
+            $location.url("/Login");
+        }
 
         //$scope.UsuarioCambiarPass = {
         //    Password: "",
