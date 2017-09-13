@@ -108,7 +108,7 @@
             //Función para empezar a comparar los problemas
             $scope.mostrar = function () {
 
-                $scope.ProblemaComparante = $scope.Problemas[0].Problema;
+               
                 $scope.ProblemasCalificar = [];
 
                 //-------------DESCOMENTARIAR -------------------------
@@ -152,12 +152,14 @@
                     }
                 });
                
-                console.log(totalProblemas);
+              
 
                 if (totalProblemas.length > 0 && totalProblemas.length < $scope.Problemas.length) {
                     alertify.alert("<b>Ups! Tienes problemas repetidos</b>")
-                    return;
+                    return false;
                 }
+
+                $scope.ProblemaComparante = $scope.Problemas[0].Problema;
 
                 setTimeout(function () {
                     $("#comparar li:nth-child(1)").show();
