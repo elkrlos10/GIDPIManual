@@ -134,8 +134,10 @@
     <Content Include="Css\jQuery-svg-popup.css" />
     <Content Include="Css\jquery-ui.min.css" />
     <Content Include="Css\jQuery.AudioPlayer.css" />
+    <Content Include="Css\MenuAyudaObjetivos.css" />
     <Content Include="Css\notify.css" />
     <Content Include="Css\style.css" />
+    <Content Include="Css\sweetalert2.css" />
     <Content Include="Fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="images\arbol.png" />
@@ -247,6 +249,7 @@
     <Content Include="scripts\moment.js" />
     <Content Include="scripts\notify.js" />
     <Content Include="scripts\prefixfree.min.js" />
+    <Content Include="scripts\sweetalert2.js" />
     <Content Include="VIews\ArbolView.html" />
     <Content Include="VIews\cronogramaPresupuesto.html" />
     <Content Include="VIews\DatosProyecto.html" />

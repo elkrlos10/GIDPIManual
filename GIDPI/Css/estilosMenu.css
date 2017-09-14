@@ -127,6 +127,185 @@ nav.vertical {
   transition : all .4s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
+
+/*MENÚ AYUDA NÚMERO DOS*/
+
+#menuAyudaDos{
+    margin-top: 10%;
+    margin-left: 30%;
+    position: fixed;
+    z-index: 300;
+}
+
+li {
+  list-style-type: none;
+}
+
+.menuAyuda , #menuToggle {
+  display : block !important;
+  width   : auto  !important;
+  text-decoration : none;
+  background:#238276;
+  color   : #FFF;
+  padding : 20px 23px;
+  border  : 1px solid #1a6359;
+}
+
+#menuAyudaDos:after {
+  content : '';
+  position: absolute;
+  display : none;
+  font-size   : 20px;
+  line-height : 20px;
+  text-align : center;
+  color  : #238276;
+  font-weight: 300;
+  text-shadow : none;
+  padding : 30px 20px;
+  text-transform : capitalize;
+}
+
+span {
+  display     : inline-block;
+  transition : all .4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+menu a:hover {
+    box-shadow: inset 0 0 0 2px #1b665c;
+    text-shadow: 0 0 2px #B93632;
+    background: #165950;
+    color: white;
+    text-decoration:none;
+}
+
+
+nav.vertical {
+  height: 500px;
+  width : 80px;
+  float : right;
+}
+
+.verticalDos menu {
+  top   : -402px;
+  transition : all .4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.verticalDos a , .vertical label {
+  border-top-color : rgba(255,255,255,0.1);
+}
+
+.verticalDos a:after {
+  padding : 20px 0;
+  width   : 100%;
+  left : 0;
+  top  : 100%;
+}
+
+.verticalDos span {
+  transform  : rotate(90deg);
+}
+
+#toggle1:checked ~ menu {
+  top   : 0;
+  transition   : top .4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+#toggle1:checked ~ label span {
+  transform  : rotate(0deg);
+  transition : all .4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+
+
+/*MENÚ AYUDA NÚMERO TRES*/
+
+#menuAyudaTres{
+    margin-top: 10%;
+    margin-left: 30%;
+    position: fixed;
+    z-index: 300;
+}
+
+li {
+  list-style-type: none;
+}
+
+.menuAyuda , #menuToggle {
+  display : block !important;
+  width   : auto  !important;
+  text-decoration : none;
+  background:#238276;
+  color   : #FFF;
+  padding : 20px 23px;
+  border  : 1px solid #1a6359;
+}
+
+#menuAyudaTres:after {
+  content : '';
+  position: absolute;
+  display : none;
+  font-size   : 20px;
+  line-height : 20px;
+  text-align : center;
+  color  : #238276;
+  font-weight: 300;
+  text-shadow : none;
+  padding : 30px 20px;
+  text-transform : capitalize;
+}
+
+span {
+  display     : inline-block;
+  transition : all .4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+menu a:hover {
+    box-shadow: inset 0 0 0 2px #1b665c;
+    text-shadow: 0 0 2px #B93632;
+    background: #165950;
+    color: white;
+    text-decoration:none;
+}
+
+
+nav.vertical {
+  height: 500px;
+  width : 80px;
+  float : right;
+}
+
+.verticalTres menu {
+  top   : -402px;
+  transition : all .4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.verticalTres a , .vertical label {
+  border-top-color : rgba(255,255,255,0.1);
+}
+
+.verticalTres a:after {
+  padding : 20px 0;
+  width   : 100%;
+  left : 0;
+  top  : 100%;
+}
+
+.verticalTres span {
+  transform  : rotate(90deg);
+}
+
+#toggle3:checked ~ menu {
+  top   : 0;
+  transition   : top .4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+#toggle3:checked ~ label span {
+  transform  : rotate(0deg);
+  transition : all .4s cubic-bezier(0.86, 0, 0.07, 1);
+} 
+
+
+
 #audioWrap{
  width: 60%; 
  margin-left: 20%; 
