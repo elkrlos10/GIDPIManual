@@ -7,7 +7,13 @@
                 var color = $("#iconoUno").attr('value');
                 //console.log(cosa);
                 if (color == "1") {
-                    alertify.alert("<b>Debe abrir un proyecto o  crear uno nuevo</b>", function () {
+                    swal({
+                        text: 'Debe abrir un proyecto o  crear uno nuevo',
+                        confirmButtonColor: '#238276',
+                        width: '25%',
+                        allowOutsideClick: false
+
+                    }).then(function () {
                         $("#misProyectos").toggle("slow");
                     });
                 } else {
@@ -254,12 +260,17 @@
                     $("#iconoUno").attr("src", "images/datosBasicosAct.png");
                     $("#iconoUno").attr('value', 2);
                     $('#flechaUno').fadeIn("slow");
+                    $("#circuloUno").addClass("animated rotateIn");
+                   
+                    $(".campo:nth-child(1)").css({ 'left': '33%' })
+                    
 
                     $("#circuloDos").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
                     $("#iconoDos").attr("src", "images/lluviaIdeasAct.png");
                     $("#iconoDos").attr('value', 2);
                     $('#flechaDos').fadeIn("slow");
-
+                    $("#circuloDos").addClass("animated rotateIn");
+                    $(".campo:nth-child(3)").css({ 'right': '25%' })
                     //$("#circuloTres").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
                     //$("#iconoTres").attr("src", "images/arbolProbAct.png");
                     //$("#iconoTres").attr('value', 2);
@@ -271,7 +282,8 @@
                     $("#iconoTres").attr("src", "images/arbolProbAct.png");
                     $("#iconoTres").attr('value', 2);
                     $('#flechaTres').fadeIn("slow");
-
+                    $("#circuloTres").addClass("animated rotateIn");
+                    $(".campo:nth-child(5)").css({ 'right': '10%' })
                     
                 }
 
@@ -281,6 +293,8 @@
                     $("#iconoCuatro").attr("src", "images/arbolAct.png");
                     $("#iconoCuatro").attr('value', 2);
                     $('#flechaCuatro').fadeIn("slow");
+                    $("#circuloCuatro").addClass("animated rotateIn");
+                    $(".campo:nth-child(7)").css({ 'left': '60%' })
                 }
 
                 if (Etapa >= 5) {
@@ -289,6 +303,8 @@
                     $("#iconoCinco").attr("src", "images/perfilAct.png");
                     $("#iconoCinco").attr('value', 2);
                     $('#flechaCinco').fadeIn("slow");
+                    $("#circuloCinco").addClass("animated rotateIn");
+                    $(".campo:nth-child(9)").css({ 'left': '34%' })
                 }
 
                 if (Etapa >= 6) {
@@ -296,6 +312,8 @@
                     $("#iconoSeis").attr("src", "images/graficaAct.png");
                     $("#iconoSeis").attr('value', 2);
                     $('#flechaSeis').fadeIn("slow");
+                    $("#circuloSeis").addClass("animated rotateIn");
+                    $(".campo:nth-child(11)").css({ 'left': '5%' })
                 }
 
                 if (Etapa >= 7) {
@@ -303,12 +321,16 @@
                     $("#iconoSiete").attr("src", "images/calendarioAct.png");
                     $("#iconoSiete").attr('value', 2);
                     $('#flechaSiete').fadeIn("slow");
+                    $("#circuloSiete").addClass("animated rotateIn");
+                    $(".campo:nth-child(13)").css({ 'left': '-7%' })
                 }
                 if (Etapa >= 9) {
                     $("#circuloOcho").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
                     $("#iconoOcho").attr("src", "images/matrizAct.png");
                     $("#iconoOcho").attr('value', 2);
                     $('#flechaOcho').fadeIn("slow");
+                    $("#circuloOcho").addClass("animated rotateIn");
+                    $(".campo:nth-child(15)").css({ 'left': '12%' })
                 }
             }
 

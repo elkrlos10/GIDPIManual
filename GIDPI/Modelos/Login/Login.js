@@ -31,6 +31,10 @@
                 TipoUsuario:"",
             };
 
+            $scope.recuperarContrasena = {
+                email:""
+
+            }
            
         
             $scope.RegistroPersonaNatural = function () {
@@ -153,6 +157,22 @@
             }
 
 
+
+            $scope.ConsultarCorreo = function () {
+
+                if ($scope.recuperarContrasena.email == "" || $scope.recuperarContrasena.email ==  null) {
+                    alertify.success("Debe Ingresar el correo!");
+                } else {
+                    LoginService.ConsutarEmail($scope.recuperarContrasena.email, function (response) {
+                        if (response.success) {
+                            alertify.success(response.Mensaje);
+                        }
+                    })
+
+                    $('#ModalOlvideContra').modal('hide');
+                }
+
+            }
 
 
         }]);

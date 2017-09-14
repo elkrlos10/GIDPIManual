@@ -371,7 +371,14 @@
                                         document.querySelector("#btnProblemaCentral").addEventListener("click", function () {
                                             var txtInicial = document.querySelector("#txtProblemaInicial").value; //capturar texto del problema central en modal
                                             if (txtInicial.length == 0 || txtInicial == " ") { //validar si viene vacio
-                                                alert("Debes ingresar un problema central");
+                                                swal({
+                                                    text: 'Debes ingresar un problema central',
+                                                    confirmButtonColor: '#238276',
+                                                    width: '25%'
+
+                                                })
+
+                                                
                                             } else {
                                                 document.querySelector("#txtProblema").value = txtInicial;
                                                 modalOff();
@@ -705,7 +712,13 @@
 
                 ArbolProblemaService.GuardarDatosArbol($scope.ObjArbol, function (response) {
                     if (response.success) {
-                        alertify.alert("<b>Registro Exitoso</b>");
+                        swal({
+                            text: 'Registro Exitoso',
+                            confirmButtonColor: '#238276',
+                            width: '25%'
+
+                        })
+                     
                         $location.url("/Menu");
 
                     }

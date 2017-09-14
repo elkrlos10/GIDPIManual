@@ -135,7 +135,13 @@
                 if (cont == 0) {
                     CronogramaPresupuestoService.GuardarCronograma($scope.Cronograma, function (response) {
                         if (response.success) {
-                            alertify.alert("<b>Registro Exitoso</b>");
+                            swal({
+                                text: 'Registro Exitoso',
+                                confirmButtonColor: '#238276',
+                                width: '25%'
+
+                            })
+                        
                             $("#btnPresupuesto").removeAttr("disabled", "disabled");
                             $("#containerPresupuesto").show();
                             $("#containerCronograma").hide();
@@ -269,7 +275,15 @@
 
                             CronogramaPresupuestoService.GuardarAIU($scope.AIU, function (response) {
                                 if (response.success) {
-                                    alertify.alert("<b>Registro Exitoso</b>");
+
+
+                                    swal({
+                                        text: 'Registro Exitoso',
+                                        confirmButtonColor: '#238276',
+                                        width: '25%'
+
+                                    })
+
                                     $location.url("/Menu");
 
                                 }

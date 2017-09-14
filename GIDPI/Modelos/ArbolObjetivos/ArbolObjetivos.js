@@ -1,6 +1,7 @@
 ﻿ManualApp.controller('ArbolObjetivosController',
     ['$scope', '$rootScope', '$location', 'ArbolObjetivoService', '$cookies', '$cookieStore', 'MenuService', '$routeParams', '$sce',
         function ($scope, $rootScope, $location, ArbolObjetivoService, $cookies, $cookieStore, MenuService, $routeParams, $sce) {
+            //location.reload();
             $("#resultados").attr("disabled", "disabled");
             //LINEA PARA OCULTAR EL FORMULARIO DE OBJETIVOS
             $("#VistaObjetivos").hide();
@@ -710,7 +711,13 @@
 
                 ArbolObjetivoService.GuardarDatosArbol($scope.ObjArbol, function (response) {
                     if (response.success) {
-                        alertify.alert("<b>Registro Exitoso</b>");
+
+                        swal({
+                            text: 'Registro Exitoso',
+                            confirmButtonColor: '#238276',
+                            width: '25%',
+                        })
+                      
                         //$scope.ocultarArbol();
                         $("#TabObjetivos").attr("disabled", false);
                         $scope.ocultarArbol();
@@ -907,8 +914,14 @@
                 if (con == 0) {
                     ArbolObjetivoService.GuardarObjetivos($scope.ObjetivosFinales, function (response) {
                         if (response.success) {
+
+
+                            swal({
+                                text: 'Registro Exitoso',
+                                confirmButtonColor: '#238276',
+                                width: '25%',
+                            })
                            
-                            alertify.alert("<b>Registro Exitoso</b>");
                             $location.url("/Menu");
                         }
                     });

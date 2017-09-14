@@ -26,6 +26,16 @@
             });
         };
 
+        service.ConsutarEmail = function (correo, callback) {
+            item={
+                Parametro1:correo
+            }
+            $http.post(URLServices + "Login/ConsutarEmail/", item)
+            .success(function (response) {
+                callback(response);
+            });
+        };
+
         return service;
 
     }]);

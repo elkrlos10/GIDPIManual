@@ -53,7 +53,13 @@
                 if(contadotr==0){
                     InvolucradosService.GuardarInvolucrados($scope.Involucrados, function (response) {
                         if (response.success) {
-                            alertify.alert("<b>Registro Exitoso</b>");
+                            swal({
+                                text: 'Registro Exitoso',
+                                confirmButtonColor: '#238276',
+                                width: '25%'
+
+                            })
+                       
                             $location.url("/Menu");
                         }
                     })

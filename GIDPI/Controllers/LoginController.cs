@@ -1,5 +1,6 @@
 ﻿using Datos.DTO;
 using Datos.Modelos;
+using GIDPI.Parametros;
 using LogicaNegocio.LogicaNegocio;
 using System;
 using System.Collections.Generic;
@@ -98,6 +99,26 @@ namespace GIDPI.Controllers
                 return Ok(new { success = false });
             }
            
+        }
+
+        [HttpPost]
+        public IHttpActionResult ConsutarEmail(ParametrosDTO oParametros)
+        {
+            try
+            {
+
+                UsuarioBl oUsuarioBl = new UsuarioBl();
+                var Mensaje = oUsuarioBl.ConsutarEmail(oParametros.Parametro1);
+
+
+                return Ok(new { success = true, Mensaje });
+            }
+            catch (Exception e)
+            {
+
+                return Ok(new { success = false });
+            }
+
         }
     }
 }

@@ -283,7 +283,13 @@
                         if (response.success) {
                             $("#containerNombre").hide();
                             $("#containerPerfilProyect").show();
-                            alertify.alert("Registro exitoso");
+                            swal({
+                                text: 'Registro Exitoso',
+                                confirmButtonColor: '#238276',
+                                width: '25%'
+
+                            })
+                           
                             //$location.url("/Menu");
                         }
 
@@ -301,7 +307,12 @@
                 if ($scope.ValidarPerfilProyecto()!=false) {
                     PerfilProyectoService.EditarPerfilProyecto($scope.PerfilProyecto, function (response) {
                         if (response.success) {
+                            swal({
+                                text: 'Edición Exitosa',
+                                confirmButtonColor: '#238276',
+                                width: '25%'
 
+                            })
                             alertify.alert("Edición exitosa");
 
                         }
@@ -413,7 +424,13 @@
                 if($scope.ValidarPerfilProyecto2() !=false){
                     PerfilProyectoService.GuardarPerfilProyecto2($scope.PerfilProyecto2, function (response) {
                         if (response.success) {
-                            alertify.alert("Registro exitoso");
+                            swal({
+                                text: 'Registro Exitoso',
+                                confirmButtonColor: '#238276',
+                                width: '25%'
+
+                            })
+                          
                             $location.url("/Menu");
                         }
 
@@ -431,7 +448,13 @@
                 if ($scope.ValidarPerfilProyecto2() != false) {
                     PerfilProyectoService.EditarPerfilProyecto2($scope.PerfilProyecto2, function (response) {
                         if (response.success) {
-                            alertify.alert("Edición exitosa");
+                            swal({
+                                text: 'Edición Exitosa',
+                                confirmButtonColor: '#238276',
+                                width: '25%'
+
+                            })
+               
                             $location.url("/Menu");
                         }
 

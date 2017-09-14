@@ -155,7 +155,15 @@
               
 
                 if (totalProblemas.length > 0 && totalProblemas.length < $scope.Problemas.length) {
-                    alertify.alert("<b>Ups! Tienes problemas repetidos</b>")
+
+
+                    swal({
+                        text: 'Ups! Tienes problemas repetidos',
+                        confirmButtonColor: '#238276',
+                        width: '25%'
+
+                    })
+                
                     return false;
                 }
 
@@ -529,19 +537,37 @@
                 $scope.DatosProyecto.DetalleMat = $scope.Problemas;
                 if ($scope.DatosProyecto.ProblemaGeneral == "" ) {
 
-                    alertify.alert("<b>Ingrese el problema general</b>")
+
+
+                    swal({
+                        text: 'Ingrese el problema general',
+                        confirmButtonColor: '#238276',
+                        width: '25%'
+
+                    })
+                  
                     return;
 
                 } else if ($scope.DatosProyecto.DetalleMat[0].Criterio == "") {
+                    swal({
+                        text: 'Debe realizar la matriz de Vester',
+                        confirmButtonColor: '#238276',
+                        width: '25%'
 
-                    alertify.alert("<b>Debe realizar la matriz de Vester</b>")
+                    })
+                  
                     return;
                 }
            
                 MatrizService.Guardar($scope.DatosProyecto, function (response) {
                     if (response.success) {
+                        swal({
+                            text: 'Registro Exitoso',
+                            confirmButtonColor: '#238276',
+                            width: '25%'
 
-                        alertify.alert("<b>Registro Exitoso</b>");
+                        })
+                      
                         $location.url("/Menu");
                         location.reload();
                    

@@ -187,7 +187,13 @@
                         DatosProyectoService.GuardarDatosProyecto($scope.DatosProyecto, function (response) {
 
                             if (response.success) {
-                                alertify.alert("<b>Registro Exitoso</b>");
+
+                                swal({
+                                    text: 'Registro Exitoso',
+                                    confirmButtonColor: '#238276',
+                                    width: '25%',
+                                })
+                                
 
                                 if ($rootScope.proyecto != undefined) {
                                     $cookies.remove("datosProyecto");
@@ -253,7 +259,14 @@
                     DatosProyectoService.ModificarProyecto($scope.DatosProyecto, function (response) {
                         if (response.success) {
 
-                            alertify.alert("Modificacion exitosa");
+                            swal({
+                                text: 'Modificacion Exitoso',
+                                confirmButtonColor: '#238276',
+                                width: '25%'
+
+                            })
+                            
+
                             $location.url("/Menu");
                         }
                     })

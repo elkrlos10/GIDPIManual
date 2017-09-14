@@ -91,7 +91,7 @@
                                 </div>
 
                                 <div class="login-agileits-bottom">
-                                    <h2><button class="btn btn-info" type="button" data-toggle="modal" data-target="#ModalOlvideContra" >Olvide mi contraseña</button></h2>
+                                    <h2><button  id="ingresar" style="margin-top:2%;" type="button" data-toggle="modal" data-target="#ModalOlvideContra" >Olvide mi contraseña</button></h2>
                                 </div>
 
                             </div>
@@ -203,7 +203,7 @@
 
 
 
-<div class="modal fade" id="ModalOlvideContra"  data-keyboard=”false” role="form">
+<div class="modal fade " id="ModalOlvideContra"  data-keyboard=”false” role="form">
     <div class="modal-dialog" style="width:30%; height:100px; ">
         <!--Modal content-->
         <div class="modal-content">
@@ -217,17 +217,19 @@
 
             </div>
             <div class="modal-body" style="height: 200px; ">
-                <div class="form-group">
-                 <p class="title">Ingrese su corrreo </p>
-                <input type="email" class="form-control" />
-                </div>
+                <form>
+                    <div class="form-group">
+                        <p >Ingrese su corrreo </p>
+                        <input type="email" class="form-control" ng-model="recuperarContrasena.email"  />
+                    </div>
 
-                <button class="btn btn-success  btn-default" type="submit" data-dismiss="modal">Aceptar</button>
+                    
+                    <button type="button" class="btn btn-default btn-danger" style="float:right" data-dismiss="modal">Cancelar</button>
+                    <button class="btn btn-success  btn-default btn-left" type="submit" style="float:right; margin-right:1%"  ng-click="ConsultarCorreo()">Aceptar</button>
+                </form>
             </div>
-            <div class="modal-footer">
-                <button class="btn btn-success  btn-default" type="submit" data-dismiss="modal" >Aceptar</button>
-                <button type="button" class="btn btn-default btn-danger" data-dismiss="modal" >Cancelar</button>
-            </div>
+       
+            
         </div>
     </div>
 </div>
