@@ -134,7 +134,9 @@
     <Content Include="Css\jQuery-svg-popup.css" />
     <Content Include="Css\jquery-ui.min.css" />
     <Content Include="Css\jQuery.AudioPlayer.css" />
+    <Content Include="Css\MenuAyudaDatosBasicos.css" />
     <Content Include="Css\MenuAyudaObjetivos.css" />
+    <Content Include="Css\MenuAyudaPerfilProyecto.css" />
     <Content Include="Css\notify.css" />
     <Content Include="Css\style.css" />
     <Content Include="Css\sweetalert2.css" />

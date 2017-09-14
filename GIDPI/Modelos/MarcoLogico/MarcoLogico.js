@@ -93,4 +93,12 @@
 
 
 
+            $scope.Regresar = function () {
+
+                $location.url("/Menu");
+
+            }
+
+
+
         }]);

@@ -1,136 +1,27 @@
-﻿<style>
-.lineaTab {
-        margin-top: 12%;
-        margin-left: -1%;
-}
-
-#menuAyuda {
-        margin-top: 0%;
-        margin-left: 78.5%;
-        position: fixed;
-        z-index: 300;
-}
-
-@media (min-width: 1440px) and (max-width: 1600px) {
-
-.lineaTab {
-    margin-top: 12%;
-    margin-left: -1%;
-}
-    
-}
-
-@media (min-width: 1402px) and (max-width: 1440px) {
-
-#menuAyuda {
-    margin-top: -6.5%;
-    margin-left: 94.5%;
-    position: fixed;
-    z-index: 300;
-        }
-
-.lineaTab {
-    margin-top: 12%;
-    margin-left: -0.5%;
-}
-
-}
-
-
-@media (max-width: 1366px) and (min-width: 1361px) {
-
-
-.lineaTab {
-    margin-top: 12%;
-    margin-left: 0%;
-}
-
-#menuAyuda{
-    margin-top:0%;
-    margin-left:95%;
-    position:fixed;
-    z-index:300;
-}
-
-}
-
-
-@media (max-width: 1360px) and (max-height: 1281px) {
-
-.lineaTab {
-    margin-top: 12%;
-    margin-left:-0.5%;
-}
-
-#menuAyuda{
-    margin-top:0%;
-    margin-left:95%;
-    position:fixed;
-    z-index:300;
-}
-
-}
-
-@media (max-width: 1280px) and (min-width: 1153px) {
-
-.lineaTab {
-    margin-top: 15%;
-    margin-left: 0%;
-}
-
-#menuAyuda{
-    margin-top:0%;
-    margin-left:94%;
-    position:fixed;
-    z-index:300;
-}
-
-}
-
-@media(max-width:1152px) {
-
-.lineaTab {
-    margin-top: 15%;
-    margin-left: 5%;
-}
-
-#menuAyuda{
-    margin-top:0%;
-    margin-left:94%;
-    position:fixed;
-    z-index:300;
-}    
-
-}
-
-@media (max-width: 1024px) and (max-height: 768px) {
-
-.lineaTab {
-    margin-top: 13%;
-    margin-left: 5%;
-}
-
-#menuAyuda{
-    margin-top:0%;
-    margin-left:93%;
-    position:fixed;
-    z-index:300;
-}    
-  
-
-}
-
-</style>
+﻿<link href="../Css/MenuAyudaPerfilProyecto.css" rel="stylesheet" />
 
 <div class="container-fluid" style="height: auto; margin-top:-10%">
-
-
-
 
     <div class="container" style="height: auto;  background-color:rgba(192,192,192,0.15);">
 
 <!-- EMPIEZA CONTAINER DE NOMBRE DEL PROYECTO -->
       <div id="containerNombre" style="margin-top:3%">
+
+          <nav class="verticalCuatro" id="menuAyudaCuatro">
+              <input type="checkbox" id="toggle4" />
+              <label id="menuToggle" for="toggle4">
+                  <span class="fa fa-bars" style="font-size:22px;"></span>
+              </label>
+              <menu style="margin-top:-6%;">
+                  <li><a class="fa fa-power-off menuAyuda" style="font-size:22px;" ng-click="cerrarSesion()" title="Cerrar sesión"></a></li>
+                  <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" ng-click="atras()" style="font-size:22px;"></a></li>
+                  <li><a class="fa fa-file button demo-btn demo5 menuAyuda" title="Leer ayuda" data-svg-popup="demo5" style="font-size:22px;"></a></li>
+                  <li><a class="fa fa-video-camera button demo-btn demo6 menuAyuda" title="Ver ayuda" data-svg-popup="demo6" style="font-size:22px;"></a></li>
+                  <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="audio" style="font-size:22px;"></a></li>
+
+              </menu>
+          </nav>
+
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:12vh;">
             <h1 class="titulovistaObjetivos" style="margin-left:45%">Nombre del proyecto</h1>
         </div>
@@ -211,6 +102,21 @@
 <!--TERMINA CONTAINER DE NOMBRE DEL PROYECTO -->
         <!-- COMIENZA CONTAINER DE PERFIL PROYECTO -->
         <div id="containerPerfilProyect" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+
+            <nav class="verticalCinco" id="menuAyudaCinco">
+                <input type="checkbox" id="toggle5" />
+                <label id="menuToggle" for="toggle5">
+                    <span class="fa fa-bars" style="font-size:22px;"></span>
+                </label>
+                <menu style="margin-top:-6%;">
+                    <li><a class="fa fa-power-off menuAyuda" style="font-size:22px;" ng-click="cerrarSesion()" title="Cerrar sesión"></a></li>
+                    <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" ng-click="atras()" style="font-size:22px;"></a></li>
+                    <li><a class="fa fa-file button demo-btn demo5 menuAyuda" title="Leer ayuda" data-svg-popup="demo5" style="font-size:22px;"></a></li>
+                    <li><a class="fa fa-video-camera button demo-btn demo6 menuAyuda" title="Ver ayuda" data-svg-popup="demo6" style="font-size:22px;"></a></li>
+                    <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="audio" style="font-size:22px;"></a></li>
+
+                </menu>
+            </nav>
 
             <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height:auto;">
 
