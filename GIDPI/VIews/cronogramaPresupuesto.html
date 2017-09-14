@@ -1,156 +1,26 @@
-﻿<style>
-    input[type=number]::-webkit-outer-spin-button,
-    input[type=number]::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
-
-
-    input[type=number] {
-        -moz-appearance: textfield;
-    }
-
-    #menuAyuda {
-        margin-top: 0%;
-        margin-left: 95.5%;
-        position: fixed;
-        z-index: 300;
-    }
-
-.lineaTab {
-        margin-top: 12%;
-        margin-left: -1%;
-}
-
-
-@media (min-width: 1440px) and (max-width: 1600px) {
-
-.lineaTab {
-    margin-top: 12%;
-    margin-left: -1%;
-}
-    
-}
-
-@media (min-width: 1402px) and (max-width: 1440px) {
-
-.lineaTab {
-    margin-top: 12%;
-    margin-left: -0.5%;
-}
-
-}
-
-@media (max-width: 1366px) and (min-width: 1361px) {
-
-#menuAyuda {
-    margin-top: 0%;
-    margin-left: 95%;
-    position: fixed;
-    z-index: 300;
-}
-
-.lineaTab {
-    margin-top: 12%;
-    margin-left: 0%;
-}
-    }
-
-
-@media (max-width: 1360px) and (max-height: 1281px) {
-
-#menuAyuda {
-    margin-top: 0%;
-    margin-left: 95%;
-    position: fixed;
-    z-index: 300;
-}
-
-.lineaTab {
-    margin-top: 12%;
-    margin-left:-0.5%;
-}
-
-}
-
-@media (max-width: 1280px) and (min-width: 1153px) {
-
-#menuAyuda {
-    margin-top: 0%;
-    margin-left: 94%;
-    position: fixed;
-    z-index: 300;
-}
-
-.lineaTab {
-    margin-top: 15%;
-    margin-left: 0%;
-}
-
-}
-
-
-@media(max-width:1152px) {
-
-#menuAyuda {
-    margin-top: 0%;
-    margin-left: 94%;
-    position: fixed;
-    z-index: 300;
-}
-
-.lineaTab {
-    margin-top: 15%;
-    margin-left: 5%;
-}
-
-}
-
-
-@media (max-width: 1024px) and (max-height: 768px) {
-
-#menuAyuda {
-    margin-top: 0%;
-    margin-left: 93%;
-    position: fixed;
-    z-index: 300;
-}
-
-.lineaTab {
-    margin-top: 13%;
-    margin-left: 5%;
-}
-
-
-}
-
-</style>
-
-
-<nav class="vertical" id="menuAyuda">
-    <input type="checkbox" id="toggle2" />
-    <label id="menuToggle" for="toggle2">
-        <span class="fa fa-bars" style="font-size:22px;"></span>
-    </label>
-    <menu style="margin-top:-6%;">
-        <li><a class="fa fa-power-off menuAyuda" style="font-size:22px;" title="Cerrar sesión"></a></li>
-        <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" ng-click="atras()" style="font-size:22px;"></a></li>
-        <li><a class="fa fa-file button demo-btn demo5 menuAyuda" title="Leer ayuda" data-svg-popup="demo5" style="font-size:22px;"></a></li>
-        <li><a class="fa fa-video-camera button demo-btn demo6 menuAyuda" title="Ver ayuda" data-svg-popup="demo6" style="font-size:22px;"></a></li>
-        <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="audio" style="font-size:22px;"></a></li>
-
-    </menu>
-</nav>
-
-
-
+﻿<link href="../Css/MenuAyudaCronogramaPresupuesto.css" rel="stylesheet" />
 
 <div class="container-fluid" style="height: auto; margin-top:-10%;">
 
     <div class="container" style="height:200%; background-color:rgba(192,192,192,0.15);">
 
         <div id="containerCronograma">
+
+            <nav class="verticalSeis" id="menuAyudaSeis">
+                <input type="checkbox" id="toggle6" />
+                <label id="menuToggle" for="toggle6">
+                    <span class="fa fa-bars" style="font-size:22px;"></span>
+                </label>
+                <menu style="margin-top:-6%;">
+                    <li><a class="fa fa-power-off menuAyuda" style="font-size:22px;" ng-click="cerrarSesion()" title="Cerrar sesión"></a></li>
+                    <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" ng-click="atras()" style="font-size:22px;"></a></li>
+                    <li><a class="fa fa-file button demo-btn demo5 menuAyuda" title="Leer ayuda" data-svg-popup="demo5" style="font-size:22px;"></a></li>
+                    <li><a class="fa fa-video-camera button demo-btn demo6 menuAyuda" title="Ver ayuda" data-svg-popup="demo6" style="font-size:22px;"></a></li>
+                    <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="audio" style="font-size:22px;"></a></li>
+
+                </menu>
+            </nav>
+
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:12vh;">
                 <h1 class="titulovistaObjetivos">CRONOGRAMA</h1>
             </div>
@@ -241,6 +111,22 @@
 <!--container de Presupuesto-->
         
            <div id="containerPresupuesto" class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+
+               <nav class="verticalSiete" id="menuAyudaSiete">
+                   <input type="checkbox" id="toggle7" />
+                   <label id="menuToggle" for="toggle7">
+                       <span class="fa fa-bars" style="font-size:22px;"></span>
+                   </label>
+                   <menu style="margin-top:-6%;">
+                       <li><a class="fa fa-power-off menuAyuda" style="font-size:22px;" ng-click="cerrarSesion()" title="Cerrar sesión"></a></li>
+                       <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" ng-click="atras()" style="font-size:22px;"></a></li>
+                       <li><a class="fa fa-file button demo-btn demo5 menuAyuda" title="Leer ayuda" data-svg-popup="demo5" style="font-size:22px;"></a></li>
+                       <li><a class="fa fa-video-camera button demo-btn demo6 menuAyuda" title="Ver ayuda" data-svg-popup="demo6" style="font-size:22px;"></a></li>
+                       <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="audio" style="font-size:22px;"></a></li>
+
+                   </menu>
+               </nav>
+
                <div style="height: 12vh; margin-left:5%;">
                    <h1 class="titulovistaObjetivos">PRESUPUESTO</h1>
                </div>

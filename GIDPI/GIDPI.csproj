@@ -134,7 +134,12 @@
     <Content Include="Css\jQuery-svg-popup.css" />
     <Content Include="Css\jquery-ui.min.css" />
     <Content Include="Css\jQuery.AudioPlayer.css" />
+    <Content Include="Css\MenuAyudaArbolProblemas.css" />
+    <Content Include="Css\MenuAyudaCronogramaPresupuesto.css" />
     <Content Include="Css\MenuAyudaDatosBasicos.css" />
+    <Content Include="Css\MenuAyudaInvolucrados.css" />
+    <Content Include="Css\MenuAyudaMatrizMarcoLogico.css" />
+    <Content Include="Css\MenuAyudaMatrizVester.css" />
     <Content Include="Css\MenuAyudaObjetivos.css" />
     <Content Include="Css\MenuAyudaPerfilProyecto.css" />
     <Content Include="Css\notify.css" />

@@ -474,6 +474,171 @@ nav.vertical {
 } 
 
 
+/*MENÚ AYUDA NÚMERO SEIS*/
+
+li {
+  list-style-type: none;
+}
+
+.menuAyuda , #menuToggle {
+  display : block !important;
+  width   : auto  !important;
+  text-decoration : none;
+  background:#238276;
+  color   : #FFF;
+  padding : 20px 23px;
+  border  : 1px solid #1a6359;
+}
+
+#menuAyudaSeis:after {
+  content : '';
+  position: absolute;
+  display : none;
+  font-size   : 20px;
+  line-height : 20px;
+  text-align : center;
+  color  : #238276;
+  font-weight: 300;
+  text-shadow : none;
+  padding : 30px 20px;
+  text-transform : capitalize;
+}
+
+span {
+  display     : inline-block;
+  transition : all .4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+menu a:hover {
+    box-shadow: inset 0 0 0 2px #1b665c;
+    text-shadow: 0 0 2px #B93632;
+    background: #165950;
+    color: white;
+    text-decoration:none;
+}
+
+
+nav.vertical {
+  height: 500px;
+  width : 80px;
+  float : right;
+}
+
+.verticalSeis menu {
+  top   : -402px;
+  transition : all .4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.verticalSeis a , .vertical label {
+  border-top-color : rgba(255,255,255,0.1);
+}
+
+.verticalSeis a:after {
+  padding : 20px 0;
+  width   : 100%;
+  left : 0;
+  top  : 100%;
+}
+
+.verticalSeis span {
+  transform  : rotate(90deg);
+}
+
+#toggle6:checked ~ menu {
+  top   : 0;
+  transition   : top .4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+#toggle6:checked ~ label span {
+  transform  : rotate(0deg);
+  transition : all .4s cubic-bezier(0.86, 0, 0.07, 1);
+} 
+
+
+/*MENÚ AYUDA NÚMERO SIETE*/
+
+li {
+  list-style-type: none;
+}
+
+.menuAyuda , #menuToggle {
+  display : block !important;
+  width   : auto  !important;
+  text-decoration : none;
+  background:#238276;
+  color   : #FFF;
+  padding : 20px 23px;
+  border  : 1px solid #1a6359;
+}
+
+#menuAyudaSiete:after {
+  content : '';
+  position: absolute;
+  display : none;
+  font-size   : 20px;
+  line-height : 20px;
+  text-align : center;
+  color  : #238276;
+  font-weight: 300;
+  text-shadow : none;
+  padding : 30px 20px;
+  text-transform : capitalize;
+}
+
+span {
+  display     : inline-block;
+  transition : all .4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+menu a:hover {
+    box-shadow: inset 0 0 0 2px #1b665c;
+    text-shadow: 0 0 2px #B93632;
+    background: #165950;
+    color: white;
+    text-decoration:none;
+}
+
+
+nav.vertical {
+  height: 500px;
+  width : 80px;
+  float : right;
+}
+
+.verticalSiete menu {
+  top   : -402px;
+  transition : all .4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.verticalSiete a , .vertical label {
+  border-top-color : rgba(255,255,255,0.1);
+}
+
+.verticalSiete a:after {
+  padding : 20px 0;
+  width   : 100%;
+  left : 0;
+  top  : 100%;
+}
+
+.verticalSiete span {
+  transform  : rotate(90deg);
+}
+
+#toggle7:checked ~ menu {
+  top   : 0;
+  transition   : top .4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+#toggle7:checked ~ label span {
+  transform  : rotate(0deg);
+  transition : all .4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+
+
+
+
 #audioWrap{
  width: 60%; 
  margin-left: 20%; 

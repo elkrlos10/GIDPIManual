@@ -195,7 +195,7 @@
                                 Etapa: response.proyecto.Etapa
                             }
                         };
-
+                        $rootScope.nombreProyecto = response.proyecto.TemaProyecto;
                         $scope.EtapasProyecto(response.proyecto.Etapa);
                     }
 
