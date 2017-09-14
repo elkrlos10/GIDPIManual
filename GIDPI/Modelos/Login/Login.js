@@ -124,24 +124,30 @@
                     return false;
                 } else {
                     LoginService.ConsultarUsuario($scope.Usuario, function (response) {
+                        if (response.usuario != null) {
 
-                        if (response.success) {
-                            alertify.success("Bienvenido a GIDPI");
+                            if (response.success) {
+                                alertify.success("Bienvenido a GIDPI");
 
-                            $rootScope.globals = {
-                                currentUser: {
-                                    id: response.usuario.IdUsuario,
-                                    nombre: response.usuario.Usuario1,
-                                    //apellido: response.usuario.Usuario1.Apellido,
-                                    //cedula: response.usuario.Cedula,
-                                    //tipousuario: response.usuario.TipoUsuario,
-                                    //idpersona: response.usuario.IdPersona
-                                }
-                            };
-                            $cookies.putObject("username", $rootScope.globals);
+                                $rootScope.globals = {
+                                    currentUser: {
+                                        id: response.usuario.IdUsuario,
+                                        nombre: response.usuario.Usuario1,
+                                        //apellido: response.usuario.Usuario1.Apellido,
+                                        //cedula: response.usuario.Cedula,
+                                        //tipousuario: response.usuario.TipoUsuario,
+                                        //idpersona: response.usuario.IdPersona
+                                    }
+                                };
+                                $cookies.putObject("username", $rootScope.globals);
 
-                            $location.url('/Menu');
+                                $location.url('/Menu');
+                            }
+                          
+                        } else {
+                            alertify.success("El usuario o la contraseña es incorrecta");
                         }
+                        
                     });
                 }
             }

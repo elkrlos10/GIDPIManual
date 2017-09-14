@@ -44,7 +44,7 @@
                      || $scope.Marco.Actividad1 == "" || $scope.Marco.Actividad2 == "" || $scope.Marco.Actividad2 == "" || $scope.Marco.Actividad4 == ""
 
                     ) {
-                    alertify.alert("<b>Faltan campos por completar</b>");
+                    alertify.success("Ups! Faltan campos por completar");
                     return false;
                 } else {
                     MarcoLogicoService.GuardarMarco($scope.Marco, function (response) {
