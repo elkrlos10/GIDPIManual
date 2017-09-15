@@ -2,7 +2,7 @@
     ['$scope', '$rootScope', '$location', 'DatosProyectoService', '$cookies', '$routeParams', '$sce',
         function ($scope, $rootScope, $location, DatosProyectoService, $cookies ,$routeParams, $sce) {
             
-
+            console.log($("#contenido"));
             $scope.atras = function () {
                 $location.url("/Menu");
             }

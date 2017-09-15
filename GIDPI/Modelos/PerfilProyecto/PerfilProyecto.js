@@ -313,7 +313,7 @@
                                 width: '25%'
 
                             })
-                            alertify.alert("Edición exitosa");
+                           
 
                         }
 

@@ -46,6 +46,7 @@
                     alertify.alert('<b>Debes culminar el paso anterior</b>');
                 } else {
                     $location.url("/Objetivos");
+                    location.reload();
                 }
             };
 
@@ -340,6 +341,40 @@
             $("#proyectos").click(function () {
                 $("#misProyectos").toggle("slow");
             });
+
+            $scope.borrarProyecto = function () {
+                swal({
+                    title: 'Esta seguro de eliminar este proyecto?',
+                    text: "Perdera toda la informacion del proyecto...!",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Si, Eliminar',
+                    cancelButtonText: 'No, Cancelar!',
+                    confirmButtonClass: 'btn btn-success',
+                    cancelButtonClass: 'btn btn-danger',
+                    buttonsStyling: false
+                }).then(function () {
+                    swal(
+                      'Borrado!',
+                      'Tu proyecto ha sido borrado.',
+                      'success'
+                    )
+                }, function (dismiss) {
+                    // dismiss can be 'cancel', 'overlay',
+                    // 'close', and 'timer'
+                    if (dismiss === 'cancel') {
+                        swal(
+                             'Eliminado',
+                              'El proyecto ha sido eliminado!',
+                                 'error'
+                         )
+                    }
+                })
+            }
+
+
 
         }]);
 

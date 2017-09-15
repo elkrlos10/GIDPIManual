@@ -59,6 +59,8 @@
 
                             
                             $("#btnFinalizar").show();
+                            $("#btnGuardarMarco").hide();
+                            $("#btnEditarMarco").show();
                             //$location.url("/Menu");
                         }
                     })

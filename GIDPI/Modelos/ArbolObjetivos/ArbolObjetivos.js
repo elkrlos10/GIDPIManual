@@ -182,7 +182,7 @@
                     document.querySelector("#imgEfecto").setAttribute("src", "img/lineaU" + efectos.length + ".png");
                 } else {
 
-                    document.querySelector("#imgEfecto").setAttribute("src", "img/sinLinea.png");
+                   // document.querySelector("#imgEfecto").setAttribute("src", "img/sinLinea.png");
                 }
                 //causas
                 if (causas.length != 0) {

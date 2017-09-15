@@ -13,6 +13,30 @@ nav {
     z-index: 300;
 }
 
+#proyectosNom{
+    
+    width:95%;
+    margin-top:3%;
+    margin-left:7px;
+    height:5%; 
+    color:white;
+    font-weight:600;
+    border:solid 1px #238276;
+    cursor:pointer;
+    padding:8px;
+
+}
+ #proyectosNom:hover{
+    background-color:rgba(89,181,72,0.5); 
+}
+
+ #btnEliminarProyect:hover{
+     color:red;
+ }
+
+
+
+
 nav input[type=checkbox] {
   display : none;
 }

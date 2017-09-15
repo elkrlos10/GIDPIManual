@@ -569,7 +569,7 @@
                         })
                       
                         $location.url("/Menu");
-                        location.reload();
+                        
                    
                     }
                 })
