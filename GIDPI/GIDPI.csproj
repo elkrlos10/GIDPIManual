@@ -126,6 +126,7 @@
     <Content Include="Css\bootstrap-datetimepicker-standalone.css" />
     <Content Include="Css\bootstrap-grid.min.css" />
     <Content Include="Css\bootstrap.min.css" />
+    <Content Include="Css\ej.web.all.min.css" />
     <Content Include="Css\estilos.css" />
     <Content Include="Css\EstilosArbol.css" />
     <Content Include="Css\estilosMenu.css" />
@@ -213,6 +214,7 @@
     <Content Include="Modelos\Presupuesto\CronogramaPresupuesto.js" />
     <Content Include="Modelos\Presupuesto\CronogramaPresupuestoService.js" />
     <Content Include="Modelos\Principal.js" />
+    <Content Include="Modelos\Reporte\Reporte.js" />
     <Content Include="Principal.html" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
@@ -231,6 +233,8 @@
     <Content Include="scripts\codigo.js" />
     <Content Include="scripts\codigoMenu.js" />
     <Content Include="scripts\easyResponsiveTabs.js" />
+    <Content Include="scripts\ej.web.all.min.js" />
+    <Content Include="scripts\ej.widget.angular.min.js" />
     <Content Include="scripts\flowchart.js" />
     <Content Include="scripts\go.js" />
     <Content Include="scripts\goSamples.js" />
@@ -246,6 +250,7 @@
     <Content Include="scripts\jquery-ui.min.js" />
     <Content Include="scripts\jQuery.AudioPlayer.js" />
     <Content Include="scripts\jquery.min.js" />
+    <Content Include="scripts\jsrender.min.js" />
     <Content Include="scripts\main.js" />
     <Content Include="scripts\moment.js" />
     <Content Include="scripts\notify.js" />
@@ -265,6 +270,7 @@
     <Content Include="VIews\Objetivos.html" />
     <Content Include="VIews\ObjetivosView.html" />
     <Content Include="VIews\perfilProyecto.html" />
+    <Content Include="VIews\Reporte.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

@@ -4,7 +4,7 @@
 
 
 // create the module and name it scotchApp
-var ManualApp = angular.module('ManualApp', ['ngRoute', 'ngCookies']);
+var ManualApp = angular.module('ManualApp', ['ngRoute', 'ngCookies', 'ejangular']);
 
 
 
@@ -67,6 +67,11 @@ ManualApp.config(function ($routeProvider) {
             templateUrl: 'Views/MarcoLogico.html',
             controller: 'MarcoLogicoController'
         })
+
+      .when('/Reporte', {
+          templateUrl: 'Views/Reporte.html',
+          controller: 'ReporteController'
+      })
 
 
 })
