@@ -18,6 +18,6 @@ namespace Datos.Modelos
         [StringLength(100)]
         public string ObjetivoCentral { get; set; }
 
-      
+        public byte[] imagen { get; set; }
     }
 }

@@ -13,9 +13,13 @@ namespace LogicaNegocio.LogicaNegocio
         Model1 entity = new Model1();
         public void GuardarDatosArbolObjetivos(ArbolObjetivoDTO oArbolDTO)
         {
+
+            string base64 = oArbolDTO.imagen.Split(',')[1];
             ArbolObjetivos oArbol = new ArbolObjetivos();
             oArbol.IdProyecto = oArbolDTO.IdProyecto;
             oArbol.ObjetivoCentral = oArbolDTO.ObjetivoCentral;
+            byte[] imageBytes = Convert.FromBase64String(base64);
+            oArbol.imagen = imageBytes;
             entity.ArbolObjetivos.Add(oArbol);
             entity.SaveChanges();
 

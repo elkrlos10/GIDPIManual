@@ -556,6 +556,7 @@
                 }
 
                 //crear efectos
+                   
                 if (tipo == "efecto" && efectos.length < 5) {
                     img3 = document.createElement("img");
                     elemento = document.createElement("li");
@@ -590,6 +591,8 @@
                     bloque.setAttribute("class", "bloque");
                     txtArea.setAttribute("class", "txtBloque2");
                     txtArea.setAttribute("maxlength", "140");
+                    txtArea.setAttribute("style", "font-size:10px;");
+
                     causa.appendChild(elemento).appendChild(bloque).appendChild(borrar);
                     causa.querySelector("li:last-child div:last-child").appendChild(txtArea);
                     document.querySelector("#imgCausa3").appendChild(img3);
@@ -626,6 +629,7 @@
                         bloque.setAttribute("class", "bloque2");
                         txtArea.setAttribute("class", "txtBloque3");
                         txtArea.setAttribute("maxlength", "140");
+                        txtArea.setAttribute("style", "font-size:6.5px;");
                         causaIndirectaUl.querySelector("li:nth-child(" + indirecto + ")").appendChild(bloque).appendChild(txtArea);
                         causaIndirectaUl.querySelector("li:nth-child(" + indirecto + ") div:last-child").appendChild(borrar);
                     } else if (document.querySelectorAll("#causaIndirecta li:nth-child(" + indirecto + ") div").length >= 3) {

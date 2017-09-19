@@ -66,32 +66,32 @@ namespace GIDPI.Controllers
             }
         }
 
-        [HttpPost]
-        public IHttpActionResult UploadFileArea(ParametrosDTO oParametros)
-        {
-            //Model entity = new Model ();
-            try
-            {
+        //[HttpPost]
+        //public IHttpActionResult UploadFileArea(ParametrosDTO oParametros)
+        //{
+        //    //Model entity = new Model ();
+        //    try
+        //    {
 
-                string base64 = oParametros.Parametro1.Split(',')[1];
-                // Convert base 64 string to byte[]
-                byte[] imageBytes = Convert.FromBase64String(base64);
-                // Convert byte[] to Image
-                var ms = new MemoryStream(imageBytes, 0, imageBytes.Length);
+        //        string base64 = oParametros.Parametro1.Split(',')[1];
+        //        // Convert base 64 string to byte[]
+        //        byte[] imageBytes = Convert.FromBase64String(base64);
+        //        // Convert byte[] to Image
+        //        var ms = new MemoryStream(imageBytes, 0, imageBytes.Length);
                 
-                    var image = Image.FromStream(ms, true);
+        //            var image = Image.FromStream(ms, true);
                   
                 
 
 
-                return Ok(new { success = true, message = "La extencion del archivo no es valida" });
-            }
+        //        return Ok(new { success = true, message = "La extencion del archivo no es valida" });
+        //    }
 
-            catch (Exception exc)
-            {
+        //    catch (Exception exc)
+        //    {
 
-                return Ok(new { success = false, message = exc.Message });
-            }
-        }
+        //        return Ok(new { success = false, message = exc.Message });
+        //    }
+        //}
     }
 }

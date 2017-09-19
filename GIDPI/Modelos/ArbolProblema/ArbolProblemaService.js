@@ -19,16 +19,16 @@
         //        waitingDialog.hide();
         //    });
         //};
-        service.SubirArchivo = function (img, callback) {
+        //service.SubirArchivo = function (img, callback) {
 
-            item = {
-                Parametro1: img
-            }
-            $http.post(URLServices + "ArbolProblema/UploadFileArea/", item)
-            .success(function (response) {
-                callback(response);
-            });
-        };
+        //    item = {
+        //        Parametro1: img
+        //    }
+        //    $http.post(URLServices + "ArbolProblema/UploadFileArea/", item)
+        //    .success(function (response) {
+        //        callback(response);
+        //    });
+        //};
 
 
         service.ArbolProblemaProyecto = function (IdProyecto, callback) {

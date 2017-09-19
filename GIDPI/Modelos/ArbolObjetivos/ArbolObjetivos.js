@@ -570,6 +570,7 @@
                     bloque.setAttribute("class", "bloque");
                     txtArea.setAttribute("class", "txtBloque2");
                     txtArea.setAttribute("maxlength", "140");
+                    txtArea.setAttribute("style", "font-size:10px;");
                     efecto.appendChild(elemento).appendChild(bloque).appendChild(borrar);
                     efecto.querySelector("li:last-child div:last-child").appendChild(txtArea);
                     document.querySelector("#imgEfecto3").appendChild(img3);
@@ -590,6 +591,7 @@
                     bloque.setAttribute("class", "bloque");
                     txtArea.setAttribute("class", "txtBloque2");
                     txtArea.setAttribute("maxlength", "140");
+                    txtArea.setAttribute("style", "font-size:10px;");
                     causa.appendChild(elemento).appendChild(bloque).appendChild(borrar);
                     causa.querySelector("li:last-child div:last-child").appendChild(txtArea);
                     document.querySelector("#imgCausa3").appendChild(img3);
@@ -608,6 +610,7 @@
                         bloque.setAttribute("class", "bloque2");
                         txtArea.setAttribute("class", "txtBloque3");
                         txtArea.setAttribute("maxlength", "140");
+                        txtArea.setAttribute("style", "font-size:6.5px;");
                         efectoIndirectoUl.querySelector("li:nth-child(" + indirecto + ")").appendChild(bloque).appendChild(txtArea);
                         efectoIndirectoUl.querySelector("li:nth-child(" + indirecto + ") div:last-child").appendChild(borrar);
 
@@ -625,6 +628,7 @@
                         bloque.setAttribute("class", "bloque2");
                         txtArea.setAttribute("class", "txtBloque3");
                         txtArea.setAttribute("maxlength", "140");
+                        txtArea.setAttribute("style", "font-size:6.5px;");
                         causaIndirectaUl.querySelector("li:nth-child(" + indirecto + ")").appendChild(bloque).appendChild(txtArea);
                         causaIndirectaUl.querySelector("li:nth-child(" + indirecto + ") div:last-child").appendChild(borrar);
                     } else if (document.querySelectorAll("#causaIndirecta li:nth-child(" + indirecto + ") div").length >= 3) {
@@ -709,21 +713,37 @@
                     $scope.ObjArbol.Fines.push({ fin: value, FinesIndirectos: datosEfectosIndirectos[index] })
                 })
 
-                ArbolObjetivoService.GuardarDatosArbol($scope.ObjArbol, function (response) {
-                    if (response.success) {
 
-                        swal({
-                            text: 'Registro Exitoso',
-                            confirmButtonColor: '#238276',
-                            width: '25%',
+
+                html2canvas($("#arbolContenedor"), {
+                    onrendered: function (canvas) {
+                        theCanvas = canvas;
+                        //  document.body.appendChild(canvas);
+
+                        var imgageData = theCanvas.toDataURL();
+                        // Now browser starts downloading it instead of just showing it
+                        var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
+                        $scope.ObjArbol.imagen = imgageData;
+                        console.log($scope.ObjArbol.imagen);
+                        ArbolObjetivoService.GuardarDatosArbol($scope.ObjArbol, function (response) {
+                            if (response.success) {
+
+                                swal({
+                                    text: 'Registro Exitoso',
+                                    confirmButtonColor: '#238276',
+                                    width: '25%',
+                                })
+
+                                //$scope.ocultarArbol();
+                                $("#TabObjetivos").attr("disabled", false);
+                                $scope.ocultarArbol();
+
+                            }
                         })
-                      
-                        //$scope.ocultarArbol();
-                        $("#TabObjetivos").attr("disabled", false);
-                        $scope.ocultarArbol();
-
                     }
-                })
+                });
+
+             
             }
             //document.querySelector("#guardar").addEventListener("click", function () {
 

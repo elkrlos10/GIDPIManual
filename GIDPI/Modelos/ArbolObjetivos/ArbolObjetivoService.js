@@ -51,7 +51,16 @@
                 callback(response);
             });
         };
+        //service.SubirArchivo = function (img, callback) {
 
+        //    item = {
+        //        Parametro1: img
+        //    }
+        //    $http.post(URLServices + "ArbolObjetivo/UploadFileArea/", item)
+        //    .success(function (response) {
+        //        callback(response);
+        //    });
+        //};
         return service;
 
     }]);

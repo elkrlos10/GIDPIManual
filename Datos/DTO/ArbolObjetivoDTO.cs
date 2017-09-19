@@ -12,6 +12,7 @@ namespace Datos.DTO
         public int IdProyecto { get; set; }
 
         public string ObjetivoCentral { get; set; }
+        public string imagen { get; set; }
 
         public List<Medios> Medios { get; set; }
         public List<Fines> Fines { get; set; }

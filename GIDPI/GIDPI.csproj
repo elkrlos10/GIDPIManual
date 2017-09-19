@@ -235,6 +235,7 @@
     <Content Include="scripts\easyResponsiveTabs.js" />
     <Content Include="scripts\ej.web.all.min.js" />
     <Content Include="scripts\ej.widget.angular.min.js" />
+    <Content Include="scripts\filesaver.js" />
     <Content Include="scripts\flowchart.js" />
     <Content Include="scripts\go.js" />
     <Content Include="scripts\goSamples.js" />
@@ -243,6 +244,7 @@
     <Content Include="scripts\highcharts.js" />
     <Content Include="scripts\highchartsExporting.js" />
     <Content Include="scripts\highlight.js" />
+    <Content Include="scripts\html2canvas.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-2.1.4.min.js" />
     <Content Include="scripts\jquery-3.2.1.min.js" />
