@@ -20,6 +20,7 @@
             $scope.ObjArbol = {
                 IdProyecto: $rootScope.proyecto.datos.id,
                 ObjetivoCentral: "",
+                imagen:"",
                 Causas: [
                   {
                       Causa: "",
@@ -567,6 +568,8 @@
                     bloque.setAttribute("class", "bloque");
                     txtArea.setAttribute("class", "txtBloque2");
                     txtArea.setAttribute("maxlength", "140");
+                    txtArea.setAttribute("style", "font-size:10px;");
+                
                     efecto.appendChild(elemento).appendChild(bloque).appendChild(borrar);
                     efecto.querySelector("li:last-child div:last-child").appendChild(txtArea);
                     document.querySelector("#imgEfecto3").appendChild(img3);
@@ -605,6 +608,7 @@
                         bloque.setAttribute("class", "bloque2");
                         txtArea.setAttribute("class", "txtBloque3");
                         txtArea.setAttribute("maxlength", "140");
+                        txtArea.setAttribute("style", "font-size:6.5px;");
                         efectoIndirectoUl.querySelector("li:nth-child(" + indirecto + ")").appendChild(bloque).appendChild(txtArea);
                         efectoIndirectoUl.querySelector("li:nth-child(" + indirecto + ") div:last-child").appendChild(borrar);
 
@@ -692,49 +696,70 @@
                     }
                     datosCausasIndirectos.push(cadaLiIndirecto);
                 }
-                //console.log(datosEfectosIndirectos);
-                //console.log(datosCausasIndirectos);
-                //console.log(datosEfectos);
-                //console.log(datosCausas);
 
                 $scope.ObjArbol.ProblemaCentral = datosProblema;
-                $.each(datosCausas, function (index, value) {
-                    if (value != "") {
-                        $scope.ObjArbol.Causas.push({ Causa: value, CausaIndirecta: datosCausasIndirectos[index] })
-                    }
+                if (datosCausas.length > 0 || datosEfectos>0) {
+                    $.each(datosCausas, function (index, value) {
+                        if (value != "") {
+                            $scope.ObjArbol.Causas.push({ Causa: value, CausaIndirecta: datosCausasIndirectos[index] })
+                        }
 
 
-                })
-                $.each(datosEfectos, function (index, value) {
+                    })
+                    $.each(datosEfectos, function (index, value) {
 
-                    $scope.ObjArbol.Efectos.push({ Efecto: value, EfectoIndirecta: datosEfectosIndirectos[index] })
-                })
+                        $scope.ObjArbol.Efectos.push({ Efecto: value, EfectoIndirecta: datosEfectosIndirectos[index] })
+                    })
+                } else {
+                    alert("debes agregar una causa o un efecto como minimo");
+                    return;
+                }
 
-                ArbolProblemaService.GuardarDatosArbol($scope.ObjArbol, function (response) {
-                    if (response.success) {
-                        swal({
-                            text: 'Registro Exitoso',
-                            confirmButtonColor: '#238276',
-                            width: '25%'
+               
 
+
+                html2canvas($("#arbolContenedor"), {
+                    onrendered: function (canvas) {
+                        theCanvas = canvas;
+                      //  document.body.appendChild(canvas);
+
+                        var imgageData = theCanvas.toDataURL();
+                        // Now browser starts downloading it instead of just showing it
+                        var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
+                        $scope.ObjArbol.imagen = imgageData;
+
+                        ArbolProblemaService.GuardarDatosArbol($scope.ObjArbol, function (response) {
+                            if (response.success) {
+                                swal({
+                                    text: 'Registro Exitoso',
+                                    confirmButtonColor: '#238276',
+                                    width: '25%'
+
+                                })
+
+                                $location.url("/Menu");
+
+                            }
                         })
-                     
-                        $location.url("/Menu");
-
                     }
-                })
-                console.log($scope.ObjArbol);
-                console.log(datosProblema);
-            }
+                });
+              
+              
+                
+        }
 
-            //document.querySelector("#guardar").addEventListener("click", function () {
 
-            //});
+//document.querySelector("#guardar").addEventListener("click", function () {
 
-            $scope.atras = function () {
+//});
 
-                $location.url("/Menu");
+$scope.atras = function () {
 
-            }
+    $location.url("/Menu");
 
-        }]);
+}
+
+
+
+
+}]);

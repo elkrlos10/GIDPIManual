@@ -41,9 +41,12 @@ namespace LogicaNegocio.LogicaNegocio
 
         public void GuardarDatosArbol(ArbolProblemaDTO oArbolDTO)
         {
+            string base64 = oArbolDTO.imagen.Split(',')[1];
             ArbolProblema oArbol = new ArbolProblema();
             oArbol.IdProyecto = oArbolDTO.IdProyecto;
             oArbol.ProblemaCentral = oArbolDTO.ProblemaCentral;
+            byte[] imageBytes = Convert.FromBase64String(base64);
+            oArbol.imagen = imageBytes;
             entity.ArbolProblema.Add(oArbol);
             entity.SaveChanges();
 

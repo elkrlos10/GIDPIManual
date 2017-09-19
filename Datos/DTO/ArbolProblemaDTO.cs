@@ -13,6 +13,8 @@ namespace Datos.DTO
 
         public string ProblemaCentral { get; set; }
 
+        public string imagen { get; set; }
+
         public List<Causas> Causas { get; set; }
         public List<Efectos> Efectos { get; set; }
     }

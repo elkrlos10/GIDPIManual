@@ -4,6 +4,33 @@
 
         var service = {};
 
+        //service.SubirArchivo = function (data, callback) {
+        //    //waitingDialog.show();
+        //    var ajaxRequest = $.ajax({
+        //        type: "POST",
+        //        url: URLServices + "ArbolProblema/UploadFileArea",
+        //        contentType: false,
+        //        processData: false,
+        //        data: data
+        //    }).done(function (responseData, textStatus) {
+        //        callback(responseData);
+        //        waitingDialog.hide();
+        //    }).fail(function () {
+        //        waitingDialog.hide();
+        //    });
+        //};
+        service.SubirArchivo = function (img, callback) {
+
+            item = {
+                Parametro1: img
+            }
+            $http.post(URLServices + "ArbolProblema/UploadFileArea/", item)
+            .success(function (response) {
+                callback(response);
+            });
+        };
+
+
         service.ArbolProblemaProyecto = function (IdProyecto, callback) {
 
             item = {

@@ -108,6 +108,12 @@
 
             }
 
+            $scope.sacarArbol= function () {
+             
+            }
+
+           
+
 
 
         }]);

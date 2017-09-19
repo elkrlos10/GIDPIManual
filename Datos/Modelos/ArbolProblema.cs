@@ -19,6 +19,7 @@ namespace Datos.Modelos
         [StringLength(300)]
         public string ProblemaCentral { get; set; }
 
+        public byte[] imagen { get; set; }
  
     }
 }
