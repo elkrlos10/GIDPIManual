@@ -128,6 +128,7 @@
     <Content Include="Css\bootstrap.min.css" />
     <Content Include="Css\ej.web.all.min.css" />
     <Content Include="Css\estilos.css" />
+    <Content Include="Css\EstilosAdministrador.css" />
     <Content Include="Css\EstilosArbol.css" />
     <Content Include="Css\estilosMenu.css" />
     <Content Include="Css\estilosPlataforma.css" />
@@ -189,6 +190,8 @@
     <Content Include="img\lineaU4.png" />
     <Content Include="img\lineaU5.png" />
     <Content Include="img\sinLinea.png" />
+    <Content Include="Modelos\Admin\Admin.js" />
+    <Content Include="Modelos\Admin\AdminService.js" />
     <Content Include="Modelos\ArbolObjetivos\ArbolObjetivoService.js" />
     <Content Include="Modelos\ArbolObjetivos\ArbolObjetivos.js" />
     <Content Include="Modelos\ArbolObjetivos\BorrarElemento2.js" />
@@ -280,6 +283,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\ArbolObjetivoController.cs" />
     <Compile Include="Controllers\ArbolProblemaController.cs" />
     <Compile Include="Controllers\CronogramaPresupuestoController.cs" />

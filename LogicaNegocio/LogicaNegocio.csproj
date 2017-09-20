@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LogicaNegocio\AdminBl.cs" />
     <Compile Include="LogicaNegocio\ArbolObjetivoBl.cs" />
     <Compile Include="LogicaNegocio\ArbolProblemaBl.cs" />
     <Compile Include="LogicaNegocio\CronogramaPresupuestoBL.cs" />
