@@ -4,7 +4,7 @@
 
             $("#containerPresupuesto").hide();
             $("#btnPresupuesto").attr("disabled", "disabled");
-
+         
 
             $scope.Cronograma = [{
                 IdProyecto: $rootScope.proyecto.datos.id,
@@ -78,10 +78,11 @@
                         window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
             function repetir() {
-
+               
                 $('.FI').datepicker({
                     language: 'es',
                     autoclose: true,
+                   
                     //daysOfWeekDisabled: [0]
                 });
 
@@ -110,6 +111,9 @@
 
             }
 
+
+
+
             $scope.EliminarCamposPresupuesto = function () {
 
                 if ($scope.Presupuesto[($scope.Presupuesto.length - 1)].Item == "" && $scope.Presupuesto[($scope.Presupuesto.length - 1)].Concepto == ""
@@ -125,6 +129,10 @@
 
             $scope.GuardarCronograma = function () {
                 var cont = 0;
+            
+
+
+
                 $.each($scope.Cronograma, function (index, value) {
                     if (value.Actividad == "" || value.FechaInicio == "" || value.FechaFin == "" ) {
 
@@ -133,21 +141,23 @@
 
                 })
                 if (cont == 0) {
-                    CronogramaPresupuestoService.GuardarCronograma($scope.Cronograma, function (response) {
-                        if (response.success) {
-                            swal({
-                                text: 'Registro Exitoso',
-                                confirmButtonColor: '#238276',
-                                width: '25%'
 
-                            })
+                    
+                    //CronogramaPresupuestoService.GuardarCronograma($scope.Cronograma, function (response) {
+                    //    if (response.success) {
+                    //        swal({
+                    //            text: 'Registro Exitoso',
+                    //            confirmButtonColor: '#238276',
+                    //            width: '25%'
+
+                    //        })
                         
-                            $("#btnPresupuesto").removeAttr("disabled", "disabled");
-                            $("#containerPresupuesto").show();
-                            $("#containerCronograma").hide();
+                    //        $("#btnPresupuesto").removeAttr("disabled", "disabled");
+                    //        $("#containerPresupuesto").show();
+                    //        $("#containerCronograma").hide();
 
-                        }
-                    })
+                    //    }
+                    //})
                 } else {
                     alertify.success("Ups! Faltan campos por completar");
                     return;

@@ -40,15 +40,15 @@
                         </thead>
 
                         <tbody>
-                            <tr ng-repeat="crono in Cronograma">
+                            <tr   ng-repeat="crono in Cronograma">
                                 <td><textarea class="form-control"maxlength="500" ng-model="crono.Actividad" ></textarea></td>
-                                <td>
+                                <td class="input-daterange">
                                    
-                                    <input class="form-control FI" style="width:100%; height:50px;" ng-model="crono.FechaInicio" />
+                                    <input class="form-control FI" id="FeI" style="width:100%; height:50px;"  data-date-start-date="0d" ng-model="crono.FechaInicio" />
                                 </td>
 
-                                <td>
-                                    <input class="form-control FE" style="width:100%; height:50px;" ng-model="crono.FechaFin"  />
+                                <td class="input-daterange">
+                                    <input class="form-control FE" id="FeF" style="width:100%; height:50px;"  data-date-start-date="0d" ng-model="crono.FechaFin"  />
                                 </td>
                             </tr>
 
@@ -241,3 +241,16 @@
     </div>
 
 </div>
+
+
+<script>
+
+    $("#FeI").change(function () {
+        $("#FeF").val("");
+        $("#FeF").datepicker("destroy");
+        var inicio = $("#FeI").val();
+        $("#FeF").datepicker({
+            minDate:inicio
+        });
+    })
+</script>

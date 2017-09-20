@@ -258,6 +258,7 @@
     <Content Include="scripts\notify.js" />
     <Content Include="scripts\prefixfree.min.js" />
     <Content Include="scripts\sweetalert2.js" />
+    <Content Include="VIews\AdminView.html" />
     <Content Include="VIews\ArbolView.html" />
     <Content Include="VIews\cronogramaPresupuesto.html" />
     <Content Include="VIews\DatosProyecto.html" />

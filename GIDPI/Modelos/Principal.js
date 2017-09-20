@@ -72,6 +72,10 @@ ManualApp.config(function ($routeProvider) {
           templateUrl: 'Views/Reporte.html',
           controller: 'ReporteController'
       })
+    .when('/Admin', {
+        templateUrl: 'Views/AdminView.html',
+        controller: 'ReporteController'
+    })
 
 
 })
