@@ -25,7 +25,13 @@
             $scope.Matriz = function () {
                 var color = $("#iconoDos").attr('value');
                 if (color == 1) {
-                    alertify.alert('<b>Debes culminar el paso anterior</b>');
+                    swal({
+                        text: 'Debes culminar el paso anterior',
+                        confirmButtonColor: '#238276',
+                        width: '25%',
+                        allowOutsideClick: false
+
+                    })
                 } else {
                     $location.url("/Matriz");
                 }
@@ -34,7 +40,13 @@
             $scope.Arbol = function () {
                 var color = $("#iconoTres").attr('value');
                 if (color == 1) {
-                    alertify.alert('<b>Debes culminar el paso anterior</b>');
+                    swal({
+                        text: 'Debes culminar el paso anterior',
+                        confirmButtonColor: '#238276',
+                        width: '25%',
+                        allowOutsideClick: false
+
+                    })
                 } else {
                     $location.url("/ArbolProblema");
                 }
@@ -43,7 +55,14 @@
             $scope.ArbolObjetivos = function () {
                 var color = $("#iconoCuatro").attr('value');
                 if (color == 1) {
-                    alertify.alert('<b>Debes culminar el paso anterior</b>');
+                    swal({
+                        text: 'Debes culminar el paso anterior',
+                        confirmButtonColor: '#238276',
+                        width: '25%',
+                        allowOutsideClick: false
+
+                    })
+                    
                 } else {
                     $location.url("/Objetivos");
                     location.reload();
@@ -54,9 +73,13 @@
                 var color = $("#iconoCinco").attr('value');
                 //console.log(cosa);
                 if (color == "1") {
-                    alertify.alert("<b>Debes culminar el paso anterior</b>", function () {
-                       
-                    });
+                    swal({
+                        text: 'Debes culminar el paso anterior',
+                        confirmButtonColor: '#238276',
+                        width: '25%',
+                        allowOutsideClick: false
+
+                    })
                 } else {
                     $location.url("/Involucrados");
                 }
@@ -68,9 +91,13 @@
                 var color = $("#iconoSeis").attr('value');
                 //console.log(cosa);
                 if (color == "1") {
-                    alertify.alert("<b>Debes culminar el paso anterior</b>", function () {
-                     
-                    });
+                    swal({
+                        text: 'Debes culminar el paso anterior',
+                        confirmButtonColor: '#238276',
+                        width: '25%',
+                        allowOutsideClick: false
+
+                    })
                 } else {
                     $location.url("/PerfilProyecto");
                 }
@@ -81,9 +108,13 @@
                 var color = $("#iconoSiete").attr('value');
                 //console.log(cosa);
                 if (color == "1") {
-                    alertify.alert("<b>Debes culminar el paso anterior</b>", function () {
+                    swal({
+                        text: 'Debes culminar el paso anterior',
+                        confirmButtonColor: '#238276',
+                        width: '25%',
+                        allowOutsideClick: false
 
-                    });
+                    })
                 } else {
                     $location.url("/Cronograma");
                 }
@@ -94,9 +125,13 @@
                 var color = $("#iconoOcho").attr('value');
                 //console.log(cosa);
                 if (color == "1") {
-                    alertify.alert("<b>Debes culminar el paso anterior</b>", function () {
+                    swal({
+                        text: 'Debes culminar el paso anterior',
+                        confirmButtonColor: '#238276',
+                        width: '25%',
+                        allowOutsideClick: false
 
-                    });
+                    })
                 } else {
                     $location.url("/MarcoL");
                 }
@@ -227,30 +262,37 @@
 
                 $("#circuloDos").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
                 $("#iconoDos").attr("src", "images/lluviaIdeas.png");
+                $("#iconoDos").attr('value', 1);
                 $("#flechaDos").fadeOut("fast");
 
                 $("#circuloTres").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
                 $("#iconoTres").attr("src", "images/arbolProb.png");
+                $("#iconoTres").attr('value', 1);
                 $("#flechaTres").fadeOut("fast");
 
                 $("#circuloCuatro").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
                 $("#iconoCuatro").attr("src", "images/arbol.png");
+                $("#iconoCuatro").attr('value', 1);
                 $("#flechaCuatro").fadeOut("fast");
 
                 $("#circuloCinco").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
                 $("#iconoCinco").attr("src", "images/perfil.png");
+                $("#iconoCinco").attr('value', 1);
                 $("#flechaCinco").fadeOut("fast");
 
                 $("#circuloSeis").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
                 $("#iconoSeis").attr("src", "images/grafica.png");
+                $("#iconoSeis").attr('value', 1);
                 $("#flechaSeis").fadeOut("fast");
 
                 $("#circuloSiete").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
                 $("#iconoSiete").attr("src", "images/calendario.png");
+                $("#iconoSiete").attr('value', 1);
                 $("#flechaSiete").fadeOut("fast");
 
                 $("#circuloOcho").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
                 $("#iconoOcho").attr("src", "images/matriz.png");
+                $("#iconoOcho").attr('value', 1);
                 $("#flechaOcho").fadeOut("fast");
             }
 
@@ -348,31 +390,54 @@
                     text: "Perdera toda la informacion del proyecto...!",
                     type: 'warning',
                     showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
+                    confirmButtonColor: '#238276',
                     cancelButtonColor: '#d33',
                     confirmButtonText: 'Si, Eliminar',
                     cancelButtonText: 'No, Cancelar!',
                     confirmButtonClass: 'btn btn-success',
                     cancelButtonClass: 'btn btn-danger',
-                    buttonsStyling: false
+                    //preConfirm: function () {
+                   
+                    //}
+
                 }).then(function () {
-                    swal(
-                      'Borrado!',
-                      'Tu proyecto ha sido borrado.',
-                      'success'
-                    )
-                }, function (dismiss) {
+                    MenuService.EliminarProyecto($rootScope.proyecto.datos.id, function (response) {
+                        if (response.success) {
+                            swal({
+
+                                confirmButtonColor: '#238276',
+                                title: 'Borrado!',
+                                text: 'Tu proyecto ha sido borrado.',
+                                type: 'success'
+                            }).then(function () {
+                                location.reload();
+                            })
+                               
+                           
+                            
+                        } else {
+                            alert("salio mal");
+                        }
+                    })
+                      
+                            
+                }), function (dismiss) {
                     // dismiss can be 'cancel', 'overlay',
                     // 'close', and 'timer'
                     if (dismiss === 'cancel') {
-                        swal(
-                             'Eliminado',
-                              'El proyecto ha sido eliminado!',
-                                 'error'
-                         )
+                        swal({
+                            confirmButtonColor: '#238276',
+                            title : 'Eliminado',
+                            text:'El proyecto ha sido eliminado!',
+                            type: 'error',
+                                 
+
+                        })
                     }
-                })
-            }
+                }
+                    
+                }
+            
 
 
 

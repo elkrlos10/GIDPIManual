@@ -51,5 +51,24 @@ namespace GIDPI.Controllers
         }
 
 
+        [HttpPost]
+        public IHttpActionResult EliminarProyecto(ParametrosDTO IdProyecto)
+        {
+
+            try
+            {
+                MenuBl oMenu = new MenuBl();
+
+                 oMenu.EliminarProyecto(int.Parse(IdProyecto.Parametro1));
+
+                return Ok(new { success = true});
+            }
+            catch (Exception)
+            {
+
+                return Ok(new { success = false });
+            }
+        }
+
     }
     }

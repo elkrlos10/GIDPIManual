@@ -23,6 +23,16 @@
                 callback(response);
             });
         };
+
+        service.EliminarProyecto = function (IdProyecto, callback) {
+            item = {
+                Parametro1: IdProyecto
+            }
+            $http.post(URLServices + "Menu/EliminarProyecto/", item)
+            .success(function (response) {
+                callback(response);
+            });
+        };
         return service;
 
     }]);
