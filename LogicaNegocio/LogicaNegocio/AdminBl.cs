@@ -83,11 +83,11 @@ namespace LogicaNegocio.LogicaNegocio
                           select i).Count();
 
 
-            var totalMatriz = (Proyectos - matriz);
+           
 
-            Datos.Add(Proyectos);
+            Datos.Add(matriz);
 
-            Datos.Add(totalMatriz);
+        
 
             return Datos;
 
