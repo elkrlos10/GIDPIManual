@@ -91,9 +91,91 @@ $(function () {
 
 //------------- INICIA MATRIZ DE VESTER----------------------
 
+$(function () {
 
+    $('.ayudaTextoDos').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+
+
+    $('.ayudaVideoDos').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+
+}());
 
 
 
 
 //------------- FINALIZA MATRIZ DE VESTER----------------------
+
+
+//------------- INICIA ÁRBOL DE PROBLEMAS----------------------
+
+$(function () {
+
+    $('.ayudaTextoTres').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+
+
+    $('.ayudaVideoTres').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+
+}());
+
+
+//------------- FINALIZA ÁRBOL DE PROBLEMAS----------------------
+
+
+//------------- INICIA ÁRBOL DE OBJETIVOS----------------------
+
+$(function () {
+
+    $('.ayudaTextoCuatro').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+
+
+    $('.ayudaVideoCuatro').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+}());
+
+
+//------------- FINALIZA ÁRBOL DE PROBLEMAS----------------------
+
+
+//------------- INICIA OBJETIVOS----------------------
+
+$(function () {
+
+    $('.ayudaTextoCinco').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+
+
+    $('.ayudaVideoCinco').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+}());
+
+
+//------------- FINALIZA OBJETIVOS----------------------

@@ -1,5 +1,65 @@
 ﻿<link href="../Css/MenuAyudaArbolProblemas.css" rel="stylesheet" />
 
+<!--INICIA AYUDA TEXTO-->
+
+<div id="ayudaTextoTres">
+    <div class="svg-popup-content">
+        <h3 class="title-plagin" style="text-align:center; color:#238271; text-transform:uppercase; font-weight:600;">Árbol de problemas</h3>
+        <hr style="background:black;" />
+
+        <p>
+            <h4><b>Problema central</b></h4>
+        <p>
+            Se define como una situación no deseada, es decir, una situación negativa que padece la comunidad en un momento determinado. Un problema no es la ausencia de su solución, sino un estado existente negativo.
+        </p>
+
+        <br />
+
+        <h4><b>Causas directas</b></h4>
+        <p>
+            Aquellas acciones o hechos concretos que generan o dan origen al problema central del proyecto. (Metodología General para la Formulación y Evaluación de Proyectos de Inversión Pública, 2013).
+        </p>
+
+
+        <br />
+
+        <h4><b>Causas indirectas</b></h4>
+        <p>
+            Acciones o hechos que dan origen a las causas directas, pero que no están relacionadas directamente con el problema central del proyecto. (Metodología General para la Formulación y Evaluación de Proyectos de Inversión Pública, 2013).
+        </p>
+
+
+        <br />
+
+            <h4><b>Efectos directos</b></h4>
+            <p>Son el resultado o las consecuencias que originan la existencia del problema central en la población afectada.
+               (Metodología General para la Formulación y Evaluación de Proyectos de Inversión Pública, 2013).
+            </p>
+
+
+        <br />
+
+            <h4><b>Efectos indirectos</b></h4>
+            <p>
+                Son el resultado o las consecuencias que generan los efectos directos por la existencia del problema, pero que no se originan directamente del problema. (Metodología General para la Formulación y Evaluación de Proyectos de Inversión Pública, 2013).
+            </p>
+        </p>
+
+    </div>
+</div>
+
+<!--FINALIZA AYUDA TEXTO-->
+<!--INICIA AYUDA VIDEO-->
+
+<div id="ayudaVideoTres">
+    <div class="svg-popup-content">
+        <h3 class="title-plagin">Video</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/QA6eLUTgAFE" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<!--FINALIZA AYUDA VIDEO-->
+
 
 <nav class="vertical" id="menuAyuda">
     <input type="checkbox" id="toggle2" />
@@ -10,8 +70,8 @@
 
         <li><a class="fa fa-power-off menuAyuda" style="font-size:22px;" ng-click="cerrarSesion()" title="Cerrar sesión"></a></li>
         <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" ng-click="atras()" style="font-size:22px;"></a></li>
-        <li><a class="fa fa-file button demo-btn demo5 menuAyuda" title="Leer ayuda" data-svg-popup="demo5" style="font-size:22px;"></a></li>
-        <li><a class="fa fa-video-camera button demo-btn demo6 menuAyuda" title="Ver ayuda" data-svg-popup="demo6" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-file button demo-btn ayudaTextoTres menuAyuda" title="Leer ayuda" data-svg-popup="ayudaTextoTres" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-video-camera button demo-btn ayudaVideoTres menuAyuda" title="Ver ayuda" data-svg-popup="ayudaVideoTres" style="font-size:22px;"></a></li>
         <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="audio" style="font-size:22px;"></a></li>
 
     </menu>
@@ -102,6 +162,8 @@
 </div>
 
 <script src="../Modelos/ArbolProblema/BorrarElemento.js"></script>
+<script src="../scripts/AnimacionTextoVideoAudio.js"></script>
+
 
 <style>
     ::-webkit-scrollbar {
