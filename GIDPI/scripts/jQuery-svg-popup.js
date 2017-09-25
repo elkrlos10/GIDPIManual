@@ -148,8 +148,8 @@
 									'left': '50%',
 									'top': config.height+'%',
 									'z-index': '10001',
-									'transform': 'translate(-50%,-65%)',
-									'-webkit-transform': 'translate(-50%,-65%)',
+									'transform': 'translate(-50%,-50%)',
+									'-webkit-transform': 'translate(-50%,-50%)',
 									'-webkit-transition': 'top 0.3s',
 									'transition': 'top 0.3s'
 							});

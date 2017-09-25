@@ -179,3 +179,47 @@ $(function () {
 
 
 //------------- FINALIZA OBJETIVOS----------------------
+
+
+//------------- INICIA RESULTADOS----------------------
+
+$(function () {
+
+    $('.ayudaTextoSeis').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+
+
+    $('.ayudaVideoSeis').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+}());
+
+
+//------------- FINALIZA RESULTADOS----------------------
+
+
+//------------- INICIA INVOLUCRADOS----------------------
+
+$(function () {
+
+    $('.ayudaTextoSiete').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+
+
+    $('.ayudaVideoSiete').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+}());
+
+
+//------------- FINALIZA INVOLUCRADOS----------------------
