@@ -1,5 +1,34 @@
 ﻿<link href="../Css/MenuAyudaCronogramaPresupuesto.css" rel="stylesheet" />
 
+<!--INICIA AYUDA TEXTO-->
+
+<div id="ayudaTextoDiez">
+    <div class="svg-popup-content">
+        <h3 class="title-plagin" style="text-align:center; color:#238271; text-transform:uppercase; font-weight:600;">Cronograma</h3>
+        <hr style="background:black;" />
+
+        <p>
+           Son aquellas actividades que el ejecutor tiene que llevar a cabo para cumplir cada objetivo específico e implican la utilización de recursos.
+        <p>
+
+
+    </div>
+</div>
+
+<!--FINALIZA AYUDA TEXTO-->
+<!--INICIA AYUDA VIDEO-->
+
+<div id="ayudaVideoDiez">
+    <div class="svg-popup-content">
+        <h3 class="title-plagin">Video</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=K22qJ-VikTo" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<!--FINALIZA AYUDA VIDEO-->
+
+
+
 <div class="container-fluid" style="height: auto; margin-top:-10%;">
 
     <div class="container" style="height:200%; background-color:rgba(192,192,192,0.15);">
@@ -14,8 +43,8 @@
                 <menu style="margin-top:-6%;">
                     <li><a class="fa fa-power-off menuAyuda" style="font-size:22px;" ng-click="cerrarSesion()" title="Cerrar sesión"></a></li>
                     <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" ng-click="atras()" style="font-size:22px;"></a></li>
-                    <li><a class="fa fa-file button demo-btn demo5 menuAyuda" title="Leer ayuda" data-svg-popup="demo5" style="font-size:22px;"></a></li>
-                    <li><a class="fa fa-video-camera button demo-btn demo6 menuAyuda" title="Ver ayuda" data-svg-popup="demo6" style="font-size:22px;"></a></li>
+                    <li><a class="fa fa-file button demo-btn ayudaTextoDiez menuAyuda" title="Leer ayuda" data-svg-popup="ayudaTextoDiez" style="font-size:22px;"></a></li>
+                    <li><a class="fa fa-video-camera button demo-btn ayudaVideoDiez menuAyuda" title="Ver ayuda" data-svg-popup="ayudaVideoDiez" style="font-size:22px;"></a></li>
                     <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="audio" style="font-size:22px;"></a></li>
 
                 </menu>
@@ -109,6 +138,31 @@
 
 
 <!--container de Presupuesto-->
+
+<div id="ayudaTextoOnce">
+    <div class="svg-popup-content">
+        <h3 class="title-plagin" style="text-align:center; color:#238271; text-transform:uppercase; font-weight:600;">Presupuesto</h3>
+        <hr style="background:black;" />
+
+        <p>
+            En el campo de proyectos, un presupuesto es el cálculo anticipado de los gastos y costos que se deben tener en cuenta para la ejecución de un proyecto.
+        <p>
+
+
+    </div>
+</div>
+
+<!--FINALIZA AYUDA TEXTO-->
+<!--INICIA AYUDA VIDEO-->
+
+<div id="ayudaVideoOnce">
+    <div class="svg-popup-content">
+        <h3 class="title-plagin">Video</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=K22qJ-VikTo" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<!--FINALIZA AYUDA VIDEO-->
         
            <div id="containerPresupuesto" class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
 
@@ -120,8 +174,8 @@
                    <menu style="margin-top:-6%;">
                        <li><a class="fa fa-power-off menuAyuda" style="font-size:22px;" ng-click="cerrarSesion()" title="Cerrar sesión"></a></li>
                        <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" ng-click="atras()" style="font-size:22px;"></a></li>
-                       <li><a class="fa fa-file button demo-btn demo5 menuAyuda" title="Leer ayuda" data-svg-popup="demo5" style="font-size:22px;"></a></li>
-                       <li><a class="fa fa-video-camera button demo-btn demo6 menuAyuda" title="Ver ayuda" data-svg-popup="demo6" style="font-size:22px;"></a></li>
+                       <li><a class="fa fa-file button demo-btn ayudaTextoOnce menuAyuda" title="Leer ayuda" data-svg-popup="ayudaTextoOnce" style="font-size:22px;"></a></li>
+                       <li><a class="fa fa-video-camera button demo-btn ayudaVideoOnce menuAyuda" title="Ver ayuda" data-svg-popup="ayudaVideoOnce" style="font-size:22px;"></a></li>
                        <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="audio" style="font-size:22px;"></a></li>
 
                    </menu>
@@ -242,6 +296,7 @@
 
 </div>
 
+<script src="../scripts/AnimacionTextoVideoAudio.js"></script>
 
 <script>
 

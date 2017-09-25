@@ -223,3 +223,94 @@ $(function () {
 
 
 //------------- FINALIZA INVOLUCRADOS----------------------
+
+
+//------------- INICIA NOMBRE PROYECTO----------------------
+
+$(function () {
+
+    $('.ayudaTextoNueve').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+
+
+    $('.ayudaVideoNueve').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+}());
+
+
+//------------- FINALIZA NOMBRE PROYECTO----------------------
+
+
+
+//------------- INICIA PERFIL PROYECTO----------------------
+
+$(function () {
+
+    $('.ayudaTextoOcho').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+
+
+    $('.ayudaVideoOcho').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+}());
+
+
+//------------- FINALIZA PERFIL PROYECTO----------------------
+
+
+//------------- INICIA CRONOGRAMA----------------------
+
+$(function () {
+
+    $('.ayudaTextoDiez').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+
+
+    $('.ayudaVideoDiez').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+}());
+
+
+//------------- FINALIZA CRONOGRAMA----------------------
+
+
+//------------- INICIA PRESUPUESTO----------------------
+
+$(function () {
+
+    $('.ayudaTextoOnce').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+
+
+    $('.ayudaVideoOnce').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+}());
+
+
+//------------- FINALIZA PRESUPUESTO----------------------
+
+
