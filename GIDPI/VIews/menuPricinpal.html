@@ -1,4 +1,10 @@
-﻿<div id="demo5">
+﻿<style>
+    ::-webkit-scrollbar-track {
+        background-color: rgba(35, 130, 118, -0.4);
+    }
+</style>
+
+<div id="demo5">
     <div class="svg-popup-content">
         <h3 class="title-plagin">Texto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint repellendus, porro repudiandae, sit dicta nobis dolores nostrum consequuntur molestiae amet commodi? Minus nobis minima ex adipisci deleniti. Aliquam, magni, rem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi magnam eos ullam! Veniam, modi, et. Molestiae doloribus ab voluptate natus voluptas dolorem, ut beatae vitae harum placeat praesentium, ullam est.</p>
@@ -29,96 +35,6 @@
 
     </menu>
 </nav>
-
-
-<!--<section id="menuAyuda" class="menuAyuda menuAyuda--circle">
-    <input type="checkbox" id="menu__active" />
-    <label for="menu__active" class="menu__active">
-        <div class="menu__toggle">
-            <div class="icon">
-                <div class="hamburger"></div>
-            </div>
-        </div>
-        <input type="radio" name="arrow--up" id="degree--up-0" />
-        <input type="radio" name="arrow--up" id="degree--up-1" />
-        <input type="radio" name="arrow--up" id="degree--up-2" />
-        <div class="menu__listings">
-            <ul class="circle">
-                <li>
-                    <div class="placeholder">
-                        <div class="upside demo-item">
-                            <a class="button demo-btn demo6" data-svg-popup="demo6"><i class="fa fa-video-camera"></i></a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="placeholder">
-                        <div class="upside">
-                            <a class="button" id="audio"><i class="fa fa-volume-up"></i></a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="placeholder">
-                        <div class="upside">
-                            <a href="#">&nbsp</a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="placeholder">
-                        <div class="upside">
-                            <a class="button" id="texto"><i class="fa fa-file"></i></a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="placeholder">
-                        <div class="upside">
-                            <a href="#" class="button"><i class="fa fa-binoculars"></i></a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="placeholder">
-                        <div class="upside">
-                            <a href="#" class="button"><i class="fa fa-battery-4"></i></a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="placeholder">
-                        <div class="upside">
-                            <a href="#" class="button"><i class="fa fa-calendar"></i></a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="placeholder">
-                        <div class="upside">
-                            <a href="#" class="button"><i class="fa fa-cloud"></i></a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="placeholder">
-                        <div class="upside">
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="placeholder">
-                        <div class="upside demo-item">
-                            <a class="button demo-btn demo5" data-svg-popup="demo5"><i class="fa fa-file"></i></a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-    </label>
-</section>-->
-
 
 <div id="proyecto" style="margin-left:1%; z-index:5;">
     <button id="proyectos" title="Mis proyectos">Mis proyectos</button><br /><br />
@@ -247,87 +163,4 @@
 
 </div>
 
-
-
-<script>
- $('#menu-toggle').click(function () {
-        $('#wrapper').slideToggle({
-            direction: "up"
-        }, 300);
-        $(this).toggleClass('clientsClose');
-    });
-
-
-  $(document).ready(function(){
-$("#audio").click(function () {
-    $("#audioWrap").each(function () {
-        displaying = $(this).css("display");
-        if(displaying == "block") {
-          $(this).fadeOut('slow',function() {
-           $(this).css("display","none");
-          });
-        } else {
-          $(this).fadeIn('slow',function() {
-            $(this).css("display","block");
-          });
-        }
-      });
-    });
-  });
-
-
-    $(function () {
-
-        $('.demo5').svgpopup({
-            stepX: 6,
-            stepY: 4,
-            figure: 'triangle',
-            fill: '#238276',
-            strokeFill: 'rgba(255,255,255, .2)',
-            opacity: 0.8,
-            visible: false,
-            speed: 1,
-            randomize: false
-        });
-
-        $('.demo6').svgpopup({
-            stepX: 6,
-            stepY: 4,
-            figure: 'triangle',
-            fill: '#238276',
-            strokeFill: 'rgba(255,255,255, .2)',
-            opacity: 0.8,
-            visible: false,
-            speed: 1,
-            randomize: false
-        });
-
-    }());
-
-
-
-    $(function() {
-        var player = $.AudioPlayer;
-        player.init({
-            container: '#audioWrap'
-            ,source: '../audios/Don Tetto - Yo Estaré Bien (Con Letra).mp3'
-            ,imagePath: '../images'
-            ,debuggers: false
-            ,allowSeek: true
-        });
-
-        $('[data-url]').on('click', function(event) {
-            event.preventDefault();
-
-            player.updateSource({
-                source: $(this).data('url')
-            });
-        });
-    });
-</script>
-
-<style>
-    ::-webkit-scrollbar-track {
-      background-color: rgba(35, 130, 118, -0.4);
-} 
-</style>
+<script src="../scripts/AnimacionTextoVideoAudio.js"></script>

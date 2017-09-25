@@ -1,5 +1,57 @@
 ﻿<link href="../Css/MenuAyudaDatosBasicos.css" rel="stylesheet" />
 
+<!--INICIA AYUDA TEXTO-->
+
+<div id="ayudaTextoUno">
+    <div class="svg-popup-content">
+        <h3 class="title-plagin" style="text-align:center; color:#238271; text-transform:uppercase; font-weight:600;">Datos generales</h3>
+        <hr style="background:black;" />
+        <p>
+            <h4><b>Tipo de proyecto:</b></h4>
+            <p>Este se enfoca en lo que va dirigido el proyecto. El cual se divide en tres opciones que son:</p>
+
+        <h5><b>-Innovación:</b></h5>
+        <p>Es crear o mejorar un producto, proceso o servicio para la introducción en el mercado.</p>
+
+        <h5><b>-Desarrollo tecnológico:</b></h5>
+        <p>Es el conjunto de conocimientos técnicos, ordenados científicamente para diseñar un producto que satisface una necesidad existente de una población.</p>
+
+        <h5><b>-Investigación:</b></h5>
+        <p>Profundizar o apropiarse nuevos conocimientos para la comprobación o producción de nuevas teorías o existentes.</p>
+
+        <br />
+
+        <h4><b>Acción a realizar del proyecto:</b></h4>
+        <p>Es la actividad que engloba un conjunto de acciones para desarrollar el proyecto.</p>
+
+        <br />
+
+        <h4><b>Tema principal del proyecto:</b></h4>
+        <p>Es aquello que queremos abarcar, también llamado situación de interés.</p>
+
+        <br />
+
+        <h4><b>Localización</b></h4>
+        <p>Donde se va desarrollar y ejecutar geográficamente el proyecto.</p>
+
+        </p>
+    </div>
+</div>
+
+<!--FINALIZA AYUDA TEXTO-->
+
+
+<!--INICIA AYUDA VIDEO-->
+
+<div id="ayudaVideoUno">
+    <div class="svg-popup-content">
+        <h3 class="title-plagin">Video</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/QA6eLUTgAFE" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<!--FINALIZA AYUDA VIDEO-->
+
 <div class="container-fluid"style="height:100vh; margin-top:-10%;">
 
     <nav class="vertical" id="menuAyuda">
@@ -10,19 +62,19 @@
         <menu style="margin-top:-6%;">
             <li><a class="fa fa-power-off menuAyuda" style="font-size:22px;" ng-click="cerrarSesion()" title="Cerrar sesión"></a></li>
             <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" ng-click="atras()" style="font-size:22px;"></a></li>
-            <li><a class="fa fa-file button demo-btn demo5 menuAyuda" title="Leer ayuda" data-svg-popup="demo5" style="font-size:22px;"></a></li>
-            <li><a class="fa fa-video-camera button demo-btn demo6 menuAyuda" title="Ver ayuda" data-svg-popup="demo6" style="font-size:22px;"></a></li>
-            <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="audio" style="font-size:22px;"></a></li>
+            <li><a class="fa fa-file button demo-btn ayudaTextoUno menuAyuda" title="Leer ayuda" data-svg-popup="ayudaTextoUno" style="font-size:22px;"></a></li>
+            <li><a class="fa fa-video-camera button demo-btn ayudaVideoUno menuAyuda" title="Ver ayuda" data-svg-popup="ayudaVideoUno" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="ayudaAudioUno" style="font-size:22px;"></a></li>
 
         </menu>
     </nav>
 
-    <div id="contenido" class="container" style="background:rgba(192,192,192,0.15); height:100vh;">
+    <div id="contenido" class="container" style="background:rgba(192,192,192,0.15); height:100vh; ">
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:100vh;">
             <h1 id="datosGenerales" style="margin-top:5%;">DATOS GENERALES</h1><br />
 
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height:60vh;">
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height:60vh; z-index:0;">
 
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="margin-left:20%;">
                     <form name="sede" id="sede">
@@ -119,3 +171,6 @@
 
     </div>
 </div>
+
+
+<script src="../scripts/AnimacionTextoVideoAudio.js"></script>
