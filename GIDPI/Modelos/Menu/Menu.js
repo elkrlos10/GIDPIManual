@@ -386,8 +386,8 @@
 
             $scope.borrarProyecto = function () {
                 swal({
-                    title: 'Esta seguro de eliminar este proyecto?',
-                    text: "Perdera toda la informacion del proyecto...!",
+                    title: '¿Esta seguro?',
+                    text: "Si elimina el proyecto ... , perderá toda la información sobre este.",
                     type: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#238276',
@@ -410,17 +410,20 @@
                                 text: 'Tu proyecto ha sido borrado.',
                                 type: 'success'
                             }).then(function () {
-                                location.reload();
+                                $scope.DeshabilitarCirculos();
+                                $cookies.remove("datosProyecto");
+                                $rootScope.nombreProyecto = "";
+                                MenuService.ConsultarProyectos($rootScope.globals.currentUser.id, function (response) {
+                                    if (response.success) {
+                                        $scope.Proyectos = response.proyectos;
+                                    }
+                                })
+                                
                             })
-                               
-                           
-                            
                         } else {
                             alert("salio mal");
                         }
                     })
-                      
-                            
                 }), function (dismiss) {
                     // dismiss can be 'cancel', 'overlay',
                     // 'close', and 'timer'
