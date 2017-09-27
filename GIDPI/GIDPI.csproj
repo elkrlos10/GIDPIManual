@@ -119,6 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="audios\Don Tetto - Yo Estaré Bien %28Con Letra%29.mp3" />
+    <Content Include="audios\Sanalejo - El Diablo.mp3" />
     <Content Include="Css\alertify.core.css" />
     <Content Include="Css\alertify.default.css" />
     <Content Include="Css\animate.css" />
