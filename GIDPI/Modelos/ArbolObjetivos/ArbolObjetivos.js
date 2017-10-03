@@ -296,7 +296,7 @@
 
                                     var problemaGeneral = response.ArbolFinal.ProblemaCentral;
                                     document.querySelector("#txtProblema").value = problemaGeneral;
-                                    alerta1("Consejo.", "En el panel de la izquierda podras crear las causas y efectos.", 5);
+                                    alerta1("Consejo.", "En el panel de la izquierda podras crear los medios y fines.", 5);
 
                                     //CICLO PARA CREAR LOS EFECTOS EN EL ARBOL
                                     $.each(response.ArbolFinal.Efectos, function (index, value) {
@@ -397,7 +397,7 @@
 
                                     var ObjetivoCentral = response.ArbolFinal.ObjetivoCentral;
                                     document.querySelector("#txtProblema").value = ObjetivoCentral;
-                                    alerta1("Consejo.", "En el panel de la izquierda podras crear las causas y efectos.", 5);
+                                    alerta1("Consejo.", "En el panel de la izquierda podras crear los medios y fines.", 5);
 
                                     //CICLO PARA CREAR LOS EFECTOS EN EL ARBOL
                                     $.each(response.ArbolFinal.Fines, function (index, value) {
@@ -761,6 +761,7 @@
                 $("#vistaResultados").hide();
                 $("#VistaObjetivos").show();
                 $("#resultados").attr("disabled", false);
+                $(".notify").hide();
              
                 if (contador == 0) {
                     if ($rootScope.proyecto.datos.Etapa < 5) {
@@ -813,6 +814,7 @@
                 $("#ArbolObjetivos").show();
                 $("#VistaObjetivos").hide();
                 $("#vistaResultados").hide();
+                $(".notify").hide();
             }
 
             //$scope.medio1 = "";
@@ -823,6 +825,7 @@
                 $("#ArbolObjetivos").hide();
                 $("#VistaObjetivos").hide();
                 $("#vistaResultados").show();
+                $(".notify").hide();
            
                 if (contador == 0) {
                     if ($rootScope.proyecto.datos.Etapa < 5) {
@@ -956,6 +959,7 @@
             $scope.atras = function () {
 
                 $location.url("/Menu");
+                $(".notify").hide();
 
             }
 

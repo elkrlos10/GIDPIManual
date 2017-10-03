@@ -27,13 +27,6 @@ $(document).ready(function(){
 
 
 $(function () {
-
-    $('.demo5').svgpopup({
-        figure: 'rectangle',
-        fill: '#238276',
-        randomize: false
-    });
-
     $('.demo6').svgpopup({
         figure: 'rectangle',
         fill: '#238276',

@@ -19,6 +19,12 @@
 }  
 
 
+#tipsArbolProblema{
+    margin-top:-7%;
+    margin-left:12%;
+}
+
+
 @media (min-width: 1402px) and (max-width: 1440px) {
 
 #menuAyuda{
@@ -32,6 +38,11 @@
     margin-top:-11%;
     margin-left:61%;
 }  
+
+#tipsArbolProblema{
+    margin-top:-6.2%;
+    margin-left:12%;
+}
 
 }
 
@@ -50,6 +61,11 @@
     margin-left:61%;
 }  
 
+#tipsArbolProblema{
+    margin-top:-6%;
+    margin-left:12%;
+}
+
 }
 
 
@@ -66,6 +82,11 @@
     margin-top:-11%;
     margin-left:61%;
 }  
+
+#tipsArbolProblema{
+    margin-top:-6%;
+    margin-left:12%;
+}
   
 }
 
@@ -83,6 +104,11 @@
     margin-left:61%;
 }  
 
+#tipsArbolProblema{
+    margin-top:-5.5%;
+    margin-left:12%;
+}
+
 }
 
 @media(max-width:1152px) {
@@ -99,6 +125,11 @@
     margin-left:61%;
 }    
 
+#tipsArbolProblema{
+    margin-top:-5.5%;
+    margin-left:14%;
+}
+
 }
 
 @media (max-width: 1024px) and (max-height: 768px) {
@@ -114,5 +145,10 @@
     margin-top:-12%;
     margin-left:61%;
 } 
+
+#tipsArbolProblema{
+    margin-top:-3%;
+    margin-left:14%;
+}
   
 }
