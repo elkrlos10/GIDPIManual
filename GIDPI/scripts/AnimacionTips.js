@@ -1,4 +1,32 @@
-﻿//-------------------------------INICIA TIPS ÁRBOL DE PROBLEMAS-------------------------------------
+﻿//-------------------------------INICIA TIPS MATRIZ DE VESTER-------------------------------------
+
+function tipMatrizVester() {
+    $.notify("<h5 style='text-align:center'><b>Para recordar...</b></h5>" + "Identificación de situación a abordar <br/><b>1.</b>¿Qué problemas serán analizados? <br/><b>2.</b>¿Dónde ocurren estos problemas?<br/><b>3.</b>¿A qué o a quiénes afectan?",
+
+       {
+           type: "success", align: "left", verticalAlign: "bottom",
+           delay: 10000, animation: true, animationType: "scale", close: true
+
+       });
+
+}
+
+
+function tipMatrizVesterDos() {
+    $.notify("<h5 style='text-align:center'><b>Para recordar...</b></h5>" + "Redacción de problemáticas que surgen a partir de la situación que se planteó.<br/><b>1.</b>Evitar la frase “NO HAY...”, “no existe…”<br/><b>2.</b>Hablar en 3ra persona <br/><b>3.</b>Especificar el lugar de la problemáticas <br/><b>4.</b>Tener en cuenta que cuando se habla de problemáticas deben de ser redactadas en negativo.",
+
+       {
+           type: "success", align: "left", verticalAlign: "bottom",
+           delay: 10000, animation: true, animationType: "scale", close: true
+
+       });
+
+}
+
+//-------------------------------FINALIZA TIPS MATRIZ DE VESTER-------------------------------------
+
+
+//-------------------------------INICIA TIPS ÁRBOL DE PROBLEMAS-------------------------------------
 
 function tipArbolProblema() {
     $.notify("<h5 style='text-align:center'><b>Para recordar...</b></h5>" + "La lógica del árbol de problemas se realiza de abajo hacia arriba.",
@@ -167,22 +195,114 @@ function tipResultadosCuatro() {
 //------------------------FINALIZA TIPS ÁRBOL DE OBJETIVOS--------------------------------------------
 
 
-
-
-
-
-
-
 //------------------------INICIA TIPS MATRIZ DE INVOLUCRADOS--------------------------------------------
 
 
-function usage() {
-    $.notify("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam imperdiet arcu est,eu tincidunt tellus scelerisque in. Donec elementum commodo nunc. Nulla gravida pretium ante, nec vulputate turpis luctus ut. Sed ligula arcu, tincidunt eu imperdiet non, iaculis ac mauris. Praesent porttitor dapibus magna faucibus aliquet. Nunc commodo elementum ante non mollis. Sed viverra elit quis placerat ultricies. Cras et urna tristique, ornare nulla vel, placerat est. ",
-
+function tipInvolucrados() {
+    $.notify("<h5 style='text-align:center'><b>Para recordar...</b></h5>" + "<b>1</b> Realizar una evaluación general para determinar quienes tienen relación con el proyecto.</br><b>2</b> No se debe de poner nombres propios de personas; puede ser nombres de empresas,entidades, áreas, sectores etc.</br><b>3</b> Se debe tener en cuenta a todos los interesados, beneficiarios y posibles socios.",
         {
             type: "success", align: "left", verticalAlign: "bottom",
             delay: 10000, animation: true, animationType: "scale", close: true
 
         });
 }
+
+function tipInvolucradosDos() {
+    $.notify("<h5 style='text-align:center'><b>Para recordar...</b></h5>" + "Qué cambios son deseables por parte de los agentes involucrados.",
+        {
+            type: "success", align: "left", verticalAlign: "bottom",
+            delay: 10000, animation: true, animationType: "scale", close: true
+
+        });
+}
+
+function tipInvolucradosTres() {
+    $.notify("<h5 style='text-align:center'><b>Para recordar...</b></h5>" + "Escribir solo problemas existentes, no potenciales o posibles que afectan a los involucrados en torno al problema del proyecto ¿Cómo los está afectando el problema? Es importante que te coloques en los pies del involucrado y no desde tu perspectiva.",
+        {
+            type: "success", align: "left", verticalAlign: "bottom",
+            delay: 10000, animation: true, animationType: "scale", close: true
+
+        });
+}
+
+function tipInvolucradosCuatro() {
+    $.notify("<h5 style='text-align:center'><b>Para recordar...</b></h5>" + "Se debe colocar el valor total del presupuesto estimado para la ejecución del proyecto, este debe escribirse en números y letras para mayor claridad. </br>Mencionar al personal o área  encargada de la autorización para ejecutar el proyecto</br><b>Ejempo:</b>Recursos de $118.700.208 (ciento dieciocho millones setecientos mil doscientos ocho pesos), proyecto autorizado desde Subdirección.",
+        {
+            type: "success", align: "left", verticalAlign: "bottom",
+            delay: 10000, animation: true, animationType: "scale", close: true
+
+        });
+}
+
 //------------------------FINALIZA TIPS MATRIZ DE INVOLUCRADOS--------------------------------------------
+
+//------------------------INICIA TIPS NOMBRE DE PROYECTO--------------------------------------------------
+
+function tipNombreProyecto() {
+    $.notify("<h5 style='text-align:center'><b>Para recordar...</b></h5>" + "El nombre del proyecto debe responder a los siguientes interrogantes: </br>¿Qué se va a hacer? </br>¿Sobre qué se va a hacer? y</br> ¿Dónde se va a hacer?, debe ir relacionado con el objetivo general.",
+        {
+            type: "success", align: "left", verticalAlign: "bottom",
+            delay: 10000, animation: true, animationType: "scale", close: true
+
+        });
+}
+
+
+function tipNombreProyectoDos() {
+    $.notify("<h5 style='text-align:center'><b>Para recordar...</b></h5>" + "<b>1</b> Se debe redactar en forma impersonal, tipo ensayo y párrafo. </br><b>2</b> Debe presentar de manera lógica, los antecedentes y evolución del problema partiendo de lo general para llegar a lo específico.",
+        {
+            type: "success", align: "left", verticalAlign: "bottom",
+            delay: 10000, animation: true, animationType: "scale", close: true
+
+        });
+}
+
+function tipNombreProyectoTres() {
+    $.notify("<h5 style='text-align:center'><b>Para recordar...</b></h5>" + "La descripción del problema debe conducir al lector de manera lógica a la pregunta de investigación final, la cual, consiste en resumir el problema en una pregunta que debe ser una derivación lógica de lo planteado en  la descripción del problema y conservar coherencia con el título y el objetivo general.",
+        {
+            type: "success", align: "left", verticalAlign: "bottom",
+            delay: 10000, animation: true, animationType: "scale", close: true
+
+        });
+}
+
+
+function tipNombreProyectoCuatro() {
+    $.notify("<h5 style='text-align:center'><b>Para recordar...</b></h5>" + "<b>1</b> Se recomienda utilizar referencias actuales, para mayor credibilidad. </br><b>2</b> En la pregunta problematizadora, la respuesta debe quedar de forma abierta.",
+        {
+            type: "success", align: "left", verticalAlign: "bottom",
+            delay: 10000, animation: true, animationType: "scale", close: true
+
+        });
+}
+
+//------------------------FINALIZA TIPS NOMBRE DE PROYECTO------------------------------------------------
+
+
+
+//------------------------INICIA TIPS CRONOGRAMA------------------------------------------------
+
+function tipCronograma() {
+    $.notify("<h5 style='text-align:center'><b>Para recordar...</b></h5>" + "<b>1</b> Escriba las Actividades correspondientes a cada objetivo.</br><b>2</b> Organícese en orden cronológico.",
+        {
+            type: "success", align: "left", verticalAlign: "bottom",
+            delay: 10000, animation: true, animationType: "scale", close: true
+
+        });
+}
+
+//------------------------FINALIZA TIPS CRONOGRAMA------------------------------------------------
+
+
+//------------------------INICIA TIPS PRESUPUESTO------------------------------------------------
+
+function tipPresupuesto() {
+    $.notify("<h5 style='text-align:center'><b>Para recordar...</b></h5>" + "<b>1</b>Defina, en detalle, los recursos humanos y financieros para cada actividad. </br><b>2</b> Se recomienda tener en cuenta el iva vigente, y si aplica para su proyecto el AIU(administración, imprevistos y utilidad).</br><b>3</b> Se sugiere que los valores sean reales y vigentes.",
+        {
+            type: "success", align: "left", verticalAlign: "bottom",
+            delay: 10000, animation: true, animationType: "scale", close: true
+
+        });
+}
+
+//------------------------FINALIZA TIPS PRESUPUESTO------------------------------------------------

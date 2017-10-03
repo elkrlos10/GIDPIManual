@@ -134,7 +134,31 @@
 
           </div>
 
-          <!--<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:100vh; background:#ddd;"></div>-->
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:90vh;">
+
+              <div style="position:absolute; z-index:99; cursor:pointer;">
+                  <span><i class="fa fa-info-circle" style="font-size:40px; color:#238276; float:right;" onclick="tipNombreProyecto()"></i></span>
+              </div>
+
+              <div style="height:35vh;"></div>
+
+              <div style="position:absolute; z-index:99; cursor:pointer;">
+                  <span><i class="fa fa-info-circle" style="font-size:40px; color:#238276; float:right;" onclick="tipNombreProyectoDos()"></i></span>
+              </div>
+
+              <div style="height:10vh;"></div>
+
+              <div style="position:absolute; z-index:99; cursor:pointer;">
+                  <span><i class="fa fa-info-circle" style="font-size:40px; color:#238276; float:right;" onclick="tipNombreProyectoTres()"></i></span>
+              </div>
+
+              <div style="height:10vh;"></div>
+
+              <div style="position:absolute; z-index:99; cursor:pointer;">
+                  <span><i class="fa fa-info-circle" style="font-size:40px; color:#238276; float:right;" onclick="tipNombreProyectoCuatro()"></i></span>
+              </div>
+
+          </div>
 
 
        </div>
@@ -194,10 +218,7 @@
             </div>
         </div>
 
-
-
-
-        <div id="containerPerfilProyect" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+        <div id="containerPerfilProyect" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="auto;">         
 
             <nav class="verticalCinco" id="menuAyudaCinco">
                 <input type="checkbox" id="toggle5" />
@@ -214,187 +235,174 @@
                 </menu>
             </nav>
 
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height:auto;">
 
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height:12vh;">
-                    <h1 class="titulovistaObjetivos">Perfil del proyecto</h1>
-                </div>
+        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height:auto;">
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:12vh;">
+                <h1 class="titulovistaObjetivos">Perfil del proyecto</h1>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 6vh;"><p class="textos">PLANTEAMIENTO DEL PROBLEMA</p></div>
 
 
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height: 6vh;"><p class="textos">PLANTEAMIENTO DEL PROBLEMA</p></div>
-
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height: 30vh;">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 30vh;">
                     <textarea class="form-control" rows="12" maxlength="5000" ng-model="PerfilProyecto2.Planteamiento"></textarea>
 
                 </div>
 
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height:8vh;"></div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:8vh;"></div>
 
                 <div style="margin-top:-2%;">
-                    <div class="col-lg-12 col-md-11 col-sm-11 col-xs-11" style="height: 6vh;"><p class="textos">IMPACTO</p></div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 6vh;"><p class="textos">IMPACTO</p></div>
 
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 20vh;">
+                            <textarea class="form-control" rows="9" maxlength="5000" ng-model="PerfilProyecto2.Impacto"></textarea>
+                        </div>
 
-                    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height: 20vh;">
-                        <textarea class="form-control" rows="9" maxlength="5000" ng-model="PerfilProyecto2.Impacto"></textarea>
-                    </div>
                 </div>
 
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height:8vh;"></div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-112" style="height:8vh;"></div>
 
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height: 6vh;"><p class="textos">METODOLOGÍA</p></div>
-
-
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height: auto;">
-
-                    <table class="table table-bordered">
-                        <tbody>
-                            <tr>
-                                <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                    <p>Enfoque</p>
-                                </th>
-
-                                <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                    <select class="form-control" id="enfoque" ng-change="cambioEnfoque(Enfoque.significado)" ng-model="Enfoque.significado">
-                                        <option ng-repeat="E in Enfoque" value="{{E.significado}}">{{E.id}}</option>
-
-                                    </select>
-                                </th>
-
-                                <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                    <p style="font-size:10px;" ng-model="Significado">{{Significado}}</p>
-                                </th>
-                            </tr>
-
-                            <tr>
-                                <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                    <p>Tipo de investigación</p>
-                                </th>
-
-                                <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                    <select class="form-control" id="tipoInve" ng-change="CambioTipoInvesticacion(TipoInvesticion.significado)" ng-model="TipoInvesticion.significado">
-                                        <option value="{{t.significado}}" ng-repeat="t in TipoInvesticion">{{t.id}}</option>
-
-                                    </select>
-                                </th>
-
-                                <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                    <p style="font-size:10px;" id="significado" ng-model="Sig">{{Sig}}</p>
-                                </th>
-                            </tr>
-
-                            <tr>
-                                <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                    <p>Método de estudio</p>
-                                </th>
-
-                                <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                    <select class="form-control" id="metodo" ng-model="Metodo.significado" ng-change="CambioMetodo(Metodo.significado)">
-                                        <option value="{{m.significado}}" ng-repeat="m in Metodo">{{m.id}}</option>
-
-                                    </select>
-                                </th>
-
-                                <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                    <p style="font-size:10px;" ng-model="sigMetodo">{{sigMetodo}}</p>
-                                </th>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <table class="table table-bordered">
-                        <tbody>
-                            <tr>
-                                <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                    <p>Población y Muestra</p>
-                                </th>
-
-                                <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                    <textarea class="form-control" maxlength="150" ng-model="PerfilProyecto2.Poblacion"></textarea>
-                                </th>
-                            </tr>
-
-                            <tr>
-                                <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                    <p>Variables o categorías de análisis</p>
-                                </th>
-
-                                <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                    <textarea class="form-control" maxlength="100" ng-model="PerfilProyecto2.Variables"></textarea>
-                                </th>
-                            </tr>
-
-                            <tr>
-                                <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                    <p>Técnicas e instrumentos de recolección y análisis de la información</p>
-                                </th>
-
-                                <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                    <textarea class="form-control" maxlength="100" ng-model="PerfilProyecto2.Tecnicas"></textarea>
-                                </th>
-                            </tr>
-
-                        </tbody>
-                    </table>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 6vh;"><p class="textos">METODOLOGÍA</p></div>
 
 
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <p>Enfoque</p>
+                        </th>
 
-                    <textarea class="form-control" maxlength="5000" rows="10" style="margin-bottom:2%;" ng-model="PerfilProyecto2.Metodologia"></textarea>
+                        <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <select class="form-control" id="enfoque" ng-change="cambioEnfoque(Enfoque.significado)" ng-model="Enfoque.significado">
+                                <option ng-repeat="E in Enfoque" value="{{E.significado}}">{{E.id}}</option>
+
+                            </select>
+                        </th>
+
+                        <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <p style="font-size:10px;" ng-model="Significado">{{Significado}}</p>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <p>Tipo de investigación</p>
+                        </th>
+
+                        <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <select class="form-control" id="tipoInve" ng-change="CambioTipoInvesticacion(TipoInvesticion.significado)" ng-model="TipoInvesticion.significado">
+                                <option value="{{t.significado}}" ng-repeat="t in TipoInvesticion">{{t.id}}</option>
+
+                            </select>
+                        </th>
+
+                        <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <p style="font-size:10px;" id="significado" ng-model="Sig">{{Sig}}</p>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <p>Método de estudio</p>
+                        </th>
+
+                        <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <select class="form-control" id="metodo" ng-model="Metodo.significado" ng-change="CambioMetodo(Metodo.significado)">
+                                <option value="{{m.significado}}" ng-repeat="m in Metodo">{{m.id}}</option>
+
+                            </select>
+                        </th>
+
+                        <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <p style="font-size:10px;" ng-model="sigMetodo">{{sigMetodo}}</p>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
 
 
-                    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height:6vh;">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <p>Población y Muestra</p>
+                        </th>
 
-                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="height:6vh;"></div>
+                        <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <textarea class="form-control" maxlength="150" ng-model="PerfilProyecto2.Poblacion"></textarea>
+                        </th>
+                    </tr>
 
-                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:6vh;">
+                    <tr>
+                        <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <p>Variables o categorías de análisis</p>
+                        </th>
+
+                        <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <textarea class="form-control" maxlength="100" ng-model="PerfilProyecto2.Variables"></textarea>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <p>Técnicas e instrumentos de recolección y análisis de la información</p>
+                        </th>
+
+                        <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <textarea class="form-control" maxlength="100" ng-model="PerfilProyecto2.Tecnicas"></textarea>
+                        </th>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <textarea class="form-control col-lg-12 col-md-12 col-sm-12 col-xs-12" maxlength="5000" rows="10" style="margin-bottom:2%;" ng-model="PerfilProyecto2.Metodologia"></textarea>
 
 
-                        </div>
-
-                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:6vh; margin-left:105%; margin-top:-5%;">
-
-                            <div style="" id="guardarPerfil2" ng-click="guardarPerfil2()">
-
-                                <i id="iconGuardar" class="fa fa-floppy-o" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
-
-                                <p style="font-size:10px; text-align:center; margin-left:-51%;">Guardar</p>
-                            </div>
 
 
-                            <div  id="editarPerfil2" ng-click="editarPerfilProyectoParte2()" style=" margin-left:105%; margin-top:-5%;">
-                                <i id="iconEditar" class="fa fa-pencil-square-o" title="Editar" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
-                                <p style="font-size:10px; text-align:center; margin-left:-25%;">Editar</p>
-                            </div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height:6vh;">
 
-                        </div>
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="height:6vh;"></div>
 
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:6vh;">
+
+
+                </div>
+
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:6vh; margin-left:105%; margin-top:-5%;">
+
+                    <div style="" id="guardarPerfil2" ng-click="guardarPerfil2()">
+
+                        <i id="iconGuardar" class="fa fa-floppy-o" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
+
+                        <p style="font-size:10px; text-align:center; margin-left:-51%;">Guardar</p>
                     </div>
 
 
-                    <!--<div style="margin-top:2%; margin-bottom:6%; float:right;" id="guardarPerfil2" ng-click="guardarPerfil2()">
-            <i id="iconGuardar" class="fa fa-floppy-o" title="Guardar" style="cursor:pointer; font-size:50px; color:#238276;" aria-hidden="true"></i>
-        </div>
-
-        <div id="BtnModificar" style="margin-top:2%; margin-bottom:3%; float:right;  margin-right:2%;" id="editarPerfil2" ng-click="editarPerfilProyectoParte2()">
-            <i id="iconEditar" class="fa fa-pencil-square-o" title="Editar" style="cursor:pointer; font-size:50px; color:#238276;" aria-hidden="true"></i>
-        </div>-->
+                    <div id="editarPerfil2" ng-click="editarPerfilProyectoParte2()" style=" margin-left:105%; margin-top:-5%;">
+                        <i id="iconEditar" class="fa fa-pencil-square-o" title="Editar" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
+                        <p style="font-size:10px; text-align:center; margin-left:-25%;">Editar</p>
+                    </div>
 
                 </div>
 
             </div>
 
-            <!--<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:98vh; background:#e1e;"></div>-->
-
         </div>
+
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 160vh; background:#aaa;"></div>
+
+       
+      </div>
+
+        
+
+
 
 
         <!-- TERMINA CONTAINER DE PERFIL PROYECTO -->
-
-
-
-
-        <!--<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 270vh; background: #8196be">ICONO INFORMACIÓN</div>-->
-
-
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="position:relative; height: 12vh; margin-top:-1%  ">
 

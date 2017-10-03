@@ -578,6 +578,7 @@
             $scope.Regresar = function () {
 
                 $location.url("/Menu");
+                $(".notify").hide();
 
             }
 

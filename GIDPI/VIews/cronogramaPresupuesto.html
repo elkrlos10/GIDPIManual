@@ -133,6 +133,13 @@
                     <button class="btn btn-success" style="margin-left:82%; margin-top:-6%" ng-click="GuardarCronograma()">Guardar</button>
                 </div>-->
             </div>
+
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                <div style="position:absolute; z-index:99; cursor:pointer;">
+                    <span><i class="fa fa-info-circle" style="font-size:40px; color:#238276; float:right; margin-right:170%;" onclick="tipCronograma()"></i></span>
+                </div>
+            </div>
+
         </div>
 
 
@@ -185,7 +192,7 @@
                    <h1 class="titulovistaObjetivos">PRESUPUESTO</h1>
                </div>
 
-               <center>
+               <center class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
                    <table id="tablita" class="table table-responsive " style="width:100%;">
                        <thead>
                            <tr>
@@ -255,20 +262,26 @@
                        </tbody>
                    </table>
 
+                   <div style="margin-left:92%; margin-top:3%;" ng-click="GuardarPresupuesto()">
+                       <i id="iconGuardar" class="fa fa-floppy-o" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
+                       <p style="font-size:10px; text-align:center; margin-left:-0%;">Guardar</p>
+
+                   </div>
                   
                </center>
 
-               <div>
-                  
+               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:5vh;">
+
+                   <div style="position:absolute; z-index:99; cursor:pointer;">
+                       <span><i class="fa fa-info-circle" style="font-size:40px; color:#238276; float:right;" onclick="tipPresupuesto()"></i></span>
+                   </div>
+
                </div>
+
                <div>
                    <!--<button class="btn btn-success" ng-click="GuardarPresupuesto()" style="margin-left:90%;">Guardar</button>-->
 
-                   <div style="margin-left:92%; margin-top:3%;" ng-click="GuardarPresupuesto()">
-                       <i id="iconGuardar" class="fa fa-floppy-o" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
-                       <p style="font-size:10px; text-align:center; margin-left:-60%;">Guardar</p>
 
-                   </div>
 
                </div>
            </div>

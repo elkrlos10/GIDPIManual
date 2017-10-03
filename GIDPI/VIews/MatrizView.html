@@ -79,8 +79,6 @@
                 </div>
                 <p style="font-size:10px;">Guardar</p>
 
-
-
             </div>
 
 
@@ -101,16 +99,11 @@
                     <input style="width:16px;height: 16px" class="form-check-input" title="Alta Influencia" type="radio" name={{$index+1}} ng-model="Cantidad" value="19"> 20
                 </label>
 
-                <div id="agregar_btn" ng-click="mostrar()" style="margin-left:90%;">
-                    <i id="iconEditar" class="fa fa-exchange" style="cursor:pointer; font-size:30px; color:#238276; margin-left:1%;" aria-hidden="true"></i>
-                </div>
-                <p style="font-size:10px; margin-left:88%;">Comparar</p>
-
             </div>
 
 
 
-            <div class="col-lg-2 col-md-2 col-sm-2" style="height:15vh;">
+            <div class="col-lg-2 col-md-2 col-sm-2" style="height:5vh;">
 
                 <center>
                     <div id="agregar_btn" ng-click="Agregar(Cantidad)" style="margin-left:3%;">
@@ -121,7 +114,18 @@
 
             </div>
 
-            <div class="col-lg-2 col-md-2 col-sm-2" style="height:15vh; background:#ccc;"></div>
+            <div class="col-lg-2 col-md-2 col-sm-2" style="height:10vh; z-index:66;">
+
+                <div id="tipMatrizVester" style="position:absolute; z-index:99; cursor:pointer;">
+                    <span><i class="fa fa-info-circle" style="font-size:30px; color:#238276; float:right; margin-right:-130%;" onclick="tipMatrizVester()"></i></span>
+                </div>
+
+
+                <div id="tipMatrizVester" style="position:absolute; z-index:99; cursor:pointer; margin-top:40%;  margin-left:26%;">
+                    <span><i class="fa fa-info-circle" style="font-size:30px; color:#238276; float:right;" onclick="tipMatrizVesterDos()"></i></span>
+                </div>
+
+            </div>
 
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:auto;">
@@ -141,13 +145,14 @@
                         </li>
                     </ul>
                 </form>
-
             </div>
 
+            <div id="agregar_btn" ng-click="mostrar()" style="margin-left:70%;">
+                <i id="iconEditar" class="fa fa-exchange" style="cursor:pointer; font-size:30px; color:#238276; margin-left:1%;" aria-hidden="true"></i>
+            </div>
+            <p style="font-size:10px; margin-left:70%;">Comparar</p>
+
         </div>
-
-
-
     </div>
 
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:auto;">
@@ -284,3 +289,4 @@
 
 
 <script src="../scripts/AnimacionTextoVideoAudio.js"></script>
+<script src="../scripts/AnimacionTips.js"></script>
