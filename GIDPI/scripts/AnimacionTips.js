@@ -279,6 +279,33 @@ function tipNombreProyectoCuatro() {
 //------------------------FINALIZA TIPS NOMBRE DE PROYECTO------------------------------------------------
 
 
+//------------------------INICIA TIPS PERFIL DEL PROYECTO------------------------------------------
+
+function tipPerfilProyecto() {
+    $.notify("<h5 style='text-align:center'><b>Para recordar...</b></h5>" + "Los impactos pueden ser sociales, tecnológicos, ambientales, económicos.",
+        {
+            type: "success", align: "left", verticalAlign: "bottom",
+            delay: 10000, animation: true, animationType: "scale", close: true
+
+        });
+}
+
+
+function tipPerfilProyectoDos() {
+    $.notify("<h5 style='text-align:center'><b>Para recordar...</b></h5>" + "Redacte la metodología de forma lógica y coherente con cada uno de los datos que escribió anteriormente.",
+        {
+            type: "success", align: "left", verticalAlign: "bottom",
+            delay: 10000, animation: true, animationType: "scale", close: true
+
+        });
+}
+
+
+
+//------------------------FINALIZA TIPS PERFIL DEL PROYECTO------------------------------------------
+
+
+
 
 //------------------------INICIA TIPS CRONOGRAMA------------------------------------------------
 
@@ -306,3 +333,6 @@ function tipPresupuesto() {
 }
 
 //------------------------FINALIZA TIPS PRESUPUESTO------------------------------------------------
+
+
+
