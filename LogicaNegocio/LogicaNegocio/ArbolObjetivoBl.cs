@@ -18,8 +18,8 @@ namespace LogicaNegocio.LogicaNegocio
             ArbolObjetivos oArbol = new ArbolObjetivos();
             oArbol.IdProyecto = oArbolDTO.IdProyecto;
             oArbol.ObjetivoCentral = oArbolDTO.ObjetivoCentral;
-            byte[] imageBytes = Convert.FromBase64String(base64);
-            oArbol.imagen = imageBytes;
+            var imageBytes = Convert.FromBase64String(base64);
+            oArbol.Imagen = imageBytes;
             entity.ArbolObjetivos.Add(oArbol);
             entity.SaveChanges();
 

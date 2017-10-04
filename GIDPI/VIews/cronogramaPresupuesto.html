@@ -209,15 +209,19 @@
                        <tbody>
 
                            <tr ng-repeat="presu in Presupuesto">
-                               <td><input  class="form-control" type="number" style="margin-top:11%;"  min="1" onkeypress="if(this.value.length==3) return false" placeholder="#"  ng-model="presu.Item"/></td>
-                               <td><input class="form-control" type="text" style="margin-top:5%; " maxlength="100" ng-model="presu.Concepto"/></td>
+                               <td><input class="form-control" type="number" style="margin-top:11%;" min="1" onkeypress="if(this.value.length==3) return false" placeholder="#" ng-model="presu.Item" /></td>
+                               <td><input class="form-control" type="text" style="margin-top:5%; " maxlength="100" ng-model="presu.Concepto" /></td>
                                <td><textarea class="form-control" type="text" maxlength="200" ng-model="presu.Descripcion"></textarea> </td>
-                               <td><input class="form-control" type="text" style="margin-top:10%; " maxlength="50" ng-model="presu.Unidad"/></td>
-                               <td><input class="form-control" type="number" style="margin-top:10%; " placeholder="#"  ng-keyup="CalcularValorTotal()" ng-model="presu.Cantidad"/></td>
-                               <td><input placeholder="$"  class="form-control"  type="number" style="margin-top:4.5%; "  ng-keyup="CalcularValorTotal()" ng-model="presu.ValorUnitario"/></td>
-                               <td><input  ng-model="presu.ValorTotal" disabled class="form-control" style="margin-top:4.5%" type="text"  /></td>
+                               <td><input class="form-control" type="text" style="margin-top:10%; " maxlength="50" ng-model="presu.Unidad" /></td>
+                               <td><input class="form-control" type="number" style="margin-top:10%;text-align:right " placeholder="#" ng-keyup="CalcularValorTotal()" ng-model="presu.Cantidad" format="number" /></td>
+                               <td>
+                                   <input placeholder="$" class="form-control" type="text" style="margin-top:4.5%; text-align:right " ng-keyup="CalcularValorTotal()" ng-model="presu.ValorUnitario" format="number" />
+                               </td>
+
+                               <td><input ng-model="presu.ValorTotal" disabled class="form-control" style="margin-top:4.5%; text-align:right" type="text" format="number" /></td>
 
                            </tr>
+
                            <tr>
 
                                <td>
@@ -230,7 +234,7 @@
                                </td>
 
                                <td>
-                               <!--<button class="btn btn-danger fa fa-close" style="width:50%;" ng-click="EliminarCamposPresupuesto()"></button>-->
+                                   <!--<button class="btn btn-danger fa fa-close" style="width:50%;" ng-click="EliminarCamposPresupuesto()"></button>-->
                                    <center>
                                        <div ng-click="EliminarCamposPresupuesto()" style="margin-left:3%;">
                                            <i id="iconEditar" class="fa fa-trash-o" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
@@ -238,25 +242,55 @@
                                        <p style="font-size:10px;">Eliminar</p>
                                    </center>
                                </td>
-                               <td> 
-                                     <input type="number" placeholder="IVA" ng-model="AIU.Iva" ng-keyup="CalcularValorTotal()"  onkeypress="if(this.value.length==2) return false" class="form-control" style="width:45%; margin-left:0%;"/>
-                                   <input type="number" placeholder="%" ng-model="AIU.A" ng-keyup="CalcularValorTotal()" class="form-control" style="width:45%; margin-left:51%; margin-top:-20%" />
-                                   
+                               <td>
+
+                                   <h5 style="float:right"><b>Administracion</b></h5>
+                                   <input type="number" placeholder="%" ng-model="AIU.A" ng-keyup="CalcularValorTotal()" class="form-control" onkeypress="if(this.value.length==2) return false" style="width:50%;  margin-top:0%; float:right; text-align:right" />
 
                                </td>
-                               <td >
-                                   <input type="number"placeholder="%" ng-model="AIU.I" ng-keyup="CalcularValorTotal()" onkeypress="if(this.value.length==2) return false" class="form-control" style="width:100%; " />
-                                   
-                                 
+                               <td>
+                                   <h5><b>Imprevistos</b></h5>
+                                   <input type="number" placeholder="%" ng-model="AIU.I" ng-keyup="CalcularValorTotal()" onkeypress="if(this.value.length==2) return false" class="form-control" style="width:100%; text-align:right " />
+
+
                                </td>
-                               <td> 
-                                   <input type="number"  placeholder="%" ng-model="AIU.U" ng-keyup="CalcularValorTotal()" onkeypress="if(this.value.length==2) return false" class="form-control" style="width:100%; " />
-                       
-                                </td>
-                               <td ><h4 style="float: right; " >Coste Total:</h4></td>
-                               <td><input value="$" ng-model="total" disabled class="form-control" type="text" style="margin-top:2%;" /></td>
+                               <td>
+                                   <h5><b>Utilidad</b></h5>
+                                   <input type="number" placeholder="%" ng-model="AIU.U" ng-keyup="CalcularValorTotal()" onkeypress="if(this.value.length==2) return false" class="form-control" style="width:100%; text-align:right " />
+
+                               </td>
+                               <td>
+                                   <h5><b>IVA/Utilidad</b></h5>
+                                   <input type="number" placeholder="%" ng-model="AIU.Iva" ng-keyup="CalcularValorTotal()" onkeypress="if(this.value.length==2) return false" class="form-control" style="width:50%; margin-left:0%; text-align:right" />
+
+                               </td>
+                               <td>
+                                   <center><h5 style=""><b> Subtotal:</b></h5></center>
+                                   <input value="$" ng-model="Subtotal" disabled class="form-control " type="text" style="margin-top:2%; text-align:right" format="number" />
+                               </td>
+
                            </tr>
+                           <tr>
+                               <td></td>
+                               <td></td>
+                               <td>
+                                   <input value="$" ng-model="A" disabled class="form-control" type="text" style="margin-top:2%; width:50%; float:right; text-align:right" format="number" />
+                               </td>
+                               <td>
+                                   <input value="$" ng-model="I" disabled class="form-control" type="text" style="margin-top:2%; text-align:right" format="number" />
+                               </td>
+                               <td>
+                                   <input value="$" ng-model="U" disabled class="form-control" type="text" style="margin-top:2%; text-align:right" format="number" />
+                               </td>
+                               <td>
+                                   <input value="$" ng-model="IvaUtilidad" disabled class="form-control" type="text" style="margin-top:2%;width:50%; text-align:right" format="number" />
+                               </td>
 
+                               <td>
+                                   <center><h5 style=""><b> Costo total:</b></h5></center>
+                                   <input value="$" ng-model="total" disabled class="form-control " type="text" style="margin-top:2%; text-align:right" format="number" />
+                               </td>
+                           </tr>
 
 
                        </tbody>

@@ -170,11 +170,12 @@
             //Función para crear un nuevo proyecto
             $scope.CrearProyecto = function () {
                 //location.reload();
-
+                $rootScope.nombreProyecto = "";
                 $("#circuloUno").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
                 $("#iconoUno").attr("src", "images/datosBasicosAct.png");
                 $("#iconoUno").attr('value', 2);
                 $('#flechaUno').fadeIn("fast");
+
                 
                 //MenuService.AbrirProyecto($rootScope.proyecto.datos.id, function (response) {
                 //    if (response.success) {
@@ -198,6 +199,7 @@
             //Función para cargar todos los datos de un proyecto ya iniciado
             $scope.AbrirProyecto = function (IdProyecto) {
                 $scope.DeshabilitarCirculos();
+                $rootScope.nombreProyecto = "";
 
                 MenuService.AbrirProyecto(IdProyecto, function (response) {
                     if (response.success) {

@@ -46,7 +46,7 @@ namespace LogicaNegocio.LogicaNegocio
             oArbol.IdProyecto = oArbolDTO.IdProyecto;
             oArbol.ProblemaCentral = oArbolDTO.ProblemaCentral;
             byte[] imageBytes = Convert.FromBase64String(base64);
-            oArbol.imagen = imageBytes;
+            oArbol.Imagen = imageBytes;
             entity.ArbolProblema.Add(oArbol);
             entity.SaveChanges();
 

@@ -254,14 +254,31 @@
                 if (parseFloat($scope.AIU.Iva) < 10) {
 
                     ivaString = "0.0" + ($scope.AIU.Iva);
-                    iva = parseFloat(ivaString) * $scope.total;
-
+                    iva = parseFloat(ivaString) * U;
+                    $scope.IvaUtilidad = iva;
+                    if ($scope.IvaUtilidad == 0) {
+                        $scope.AIU.Iva = "";
+                    } else {
+                        $scope.IvaUtilidad = iva;
+                    }
+                   
                 } else {
                     ivaString = "0." + ($scope.AIU.Iva);
-                    iva = parseFloat(ivaString) * $scope.total;
+                    iva = parseFloat(ivaString) * U;
+                    $scope.IvaUtilidad = iva;
+                   
+                    if ($scope.IvaUtilidad == 0) {
+                        $scope.AIU.Iva = "";
+                } else {
+                        $scope.IvaUtilidad = iva;
+            }
                 }
 
-                $scope.total = ($scope.total + iva + A + I + U).toFixed(2);
+                $scope.A = A.toFixed(2);
+                $scope.I = I.toFixed(2);
+                $scope.U = U.toFixed(2);
+                $scope.Subtotal = $scope.total.toFixed(2);
+                $scope.total = ($scope.total  + A + I + U).toFixed(2);
 
             }
 
@@ -346,7 +363,9 @@
                                     if (response.success) {
 
                                         $scope.AIU = response.AIU;
-                                        $scope.total = $scope.AIU.ValorTotal;
+                                        //$scope.total = $scope.AIU.ValorTotal;
+                                        $scope.CalcularValorTotal();
+
                                     }
 
                                 })
