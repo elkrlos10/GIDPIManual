@@ -85,6 +85,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -227,6 +228,7 @@
     <Content Include="Modelos\Principal.js" />
     <Content Include="Modelos\Reporte\Reporte.js" />
     <Content Include="Principal.html" />
+    <Content Include="ReporteRcdl\VistaInforme.aspx" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\alertify.js" />
@@ -307,6 +309,18 @@
     </Compile>
     <Compile Include="Parametros\ParametrosDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporteRcdl\DataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteRcdl\VistaInforme.aspx.cs">
+      <DependentUpon>VistaInforme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteRcdl\VistaInforme.aspx.designer.cs">
+      <DependentUpon>VistaInforme.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -323,6 +337,17 @@
     <Content Include="Fonts\fontawesome-webfont.woff2" />
     <Content Include="Fonts\FontAwesome.otf" />
     <None Include="Properties\PublishProfiles\gidpi.pubxml" />
+    <Content Include="ReporteRcdl\DataSet8.xsc">
+      <DependentUpon>DataSet8.xsd</DependentUpon>
+    </Content>
+    <None Include="ReporteRcdl\DataSet8.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet8.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="ReporteRcdl\DataSet8.xss">
+      <DependentUpon>DataSet8.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -345,6 +370,9 @@
       <Project>{89237133-6cf7-4e99-9184-3b3b453d0e31}</Project>
       <Name>LogicaNegocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ReporteRcdl\Informe\InformeProyecto.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

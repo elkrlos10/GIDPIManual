@@ -25,6 +25,19 @@
 
 </style>
 
-<div id="container" ej-reportviewer e-reportserviceurl="reportServiceUrl" e-processingmode="remoteMode" e-isresponsive="true" e-reportpath="rdlReportPath" style="width:100%;height:100vh"></div>
+<!--<div id="container" ej-reportviewer e-reportserviceurl="reportServiceUrl" e-processingmode="remoteMode" e-isresponsive="true" e-reportpath="rdlReportPath" style="width:100%;height:100vh"></div>-->
+<div>
+    <!--<div ng-repeat="report in reports">
+        <input type="button" ng-click="openReport(report.id)" value="{{report.name}}" />
+    </div>-->
+
+    <form class="form-horizontal" style="height: 100%;">
+        <div style="height:100%; background-color:transparent">
+            <!--<iframe  src="http://localhost:61609/Report/VistaReporte.aspx?IdProyecto=1" style="width:40%;height:100%; position:fixed; margin-top:-10%; margin-left:50%; transform:translateX(-50%)" ></iframe>-->
+            <iframe ng-src="{{url}}" style="width:40%;height:100%; position:fixed; margin-top:-10%; margin-left:50%; transform:translateX(-50%)"></iframe>
+
+        </div>
+    </form>
+</div>
 
  
