@@ -10,24 +10,34 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
+   
+    <form id="form1" runat="server" >
+     <center>
         <asp:ScriptManager ID="ScriptManager1" runat="server">
         </asp:ScriptManager>
-        <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" Font-Size="8pt" Height="502px" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="637px">
-            <LocalReport ReportPath="ReporteRcdl\Informe\InformeProyecto.rdlc">
+        
+        <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana"  Font-Size="8pt" Height="778px" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="37%" BackColor="#238276" InternalBorderColor="Aqua" ViewStateMode="Enabled" RightToLeft="YES" Enabled="False" EnableTheming="False" ExportContentDisposition="AlwaysInline" InternalBorderWidth="0px" ZoomMode="FullPage" DocumentMapWidth="80%" LinkDisabledColor="FloralWhite" SizeToReportContent="True" style="margin-right: 0px" ZoomPercent="150" CssClass="aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled aspNetDisabled" PageCountMode="Actual" PromptAreaCollapsed="True" BorderColor="Black" BorderStyle="None" ShowPageNavigationControls="False">
+           
+             <LocalReport  ReportPath="ReporteRcdl\Informe\InformeProyecto.rdlc">
                 <DataSources>
                     <rsweb:ReportDataSource DataSourceId="SqlDataSource1" Name="DataSet1" />
+                    <rsweb:ReportDataSource DataSourceId="SqlDataSource2" Name="DataSet2" />
                 </DataSources>
             </LocalReport>
+           
         </rsweb:ReportViewer>
+         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ManualDBConnectionString %>" SelectCommand="cargarMatriz" SelectCommandType="StoredProcedure">
+             <SelectParameters>
+                 <asp:Parameter Name="IdProyecto" Type="Int32" />
+             </SelectParameters>
+         </asp:SqlDataSource>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ManualDBConnectionString %>" SelectCommand="cargarProyecto" SelectCommandType="StoredProcedure">
             <SelectParameters>
                 <asp:Parameter Name="IdProyecto" Type="Int32" />
             </SelectParameters>
         </asp:SqlDataSource>
+     </center>
     </form>
+    
 </body>
 </html>

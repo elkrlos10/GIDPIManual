@@ -13,7 +13,8 @@ namespace GIDPI.ReporteRcdl
         {
             var IdProyecto = Request.QueryString["IdProyecto"];
 
-            SqlDataSource1.SelectParameters["IdProyecto"].DefaultValue = IdProyecto;
+            SqlDataSource1.SelectParameters["IdProyecto"].DefaultValue = "66";
+            SqlDataSource2.SelectParameters["IdProyecto"].DefaultValue = "66";
             //SqlDataSource2.SelectParameters["IdProyecto"].DefaultValue = IdProyecto;
 
         }

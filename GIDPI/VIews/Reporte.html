@@ -1,17 +1,21 @@
 ﻿<style>
 
-    body{
+    /*body{
         overflow-y:hidden;
-    }
+    }*/
 
-    #lineaUno{
-        display:none;
-    }
+    ::-webkit-scrollbar {
+      width: 12px;
+}
 
-    #lineaDos{
-        display:none;
-    }
+::-webkit-scrollbar-track {
+      background-color: white;
+} 
 
+::-webkit-scrollbar-thumb {
+      background-color: #51aba6;
+} 
+    
 #container_toolbarContainer{
         background:#238276;
         color:white;
@@ -31,13 +35,14 @@
         <input type="button" ng-click="openReport(report.id)" value="{{report.name}}" />
     </div>-->
 
-    <form class="form-horizontal" style="height: 100%;">
-        <div style="height:100%; background-color:transparent">
+    <form class="form-horizontal">
+        <div style="height:100%;">
             <!--<iframe  src="http://localhost:61609/Report/VistaReporte.aspx?IdProyecto=1" style="width:40%;height:100%; position:fixed; margin-top:-10%; margin-left:50%; transform:translateX(-50%)" ></iframe>-->
-            <iframe ng-src="{{url}}" style="width:40%;height:100%; position:fixed; margin-top:-10%; margin-left:50%; transform:translateX(-50%)"></iframe>
+            <iframe id="DocumentoFinal" style="border:none; background-color:rgba(161, 161, 161, 0.8)" ng-src="{{url}}"></iframe>
 
         </div>
     </form>
 </div>
+
 
  

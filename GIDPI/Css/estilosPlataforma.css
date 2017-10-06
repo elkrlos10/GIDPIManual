@@ -81,6 +81,17 @@ z-index:997;
 }
 
 
+#DocumentoFinal{
+    width:70%;
+    height:100%; 
+    border:2px solid #238276; 
+    position:fixed; 
+    margin-top:-10%; 
+    margin-left:50%; 
+    transform:translateX(-50%); 
+    overflow-y:hidden;
+}
+
 /*INICIA MATRIZ DE VESTER*/
 
 
@@ -165,6 +176,19 @@ z-index:997;
     margin-top:-2%; 
     width:7%;
 }
+
+
+#DocumentoFinal{
+    width:90%;
+    height:90vh; 
+    border:2px solid red; 
+    position:fixed; 
+    margin-top:-10%; 
+    margin-left:50%; 
+    transform:translateX(-50%); 
+    overflow:hidden;
+}
+
 
 }
 
