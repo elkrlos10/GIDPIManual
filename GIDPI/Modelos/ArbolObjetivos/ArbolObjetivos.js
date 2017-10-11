@@ -714,7 +714,10 @@
                 })
 
 
-
+                $("#guardar").hide();
+                $("#tipArbolObjetivos").hide();
+                
+                setTimeout(function () {  
                 html2canvas($("#arbolContenedor"), {
                     onrendered: function (canvas) {
                         theCanvas = canvas;
@@ -742,6 +745,7 @@
                         })
                     }
                 });
+                }, 500);
 
              
             }

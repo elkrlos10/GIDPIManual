@@ -489,6 +489,7 @@
 
                                 }
                                 $("#guardar").hide();
+
                             })
                         }
                     }
@@ -640,7 +641,7 @@
 
             //FUNCIÓN PARA GUARDAR LOS DATOS DEL ARBOL
             $scope.guardar = function () {
-
+                
 
                 var datosProblema = document.querySelector("#txtProblema").value;
                 var datosEfectos = [];
@@ -720,8 +721,8 @@
                 }
 
                
-
-
+                $("#guardar").hide();
+                setTimeout(function () { 
                 html2canvas($("#arbolContenedor"), {
                     onrendered: function (canvas) {
                         theCanvas = canvas;
@@ -748,6 +749,7 @@
                         })
                     }
                 });
+                }, 500);
               
               
                 

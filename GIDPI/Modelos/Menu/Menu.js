@@ -49,6 +49,7 @@
                     })
                 } else {
                     $location.url("/ArbolProblema");
+                    location.reload();
                 }
             };
 
