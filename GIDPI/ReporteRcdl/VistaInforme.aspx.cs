@@ -15,6 +15,10 @@ namespace GIDPI.ReporteRcdl
 
             SqlDataSource1.SelectParameters["IdProyecto"].DefaultValue = "66";
             SqlDataSource2.SelectParameters["IdProyecto"].DefaultValue = "66";
+            SqlDataSource3.SelectParameters["IdProyecto"].DefaultValue = "66";
+            SqlDataSource4.SelectParameters["IdProyecto"].DefaultValue = "66";
+            SqlDataSource5.SelectParameters["IdProyecto"].DefaultValue = "66";
+            SqlDataSource6.SelectParameters["IdProyecto"].DefaultValue = "66";
             //SqlDataSource2.SelectParameters["IdProyecto"].DefaultValue = IdProyecto;
 
         }
