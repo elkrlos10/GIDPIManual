@@ -40,6 +40,33 @@ namespace GIDPI.ReporteRcdl {
         protected global::Microsoft.Reporting.WebForms.ReportViewer ReportViewer1;
         
         /// <summary>
+        /// Control SqlDataSource13.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource13;
+        
+        /// <summary>
+        /// Control SqlDataSource12.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource12;
+        
+        /// <summary>
+        /// Control SqlDataSource11.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource11;
+        
+        /// <summary>
         /// Control SqlDataSource10.
         /// </summary>
         /// <remarks>
