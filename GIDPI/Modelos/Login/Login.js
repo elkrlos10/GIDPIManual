@@ -139,7 +139,7 @@
                                         nombre: response.usuario.Usuario1,
                                         //apellido: response.usuario.Usuario1.Apellido,
                                         //cedula: response.usuario.Cedula,
-                                        //tipousuario: response.usuario.TipoUsuario,
+                                        tipousuario: response.usuario.TipoUsuario,
                                         //idpersona: response.usuario.IdPersona
                                     }
                                 };

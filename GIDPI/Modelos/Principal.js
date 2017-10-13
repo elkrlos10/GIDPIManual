@@ -95,13 +95,14 @@ ManualApp.config(function ($routeProvider) {
                 } else {
 
                     //Para redireccionar de acuerdo al tipo de usuario
-                    //if ($rootScope.globals.currentUser.tipousuario == 1) {
-                    //    if ($location.paht() == "/ArbolProblema" || $location......) {
-                    //        $location.url("/Menu");
-                    //    }
-                    //}
-                    //$location.url("/Menu");
-                }
+                    if ($rootScope.globals.currentUser.tipousuario == 3) {
+                        //if ($location.paht() == "/Admin") {
+                          
+                        //}
+                        $location.url("/Admin");
+                    }
+                }  //$location.url("/Menu");
+                
             } else {
                 $location.path("/Login");
             }
