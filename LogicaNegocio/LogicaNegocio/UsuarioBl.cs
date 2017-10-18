@@ -1,5 +1,6 @@
 ﻿using Datos;
 using Datos.Modelos;
+using LogicaNegocio.Mail;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,12 +25,13 @@ namespace LogicaNegocio.LogicaNegocio
 
         public string ConsutarEmail(string correo)
         {
+            var mensaje = "";
+
             Model1 entity = new Model1();
             var emailN = (from i in entity.PersonaNatural
                          where i.Email == correo
                          select i).FirstOrDefault();
 
-            var mensaje = "este correo no esta registrado";
 
             if (emailN == null )
             {
@@ -38,18 +40,37 @@ namespace LogicaNegocio.LogicaNegocio
                               select i).FirstOrDefault();
                 if (emailJ != null)
                 {
-                    mensaje = "su contraseña fue enviada " + emailJ.Email;
+                    var Usuario = (from i in entity.Usuario
+                                  where i.IdUsuario == emailJ.IdUsuario
+                                  select i).FirstOrDefault();
+
+                    var Asunto = "Recuperación contraseña";
+                    var Plantilla = "Usuario: " + Usuario.Usuario1 + "<br/> Contraseña: " + Usuario.Contrasena;
+                    SendMail.SendMailMessage(Asunto, Plantilla, emailJ.Email);
+
+                    mensaje = "Su contraseña fue enviada " + emailJ.Email;
+                }
+                else
+                {
+                    mensaje = "El correo ingresado no se encuentra registrado";
                 }
                 
             }
             else
             {
-                mensaje = "su contraseña fue enviada " + emailN.Email;
+                var Usuario = (from i in entity.Usuario
+                               where i.IdUsuario == emailN.IdUsuario
+                               select i).FirstOrDefault();
+
+                var Asunto = "Recuperación contraseña";
+                var Plantilla = "Usuario: " + Usuario.Usuario1 + "<br/> Contraseña: " + Usuario.Contrasena;
+                SendMail.SendMailMessage(Asunto, Plantilla, emailN.Email);
+
+
+                mensaje = "Su contraseña fue enviada " + emailN.Email;
             }
 
             return mensaje;
-
-
 
         }
     }

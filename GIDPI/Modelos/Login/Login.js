@@ -33,7 +33,6 @@
 
             $scope.recuperarContrasena = {
                 email:""
-
             }
            
         
@@ -116,8 +115,6 @@
                 }
             }
 
-          
-
             $scope.ConsultarUsuario = function () {
                 if ($scope.Usuario.Usuario1 == null || $scope.Usuario.Usuario1 == "") {
                     alertify.success("Necesita ingresar el campo de Usuario");
@@ -156,8 +153,6 @@
                 }
             }
 
-
-
             $scope.ConsultarCorreo = function () {
 
                 if ($scope.recuperarContrasena.email == "" || $scope.recuperarContrasena.email ==  null) {
@@ -174,5 +169,15 @@
 
             }
 
+            $scope.Recuperar = function () {
+                LoginService.RecuperarPassword($scope.UsuarioRecuperar, function (response) {
+                    if (response.success == true) {
+                        $("#ModalRecuperar").modal("hide");
+                       
+                    } else {
+                       
+                    }
+                });
+            };
 
         }]);

@@ -90,18 +90,56 @@ ManualApp.config(function ($routeProvider) {
 
             if ($rootScope.globals != undefined) {
 
-                if ($location.path() !== '/Login' && !$rootScope.globals) {
-
+                if (!$rootScope.proyecto && $rootScope.InicioProyecto ==0) {
+                    $location.url("/Menu");
+                   
                 } else {
-
+                   
                     //Para redireccionar de acuerdo al tipo de usuario
                     if ($rootScope.globals.currentUser.tipousuario == 3) {
-                        //if ($location.paht() == "/Admin") {
-                          
-                        //}
                         $location.url("/Admin");
                     }
-                }  //$location.url("/Menu");
+
+                    if ($rootScope.proyecto.datos.Etapa < 10 && $location.path() == '/Reporte') {
+                        $location.url("/Menu");
+                       
+                    }
+                    if ($rootScope.proyecto.datos.Etapa == 1 && ($location.path() == '/Reporte' || $location.path() == '/Objetivos' || $location.path() == '/Involucrados'
+                        || $location.path() == '/PerfilProyecto' || $location.path() == '/Cronograma' || $location.path() == '/MarcoL')) {
+
+                        $location.url("/Menu");
+                        return;
+                    }
+                    if ($rootScope.proyecto.datos.Etapa == 2 && ($location.path() == '/Reporte' || $location.path() == '/Objetivos' || $location.path() == '/Involucrados'
+                        || $location.path() == '/PerfilProyecto' || $location.path() == '/Cronograma' || $location.path() == '/MarcoL')) {
+                       
+                        $location.url("/Menu");
+                        return;
+                    }
+                    if ($rootScope.proyecto.datos.Etapa == 3 && ($location.path() == '/Reporte' || $location.path() == '/Involucrados'
+                       || $location.path() == '/PerfilProyecto' || $location.path() == '/Cronograma' || $location.path() == '/MarcoL')) {
+
+                        $location.url("/Menu");
+                        return;
+                    }
+                    if ($rootScope.proyecto.datos.Etapa == 5 && ($location.path() == '/Reporte' || $location.path() == '/PerfilProyecto'
+                        || $location.path() == '/Cronograma' || $location.path() == '/MarcoL')) {
+                        $location.url("/Menu");
+                        return;
+                    }
+                    if ($rootScope.proyecto.datos.Etapa == 6 && ($location.path() == '/Reporte' || $location.path() == '/Cronograma' || $location.path() == '/MarcoL')) {
+                        $location.url("/Menu");
+                        return;
+                    }
+                    if ($rootScope.proyecto.datos.Etapa == 7 && ($location.path() == '/Reporte' || $location.path() == '/MarcoL')) {
+                        $location.url("/Menu");
+                        return;
+                    }
+                    if ($rootScope.proyecto.datos.Etapa == 9 && ($location.path() == '/Reporte')) {
+                        $location.url("/Menu");
+                        return;
+                    }
+                } 
                 
             } else {
                 $location.path("/Login");

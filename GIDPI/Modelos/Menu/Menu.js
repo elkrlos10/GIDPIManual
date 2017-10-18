@@ -32,7 +32,17 @@
                         allowOutsideClick: false
 
                     })
-                } else {
+                } else if ($rootScope.proyecto.datos.Etapa > 2) {
+                    swal({
+                        text: 'El árbol esta hecho',
+                        confirmButtonColor: '#238276',
+                        width: '25%',
+                        allowOutsideClick: false
+
+                    })
+                }
+
+                else {
                     $location.url("/Matriz");
                 }
             };
@@ -167,7 +177,7 @@
                 }
             })
 
-
+            $rootScope.InicioProyecto = 0;
             //Función para crear un nuevo proyecto
             $scope.CrearProyecto = function () {
                 //location.reload();
@@ -176,6 +186,7 @@
                 $("#iconoUno").attr("src", "images/datosBasicosAct.png");
                 $("#iconoUno").attr('value', 2);
                 $('#flechaUno').fadeIn("fast");
+                $rootScope.InicioProyecto = 1;
 
                 
                 //MenuService.AbrirProyecto($rootScope.proyecto.datos.id, function (response) {
@@ -232,7 +243,7 @@
                 MenuService.AbrirProyecto($rootScope.proyecto.datos.id, function (response) {
                     if (response.success) {
                         
-                        $rootScope.Proyecto = {
+                        $rootScope.proyecto = {
                             datos: {
                                 id: response.proyecto.IdProyecto,
                                 Tema: response.proyecto.TemaProyecto,
@@ -242,6 +253,7 @@
                         };
                         $rootScope.nombreProyecto = response.proyecto.TemaProyecto;
                         $scope.EtapasProyecto(response.proyecto.Etapa);
+                        $cookies.putObject("datosProyecto", $rootScope.proyecto);
                     }
 
                 });
@@ -254,10 +266,7 @@
                     if (response.success) {
                         //$scope.EtapasProyecto();
                     }
-
                 });
-            
-              
             }
 
             //Función para colocar opacos los circulos
