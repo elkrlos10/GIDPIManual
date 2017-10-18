@@ -384,6 +384,7 @@
             $scope.atras = function () {
 
                 $location.url("/Menu");
+                $(".notify").hide();
 
             }
 

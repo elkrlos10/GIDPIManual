@@ -124,6 +124,7 @@
     <Content Include="Css\alertify.core.css" />
     <Content Include="Css\alertify.default.css" />
     <Content Include="Css\animate.css" />
+    <Content Include="Css\AyudaAudio.css" />
     <Content Include="Css\bootstrap-datepicker.min.css" />
     <Content Include="Css\bootstrap-datetimepicker-standalone.css" />
     <Content Include="Css\bootstrap-grid.min.css" />
@@ -135,6 +136,7 @@
     <Content Include="Css\estilosMenu.css" />
     <Content Include="Css\estilosPlataforma.css" />
     <Content Include="Css\font-awesome.css" />
+    <Content Include="Css\fontAudio.css" />
     <Content Include="Css\highlight.css" />
     <Content Include="Css\jQuery-svg-popup.css" />
     <Content Include="Css\jquery-ui.min.css" />
@@ -239,6 +241,7 @@
     <Content Include="scripts\angular.min.js" />
     <Content Include="scripts\AnimacionTextoVideoAudio.js" />
     <Content Include="scripts\AnimacionTips.js" />
+    <Content Include="scripts\audioAyuda.js" />
     <Content Include="scripts\bootstrap-datepicker.es.js" />
     <Content Include="scripts\bootstrap-datepicker.js" />
     <Content Include="scripts\bootstrap-datetimepicker.js" />
@@ -271,6 +274,7 @@
     <Content Include="scripts\notify.js" />
     <Content Include="scripts\prefixfree.min.js" />
     <Content Include="scripts\sweetalert2.js" />
+    <Content Include="scripts\waves.min.js" />
     <Content Include="VIews\AdminView.html" />
     <Content Include="VIews\ArbolView.html" />
     <Content Include="VIews\cronogramaPresupuesto.html" />

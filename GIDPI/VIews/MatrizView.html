@@ -1,4 +1,6 @@
 ﻿<link href="../Css/MenuAyudaMatrizVester.css" rel="stylesheet" />
+<link href="../Css/AyudaAudio.css" rel="stylesheet" />
+<link href="../Css/fontAudio.css" rel="stylesheet" />
 
 <!--INICIA AYUDA TEXTO-->
 
@@ -28,6 +30,32 @@
 <!--FINALIZA AYUDA VIDEO-->
 
 
+<!--INICIA AYUDA AUDIO-->
+<div id="audioAyudaDos" style="display:none">
+    <div class="player">
+        <div class="control-row">
+            <div id="pause-button">
+                <i class="icon icon-play"></i>
+                <i class="icon"></i>
+            </div>
+            <div class="seek-field">
+                <input id="audioSeekBar" min="0" max="334" step="1" value="0" type="range" oninput="audioSeekBar()" onchange="this.oninput()">
+            </div>
+            <div class="volume-icon">
+                <i class="icon-volume-up"></i>
+            </div>
+            <div class="volume-field">
+                <input type="range" min="0" max="100" value="100" step="1" oninput="audio.volume = this.value/100" onchange="this.oninput()">
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio-player" ontimeupdate="SeekBar()" ondurationchange="CreateSeekBar()" preload="auto" loop>
+        <source src="../audios/Don Tetto - Yo Estaré Bien (Con Letra).mp3" type="audio/mpeg">
+    </audio>
+</div>
+<!--FINALIZA AYUDA AUDIO-->
+
 
 <nav class="vertical" id="menuAyuda">
     <input type="checkbox" id="toggle2" />
@@ -39,7 +67,7 @@
         <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" ng-click="Regresar()" style="font-size:22px;"></a></li>
         <li><a class="fa fa-file button demo-btn ayudaTextoDos menuAyuda" title="Leer ayuda" data-svg-popup="ayudaTextoDos" style="font-size:22px;"></a></li>
         <li><a class="fa fa-video-camera button demo-btn ayudaVideoDos menuAyuda" title="Ver ayuda" data-svg-popup="ayudaVideoDos" style="font-size:22px;"></a></li>
-        <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="audio" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="ayudaAudioDos" style="font-size:22px;"></a></li>
 
     </menu>
 </nav>
@@ -88,7 +116,7 @@
             <h1 style="display:none;" id="influeniciaTitulo">¿Qué influencia tiene en?</h1>
         </div>
 
-        <div id="problemasMatriz" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:auto; border:3px solid #4fa19c; margin-left:-3%;">
+        <div id="problemasMatriz" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:auto; border:3px solid #4fa19c; margin-left:-3%; margin-bottom:3%;">
 
             <div class="col-lg-8 col-md-8 col-sm-8" style="height:auto;">
 
@@ -103,7 +131,7 @@
 
 
 
-            <div class="col-lg-2 col-md-2 col-sm-2" style="height:5vh;">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="height:5vh;">
 
                 <center>
                     <div id="agregar_btn" ng-click="Agregar(Cantidad)" style="margin-left:3%;">
@@ -114,14 +142,14 @@
 
             </div>
 
-            <div class="col-lg-2 col-md-2 col-sm-2" style="height:10vh; z-index:66;">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="height:10vh; z-index:66;">
 
                 <div id="tipMatrizVester" style="position:absolute; z-index:99; cursor:pointer;">
                     <span><i class="fa fa-info-circle" style="font-size:30px; color:#238276; float:right; margin-right:-130%;" onclick="tipMatrizVester()"></i></span>
                 </div>
 
 
-                <div id="tipMatrizVester" style="position:absolute; z-index:99; cursor:pointer; margin-top:40%;  margin-left:26%;">
+                <div id="tipMatrizVesterDos" style="position:absolute; z-index:99; cursor:pointer; margin-top:40%;">
                     <span><i class="fa fa-info-circle" style="font-size:30px; color:#238276; float:right;" onclick="tipMatrizVesterDos()"></i></span>
                 </div>
 
@@ -290,3 +318,5 @@
 
 <script src="../scripts/AnimacionTextoVideoAudio.js"></script>
 <script src="../scripts/AnimacionTips.js"></script>
+<script src="../scripts/audioAyuda.js"></script>
+<script src="../scripts/waves.min.js"></script>

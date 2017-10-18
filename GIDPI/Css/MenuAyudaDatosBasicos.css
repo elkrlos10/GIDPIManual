@@ -6,7 +6,6 @@
 }
 
 
-
 @media (max-width: 1366px) and (min-width: 1361px) {
 
 #menuAyuda{
@@ -16,14 +15,10 @@
     z-index:300;
 }
 
-#contenido{
-    height:105vh;
-} 
-
 }
 
 
-@media (max-width: 1360px) and (max-height: 1281px) {
+@media (max-width: 1360px) and (min-width: 1280px) {
 
 #menuAyuda{
     margin-top:0%;
@@ -32,9 +27,6 @@
     z-index:300;
 }
 
-#contenido{
-    height:105vh;
-}    
 
 }
 
@@ -47,9 +39,6 @@
     z-index:300;
 }
 
-#contenido{
-    height:105vh;
-}    
 
 }
 
@@ -73,8 +62,4 @@
     z-index:300;
 }    
   
-#contenido{
-    height:100vh;
-}  
- 
 }
