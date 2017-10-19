@@ -50,6 +50,25 @@ namespace GIDPI.Controllers
             }
         }
 
+        [HttpPost]
+        public IHttpActionResult consultarMatriz(ParametrosDTO oParametros)
+        {
+
+            try
+            {
+                MenuBl oMenu = new MenuBl();
+
+                var proyecto = oMenu.consultarMatriz(int.Parse(oParametros.Parametro1));
+
+                return Ok(new { success = proyecto });
+            }
+            catch (Exception)
+            {
+
+                return Ok(new { success = false });
+            }
+        }
+
 
         [HttpPost]
         public IHttpActionResult EliminarProyecto(ParametrosDTO IdProyecto)
