@@ -33,12 +33,18 @@
 
                     })
                 } else if ($rootScope.proyecto.datos.Etapa > 2) {
-                    swal({
-                        text: 'El árbol esta hecho',
-                        confirmButtonColor: '#238276',
-                        width: '25%',
-                        allowOutsideClick: false
+                    MenuService.consultarMatriz($rootScope.proyecto.datos.id, function (response) {
+                        if (response.success) {
+                            $location.url("/Matriz");
+                        }else{
+                            swal({
+                                text: 'El árbol esta hecho',
+                                confirmButtonColor: '#238276',
+                                width: '25%',
+                                allowOutsideClick: false
 
+                            })
+                        }
                     })
                 }
 

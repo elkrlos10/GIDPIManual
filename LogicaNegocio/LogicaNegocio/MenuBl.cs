@@ -21,6 +21,24 @@ namespace LogicaNegocio.LogicaNegocio
             return proyecto;
         }
 
+        public bool consultarMatriz(int IdProyecto)
+        {
+
+            var matriz = (from i in entity.Proyecto
+                            join m in entity.MatrizVester on i.IdProyecto equals m.IdProyecto
+                            where i.IdProyecto == IdProyecto
+                            select m).FirstOrDefault();
+
+
+            if (matriz != null)
+            {
+                return true;
+            }else
+            {
+                return false;
+            }
+        }
+
 
         public void EliminarProyecto(int idProyecto)
         {
