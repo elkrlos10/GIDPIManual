@@ -18,14 +18,14 @@ namespace LogicaNegocio.Mail
         public static void SendMailMessage(string subject, string body, string to)
         {
 
-            var fromAddress = "programacionambientessena@gmail.com";
-            const string fromPassword = "programacionsena1";
+            var fromAddress = "plataforma.gidpi@gmail.com";
+            const string fromPassword = "gidpi2017";
             MailAddress fromAddress1 = new MailAddress(fromAddress);
             MailAddress toAddress = new MailAddress(to);
             var smtp = new SmtpClient();
             {
                 smtp.Host = "smtp.gmail.com";
-                smtp.Port = 587;
+                smtp.Port = 25;
                 smtp.EnableSsl = true;
                 smtp.DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network;
                 smtp.Credentials = new NetworkCredential(fromAddress, fromPassword);
