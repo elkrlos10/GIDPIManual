@@ -23,7 +23,7 @@ function tipMatrizVester() {
     $.notify("<h5 style='text-align:center'><b>Para recordar...</b></h5>" + "Identificación de situación a abordar <br/><b>1.</b>¿Qué problemas serán analizados? <br/><b>2.</b>¿Dónde ocurren estos problemas?<br/><b>3.</b>¿A qué o a quiénes afectan?",
 
        {
-           type: "success", align: "left", verticalAlign: "bottom",
+           type: "success", align: "left", verticalAlign: "middle",
            delay: 10000, animation: true, animationType: "scale", close: true
 
        });
@@ -36,7 +36,7 @@ function tipMatrizVesterDos() {
     $.notify("<h5 style='text-align:center'><b>Para recordar...</b></h5>" + "Redacción de problemáticas que surgen a partir de la situación que se planteó.<br/><b>1.</b>Evitar la frase “NO HAY...”, “no existe…”<br/><b>2.</b>Hablar en 3ra persona <br/><b>3.</b>Especificar el lugar de la problemáticas <br/><b>4.</b>Tener en cuenta que cuando se habla de problemáticas deben de ser redactadas en negativo.",
 
        {
-           type: "success", align: "left", verticalAlign: "bottom",
+           type: "success", align: "left", verticalAlign: "middle",
            delay: 10000, animation: true, animationType: "scale", close: true
 
        });

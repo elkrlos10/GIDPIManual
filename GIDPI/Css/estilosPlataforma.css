@@ -340,6 +340,33 @@ z-index:997;
   z-index: 1;
 }
 
+
+.audioVester{
+  position: fixed;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:47%;
+  margin-left:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+
+.audioArbolProblemas{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:58%;
+  margin-left:32%;
+  margin-bottom:3%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
 #contenido{
     background:rgba(192,192,192,0.15); 
     height:100vh;
@@ -364,6 +391,31 @@ z-index:997;
   z-index: 1;
 }
 
+.audioVester{
+  position: fixed;
+  background-color: #fff;
+  width: 530px;
+  height: 120px;
+  margin-top:47%;
+  margin-left:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.audioArbolProblemas{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top: 70%;
+  margin-left:32%;
+  margin-bottom:3%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
 }
 
 @media (max-width: 1499px) and (max-height: 1441px) {
@@ -380,6 +432,39 @@ z-index:997;
   height: 120px;
   margin-top:55%;
   margin-left:27%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.audioVester{
+  position: absolute;
+  background-color: #fff;
+  width: 530px;
+  height: 120px;
+  margin-top:80%;
+  margin-left:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#tipMatrizVesterDos{
+    margin-left:35%;
+}
+
+#matrizVester{
+    font-size:22px;
+}
+
+.audioArbolProblemas{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top: 75%;
+  margin-left:30%;
+  margin-bottom:3%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 1;
@@ -436,6 +521,35 @@ z-index:997;
   z-index: 1;
 }
 
+.audioVester{
+  position: absolute;
+  background-color: #fff;
+  width: 530px;
+  height: 120px;
+  margin-top:80%;
+  margin-left:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#tipMatrizVesterDos{
+    margin-left:30%;
+}
+
+.audioArbolProblemas{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top: 75%;
+  margin-left:30%;
+  margin-bottom:3%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
 }
 
 @media (max-width: 1400px) and (min-width: 1367px) {
@@ -463,6 +577,31 @@ z-index:997;
     height:100vh;
 }
 
+.audioVester{
+  position: absolute;
+  background-color: #fff;
+  width: 530px;
+  height: 120px;
+  margin-top:47%;
+  margin-left:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.audioArbolProblemas{
+  position: absolute;
+  background-color: pink;
+  width: 560px;
+  height: 120px;
+  margin-top: 75%;
+  margin-left:26%;
+  margin-bottom:3%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
 }
 
 @media (max-width: 1366px) and (min-width: 1361px) {
@@ -483,6 +622,20 @@ z-index:997;
     margin-top:-2%; 
     width:7%;
 }
+
+.audioArbolProblemas{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top: 75%;
+  margin-left:30%;
+  margin-bottom:3%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
 
 }
 
@@ -509,6 +662,31 @@ z-index:997;
 #contenido{
     background:rgba(192,192,192,0.15); 
     height:130vh;
+}
+
+.audioVester{
+  position: absolute;
+  background-color: #fff;
+  width: 530px;
+  height: 120px;
+  margin-top:47%;
+  margin-left:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.audioArbolProblemas{
+  position: absolute;
+  background-color: red;
+  width: 560px;
+  height: 120px;
+  margin-top: 75%;
+  margin-left:26%;
+  margin-bottom:3%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 
@@ -538,6 +716,31 @@ z-index:997;
     height:100vh;
 }
 
+
+.audioVester{
+  position: absolute;
+  background-color: #fff;
+  width: 530px;
+  height: 120px;
+  margin-top:47%;
+  margin-left:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.audioArbolProblemas{
+  position: absolute;
+  background-color: blue;
+  width: 560px;
+  height: 120px;
+  margin-top: 75%;
+  margin-left:26%;
+  margin-bottom:3%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
 
 }
 
@@ -584,6 +787,39 @@ z-index:997;
     margin-left:88%;
 }
 
+.audioVester{
+  position: absolute;
+  background-color: #fff;
+  width: 530px;
+  height: 120px;
+  margin-top:90%;
+  margin-left:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#matrizVester{
+    font-size:20px;
+}
+
+#tipMatrizVesterDos{
+    margin-left:41%;
+}
+
+.audioArbolProblemas{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top: 75%;
+  margin-left:26%;
+  margin-bottom:3%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
 }
 
 @media(max-width:1152px) {
@@ -618,6 +854,39 @@ z-index:997;
   height: 120px;
   margin-top:63%;
   margin-left:23%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.audioVester{
+  position: absolute;
+  background-color: #fff;
+  width: 530px;
+  height: 120px;
+  margin-top:100%;
+  margin-left:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#tipMatrizVesterDos{
+    margin-left:41%;
+}
+
+#matrizVester{
+    font-size:20px;
+}
+
+.audioArbolProblemas{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top: 75%;
+  margin-left:26%;
+  margin-bottom:3%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 1;
@@ -663,6 +932,35 @@ z-index:997;
 #contenido{
     background:rgba(192,192,192,0.15); 
     height:130vh;
+}
+
+.audioVester{
+  position: absolute;
+  background-color: #fff;
+  width: 530px;
+  height: 120px;
+  margin-top:110%;
+  margin-left:22%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#matrizVester{
+    font-size:17px;
+}
+
+.audioArbolProblemas{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top: 80%;
+  margin-left:22%;
+  margin-bottom:3%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 }
