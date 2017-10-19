@@ -112,110 +112,111 @@
                 "Areas":
                     [
                             {
-                                "nombreArea": "AGRONOMIA, VETERINARIA Y AFINES",
+                                "nombreArea": "1 AGRONOMIA, VETERINARIA Y AFINES",
                                 "id": 0,
                                 "numeroArea": [
-                                    { "titulo": "AGRONOMIA" },
-                                    { "titulo": "ZOOTECNIA" },
-                                    { "titulo": "MEDICINA VETERINARIA" }
+                                    { "titulo": "11 AGRONOMIA" },
+                                    { "titulo": "12 ZOOTECNIA" },
+                                    { "titulo": "13 MEDICINA VETERINARIA" }
                                 ]
                             },
 
                             {
-                                "nombreArea": "BELLAS ARTES",
+                                "nombreArea": "2 BELLAS ARTES",
                                 "id": 1,
                                 "numeroArea": [
-                                    { "titulo": "ARTES PLASTICAS, VISUALES Y AFINES" },
-                                    { "titulo": "OTROS PROGRAMAS ASOCIADOS A BELLAS ARTES" },
-                                    { "titulo": "MÚSICA" },
-                                    { "titulo": "ARTES REPRESENTATIVAS" },
-                                    { "titulo": "PUBLICIDAD Y AFINES" },
-                                    { "titulo": "DISEÑO" }
+                                    { "titulo": "24 ARTES PLASTICAS, VISUALES Y AFINES" },
+                                    { "titulo": "270 OTROS PROGRAMAS ASOCIADOS A BELLAS ARTES" },
+                                    { "titulo": "28 MÚSICA" },
+                                    { "titulo": "25 ARTES REPRESENTATIVAS" },
+                                    { "titulo": "26 PUBLICIDAD Y AFINES" },
+                                    { "titulo": "27 DISEÑO" }
                                 ]
                             },
                             {
-                                "nombreArea": "CIENCIAS DE LA SALUD",
+                                "nombreArea": "4 CIENCIAS DE LA SALUD",
                                 "id": 2,
                                 "numeroArea": [
-                                    { "titulo": "BACTERIOLOGIA" },
-                                    { "titulo": "ODONTOLOGIA" },
-                                    { "titulo": "SALUD PUBLICA" },
-                                    { "titulo": "OPTOMETRIA, OTROS PROGRAMAS DE CIENCIAS DE LA SALUD" },
-                                    { "titulo": "ENFERMERIA" },
-                                    { "titulo": "TERAPIAS" },
-                                    { "titulo": "MEDICINA" },
-                                    { "titulo": "INSTRUMENTACION QUIRURGICA" }
+                                    { "titulo": "440 BACTERIOLOGIA" },
+                                    { "titulo": "447 ODONTOLOGIA" },
+                                    { "titulo": "450 SALUD PUBLICA" },
+                                    { "titulo": "448 OPTOMETRIA, OTROS PROGRAMAS DE CIENCIAS DE LA SALUD" },
+                                    { "titulo": "446 ENFERMERIA" },
+                                    { "titulo": "441 TERAPIAS" },
+                                    { "titulo": "445 MEDICINA" },
+                                    { "titulo": "444 INSTRUMENTACION QUIRURGICA" }
                                 ]
                             },
                             {
-                                "nombreArea": "CIENCIAS SOCIALES Y HUMANAS",
+                                "nombreArea": "5 CIENCIAS SOCIALES Y HUMANAS",
                                 "id": 3,
                                 "numeroArea": [
-                                    { "titulo": "ANTROPOLOGIA, ARTES LIBERALES" },
-                                    { "titulo": "GEOGRAFIA, HISTORIA" },
-                                    { "titulo": "SOCIOLOGIA, TRABAJO SOCIAL Y AFINES" },
-                                    { "titulo": "FILOSOFIA, TEOLOGIA Y AFINES" },
-                                    { "titulo": "PSICOLOGIA" },
-                                    { "titulo": "LENGUAS MODERNAS, LITERATURA, LINGUISTICA Y AFINES" },
-                                    { "titulo": "FORMACION RELACIONADA CON EL CAMPO MILITAR O POLICIAL" },
-                                    { "titulo": "COMUNICACIÓN SOCIAL, PERIODISMO Y AFINES" },
-                                    { "titulo": "DEPORTES, EDUCACION FISICA Y RECREACION" },
-                                    { "titulo": "DERECHO Y AFINES" },
-                                    { "titulo": "CIENCIA POLITICA, RELACIONES INTERNACIONALES" }
+                                    { "titulo": "553 ANTROPOLOGIA, ARTES LIBERALES" },
+                                    { "titulo": "562 GEOGRAFIA, HISTORIA" },
+                                    { "titulo": "569 SOCIOLOGIA, TRABAJO SOCIAL Y AFINES" },
+                                    { "titulo": "568 FILOSOFIA, TEOLOGIA Y AFINES" },
+                                    { "titulo": "566 PSICOLOGIA" },
+                                    { "titulo": "564 LENGUAS MODERNAS, LITERATURA, LINGUISTICA Y AFINES" },
+                                    { "titulo": "561 FORMACION RELACIONADA CON EL CAMPO MILITAR O POLICIAL" },
+                                    { "titulo": "555 BIBLIOTECOLOGIA, OTROS DE CIENCIAS SOCIALES Y HUMANAS" },
+                                    { "titulo": "557 COMUNICACIÓN SOCIAL, PERIODISMO Y AFINES" },
+                                    { "titulo": "558 DEPORTES, EDUCACION FISICA Y RECREACION" },
+                                    { "titulo": "559 DERECHO Y AFINES" },
+                                    { "titulo": "556 CIENCIA POLITICA, RELACIONES INTERNACIONALES" }
 
 
                                 ]
                             },
                             {
-                                "nombreArea": "CIENCIAS DE LA EDUCACION",
+                                "nombreArea": "3 CIENCIAS DE LA EDUCACION",
                                 "id": 4,
                                 "numeroArea": [
 
-                                    { "titulo": "EDUCACION" }
+                                    { "titulo": "313 EDUCACION" }
 
 
                                 ]
                             },
                             {
-                                "nombreArea": "ECONOMIA ADMINISTRACION CONTADURIA Y AFINES",
+                                "nombreArea": "6 ECONOMIA ADMINISTRACION CONTADURIA Y AFINES",
                                 "id": 5,
                                 "numeroArea": [
-                                    { "titulo": " ADMINISTRACION" },
-                                    { "titulo": "CONTADURIA PUBLICA" },
-                                    { "titulo": "ECONOMIA" }
+                                    { "titulo": "69 ADMINISTRACION" },
+                                    { "titulo": "612 CONTADURIA PUBLICA" },
+                                    { "titulo": "611 ECONOMIA" }
                                 ]
                             },
 
                             {
-                                "nombreArea": "MATEMATICAS Y CIENCIAS NATURALES",
+                                "nombreArea": "9 MATEMATICAS Y CIENCIAS NATURALES",
                                 "id": 6,
                                 "numeroArea": [
-                                    { "titulo": "BIOLOGIA, MICROBIOLOGIA Y AFINES" },
-                                    { "titulo": "FISICA" },
-                                    { "titulo": "GEOLOGIA, OTROS PROGRAMAS DE CIENCIAS NATURALES" },
-                                    { "titulo": "QUIMICA Y AFINES" },
-                                    { "titulo": "MATEMATICAS, ESTADISTICA Y AFINES" }
+                                    { "titulo": "934 BIOLOGIA, MICROBIOLOGIA Y AFINES" },
+                                    { "titulo": "935 FISICA" },
+                                    { "titulo": "936 GEOLOGIA, OTROS PROGRAMAS DE CIENCIAS NATURALES" },
+                                    { "titulo": "939 QUIMICA Y AFINES" },
+                                    { "titulo": "937 MATEMATICAS, ESTADISTICA Y AFINES" }
                                 ]
                             }, {
-                                "nombreArea": "INGENIERIA ARQUITECTURA URBANISMO Y AFINES",
+                                "nombreArea": "8 INGENIERIA ARQUITECTURA URBANISMO Y AFINES",
                                 "id": 7,
                                 "numeroArea": [
-                                    { "titulo": "ARQUITECTURA" },
-                                    { "titulo": "INGENIERIA AGRONOMICA, PECUARIA Y AFINES" },
-                                    { "titulo": "INGENIERIA DE MINAS, METALURGIA Y AFINES" },
-                                    { "titulo": "OTRAS INGENIERIAS" },
-                                    { "titulo": "INGENIERIA QUIMICA Y AFINES" },
-                                    { "titulo": "INGENIERIA MECANICA Y AFINES" },
-                                    { "titulo": "INGENIERIA INDUSTRIAL Y AFINES" },
-                                    { "titulo": "INGENIERIA ELECTRONICA, TELECOMUNICACIONES Y AFINES" },
-                                    { "titulo": "INGENIERIA ELECTRICA Y AFINES" },
-                                    { "titulo": "INGENIERIA DE SISTEMAS, TELEMATICA Y AFINES" },
-                                    { "titulo": "INGENIERIA CIVIL Y AFINES" },
-                                    { "titulo": "INGENIERIA AGROINDUSTRIAL, ALIMENTOS Y AFINES" },
-                                    { "titulo": "INGENIERIA BIOMEDICA Y AFINES" },
-                                    { "titulo": "INGENIERIA AMBIENTAL, SANITARIA Y AFINES" },
-                                    { "titulo": "INGENIERIA AGRICOLA, FORESTAL Y AFINES" },
-                                    { "titulo": "INGENIERIA ADMNISTRATIVA Y AFINES" }
+                                    { "titulo": "818 ARQUITECTURA" },
+                                    { "titulo": "818 INGENIERIA AGRONOMICA, PECUARIA Y AFINES" },
+                                    { "titulo": "826 INGENIERIA DE MINAS, METALURGIA Y AFINES" },
+                                    { "titulo": "833 OTRAS INGENIERIAS" },
+                                    { "titulo": "832 INGENIERIA QUIMICA Y AFINES" },
+                                    { "titulo": "831 INGENIERIA MECANICA Y AFINES" },
+                                    { "titulo": "830 INGENIERIA INDUSTRIAL Y AFINES" },
+                                    { "titulo": "829 INGENIERIA ELECTRONICA, TELECOMUNICACIONES Y AFINES" },
+                                    { "titulo": "828 INGENIERIA ELECTRICA Y AFINES" },
+                                    { "titulo": "827 INGENIERIA DE SISTEMAS, TELEMATICA Y AFINES" },
+                                    { "titulo": "825 INGENIERIA CIVIL Y AFINES" },
+                                    { "titulo": "823 INGENIERIA AGROINDUSTRIAL, ALIMENTOS Y AFINES" },
+                                    { "titulo": "819 INGENIERIA BIOMEDICA Y AFINES" },
+                                    { "titulo": "820 INGENIERIA AMBIENTAL, SANITARIA Y AFINES" },
+                                    { "titulo": "822 INGENIERIA AGRICOLA, FORESTAL Y AFINES" },
+                                    { "titulo": "821 INGENIERIA ADMNISTRATIVA Y AFINES" }
 
                                 ]
                             },
