@@ -108,8 +108,8 @@
 
             }
 
-            $scope.sacarArbol= function () {
-             
+            $scope.abrirReporte= function () {
+                $location.url("/Reporte");
             }
 
            
