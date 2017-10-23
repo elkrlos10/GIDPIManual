@@ -2,10 +2,6 @@ nav {
   overflow : hidden;
 }
 
-#nombreProyectoMenu{
-     margin-top:13%;
-}
-
 #menuAyuda {
     margin-top: -10%;
     margin-left: 94%;
@@ -914,11 +910,6 @@ body{
     margin-top:6.5%;
 }
 
-#nombreProyectoMenu{
-    margin-top:30.5%;
-    z-index:-3;
-}
-
 #menuAyuda {
     margin-top: -10%;
     margin-left: 95.5%;
@@ -970,11 +961,6 @@ body{
   margin-top:-9.5%;
 }
 
-#nombreProyectoMenu{
-    margin-top:28%;
-    z-index:-3;
-}
-
 #menuAyuda {
     margin-top: -10%;
     margin-left: 95%;
@@ -1010,12 +996,6 @@ body{
   transform:rotate(90deg);
   margin-left:82.5%;
   margin-top:-9.5%;
-}
-
-
-#nombreProyectoMenu{
-    margin-top:35%;
-    z-index:-3;
 }
 
 #menuAyuda {
@@ -1078,11 +1058,6 @@ body{
   margin-top:-9.5%;
 }
 
-#nombreProyectoMenu{
-    margin-top:30.5%;
-    z-index:-3;
-}
-
 #menuAyuda {
     margin-top: -10%;
     margin-left: 100%;
@@ -1121,11 +1096,6 @@ body{
   transform:rotate(90deg);
   margin-left:81.5%;
   margin-top:-9.5%;
-}
-
-#nombreProyectoMenu{
-    margin-top:30.5%;
-    z-index:-3;
 }
 
 #menuAyuda {
@@ -1175,11 +1145,6 @@ body{
   margin-top:-9.5%;
 }
 
-#nombreProyectoMenu{
-    margin-top:28%;
-    z-index:-3;
-}
-
 #menuAyuda {
     margin-top: -10%;
     margin-left: 94.5%;
@@ -1214,11 +1179,6 @@ body{
     width: 12%;
     height: 12%;
   }
-
-#nombreProyectoMenu{
-    margin-top:3%;
-}
-
 
 #audioWrap{
  width: 60%; 
@@ -1260,11 +1220,6 @@ body{
   margin-top:-9.5%;
 }
 
-#nombreProyectoMenu{
-    margin-top:30.5%;
-    z-index:-3;
-}
-
 #menuAyuda {
     margin-top: -10%;
     margin-left: 94%;
@@ -1299,10 +1254,6 @@ body{
     position:absolute;
     transform:translateX(-55%);
     margin-top:12%;
-}
-
-#nombreProyectoMenu{
-    margin-top:-12%;
 }
 
 #menuAyuda {
@@ -1350,11 +1301,6 @@ body{
   margin-left:76%;
   margin-top:-9.5%;
 }
-
-#nombreProyectoMenu{
-     margin-top:-15%;
-}
-
 
 #audioWrap{
  width: 60%; 

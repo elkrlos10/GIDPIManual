@@ -15,9 +15,20 @@ $('#ayudaAudioTres').click(function () {
     $(this).toggleClass('clientsClose');
 });
 
+$('#ayudaAudioCuatro').click(function () {
+    $('#audioAyudaCuatro').toggle();
+    $(this).toggleClass('clientsClose');
+});
 
+$('#ayudaAudioCinco').click(function () {
+    $('#audioAyudaCinco').toggle();
+    $(this).toggleClass('clientsClose');
+});
 
-
+$('#ayudaAudioSeis').click(function () {
+    $('#audioAyudaSeis').toggle();
+    $(this).toggleClass('clientsClose');
+});
 
 //--------------------------------------------------------------------
 
