@@ -14,12 +14,16 @@ namespace LogicaNegocio.LogicaNegocio
         {
             Model1 entity = new Model1();
             var mensaje = "";
+           
             var usuario = (from i in entity.Usuario
                            where i.Usuario1 == oUsuario.Usuario1
                            select i).FirstOrDefault();
 
             if (usuario == null)
             {
+
+                //var Encriptar = SecurityEncode.SecurityEncode.Encriptar(oUsuario.Contrasena);
+                //oUsuario.Contrasena= Encriptar:
                 entity.Usuario.Add(oUsuario);
                 entity.SaveChanges();
 
@@ -45,12 +49,15 @@ namespace LogicaNegocio.LogicaNegocio
         {
             Model1 entity = new Model1();
             var mensaje = "";
+           
             var usuario = (from i in entity.Usuario
                            where i.Usuario1 == oUsuario.Usuario1
                            select i).FirstOrDefault();
 
             if (usuario == null)
             {
+                //var Encriptar = SecurityEncode.SecurityEncode.Encriptar(oUsuario.Contrasena);
+                //oUsuario.Contrasena= Encriptar:
                 entity.Usuario.Add(oUsuario);
                 entity.SaveChanges();
 

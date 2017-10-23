@@ -11,7 +11,7 @@
         <hr style="background:black;" />
         <p>
             <h4><b>Tipo de proyecto:</b></h4>
-            <p>Este se enfoca en lo que va dirigido el proyecto. El cual se divide en tres opciones que son:</p>
+        <p>Este se enfoca en lo que va dirigido el proyecto. El cual se divide en tres opciones que son:</p>
 
         <h5><b>-Innovación:</b></h5>
         <p>Es crear o mejorar un producto, proceso o servicio para la introducción en el mercado.</p>
@@ -42,8 +42,6 @@
 </div>
 
 <!--FINALIZA AYUDA TEXTO-->
-
-
 <!--INICIA AYUDA VIDEO-->
 
 <div id="ayudaVideoUno">
@@ -54,8 +52,6 @@
 </div>
 
 <!--FINALIZA AYUDA VIDEO-->
-
-
 <!--INICIA AYUDA AUDIO-->
 <div id="audioAyudaUno" style="display:none">
     <div class="player">
@@ -82,7 +78,7 @@
 </div>
 <!--FINALIZA AYUDA AUDIO-->
 
-<div class="container-fluid"style="height:100vh; margin-top:-10%;">
+<div class="container-fluid" style="height:100vh; margin-top:-10%;">
 
     <nav class="vertical" id="menuAyuda">
         <input type="checkbox" id="toggle2" />
@@ -94,7 +90,7 @@
             <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" ng-click="atras()" style="font-size:22px;"></a></li>
             <li><a class="fa fa-file button demo-btn ayudaTextoUno menuAyuda" title="Leer ayuda" data-svg-popup="ayudaTextoUno" style="font-size:22px;"></a></li>
             <li><a class="fa fa-video-camera button demo-btn ayudaVideoUno menuAyuda" title="Ver ayuda" data-svg-popup="ayudaVideoUno" style="font-size:22px;"></a></li>
-        <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="ayudaAudioUno" style="font-size:22px;"></a></li>
+            <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="ayudaAudioUno" style="font-size:22px;"></a></li>
 
         </menu>
     </nav>
@@ -107,9 +103,9 @@
             <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height:60vh; z-index:0;">
 
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="margin-left:20%;">
-                    <form name="sede" id="sede">
+                    <form name="datos" id="datos">
                         <div class="form-group">
-                            <div ng-class="{'has-error':sede.codigo.$invalid && sede.codigo.$touched, 'has-error2':sede.codigo.$error.maxlength}">
+                            <div>
                                 <label>TIPO DE PROYECTO</label>
                                 <select class="form-control" id="TipoSede" ng-required="true" ng-model="DatosProyecto.TipoProyecto" style="float:right;">
                                     <option value="INNOVACIÓN">INNOVACIÓN</option>
@@ -117,41 +113,31 @@
                                     <option value="INVESTIGACIÓN">INVESTIGACIÓN</option>
                                     <option value="OTRO">OTRO</option>
                                 </select>
-                                <span ng-if="sede.codigo.$error.maxlength" class="help-block">El código puede tener máximo 10 caracteres </span>
                             </div>
-
                         </div>
                         <div class="form-group">
-                            <div ng-class="{'has-error':sede.nombreSede.$invalid && sede.nombreSede.$touched, 'has-error2':sede.nombreSede.$error.maxlength}">
+                            <div>
                                 <label style="padding-top:20px;">ACCIÓN A REALIZAR EN EL PROYECTO</label>
                                 <select class="form-control" id="TipoSede" ng-required="true" ng-model="DatosProyecto.AccionProyecto" style="float:right;">
                                     <option ng-repeat="accionProyecto in AccionProyecto" class="{{accionProyecto}}" value="{{accionProyecto}}">{{accionProyecto | uppercase}}</option>
                                 </select>
-                                <span ng-if="sede.nombreSede.$error.maxlength" class="help-block">El nombre de la sede puede tener máximo 50 caracteres</span>
                             </div>
                         </div>
                         <div class="form-group">
-                            <div ng-class="{'has-error':sede.nombreSede.$invalid && sede.nombreSede.$touched, 'has-error2':sede.nombreSede.$error.maxlength}">
+                            <div>
                                 <label style="padding-top:20px;">TEMA PRINCIPAL DEL PROYECTO</label>
-                                <!--<select class="form-control" id="TipoSede" ng-required="true" ng-model="DatosProyecto.AccionProyecto" style="float:right;">
-                                    <option ng-repeat="accionProyecto in AccionProyecto" class="{{accionProyecto}}" value="{{accionProyecto}}">{{accionProyecto | uppercase}}</option>
-                                </select>-->
                                 <input id="" class="form-control" style="float:right; width:100%; text-transform:uppercase;" ng-model="DatosProyecto.TemaProyecto" maxlength="100" />
-
                             </div>
                         </div>
                         <div class="form-group">
                             <label style="padding-top:20px;">SELECCIONE DEPARTAMENTO</label>
                             <select class="form-control" id="Departamento" ng-required="true" ng-model="departamento" ng-change="ConsultarMunicipiosDepartamento(departamento)" style="float:right;">
-                                <!--<option value="" disabled selected>Seleccione el Área</option>-->
                                 <option ng-repeat="departamento in Departamentos" class="{{departamento.NombreDepartamento}}" value="{{departamento.IdDepartamento}}">{{departamento.NombreDepartamento}}</option>
                             </select>
                         </div>
-
                         <div class="form-group">
                             <label style="padding-top:20px;">SELECCIONE MUNICIPIO</label>
                             <select class="form-control" id="Municipio" ng-required="true" ng-model="DatosProyecto.IdMunicipio" style="float:right;">
-                                <!--<option value="" disabled selected>Seleccione el Área</option>-->
                                 <option ng-repeat="municipio in Municipio" class="{{municipio.NombreMunicipio}}" value="{{municipio.IdMunicipio}}">{{municipio.NombreMunicipio}}</option>
                             </select>
                         </div>
@@ -161,49 +147,24 @@
                                 <option ng-repeat="sector in Sector" class="{{sector}}" value="{{sector}}">{{sector}}</option>
                             </select>
                         </div>
-                        <!--<div class="form-group">
-
-                            <label>¿La sede es un colegio?</label>
-                            <input style="margin-left:5px;" type="checkbox" ng-model="Sede.Colegio" />
-                        </div>-->
                     </form>
 
                     <div class="modal-footer">
                         <br />
-                        <!--<button class="btn btn-success btn-default" id="BtnAtras" data-dismiss="modal" ng-click="atras()">Atrás</button>-->
-
-
                         <div id="BtnGuardar" data-dismiss="modal" ng-click="GuardarDatosProyecto()">
                             <i id="iconGuardar" class="fa fa-floppy-o" title="Guardar" style="cursor:pointer; font-size:30px; color:#238276; margin-top:8%;" aria-hidden="true"></i>
                             <p style="font-size:10px; margin-right:-1%;">Guardar</p>
                         </div>
-
-
-
 
                         <div id="BtnModificar" data-dismiss="modal" ng-click="ModificarProyecto()">
                             <i id="iconEditar" class="fa fa-pencil-square-o" title="Editar" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
                             <p style="font-size:10px; margin-right:1%;">Editar</p>
                         </div>
                     </div>
-
                 </div>
-
-
-
             </div>
-
-
-            <!--<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:60%; background:#ddd;"></div>-->
-
-
         </div>
-
     </div>
-
-
-
-    
 </div>
 
 <script src="../scripts/audioAyuda.js"></script>

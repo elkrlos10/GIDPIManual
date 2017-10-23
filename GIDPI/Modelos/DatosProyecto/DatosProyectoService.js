@@ -4,6 +4,14 @@
 
         var service = {};
 
+        service.GuardarDatosProyecto = function (Proyecto, callback) {
+
+            $http.post(URLServices + "DatosProyecto/GuardarDatosProyecto/", Proyecto)
+            .success(function (response) {
+                callback(response);
+            });
+        };
+
         service.ConsultarDepartamentos = function (callback) {
             $http.get(URLServices + "DatosProyecto/ConsultarDepartamentos/")
             .success(function (response) {
@@ -35,14 +43,7 @@
             });
         };
 
-        service.GuardarDatosProyecto = function (Proyecto, callback) {
-
-            $http.post(URLServices + "DatosProyecto/GuardarDatosProyecto/", Proyecto)
-            .success(function (response) {
-                callback(response);
-            });
-        };
-
+      
         service.ModificarProyecto = function (Proyecto, callback) {
 
             $http.post(URLServices + "DatosProyecto/ModificarProyecto/", Proyecto)

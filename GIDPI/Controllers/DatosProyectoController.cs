@@ -12,6 +12,26 @@ namespace GIDPI.Controllers
 {
     public class DatosProyectoController : ApiController
     {
+
+        [HttpPost]
+        public IHttpActionResult GuardarDatosProyecto(Proyecto oProyecto)
+        {
+
+            try
+            {
+                DatosProyectoBl oDatosProyectoBl = new DatosProyectoBl();
+
+                var proyecto = oDatosProyectoBl.GuardarDatosProyecto(oProyecto);
+
+                return Ok(new { success = true, proyecto });
+            }
+            catch (Exception exc)
+            {
+
+                return Ok(new { suceess = false });
+            }
+        }
+
         [HttpGet]
         public IHttpActionResult ConsultarDepartamentos()
         {
@@ -69,24 +89,7 @@ namespace GIDPI.Controllers
             }
         }
 
-        [HttpPost]
-        public IHttpActionResult GuardarDatosProyecto(Proyecto oProyecto)
-        {
-
-            try
-            {
-                DatosProyectoBl oDatosProyectoBl = new DatosProyectoBl();
-
-                var proyecto = oDatosProyectoBl.GuardarDatosProyecto(oProyecto);
-
-                return Ok(new { success = true, proyecto });
-            }
-            catch (Exception exc)
-            {
-
-                return Ok(new { suceess = false });
-            }
-        }
+  
 
         [HttpPost]
         public IHttpActionResult ModificarProyecto(Proyecto oProyecto)

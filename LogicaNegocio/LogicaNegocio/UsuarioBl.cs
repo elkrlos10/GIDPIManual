@@ -14,14 +14,13 @@ namespace LogicaNegocio.LogicaNegocio
         public Usuario ConsutarUsuario(Usuario oUsuario)
         {
             Model1 entity = new Model1();
+            //var Encriptar = SecurityEncode.SecurityEncode.Encriptar(oUsuario.Contrasena);
             var usuario = (from i in entity.Usuario
                            where i.Usuario1 == oUsuario.Usuario1
                            && i.Contrasena == oUsuario.Contrasena
                            select i).FirstOrDefault();
             return usuario;
         }
-
-
 
         public string ConsutarEmail(string correo)
         {
