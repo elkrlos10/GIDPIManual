@@ -30,6 +30,11 @@ $('#ayudaAudioSeis').click(function () {
     $(this).toggleClass('clientsClose');
 });
 
+$('#ayudaAudioSiete').click(function () {
+    $('#audioAyudaSiete').toggle();
+    $(this).toggleClass('clientsClose');
+});
+
 //--------------------------------------------------------------------
 
 $("#pause-button").click(function () {

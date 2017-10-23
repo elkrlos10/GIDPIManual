@@ -815,10 +815,12 @@
 
             //FUNCION PARA REGRESAR  A LA VISTA DEL ARBOL DE OBJETIVOS. 
             $scope.ocultarObjetivos = function () {
+                $("#audioAyudaCinco").hide();
                 $("#ArbolObjetivos").show();
                 $("#VistaObjetivos").hide();
                 $("#vistaResultados").hide();
                 $(".notify").hide();
+                
             }
 
             //$scope.medio1 = "";
@@ -830,6 +832,7 @@
                 $("#VistaObjetivos").hide();
                 $("#vistaResultados").show();
                 $(".notify").hide();
+                $("#audioAyudaCinco").hide();
            
                 if (contador == 0) {
                     if ($rootScope.proyecto.datos.Etapa < 5) {
