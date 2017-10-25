@@ -2,7 +2,7 @@
     display:none;
 }*/
 
-.control-row .pause-button {
+.control-row #pause-button {
   box-sizing: border-box;
   position: absolute;
   width: 80px;
@@ -24,7 +24,7 @@
   -webkit-animation-delay: .3s;
           animation-delay: .3s;
 }
-.control-row .pause-button .icon-pause {
+.control-row #pause-button .icon-pause {
   position: absolute;
   font-size: 1.5em;
   left: 50%;
@@ -35,7 +35,7 @@
   transition: all .1s;
   color: #238276;
 }
-.control-row .pause-button .icon-play {
+.control-row #pause-button .icon-play {
   position: absolute;
   font-size: 1.5em;
   left: 50%;
