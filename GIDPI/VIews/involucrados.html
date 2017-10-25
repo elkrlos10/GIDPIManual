@@ -1,4 +1,6 @@
 ﻿<link href="../Css/MenuAyudaInvolucrados.css" rel="stylesheet" />
+<link href="../Css/AyudaAudio.css" rel="stylesheet" />
+<link href="../Css/fontAudio.css" rel="stylesheet" />
 
 <!--INICIA AYUDA TEXTO-->
 
@@ -45,6 +47,33 @@
 
 <!--FINALIZA AYUDA VIDEO-->
 
+
+<!--INICIA AYUDA AUDIO-->
+<div id="audioAyudaSiete" style="display:none">
+    <div class="player audioInvolucrados">
+        <div class="control-row">
+            <div id="pause-button">
+                <i class="icon icon-play"></i>
+                <i class="icon"></i>
+            </div>
+            <div class="seek-field">
+                <input id="audioSeekBar" min="0" max="334" step="1" value="0" type="range" oninput="audioSeekBar()" onchange="this.oninput()">
+            </div>
+            <div class="volume-icon">
+                <i class="icon-volume-up"></i>
+            </div>
+            <div class="volume-field">
+                <input type="range" min="0" max="100" value="100" step="1" oninput="audio.volume = this.value/100" onchange="this.oninput()">
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio-player" ontimeupdate="SeekBar()" ondurationchange="CreateSeekBar()" preload="auto" loop>
+        <source src="../audios/Don Tetto - Yo Estaré Bien (Con Letra).mp3" type="audio/mpeg">
+    </audio>
+</div>
+<!--FINALIZA AYUDA AUDIO-->
+
 <nav class="vertical" id="menuAyuda">
     <input type="checkbox" id="toggle2" />
     <label id="menuToggle" for="toggle2">
@@ -56,7 +85,7 @@
         <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" ng-click="atras()" style="font-size:22px;"></a></li>
         <li><a class="fa fa-file button demo-btn ayudaTextoSiete menuAyuda" title="Leer ayuda" data-svg-popup="ayudaTextoSiete" style="font-size:22px;"></a></li>
         <li><a class="fa fa-video-camera button demo-btn ayudaVideoSiete menuAyuda" title="Ver ayuda" data-svg-popup="ayudaVideoSiete" style="font-size:22px;"></a></li>
-        <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="audio" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="ayudaAudioSiete" style="font-size:22px;"></a></li>
 
     </menu>
 </nav>
@@ -67,7 +96,7 @@
     <div class="container" style="background-color:rgba(192,192,192,0.15);">
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:12vh; margin-bottom:2%;">
-            <h1 class="titulovistaObjetivos">Matriz de involucrados</h1>
+            <h1 class="titulovistaObjetivos" id="tituloInvolucrados">Matriz de involucrados</h1>
         </div>
 
 
@@ -165,3 +194,5 @@
 
 <script src="../scripts/AnimacionTextoVideoAudio.js"></script>
 <script src="../scripts/AnimacionTips.js"></script>
+<script src="../scripts/audioAyuda.js"></script>
+<script src="../scripts/waves.min.js"></script>

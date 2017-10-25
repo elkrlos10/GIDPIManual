@@ -60,6 +60,8 @@
             $scope.MostrarPerilProyecto = function () {
                 $("#containerNombre").hide();
                 $("#containerPerfilProyect").show();
+                $('#audioAyudaOcho').hide();
+
 
                 PerfilProyectoService.ConsultarProyecto($rootScope.proyecto.datos.id, function (response) {
                     if (response.success) {
@@ -103,6 +105,7 @@
             $scope.MostrarNombre = function () {
                 $("#containerNombre").show();
                 $("#containerPerfilProyect").hide();
+                $('#audioAyudaNueve').hide();
             }
             //FINALIZA FUNCIONES DE CAMBIO DE TAP
 

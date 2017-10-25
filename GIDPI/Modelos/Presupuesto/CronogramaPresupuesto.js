@@ -39,12 +39,17 @@
             $scope.MostrarCronograma = function () {
                 $("#containerCronograma").show();
                 $("#containerPresupuesto").hide();
+                $('#audioAyudaOnce').css("display", "none");
+       
+                
             }
 
 
             $scope.MostrarPresupuesto = function () {
                 $("#containerCronograma").hide();
                 $("#containerPresupuesto").show();
+                $('#audioAyudaDiez').css("display", "none");
+        
 
             }
 

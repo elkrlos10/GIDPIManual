@@ -1,4 +1,76 @@
 ﻿<link href="../Css/MenuAyudaMatrizMarcoLogico.css" rel="stylesheet" />
+<link href="../Css/AyudaAudio.css" rel="stylesheet" />
+<link href="../Css/fontAudio.css" rel="stylesheet" />
+
+<!--INICIA AYUDA TEXTO-->
+
+<div id="ayudaTextoDoce">
+    <div class="svg-popup-content" style="width:auto;">
+        <h3 class="title-plagin" style="text-align:center; color:#238271; text-transform:uppercase; font-weight:600;">Matriz de involucrados</h3>
+        <hr style="background:black;" />
+
+        <p>
+            <h4><b>Involucrados</b></h4>
+        <p>
+            Son las personas, agentes, entidades o empresas que tienen algún interés, capacidad o necesidad y son afectadas por el proyecto, o se mueven en el entorno del el. los cuales, pueden influir para el éxito o el fracaso del mismo.
+        </p>
+        <h4><b>Intereses</b></h4>
+        <p>
+            Son los beneficios que obtienen las personas involucradas dentro de un proyecto de manera directa o indirecta; dichos beneficios pueden ser morales, económicos, sociales, personales, entre otras.
+        </p>
+        <h4><b>Problemas percibidos</b></h4>
+        <p>
+            Son todas aquellas problemáticas que pueden ser identificadas por los involucrados en su entorno, siendo estas, las que se pretende dar solución por medio del proyecto.
+        </p>
+        <h4><b>Recursos y mandatos</b></h4>
+        <p>
+            Los mandatos se refieren a la autoridad formal que tiene un grupo de involucrados para proporcionar un servicio o cumplir una función determinada. Recursos, son los medios financieros y no financieros que el grupo puede poner a disposición para contribuir a solucionar el problema de desarrollo.
+        </p>
+        <h4><b>Estrategias</b></h4>
+        <p>
+            Planes para la resolución de los problemas percibidos y la comprensión de los intereses de la sociedad. (Como el involucrado va a contribuir con el proyecto)
+        </p>
+        </p>
+
+    </div>
+</div>
+
+<!--FINALIZA AYUDA TEXTO-->
+<!--INICIA AYUDA VIDEO-->
+
+<div id="ayudaVideoDoce">
+    <div class="svg-popup-content" style="width:auto;">
+        <h3 class="title-plagin">Video</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/QA6eLUTgAFE" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<!--FINALIZA AYUDA VIDEO-->
+<!--INICIA AYUDA AUDIO-->
+<div id="audioAyudaDoce" style="display:none">
+    <div class="player audioMarcoLogico">
+        <div class="control-row">
+            <div id="pause-button">
+                <i class="icon icon-play"></i>
+                <i class="icon"></i>
+            </div>
+            <div class="seek-field">
+                <input id="audioSeekBar" min="0" max="334" step="1" value="0" type="range" oninput="audioSeekBar()" onchange="this.oninput()">
+            </div>
+            <div class="volume-icon">
+                <i class="icon-volume-up"></i>
+            </div>
+            <div class="volume-field">
+                <input type="range" min="0" max="100" value="100" step="1" oninput="audio.volume = this.value/100" onchange="this.oninput()">
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio-player" ontimeupdate="SeekBar()" ondurationchange="CreateSeekBar()" preload="auto" loop>
+        <source src="../audios/Don Tetto - Yo Estaré Bien (Con Letra).mp3" type="audio/mpeg">
+    </audio>
+</div>
+<!--FINALIZA AYUDA AUDIO-->
 
 <nav class="vertical" id="menuAyuda">
     <input type="checkbox" id="toggle2" />
@@ -6,11 +78,12 @@
         <span class="fa fa-bars" style="font-size:22px;"></span>
     </label>
     <menu style="margin-top:-6%;">
+
         <li><a class="fa fa-power-off menuAyuda" style="font-size:22px;" ng-click="cerrarSesion()" title="Cerrar sesión"></a></li>
-        <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" ng-click="Regresar()" style="font-size:22px;"></a></li>
-        <li><a class="fa fa-file button demo-btn demo5 menuAyuda" title="Leer ayuda" data-svg-popup="demo5" style="font-size:22px;"></a></li>
-        <li><a class="fa fa-video-camera button demo-btn demo6 menuAyuda" title="Ver ayuda" data-svg-popup="demo6" style="font-size:22px;"></a></li>
-        <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="audio" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" ng-click="atras()" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-file button demo-btn ayudaTextoSiete menuAyuda" title="Leer ayuda" data-svg-popup="ayudaTextoDoce" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-video-camera button demo-btn ayudaVideoSiete menuAyuda" title="Ver ayuda" data-svg-popup="ayudaVideoDoce" style="font-size:22px;"></a></li>
+        <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="ayudaAudioDoce" style="font-size:22px;"></a></li>
 
     </menu>
 </nav>
@@ -25,7 +98,7 @@
 
 
             <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="height:12vh;">
-                <h1 class="titulovistaObjetivos">MATRIZ DE MARCO LÓGICO</h1>
+                <h1 class="titulovistaObjetivos" id="textoMarcoLogico">MATRIZ DE MARCO LÓGICO</h1>
             </div>
 
 
@@ -207,8 +280,13 @@
 
     </div>
     
+</div>
 
 
+<script src="../scripts/AnimacionTextoVideoAudio.js"></script>
+<script src="../scripts/AnimacionTips.js"></script>
+<script src="../scripts/audioAyuda.js"></script>
+<script src="../scripts/waves.min.js"></script>
 
 <style>
 .marc::-webkit-input-placeholder { color:rgba(128, 128, 128,0.3) ; font-size:30px; } 
@@ -218,4 +296,3 @@
 
 
 </style>
-

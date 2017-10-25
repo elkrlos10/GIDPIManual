@@ -8,24 +8,6 @@ $('#menu-toggle').click(function () {
  });
 
 
-$(document).ready(function(){
-    $("#audio").click(function () {
-        $("#audioWrap").each(function () {
-            displaying = $(this).css("display");
-            if(displaying == "block") {
-                $(this).fadeOut('slow',function() {
-                    $(this).css("display","none");
-                });
-            } else {
-                $(this).fadeIn('slow',function() {
-                    $(this).css("display","block");
-                });
-            }
-        });
-    });
-});
-
-
 $(function () {
     $('.demo6').svgpopup({
         figure: 'rectangle',
@@ -307,3 +289,23 @@ $(function () {
 //------------- FINALIZA PRESUPUESTO----------------------
 
 
+//------------- INICIA MARCO LÓGICO----------------------
+
+$(function () {
+
+    $('.ayudaTextoDoce').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+
+
+    $('.ayudaVideoDoce').svgpopup({
+        figure: 'rectangle',
+        fill: '#238276',
+        randomize: false
+    });
+}());
+
+
+//------------- FINALIZA MARCO LÓGICO----------------------
