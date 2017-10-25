@@ -42,12 +42,12 @@
         <div id="audioAyudaOcho" style="display:none">
             <div class="player audioNombreProyecto">
                 <div class="control-row">
-                    <div id="pause-buttonNombre" class="pause-button">
+                    <div id="pause-button">
                         <i class="icon icon-play"></i>
                         <i class="icon"></i>
                     </div>
                     <div class="seek-field">
-                        <input id="audioSeekBarPerfil" min="0" max="334" step="1" value="0" type="range" oninput="audioSeekBar()" onchange="this.oninput()">
+                        <input id="audioSeekBar" min="0" max="334" step="1" value="0" type="range" oninput="audioSeekBar()" onchange="this.oninput()">
                     </div>
                     <div class="volume-icon">
                         <i class="icon-volume-up"></i>
@@ -58,7 +58,7 @@
                 </div>
             </div>
 
-            <audio id="audio-nombre" ontimeupdate="SeekBar()" ondurationchange="CreateSeekBar()" preload="auto" loop>
+            <audio id="audio-player" ontimeupdate="SeekBar()" ondurationchange="CreateSeekBar()" preload="auto" loop>
                 <source src="../audios/Don Tetto - Yo Estaré Bien (Con Letra).mp3" type="audio/mpeg">
             </audio>
         </div>
@@ -244,12 +244,12 @@
         <div id="audioAyudaNueve" style="display:none">
             <div class="player audioPerfilProyecto">
                 <div class="control-row">
-                    <div id="pause-buttonPerfil"  class="pause-button" >
+                    <div id="pause-button">
                         <i class="icon icon-play"></i>
                         <i class="icon"></i>
                     </div>
                     <div class="seek-field">
-                        <input id="audioSeekBarPerfil" min="0" max="334" step="1" value="0" type="range" oninput="audioSeekBar()" onchange="this.oninput()">
+                        <input id="audioSeekBar" min="0" max="334" step="1" value="0" type="range" oninput="audioSeekBar()" onchange="this.oninput()">
                     </div>
                     <div class="volume-icon">
                         <i class="icon-volume-up"></i>
@@ -260,7 +260,7 @@
                 </div>
             </div>
 
-            <audio id="audio-Perfil" ontimeupdate="SeekBar()" ondurationchange="CreateSeekBar()" preload="auto" loop>
+            <audio id="audio-player" ontimeupdate="SeekBar()" ondurationchange="CreateSeekBar()" preload="auto" loop>
                 <source src="../audios/Don Tetto - Yo Estaré Bien (Con Letra).mp3" type="audio/mpeg">
             </audio>
         </div>
