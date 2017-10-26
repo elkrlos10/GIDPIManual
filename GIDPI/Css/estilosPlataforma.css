@@ -19,6 +19,20 @@ textarea{
       background-color: #51aba6;
 } 
 
+#btn_reporte:hover
+{
+    box-shadow: 0px 0px 15px #238276;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
+}
+
 #ayudaUno{
 z-index:997;
 }
@@ -325,7 +339,6 @@ z-index:997;
         margin-left:1%;
 
     }
-
 
 
 .player{

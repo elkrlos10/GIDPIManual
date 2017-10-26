@@ -97,7 +97,9 @@
 
             $scope.Finalizar = function() {
                 $("#containerMarcoLogico ").hide();
+                $("#menuAyuda").hide();
                 $("#ContainerFinal ").show();
+                
             }
 
 
