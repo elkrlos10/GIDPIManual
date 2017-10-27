@@ -72,7 +72,7 @@ z-index:997;
     position:fixed;
     float:left; 
     margin-top:12%;
-    margin-left:-20%; 
+    margin-left:-22%; 
     width:5%;
 }
 #personajeHombre{
@@ -802,11 +802,16 @@ z-index:997;
     }
 
 #personajeDos{
-    float:left; 
-    margin-top:-22%;
-    margin-left:75%; 
-    width:6%;
+  
+    width:5.4%;
 }
+
+#personajeHombre{
+  
+    width:5.8%;
+}
+
+
 
 #btn_regresar{
     margin-left:74%; 
@@ -1002,10 +1007,13 @@ z-index:997;
 
 
 #personajeDos{
-    float:left; 
-    margin-top:-22%;
-    margin-left:75%; 
-    width:8%;
+  
+    width:5.6%;
+}
+
+#personajeHombre{
+  
+    width:5.8%;
 }
 
 #btn_regresar{
@@ -1135,10 +1143,13 @@ z-index:997;
     }
 
 #personajeDos{
-    float:left; 
-    margin-top:-22%;
-    margin-left:75%; 
-    width:6%;
+  
+    width:5.6%;
+}
+
+#personajeHombre{
+  
+    width:5.8%;
 }
 
 #btn_regresar{
@@ -1249,10 +1260,11 @@ z-index:997;
     }
 
 #personajeDos{
-    float:left; 
-    margin-top:-20%;
-    margin-left:75%; 
-    width:6%;
+    width:5.6%;
+}
+
+#personajeHombre{
+    width:5.8%;
 }
 
 #btn_regresar{
@@ -1391,12 +1403,14 @@ z-index:997;
     }
 
 #personajeDos{
-    float:left; 
-    margin-top:-22%;
-    margin-left:75%; 
-    width:10%;
+  
+    width:5.6%;
 }
 
+#personajeHombre{
+  
+    width:5.8%;
+}
 #btn_regresar{
     margin-left:-9%; 
     margin-top:-50%; 
@@ -1501,13 +1515,16 @@ z-index:997;
         margin-left: -18%;
         margin-top: -29%;
     }
+  #personajeDos{
+  
+    width:5.8%;
+}
 
-    #personajeDos {
-        float: left;
-        margin-top: -22%;
-        margin-left: 75%;
-        width: 6%;
-    }
+#personajeHombre{
+  
+    width:5.8%;
+}
+  
 
     #btn_regresar {
         margin-left: 75%;
@@ -1713,12 +1730,14 @@ z-index:997;
 }
 
 #personajeDos{
-    float:left; 
-    margin-top:-22%;
-    margin-left:75%; 
-    width:6%;
+  
+    width:6.5%;
 }
 
+#personajeHombre{
+  
+    width:6.8%;
+}
 #btn_regresar{
     margin-left:75%; 
     margin-top:-3%; 
@@ -1899,10 +1918,13 @@ z-index:997;
 }
 
 #personajeDos{
-    float:left; 
-    margin-top:-30%;
-    margin-left:75%; 
-    width:8%;
+  
+    width:6.8%;
+}
+
+#personajeHombre{
+  
+    width:7%;
 }
 
 #btn_regresar{
