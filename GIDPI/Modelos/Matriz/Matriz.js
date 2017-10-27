@@ -4,6 +4,7 @@
 
             $("#Panel2").hide();
             $("#problematicaCampo").removeAttr("disabled");
+            $("#ProblematicaTexto").hide();
 
             //Objeto con los problemas
             $scope.Problemas = [
@@ -40,8 +41,10 @@
                       
                         $("#problemasMatriz").hide();
                         $("#Panel2").show();
-                        $("#problematicaCampo").attr("disabled", "disabled");
-                        $("#problematicaCampo").css("width", "115%");
+                        //$("#problematicaCampo").attr("disabled", "disabled");
+                        //$("#problematicaCampo").css("width", "115%");
+                        $("#problematicaCampo").hide();
+                        $("#ProblematicaTexto").show();
                         $("#BtnGuardar").hide();
                     } else {
 

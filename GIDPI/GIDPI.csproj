@@ -168,6 +168,7 @@
     <Content Include="Css\sweetalert2.css" />
     <Content Include="Fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
+    <Content Include="images\Adriana.png" />
     <Content Include="images\arbol.png" />
     <Content Include="images\arbolAct.png" />
     <Content Include="images\arbolProb.png" />
@@ -202,6 +203,7 @@
     <Content Include="images\plantillaFondo.png" />
     <Content Include="images\play.png" />
     <Content Include="images\side.png" />
+    <Content Include="images\Thomas.png" />
     <Content Include="images\tick.png" />
     <Content Include="images\volume.png" />
     <Content Include="img\lineaD1.png" />
