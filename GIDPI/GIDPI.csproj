@@ -258,6 +258,7 @@
     <Content Include="scripts\AnimacionTextoVideoAudio.js" />
     <Content Include="scripts\AnimacionTips.js" />
     <Content Include="scripts\audioAyuda.js" />
+    <Content Include="scripts\audioAyuda2.js" />
     <Content Include="scripts\bootstrap-datepicker.es.js" />
     <Content Include="scripts\bootstrap-datepicker.js" />
     <Content Include="scripts\bootstrap-datetimepicker.js" />

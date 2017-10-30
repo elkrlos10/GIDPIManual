@@ -765,6 +765,8 @@
                 $("#vistaResultados").hide();
                 $("#VistaObjetivos").show();
                 $("#resultados").attr("disabled", false);
+                $('#audioAyudaCuatro').css("display", "none");
+                $('#audioAyudaSeis').css("display", "none");
                 $(".notify").hide();
              
                 if (contador == 0) {
@@ -826,7 +828,7 @@
             //$scope.medio1 = "";
 
             //FUNCION PARA PASAR DE LA VISTA OBJETIVOS A RESULTADOS.
-            $scope.mostrarResultados = function () {
+              $scope.mostrarResultados = function () {
 
                 $("#ArbolObjetivos").hide();
                 $("#VistaObjetivos").hide();
