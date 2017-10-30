@@ -94,12 +94,16 @@
 
         <div id="divProblematica" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:12vh;">
 
-            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="height:12vh; margin-left:13%">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="height:12vh; margin-left:-4%">
 
                 <input id="problematicaCampo" ng-model="DatosProyecto.ProblemaGeneral" maxlength="150" class="form-control" disabled placeholder="Problemática general" />
-                <h4 style="display:inline"><b>Problemática General:</b></h4>
-                <p id="ProblematicaTexto" style="font-size:16px">{{DatosProyecto.ProblemaGeneral}}</p>
             </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="TituloProblema" style="margin-top:-13%; margin-left:4%">
+                <h4 style="display:inline"><b>Problemática General:</b></h4>
+                <p  style="font-size:16px">{{DatosProyecto.ProblemaGeneral}}</p>
+            </div>
+
 
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="BtnGuardar" style="height:12vh;">
                 <div data-dismiss="modal" ng-click="Guardar()">
@@ -255,11 +259,10 @@
 
     <div id="Panel2">
         <img id="personajeHombre" src="../images/Thomas.png" />
-        <!--<center>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="height:12vh;">
-                <input id="problematicaCampoDos" ng-model="DatosProyecto.ProblemaGeneral" class="form-control" disabled placeholder="Problemática general" />
-            </div>
-        </center>-->
+ <!--<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h4 id="TituloProblema" style="display:inline"><b>Problemática General:</b></h4>
+                <p id="ProblematicaTexto" style="font-size:16px">{{DatosProyecto.ProblemaGeneral}}</p>
+            </div>-->
 
         <table class="table table-responsive table-striped table-bordered" id="tablaResultados" style="width:48%; ">
             <thead>

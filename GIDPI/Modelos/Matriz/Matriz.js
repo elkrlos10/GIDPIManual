@@ -5,6 +5,7 @@
             $("#Panel2").hide();
             $("#problematicaCampo").removeAttr("disabled");
             $("#ProblematicaTexto").hide();
+            $("#TituloProblema").hide();
 
             //Objeto con los problemas
             $scope.Problemas = [
@@ -44,7 +45,8 @@
                         //$("#problematicaCampo").attr("disabled", "disabled");
                         //$("#problematicaCampo").css("width", "115%");
                         $("#problematicaCampo").hide();
-                        $("#ProblematicaTexto").show();
+                  
+                        $("#TituloProblema").show();
                         $("#BtnGuardar").hide();
                     } else {
 
