@@ -1,5 +1,5 @@
 ﻿//Para el host
-//var URLServices = "http://gidpi.com//api/";
+//var URLServices = "http://www.gidpi.com//api/";
 //Para local
 var URLServices = "http://localhost:61609//api/";
 //var URLServices = "http://calendar365.azurewebsites.net//api/";

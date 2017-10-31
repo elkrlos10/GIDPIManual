@@ -143,7 +143,7 @@ ManualApp.config(function ($routeProvider, $locationProvider) {
                 } 
                 
             } else {
-                $location.path("/Login");
+                $location.url("/Login");
             }
 
         });

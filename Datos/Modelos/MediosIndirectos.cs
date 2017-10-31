@@ -13,8 +13,6 @@ namespace Datos.Modelos
 
         public int IdMedio { get; set; }
 
-        [Required]
-        [StringLength(100)]
         public string MedioIndirecto { get; set; }
 
     

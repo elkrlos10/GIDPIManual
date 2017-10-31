@@ -14,8 +14,6 @@ namespace Datos.Modelos
 
         public int IdCausa { get; set; }
 
-        [Column("CausaIndirecta")]
-        [StringLength(100)]
         public string CausaIndirecta1 { get; set; }
 
       

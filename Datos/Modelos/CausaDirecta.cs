@@ -16,8 +16,6 @@ namespace Datos.Modelos
 
         public int? IdArbolProblema { get; set; }
 
-        [Required]
-        [StringLength(100)]
         public string Causa { get; set; }
 
      

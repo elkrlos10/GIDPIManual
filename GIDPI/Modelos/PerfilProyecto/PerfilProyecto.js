@@ -28,12 +28,7 @@
                 TipoInvestigacion: "",
                 Metodo: "",
                 Metodologia: ""
-
-
-
             }
-
-
 
             $scope.ValidarPerfilProyecto = function () {
                 if ($scope.PerfilProyecto.NombreProyecto == "" || $scope.PerfilProyecto.NombreArea == "" || $scope.PerfilProyecto.NumeroProyecto == "" || $scope.PerfilProyecto.Justificacion == "") {
@@ -61,7 +56,8 @@
                 $("#containerNombre").hide();
                 $("#containerPerfilProyect").show();
                 $('#audioAyudaOcho').hide();
-
+                var audio = document.getElementById("audio-player");
+                audio.pause();
 
                 PerfilProyectoService.ConsultarProyecto($rootScope.proyecto.datos.id, function (response) {
                     if (response.success) {
@@ -94,8 +90,6 @@
 
                             })
                         }
-
-
                     }
                 })
 
@@ -106,6 +100,8 @@
                 $("#containerNombre").show();
                 $("#containerPerfilProyect").hide();
                 $('#audioAyudaNueve').hide();
+                var audio1 = document.getElementById("audio-player1");
+                audio1.pause();
             }
             //FINALIZA FUNCIONES DE CAMBIO DE TAP
 

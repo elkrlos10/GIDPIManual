@@ -40,8 +40,8 @@
                 $("#containerCronograma").show();
                 $("#containerPresupuesto").hide();
                 $('#audioAyudaOnce').css("display", "none");
-       
-                
+                var audio1 = document.getElementById("audio-player1");
+                audio1.pause();
             }
 
 
@@ -49,8 +49,8 @@
                 $("#containerCronograma").hide();
                 $("#containerPresupuesto").show();
                 $('#audioAyudaDiez').css("display", "none");
-        
-
+                var audio = document.getElementById("audio-player");
+                audio.pause();
             }
 
             $scope.agregarCronograma = function (index) {

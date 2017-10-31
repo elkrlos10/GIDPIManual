@@ -13,8 +13,6 @@ namespace Datos.Modelos
 
         public int IdFIn { get; set; }
 
-        [Required]
-        [StringLength(100)]
         public string FinIndirecto { get; set; }
 
     }

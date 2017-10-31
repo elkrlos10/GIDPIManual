@@ -71,7 +71,6 @@
                      ]
                  }
                 ]
-
             }
 
             $scope.DatosProyecto = {
@@ -92,11 +91,7 @@
                     HerramientaResultado: "",
                     ProductoResultado: ""
                 }
-
             }
-
-
-
             //-----------------------------------------------------------------------------------------------------
 
             //VARIABLE PARA ACTIVAR CICLO INFINITO
@@ -108,8 +103,6 @@
             var panelOn = true, numEfectos, numeCausas, tipo, txtIndirecto, efecto, causa, indirecto, elementoBorrar, img3, idElementoBorrar, causaImg3, imgBorrar;
             var efectoImg3;
 
-
-
             //CAPTURAR UL
             efecto = document.querySelector("#efecto");
             causa = document.querySelector("#causa");
@@ -118,7 +111,6 @@
 
             //CICLO INFINITO
             function repetir() {
-
                 //CAPTURAR LA CANTIDAD DE LI
                 efectos = document.querySelectorAll("#efecto li");
                 causas = document.querySelectorAll("#causa li");
@@ -175,7 +167,6 @@
                     }
                 }
 
-
                 //ASIGNAR IMAGENES
                 //efectos
                 if (efectos.length != 0) {
@@ -219,7 +210,6 @@
                     }
                 }
 
-
                 //ASIGANR ID´S Y NUMERO DE POSICION
                 for (var i = 0; i < efectos.length; i++) {
                     efectos[i].setAttribute("id", "efecto" + (i + 1));
@@ -238,7 +228,6 @@
                 update(repetir); //entra en la funcion repetir sin salir de la misma, asi crea un ciclo infinito
             }
             update(repetir); //inicia la funcion repetir
-
 
             // FUNCIONES QUE ACTIVAN LAS VENTANAS MODALES
             // mostrar
@@ -269,7 +258,6 @@
                 }, duracion * 1000)
             }
 
-
             //VARIABLES PARA LA CREACIÓN DEL ARBOL
             var contEfeIndir = 0;
             var contCuaIndir = 0;
@@ -277,7 +265,6 @@
             $scope.EfectosTotales = [];
             $scope.MediosIndTotales = [];
             $scope.FinesIndTotales = [];
-
             $scope.CausasIndTotales = [];
             $scope.EfectosIndTotales = [];
 
@@ -293,7 +280,6 @@
                         if ($scope.DatosProyecto.Etapa < 4) {
                             ArbolObjetivoService.ConsultarArbolFinal($rootScope.proyecto.datos.id, function (response) {
                                 if (response.success) {
-
                                     var problemaGeneral = response.ArbolFinal.ProblemaCentral;
                                     document.querySelector("#txtProblema").value = problemaGeneral;
                                     alerta1("Consejo.", "En el panel de la izquierda podras crear los medios y fines.", 5);
@@ -317,7 +303,6 @@
                                         document.querySelector("#imgEfecto3").appendChild(img3);
                                         document.querySelector("#efectoIndirecto").appendChild(elemento2);
 
-
                                         $.each(value.EfectoIndirecta, function (index1, value1) {
                                             $scope.EfectosIndTotales.push({ id: index, EfectoIndirecta: value.EfectoIndirecta[index1] })
                                         })
@@ -329,9 +314,7 @@
 
                                     var indirecto1 = 0;
                                     $.each($scope.EfectosIndTotales, function (index, value) {
-
                                         indirecto1 = (value.id) + 1;
-
                                         bloque = document.createElement("div");
                                         borrar = document.createElement("span");
                                         txtArea = document.createElement("textarea");
@@ -373,7 +356,6 @@
                                     var indirecto = 0;
                                     $.each($scope.CausasIndTotales, function (index, value) {
                                         indirecto = (value.id) + 1;
-
                                         bloque = document.createElement("div");
                                         borrar = document.createElement("span");
                                         txtArea = document.createElement("textarea");
@@ -384,10 +366,8 @@
                                         txtArea.setAttribute("maxlength", "140");
                                         causaIndirectaUl.querySelector("li:nth-child(" + indirecto + ")").appendChild(bloque).appendChild(txtArea);
                                         causaIndirectaUl.querySelector("li:nth-child(" + indirecto + ") div:last-child").appendChild(borrar);
-
                                     })
                                 }
-
                                 $("#TabObjetivos").attr("disabled", "disabled");
                             })
 
@@ -418,12 +398,9 @@
                                         document.querySelector("#imgEfecto3").appendChild(img3);
                                         document.querySelector("#efectoIndirecto").appendChild(elemento2);
 
-
                                         $.each(value.FinesIndirectos, function (index1, value1) {
                                             $scope.FinesIndTotales.push({ id: index, FinesIndirectos: value.FinesIndirectos[index1] })
                                         })
-
-
                                     });
 
                                     //CICLO PARA CREAR EFECTOS INDIRECTOS DEL ARBOL
@@ -474,7 +451,6 @@
                                     var indirecto = 0;
                                     $.each($scope.MediosIndTotales, function (index, value) {
                                         indirecto = (value.id) + 1;
-
                                         bloque = document.createElement("div");
                                         borrar = document.createElement("span");
                                         txtArea = document.createElement("textarea");
@@ -485,19 +461,14 @@
                                         txtArea.setAttribute("maxlength", "140");
                                         causaIndirectaUl.querySelector("li:nth-child(" + indirecto + ")").appendChild(bloque).appendChild(txtArea);
                                         causaIndirectaUl.querySelector("li:nth-child(" + indirecto + ") div:last-child").appendChild(borrar);
-
                                     })
                                 }
                                 $("#guardar").hide();
-
                                 $("#botonSiguienteArbol").show();
-
                             })
                         }
                     }
-
                 }
-
             })
 
 
@@ -656,7 +627,6 @@
                     }
                 }
 
-
                 for (var i = 0; i < causas.length; i++) {
                     var MediosVacios = datosCausas[i] = document.querySelector("#causa li:nth-child(" + (i + 1) + ") textarea").value
                     if (MediosVacios != "") {
@@ -679,7 +649,6 @@
                             alertify.success("Ups! tienes algún fin indirecto vacio");
                             return;
                         }
-
                     }
                     datosEfectosIndirectos.push(cadaLiIndirecto);
                 }
@@ -695,7 +664,6 @@
                             alertify.success("Ups! tienes algún medio indirecto vacia");
                             return;
                         }
-
                     }
                     datosCausasIndirectos.push(cadaLiIndirecto);
                 }
@@ -705,8 +673,6 @@
                     if (value != "") {
                         $scope.ObjArbol.Medios.push({ Medio: value, MediosIndirectos: datosCausasIndirectos[index] })
                     }
-
-
                 })
                 $.each(datosEfectos, function (index, value) {
 
@@ -740,20 +706,14 @@
                                 //$scope.ocultarArbol();
                                 $("#TabObjetivos").attr("disabled", false);
                                 $scope.ocultarArbol();
-
                             }
                         })
                     }
                 });
                 }, 500);
-
-             
             }
             //document.querySelector("#guardar").addEventListener("click", function () {
-
-               
             //});
-
 
             //VARIABLE PARA VALIDAR CUANDO YA INGRESO LA PRIMERA VEZ A LA VISTA DE RESULTADOS
             var contador = 0;
@@ -768,6 +728,10 @@
                 $('#audioAyudaCuatro').css("display", "none");
                 $('#audioAyudaSeis').css("display", "none");
                 $(".notify").hide();
+                var audio = document.getElementById("audio-player");
+                audio.pause();
+                var audio2 = document.getElementById("audio-player2");
+                audio2.pause();
              
                 if (contador == 0) {
                     if ($rootScope.proyecto.datos.Etapa < 5) {
@@ -822,6 +786,11 @@
                 $("#VistaObjetivos").hide();
                 $("#vistaResultados").hide();
                 $(".notify").hide();
+                var audio = document.getElementById("audio-player1");
+                audio.pause();
+                var audio1 = document.getElementById("audio-player2");
+                audio1.pause();
+
                 
             }
 
@@ -835,6 +804,10 @@
                 $("#vistaResultados").show();
                 $(".notify").hide();
                 $("#audioAyudaCinco").hide();
+                var audio = document.getElementById("audio-player");
+                audio.pause();
+                var audio1 = document.getElementById("audio-player1");
+                audio1.pause();
            
                 if (contador == 0) {
                     if ($rootScope.proyecto.datos.Etapa < 5) {
