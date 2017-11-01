@@ -16,6 +16,9 @@ namespace Datos.Modelos
 
         public int IdArbolObj { get; set; }
 
+        [Column("MedioDirecto")]
+        [Required]
+        [StringLength(140)]
         public string MedioDirecto1 { get; set; }
 
     }

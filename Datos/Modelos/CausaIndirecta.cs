@@ -14,6 +14,10 @@ namespace Datos.Modelos
 
         public int IdCausa { get; set; }
 
+        [Column("CausaIndirecta")]
+        [Required]
+        [StringLength(140)]
+
         public string CausaIndirecta1 { get; set; }
 
       

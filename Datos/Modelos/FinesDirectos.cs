@@ -15,6 +15,9 @@ namespace Datos.Modelos
 
         public int IdArbolObj { get; set; }
 
+
+        [Required]
+        [StringLength(140)]
         public string FinDirecto { get; set; }
 
    

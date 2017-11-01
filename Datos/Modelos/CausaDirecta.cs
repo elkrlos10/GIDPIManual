@@ -16,6 +16,10 @@ namespace Datos.Modelos
 
         public int? IdArbolProblema { get; set; }
 
+
+        [Required]
+        [StringLength(140)]
+
         public string Causa { get; set; }
 
      

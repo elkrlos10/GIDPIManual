@@ -9,8 +9,9 @@ var ManualApp = angular.module('ManualApp', ['ngRoute', 'ngCookies', 'ejangular'
 
 
 // configure our routes
-ManualApp.config(function ($routeProvider, $locationProvider) {
+ManualApp.config(function ($routeProvider) {
     $routeProvider
+    //$locationProvider
 
     // route for the home page
 
@@ -77,7 +78,7 @@ ManualApp.config(function ($routeProvider, $locationProvider) {
         controller: 'AdminController'
     })
 
-    $locationProvider.html5Mode(true);
+    //$locationProvider.html5Mode(true);
 
 })
 .run(['$rootScope', '$location', '$cookies', '$cookieStore', '$http', '$templateCache',

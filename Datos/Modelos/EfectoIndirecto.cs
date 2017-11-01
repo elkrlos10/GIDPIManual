@@ -14,6 +14,9 @@ namespace Datos.Modelos
 
         public int IdEfecto { get; set; }
 
+        [Column("EfectoIndirecto")]
+        [Required]
+        [StringLength(140)]
         public string EfectoIndirecto1 { get; set; }
 
    
