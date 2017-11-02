@@ -442,7 +442,16 @@ ManualApp.controller('MenuController',
                     }
                 }
                     
-                }
+            }
+
+            $scope.Regresar = function () {
+
+                $location.url("/Menu");
+                $(".notify").hide();
+
+            }
+
+
         }]);
 
 

@@ -78,6 +78,12 @@ ManualApp.config(function ($routeProvider) {
         controller: 'AdminController'
     })
 
+
+            .when('/Colaboradores', {
+                templateUrl: 'Views/Colaboradores.html',
+                controller: 'MenuController'
+            })
+
     //$locationProvider.html5Mode(true);
 
 })

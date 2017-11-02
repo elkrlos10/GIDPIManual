@@ -294,6 +294,7 @@
     <Content Include="scripts\waves.min.js" />
     <Content Include="VIews\AdminView.html" />
     <Content Include="VIews\ArbolView.html" />
+    <Content Include="VIews\Colaboradores.html" />
     <Content Include="VIews\cronogramaPresupuesto.html" />
     <Content Include="VIews\DatosProyecto.html" />
     <Content Include="VIews\arbol.html" />
