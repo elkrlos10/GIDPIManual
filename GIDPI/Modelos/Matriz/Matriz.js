@@ -69,6 +69,8 @@
 
             $scope.AgregarCampos = function () {
 
+
+
                 if ($scope.Problemas.length < 25) {
                     $scope.Problemas.push({
                         Problema: "",
@@ -83,7 +85,26 @@
 
             //Función para agregar la cantidad de problemas
             $scope.Agregar = function (Cantidad) {
+                console.log(Cantidad);
+                if ($scope.DatosProyecto.ProblemaGeneral == "") {
 
+                    swal({
+                        text: 'Ingrese el problema general',
+                        confirmButtonColor: '#238276',
+                        width: '25%'
+                    })
+                    return;
+                }
+
+                if (Cantidad == undefined) {
+
+                    swal({
+                        text: 'Elija la cantidad de problemas a evaluar',
+                        confirmButtonColor: '#238276',
+                        width: '25%'
+                    })
+                    return;
+                }
                 $scope.Problemas = [
                  {
                      Problema: "",
@@ -541,20 +562,7 @@
             //Función para almacenar los datos de la matriz  
             $scope.Guardar = function () {
                 $scope.DatosProyecto.DetalleMat = $scope.Problemas;
-                if ($scope.DatosProyecto.ProblemaGeneral == "" ) {
-
-
-
-                    swal({
-                        text: 'Ingrese el problema general',
-                        confirmButtonColor: '#238276',
-                        width: '25%'
-
-                    })
-                  
-                    return;
-
-                } else if ($scope.DatosProyecto.DetalleMat[0].Criterio == "") {
+                if ($scope.DatosProyecto.DetalleMat[0].Criterio == "") {
                     swal({
                         text: 'Debe realizar la matriz de Vester',
                         confirmButtonColor: '#238276',

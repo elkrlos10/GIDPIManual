@@ -539,28 +539,28 @@
 
             <tbody id="tbl">
 
-                <tr ng-repeat="Indirectos in medios">
+                <tr ng-repeat="(I, Indirectos) in medios">
                     <th class="col-lg-1">
                         <center><h1> {{$index+1}}</h1></center>
 
                     </th>
                     <th class="col-lg-3 col-md- col-sm-3 col-xs-3">
-                        <textarea style="width:100%;" class="block" maxlength="200" z ng-repeat="m in mediosIndirectos" ng-model="m.medioIndirectos" ng-if="m.idMedio == Indirectos.Medio"></textarea>
+                        <textarea style="width:100%;" class="block" maxlength="200" z ng-repeat="m in mediosIndirectos" ng-model="m.medioIndirectos" ng-if="m.idMedio == I"></textarea>
                         <!--<textarea style="width:100%;" ng-if="$index==1"></textarea>
                         <textarea style="width:100%;" ng-if="$index==2"></textarea>-->
                     </th>
 
                     <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                        <textarea style="width:100%;" class="block" maxlength="200" ng-repeat="m in mediosIndirectos" ng-if="m.idMedio == Indirectos.Medio" ng-model="m.Resultado"></textarea>
+                        <textarea style="width:100%;" class="block" maxlength="200" ng-repeat="m in mediosIndirectos" ng-if="m.idMedio == I" ng-model="m.Resultado"></textarea>
 
                     </th>
 
                     <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                        <textarea style="width:100%;" class="block" maxlength="200" ng-repeat="m in mediosIndirectos" ng-if="m.idMedio == Indirectos.Medio" ng-model="m.Herramienta"></textarea>
+                        <textarea style="width:100%;" class="block" maxlength="200" ng-repeat="m in mediosIndirectos" ng-if="m.idMedio == I" ng-model="m.Herramienta"></textarea>
 
                     </th>
                     <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                        <textarea style="width:100%;" id="resultados" maxlength="200" ng-repeat="m in mediosIndirectos" ng-if="m.idMedio == Indirectos.Medio" ng-model="m.Producto"></textarea>
+                        <textarea style="width:100%;" id="resultados" maxlength="200" ng-repeat="m in mediosIndirectos" ng-if="m.idMedio == I" ng-model="m.Producto"></textarea>
 
                     </th>
 

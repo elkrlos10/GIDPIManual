@@ -50,7 +50,10 @@
                 IdUsuario: "",
                 Etapa:""
             }
+
+
            
+        
             //-----------------------------------------------------------------------------------------------------
 
             //VARIABLE PARA ACTIVAR CICLO INFINITO
@@ -189,6 +192,9 @@
 
                 }
 
+                //$(".txtBloque3").css({ "font-size": Tamañoletra(efectos.length) })
+                //console.log($(".txtBloque3").css({ "font-size": Tamañoletra(efectos.length) }));
+
                 update(repetir); //entra en la funcion repetir sin salir de la misma, asi crea un ciclo infinito
             }
             update(repetir); //inicia la funcion repetir
@@ -292,6 +298,7 @@
                                                 bloque.setAttribute("class", "bloque");
                                                 txtArea.setAttribute("class", "txtBloque2");
                                                 txtArea.setAttribute("maxlength", "140");
+
                                                 efecto.appendChild(elemento).appendChild(bloque).appendChild(borrar);
                                                 efecto.querySelector("li:last-child div:last-child").appendChild(txtArea);
                                                 document.querySelector("#imgEfecto3").appendChild(img3);
@@ -512,6 +519,7 @@
                 }
             }
 
+
             //FUNCION DEL SELECT DEL PANEL
             $scope.cambioElemento = function () {
                 tipo = document.querySelector("#elemento").value;
@@ -542,6 +550,35 @@
                 }
             }
 
+            function Tamañoletra(cantidad) {
+                switch (cantidad) {
+                    case 1: {
+                        //if ((screen.width <= 1024) && (screen.height <= 768)) {
+                        letra = "font-size:50px;";
+                        //$(".txtBloque3").css({ "font-size": "font-size:50px;"})
+                            return letra;
+                        //}
+                    }
+                    case 2: {
+                        letra = "font-size:10px;";
+                        $(".txtBloque3").css({ "font-size": "font-size:150px;" })
+               
+                        return letra;
+                    }
+                    case 3: {
+                        letra = "font-size:10px;";
+                        return letra;
+                    }
+                    case 4: {
+                        letra = "font-size:8px;";
+                        return letra;
+                    }
+                    case 5: {
+                        letra = "font-size:6.5px;";
+                        return letra;
+                    }
+                }
+            }
 
             //BOTON CREAR DEL PANEL
             $scope.crear = function () {
@@ -612,7 +649,8 @@
                         bloque.setAttribute("class", "bloque2");
                         txtArea.setAttribute("class", "txtBloque3");
                         txtArea.setAttribute("maxlength", "140");
-                        txtArea.setAttribute("style", "font-size:6.5px;");
+                        txtArea.setAttribute("style", Tamañoletra(efectos.length));
+                        
                         efectoIndirectoUl.querySelector("li:nth-child(" + indirecto + ")").appendChild(bloque).appendChild(txtArea);
                         efectoIndirectoUl.querySelector("li:nth-child(" + indirecto + ") div:last-child").appendChild(borrar);
 
@@ -622,7 +660,7 @@
 
                     // crear causa indirecta
                     if (tipo == "causaIndirecta" && document.querySelectorAll("#causaIndirecta li:nth-child(" + indirecto + ") div").length < 3) {
-                        console.log(indirecto);
+             
                         bloque = document.createElement("div");
                         borrar = document.createElement("span");
                         txtArea = document.createElement("textarea");
@@ -630,7 +668,7 @@
                         bloque.setAttribute("class", "bloque2");
                         txtArea.setAttribute("class", "txtBloque3");
                         txtArea.setAttribute("maxlength", "140");
-                        txtArea.setAttribute("style", "font-size:6.5px;");
+                       
                         causaIndirectaUl.querySelector("li:nth-child(" + indirecto + ")").appendChild(bloque).appendChild(txtArea);
                         causaIndirectaUl.querySelector("li:nth-child(" + indirecto + ") div:last-child").appendChild(borrar);
                     } else if (document.querySelectorAll("#causaIndirecta li:nth-child(" + indirecto + ") div").length >= 3) {

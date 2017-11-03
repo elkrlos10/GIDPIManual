@@ -815,13 +815,12 @@
                             if (response.success) {
                                 //$scope.medios = response.ArbolFinal.Medios;
                                 $scope.mediosIndirectos = [];
-                                  
                                   $.each($scope.medios, function (index, value) {
 
                                     for (var i = 0; i < 3; i++) {
                                         if (value.MediosIndirectos[i] != "") {
                                            
-                                            $scope.mediosIndirectos.push({ idMedio: response.Especificos[index], medioIndirectos: value.MediosIndirectos[i], Resultado: "", Herramienta: "", Producto: "" })
+                                            $scope.mediosIndirectos.push({ idMedio:index, medioIndirectos: value.MediosIndirectos[i], Resultado: "", Herramienta: "", Producto: "" })
 
                                         } else {
                                             $scope.mediosIndirectos.push({ idMedio: value.Medio, medioIndirectos: "", Resultado: "", Herramienta: "", Producto: "" })
