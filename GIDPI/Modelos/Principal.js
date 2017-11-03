@@ -46,7 +46,7 @@ ManualApp.config(function ($routeProvider) {
                  templateUrl: 'Views/ObjetivosView.html',
                  controller: 'ArbolObjetivosController'
              })
-         
+
             .when('/Involucrados', {
                 templateUrl: 'Views/involucrados.html',
                 controller: 'InvolucradosController'
@@ -62,7 +62,7 @@ ManualApp.config(function ($routeProvider) {
                 controller: 'CronogramaPresupuestoController'
             })
 
-            
+
 
         .when('/MarcoL', {
             templateUrl: 'Views/MarcoLogico.html',
@@ -79,11 +79,10 @@ ManualApp.config(function ($routeProvider) {
     })
 
 
-            .when('/Colaboradores', {
-                templateUrl: 'Views/Colaboradores.html',
-                controller: 'MenuController'
-            })
-
+      .when('/Colaboradores', {
+          templateUrl: 'Views/Colaboradores.html',
+          controller: 'ColabodoresController'
+      })
     //$locationProvider.html5Mode(true);
 
 })
@@ -98,11 +97,11 @@ ManualApp.config(function ($routeProvider) {
 
             if ($rootScope.globals != undefined) {
 
-                if (!$rootScope.proyecto && $rootScope.InicioProyecto ==0) {
+                if (!$rootScope.proyecto && $rootScope.InicioProyecto == 0) {
                     $location.url("/Menu");
-                   
+
                 } else {
-                   
+
                     //Para redireccionar de acuerdo al tipo de usuario
                     if ($rootScope.globals.currentUser.tipousuario == 3) {
                         $location.url("/Admin");
@@ -110,7 +109,7 @@ ManualApp.config(function ($routeProvider) {
 
                     if ($rootScope.proyecto.datos.Etapa < 10 && $location.path() == '/Reporte') {
                         $location.url("/Menu");
-                       
+
                     }
                     if ($rootScope.proyecto.datos.Etapa == 1 && ($location.path() == '/Reporte' || $location.path() == '/Objetivos' || $location.path() == '/Involucrados'
                         || $location.path() == '/PerfilProyecto' || $location.path() == '/Cronograma' || $location.path() == '/MarcoL')) {
@@ -120,7 +119,7 @@ ManualApp.config(function ($routeProvider) {
                     }
                     if ($rootScope.proyecto.datos.Etapa == 2 && ($location.path() == '/Reporte' || $location.path() == '/Objetivos' || $location.path() == '/Involucrados'
                         || $location.path() == '/PerfilProyecto' || $location.path() == '/Cronograma' || $location.path() == '/MarcoL')) {
-                       
+
                         $location.url("/Menu");
                         return;
                     }
@@ -147,8 +146,8 @@ ManualApp.config(function ($routeProvider) {
                         $location.url("/Menu");
                         return;
                     }
-                } 
-                
+                }
+
             } else {
                 $location.url("/Login");
             }

@@ -338,7 +338,9 @@
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>TemaProyecto</rd:DefaultName>
@@ -377,7 +379,9 @@
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox20</rd:DefaultName>
@@ -496,7 +500,9 @@
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>General</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -2437,7 +2443,9 @@
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox64</rd:DefaultName>
@@ -4292,7 +4300,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!subtotal.Value, "Presupuesto")</Value>
-                <Style />
+                <Style>
+                  <Format>'$'#,0,.00;('$'#,0,.00)</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -4315,6 +4325,7 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-CO</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox168">
@@ -4358,7 +4369,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!ValorTotal.Value, "Presupuesto")</Value>
-                <Style />
+                <Style>
+                  <Format>'$'#,0,.00;('$'#,0,.00)</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -4381,6 +4394,7 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-CO</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox170">
@@ -4841,7 +4855,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ValorUnitario.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>'$'#,0,.00;('$'#,0,.00)</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -4859,6 +4875,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <rd:FormatSymbolCulture>es-CO</rd:FormatSymbolCulture>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -4873,7 +4890,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ValorXcantidad.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>'$'#,0,.00;('$'#,0,.00)</Format>
+                                <rd:FormatSymbolCulture>es-CO</rd:FormatSymbolCulture>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -4973,7 +4993,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!A.Value, "Presupuesto")</Value>
-                <Style />
+                <Style>
+                  <Format>'$'#,0,.00;('$'#,0,.00)</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -4996,6 +5018,7 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-CO</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox204">
@@ -5039,7 +5062,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!I.Value, "Presupuesto")</Value>
-                <Style />
+                <Style>
+                  <Format>'$'#,0,.00;('$'#,0,.00)</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -5062,6 +5087,7 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-CO</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox206">
@@ -5105,7 +5131,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!U.Value, "Presupuesto")</Value>
-                <Style />
+                <Style>
+                  <Format>'$'#,0,.00;('$'#,0,.00)</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -5128,6 +5156,7 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-CO</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox208">
@@ -5171,7 +5200,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!IVA.Value, "Presupuesto")</Value>
-                <Style />
+                <Style>
+                  <Format>'$'0,.00;('$'0,.00);'-'</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -5194,6 +5225,7 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-CO</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Tablix Name="Tablix22">

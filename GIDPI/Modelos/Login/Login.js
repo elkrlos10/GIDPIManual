@@ -38,9 +38,11 @@
         
             $scope.RegistroPersonaNatural = function () {
 
-                if ($scope.PersonaNatural.Nombre == null || $scope.PersonaNatural.Nombre == ""  ) {
+                if ($scope.PersonaNatural.Nombre == null || $scope.PersonaNatural.Nombre == "" ) {
                     alertify.success("El campo Nombre no puede estar vacio");
                     return false;
+               
+
                 } else if ($scope.PersonaNatural.Apellidos == null || $scope.PersonaNatural.Apellidos == "") {
                     alertify.success("El campo Apellidos no puede estar vacio");
                     return false;
@@ -49,6 +51,10 @@
                 }else  if ($scope.PersonaNatural.Documento == null || $scope.PersonaNatural.Documento == ""  ) {
                     alertify.success("El campo Documento no puede estar vacio");
                     return false;
+
+                } else if (String($scope.PersonaNatural.Documento).length < 6) {
+                    alertify.success("El campo Documento no puede ser menor a 6 caracteres");
+                    return false;
                 }else  if ($scope.PersonaNatural.Usuario == null || $scope.PersonaNatural.Usuario == ""  ) {
                     alertify.success("El campo Usuario no puede estar vacio");
                     return false;
@@ -56,10 +62,14 @@
                 } else if ($scope.PersonaNatural.Contrasena == null || $scope.PersonaNatural.Contrasena == "") {
                     alertify.success("El campo Contraseña no puede estar vacio");
                     return false;
+                } else if (String($scope.PersonaNatural.Contrasena).length < 6) {
+                    alertify.success("El campo contraseña no puede ser menor a 6 caracteres");
+                    return false;
                 }else if ($scope.PersonaNatural.Email == null || $scope.PersonaNatural.Email == ""  ) {
                     alertify.success("El campo Email no puede estar vacio o debe tener una direccion correcta");
                     return false;
-          
+                   
+     
                 }else {
                     LoginService.RegistrarPersonaNatural($scope.PersonaNatural, function (response) {
 
@@ -82,7 +92,9 @@
                     alertify.success("El campo Nit no puede estar vacio");
                     return false;
 
-
+                } else if (String($scope.PersonaJuridica.Nit).length <= 6) {
+                    alertify.success("El campo nit no puede ser menor a 6 caracteres");
+                    return false;
                 }else  if ($scope.PersonaJuridica.SectorEconomico == null || $scope.PersonaJuridica.SectorEconomico == ""  ) {
                     alertify.success("El campo SectorEconomico no puede estar vacio");
                     return false;
@@ -100,6 +112,9 @@
                     return false;
                 }else  if ($scope.PersonaJuridica.Contrasena == null || $scope.PersonaJuridica.Contrasena == ""  ) {
                     alertify.success("El campo contraseña no puede estar vacio");
+                    return false;
+                } else if (String($scope.PersonaJuridica.Contrasena).length < 6) {
+                    alertify.success("El campo contraseña no puede ser menor a 6 caracteres");
                     return false;
                 } else {
                     LoginService.RegistroPersonaJuridica($scope.PersonaJuridica, function (response) {

@@ -549,12 +549,12 @@
                     document.querySelector("#indirecta").style.display = "none"; //esconde el select para asignar a una indirecta
                 }
             }
-
+            //CAMBIAR TAMAÑO DE LA LETRA DEL BLOQUE 3
             function Tamañoletra(cantidad) {
                 switch (cantidad) {
                     case 1: {
                         //if ((screen.width <= 1024) && (screen.height <= 768)) {
-                        letra = "font-size:50px;";
+                        letra = "font-size:80%;";
                         //$(".txtBloque3").css({ "font-size": "font-size:50px;"})
                             return letra;
                         //}

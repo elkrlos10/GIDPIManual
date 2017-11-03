@@ -143,6 +143,7 @@
     <Content Include="Css\bootstrap-datetimepicker-standalone.css" />
     <Content Include="Css\bootstrap-grid.min.css" />
     <Content Include="Css\bootstrap.min.css" />
+    <Content Include="Css\Colaboradores.css" />
     <Content Include="Css\ej.web.all.min.css" />
     <Content Include="Css\estilos.css" />
     <Content Include="Css\EstilosAdministrador.css" />
@@ -226,6 +227,7 @@
     <Content Include="Modelos\ArbolProblema\ArbolProblema.js" />
     <Content Include="Modelos\ArbolProblema\ArbolProblemaService.js" />
     <Content Include="Modelos\ArbolProblema\BorrarElemento.js" />
+    <Content Include="Modelos\Colaboradores\Colaboradores.js" />
     <Content Include="Modelos\DatosProyecto\DatosProyecto.js" />
     <Content Include="Modelos\DatosProyecto\DatosProyectoService.js" />
     <Content Include="Modelos\Filter.js" />
