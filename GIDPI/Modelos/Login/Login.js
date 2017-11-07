@@ -68,16 +68,28 @@
                 }else if ($scope.PersonaNatural.Email == null || $scope.PersonaNatural.Email == ""  ) {
                     alertify.success("El campo Email no puede estar vacio o debe tener una direccion correcta");
                     return false;
+
+                } else if ($scope.PersonaNatural.Telefono == null || $scope.PersonaNatural.Telefono == "") {
+                    alertify.success("El campo Telefono no puede estar vacio");
+                    return false;
+
+                } else if (String($scope.PersonaNatural.Telefono).length < 7) {
+                    alertify.success("El campo Telefono no puede ser menor a 7 caracteres");
+                    return false;
                    
      
                 }else {
                     LoginService.RegistrarPersonaNatural($scope.PersonaNatural, function (response) {
 
                         if (response.success ) {
-                    
-                            alertify.alert("<b>Registro Exitoso</b>", function () {
-                                location.reload();
-                            });
+                            swal({
+                                text: 'Registro Exitoso',
+                                confirmButtonColor: '#238276',
+                                width: '25%'
+
+                            })
+                            location.reload();
+
                         }
                     });
                 }
@@ -116,14 +128,26 @@
                 } else if (String($scope.PersonaJuridica.Contrasena).length < 6) {
                     alertify.success("El campo contraseña no puede ser menor a 6 caracteres");
                     return false;
+                } else if (String($scope.PersonaJuridica.Telefono).length < 6) {
+                    alertify.success("El campo contraseña no puede ser menor a 6 caracteres");
+                    return false;
+
+                } else if (String($scope.PersonaJuridica.Telefono).length < 7) {
+                    alertify.success("El campo Telefono no puede ser menor a 7 caracteres");
+                    return false;
+                
                 } else {
                     LoginService.RegistroPersonaJuridica($scope.PersonaJuridica, function (response) {
 
                         if (response.success) {
+                            swal({
+                                text: 'Registro Exitoso',
+                                confirmButtonColor: '#238276',
+                                width: '25%'
 
-                            alertify.alert("<b>Registro Exitoso</b>", function () {
-                                location.reload();
-                            });
+                            })
+                            location.reload();
+                          
 
                         }
                     });

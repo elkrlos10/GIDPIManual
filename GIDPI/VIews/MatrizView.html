@@ -124,11 +124,15 @@
 
             <div class="col-lg-8 col-md-8 col-sm-8" style="height:auto;">
 
-                <label class="form-check-label" style="margin-top:4%; margin-left:40%;">
-                    <input style="width:16px;height: 16px" class="form-check-input" title="Sin ralación" type="radio" name={{$index+1}} ng-model="Cantidad" value="4"> 5
-                    <input style="width:16px;height: 16px" class="form-check-input" title="Baja Influencia" type="radio" name={{$index+1}} ng-model="Cantidad" value="9"> 10
-                    <input style="width:16px;height: 16px" class="form-check-input" title="Mediana Influencia" type="radio" name={{$index+1}} ng-model="Cantidad" value="14"> 15
-                    <input style="width:16px;height: 16px" class="form-check-input" title="Alta Influencia" type="radio" name={{$index+1}} ng-model="Cantidad" value="19"> 20
+                <label class="form-check-label" style="margin-top:4%; width:100%; margin-left:35%;">
+
+                    <input style="width:16px;height: 16px; " class="form-check-input" title="Sin ralación" type="radio" name={{$index+1}} ng-model="Cantidad" value="4"><span><p style="font-size:16px">5</p></span> 
+
+                    <input style="width:16px;height: 16px; margin-left:2%;" class="form-check-input" title="Baja Influencia" type="radio" name={{$index+1}} ng-model="Cantidad" value="9"> <span><p style="font-size:16px">10</p></span> 
+
+                    <input style="width:16px;height: 16px; margin-left:2%;" class="form-check-input" title="Mediana Influencia" type="radio" name={{$index+1}} ng-model="Cantidad" value="14"> <span><p style="font-size:16px">15</p></span> 
+
+                    <input style="width:16px;height: 16px; margin-left:2%;" class="form-check-input" title="Alta Influencia" type="radio" name={{$index+1}} ng-model="Cantidad" value="19"> <span><p style="font-size:16px">20</p></span> 
                 </label>
 
             </div>
@@ -326,3 +330,10 @@
 <script src="../scripts/AnimacionTips.js"></script>
 <script src="../scripts/audioAyuda.js"></script>
 <script src="../scripts/waves.min.js"></script>
+
+<style>
+    input[type='radio'] {
+    transform: scale(1.2);
+    width:25px;
+}
+</style>
