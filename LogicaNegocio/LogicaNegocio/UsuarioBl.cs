@@ -43,9 +43,15 @@ namespace LogicaNegocio.LogicaNegocio
                                   where i.IdUsuario == emailJ.IdUsuario
                                   select i).FirstOrDefault();
 
-                    var Asunto = "Recuperación contraseña";
-                    var Plantilla = "Usuario: " + Usuario.Usuario1 + "<br/> Contraseña: " + Usuario.Contrasena;
-                    SendMail.SendMailMessage(Asunto, Plantilla, emailJ.Email);
+                    var Asunto = "Recuperación contraseña GIDPI";
+                    //var Plantilla ="Gracias pa"+"<b>Usuario:</b> " + Usuario.Usuario1 + "<br/> <b>Contraseña:</b> " + Usuario.Contrasena;
+                    var body = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">";
+                    body += "<HTML><HEAD><META http-equiv=Content-Type content=\"text/html; charset=iso-8859-1\">";
+                    body += "</HEAD><BODY><DIV style='height:100%; width:700px;  margin-left:25%; transform:translateX(-50%)'><div style='height:70px; width:700px;   background-color:#238276;'><img src=\"cid:Adriana\" width='104' height='27' alt='img' style='margin: 20px 0px 0px 20px;'/></div><P>Hola</P><P>La solicitud para recuperar su contraseña ha sido aceptada</P>";
+                    body += "<H3>INFORMACION DE CONTACTO</H3></br><H3><B>Usuario: </B></H3>" + Usuario.Usuario1 + " <H3><B> Contraseña: </B></H3> " + Usuario.Contrasena;
+                    body += "<P>Puede dirigirse a la pagina principal de GIDPI para ingresar al aplicativo.</P><A href='www.gidpi.com/#/Login'>GIDPI</A>";
+                    body += "<P><I>Esto es un correo electronico generado automaticamente enviado por el aplicativo GIDPI. Su correo no se enviara a GIDPI si responde a este mensaje.</I></P></DIV></BODY></HTML>";
+                    SendMail.SendMailMessage(Asunto, body, emailJ.Email);
 
                     mensaje = "Su contraseña fue enviada " + emailJ.Email;
                 }
@@ -61,12 +67,22 @@ namespace LogicaNegocio.LogicaNegocio
                                where i.IdUsuario == emailN.IdUsuario
                                select i).FirstOrDefault();
 
-                var Asunto = "Recuperación contraseña";
-                var Plantilla = "Usuario: " + Usuario.Usuario1 + "<br/> Contraseña: " + Usuario.Contrasena;
-                SendMail.SendMailMessage(Asunto, Plantilla, emailN.Email);
+                var Asunto = "Recuperación contraseña GIDPI";
+
+                //var Plantilla = "<div><img src='/GIDPIManual/GIDPI/images/Adriana.png' /> </div>" +
+                //       " <div style='float:right; background:blue; height: 120%;'><br><b>Usuario:</b> " + Usuario.Usuario1 + "<br/> <b>Contraseña:</b> " + Usuario.Contrasena+"</div>";
+                var body = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">";
+                body += "<HTML><HEAD><META http-equiv=Content-Type content=\"text/html; charset=iso-8859-1\">";
+                body += "</HEAD><BODY><DIV style='height:100%; width:700px;  margin-left:25%; transform:translateX(-50%)'><div style='height:70px; width:700px;   background-color:#238276;'><img src=\"cid:Adriana\" width='104' height='27' alt='img' style='margin: 20px 0px 0px 20px;'/></div><P>Hola</P><P>La solicitud para recuperar su contraseña ha sido aceptada</P>";
+                body += "<H3>INFORMACION DE CONTACTO</H3></br><H3><B>Usuario: </B></H3>" + Usuario.Usuario1 + " <H3><B> Contraseña: </B></H3> " + Usuario.Contrasena;
+                body += "<P>Puede dirigirse a la pagina principal de GIDPI para ingresar al aplicativo.</P><A href='www.gidpi.com/#/Login'>GIDPI</A>";
+                body += "<P><I>Esto es un correo electronico generado automaticamente enviado por el aplicativo GIDPI. Su correo no se enviara a GIDPI si responde a este mensaje.</I></P></DIV></BODY></HTML>";
 
 
-                mensaje = "Su contraseña fue enviada " + emailN.Email;
+                SendMail.SendMailMessage(Asunto, body, emailN.Email);
+
+
+                mensaje = "Su contraseña fue enviada al correo : " + emailN.Email;
             }
 
             return mensaje;

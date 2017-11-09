@@ -3123,6 +3123,9 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
+        <RepeatColumnHeaders>true</RepeatColumnHeaders>
+        <RepeatRowHeaders>true</RepeatRowHeaders>
+        <KeepTogether>true</KeepTogether>
         <DataSetName>MarcoLogico</DataSetName>
         <Top>129.31687cm</Top>
         <Left>0.76114cm</Left>

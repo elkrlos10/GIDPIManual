@@ -23,15 +23,15 @@
     font-size: 23px;
     font-weight: 700;
     line-height: 1;
-    color: #000;
+    color: #fff;
     text-shadow: 0 1px 0 #fff;
     filter: alpha(opacity=20);
-    opacity: .2;
+    opacity: .5;
 	outline: none;
 }
 .notify > button.close:hover{
 	filter: alpha(opacity=50);
-    opacity: .5;
+    opacity: .8;
 }
 .notify-dismissible .message{
 	padding-right: 25px;

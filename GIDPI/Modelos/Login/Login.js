@@ -199,7 +199,13 @@
                 } else {
                     LoginService.ConsutarEmail($scope.recuperarContrasena.email, function (response) {
                         if (response.success) {
-                            alertify.success(response.Mensaje);
+
+                            swal({
+                                text: response.Mensaje,
+                                confirmButtonColor: '#238276',
+                                width: '25%',
+                            })
+                    
                         }
                     })
 
