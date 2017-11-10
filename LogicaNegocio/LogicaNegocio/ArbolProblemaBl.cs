@@ -41,77 +41,175 @@ namespace LogicaNegocio.LogicaNegocio
 
         public void GuardarDatosArbol(ArbolProblemaDTO oArbolDTO)
         {
-            string base64 = oArbolDTO.imagen.Split(',')[1];
-            ArbolProblema oArbol = new ArbolProblema();
-            oArbol.IdProyecto = oArbolDTO.IdProyecto;
-            oArbol.ProblemaCentral = oArbolDTO.ProblemaCentral;
-            byte[] imageBytes = Convert.FromBase64String(base64);
-            oArbol.Imagen = imageBytes;
-            entity.ArbolProblema.Add(oArbol);
-            entity.SaveChanges();
-
-
-            var ArbolProyecto = (from i in entity.ArbolProblema
+            var ArbolProyecto1 = (from i in entity.ArbolProblema
                                  where i.IdProyecto == oArbolDTO.IdProyecto
                                  select i).FirstOrDefault();
 
-
-            foreach (var item in oArbolDTO.Causas)
+            if (ArbolProyecto1== null)
             {
-                if (item.Causa != "")
+                string base64 = oArbolDTO.imagen.Split(',')[1];
+                ArbolProblema oArbol = new ArbolProblema();
+                oArbol.IdProyecto = oArbolDTO.IdProyecto;
+                oArbol.ProblemaCentral = oArbolDTO.ProblemaCentral;
+                byte[] imageBytes = Convert.FromBase64String(base64);
+                oArbol.Imagen = imageBytes;
+                entity.ArbolProblema.Add(oArbol);
+                entity.SaveChanges();
+
+                var ArbolProyecto = (from i in entity.ArbolProblema
+                                     where i.IdProyecto == oArbolDTO.IdProyecto
+                                     select i).FirstOrDefault();
+
+                foreach (var item in oArbolDTO.Causas)
                 {
-                    CausaDirecta oCausa = new CausaDirecta();
-                    oCausa.IdArbolProblema = ArbolProyecto.IdArbolProblema;
-                    oCausa.Causa = item.Causa;
-                    entity.CausaDirecta.Add(oCausa);
-                    entity.SaveChanges();
-
-                    var causa = (from i in entity.CausaDirecta
-                                 orderby i.IdCausa descending
-                                 select i).FirstOrDefault();
-
-                    foreach (var item1 in item.CausaIndirecta)
+                    if (item.Causa != "")
                     {
-                        CausaIndirecta oCausaIndirecta = new CausaIndirecta();
-                        oCausaIndirecta.IdCausa = causa.IdCausa;
-                        oCausaIndirecta.CausaIndirecta1 = item1;
-                        entity.CausaIndirecta.Add(oCausaIndirecta);
+                        CausaDirecta oCausa = new CausaDirecta();
+                        oCausa.IdArbolProblema = ArbolProyecto.IdArbolProblema;
+                        oCausa.Causa = item.Causa;
+                        entity.CausaDirecta.Add(oCausa);
                         entity.SaveChanges();
+
+                        var causa = (from i in entity.CausaDirecta
+                                     orderby i.IdCausa descending
+                                     select i).FirstOrDefault();
+
+                        foreach (var item1 in item.CausaIndirecta)
+                        {
+                            CausaIndirecta oCausaIndirecta = new CausaIndirecta();
+                            oCausaIndirecta.IdCausa = causa.IdCausa;
+                            oCausaIndirecta.CausaIndirecta1 = item1;
+                            entity.CausaIndirecta.Add(oCausaIndirecta);
+                            entity.SaveChanges();
+                        }
                     }
+                }
+
+                foreach (var item in oArbolDTO.Efectos)
+                {
+                    if (item.Efecto != "")
+                    {
+                        EfectoDirecto oEfecto = new EfectoDirecto();
+                        oEfecto.IdArbolProblema = ArbolProyecto.IdArbolProblema;
+                        oEfecto.Efecto = item.Efecto;
+                        entity.EfectoDirecto.Add(oEfecto);
+                        entity.SaveChanges();
+
+                        var efecto = (from i in entity.EfectoDirecto
+                                      orderby i.IdEfecto descending
+                                      select i).FirstOrDefault();
+
+                        foreach (var item1 in item.EfectoIndirecta)
+                        {
+                            EfectoIndirecto oEfectoIndirecto = new EfectoIndirecto();
+                            oEfectoIndirecto.IdEfecto = efecto.IdEfecto;
+                            oEfectoIndirecto.EfectoIndirecto1 = item1;
+                            entity.EfectoIndirecto.Add(oEfectoIndirecto);
+                            entity.SaveChanges();
+                        }
+                    }
+                }
+
+                var proyecto = (from i in entity.Proyecto
+                                where i.IdProyecto == oArbolDTO.IdProyecto
+                                select i).FirstOrDefault();
+
+                proyecto.Etapa = 3;
+                entity.SaveChanges();
+            }
+            else
+            {
+                var ArbolProyecto = (from i in entity.ArbolProblema
+                                     where i.IdProyecto == oArbolDTO.IdProyecto
+                                     select i).FirstOrDefault();
+
+                string base64 = oArbolDTO.imagen.Split(',')[1];
+                ArbolProyecto.IdProyecto = oArbolDTO.IdProyecto;
+                ArbolProyecto.ProblemaCentral = oArbolDTO.ProblemaCentral;
+                byte[] imageBytes = Convert.FromBase64String(base64);
+                ArbolProyecto.Imagen = imageBytes;
+                entity.SaveChanges();
+
+                var causas = (from i in entity.CausaDirecta
+                              where i.IdArbolProblema == ArbolProyecto.IdArbolProblema
+                              select i).ToList();
+
+                var contador = 0;
+                foreach (var item in oArbolDTO.Causas)
+                {
+                    if (item.Causa != "")
+                    {
+                        CausaDirecta oCausa1 = new CausaDirecta();
+
+                        if ((contador-1) < causas.Count)
+                        {
+                                causas[contador-1].IdArbolProblema = ArbolProyecto.IdArbolProblema;
+                                causas[contador-1].Causa = item.Causa;
+                                entity.SaveChanges();
+
+                            var idCausa = causas[contador - 1].IdCausa;
+                            oCausa1 = (from i in entity.CausaDirecta
+                                         where i.IdCausa == idCausa
+                                       select i).FirstOrDefault();
+                        }
+                        else
+                        {
+                            CausaDirecta oCausa = new CausaDirecta();
+                            oCausa.IdArbolProblema = ArbolProyecto.IdArbolProblema;
+                            oCausa.Causa = item.Causa;
+                            entity.CausaDirecta.Add(oCausa);
+                            entity.SaveChanges();
+
+                            oCausa1 = (from i in entity.CausaDirecta
+                                         orderby i.IdCausa descending
+                                         select i).FirstOrDefault();
+                        }
+
+                        List<CausaIndirecta> oLista = new List<CausaIndirecta>();
+                  
+                            oLista= (from i in entity.CausaIndirecta
+                                     where i.IdCausa == oCausa1.IdCausa
+                                     select i).ToList();
+                        
+
+                        var contador1 = 0;
+                        foreach (var item1 in item.CausaIndirecta)
+                        {
+                            
+                            //if (oLista.Count != 0 )
+                            //{
+                                if (contador1 < oLista.Count)
+                                {
+                                    oLista[contador1].IdCausa = oCausa1.IdCausa;
+                                    oLista[contador1].CausaIndirecta1 = item1;
+                                    entity.SaveChanges();
+                                }
+                                else
+                                {
+                                    CausaIndirecta oCausaIndirecta = new CausaIndirecta();
+                                    oCausaIndirecta.IdCausa = oCausa1.IdCausa;
+                                    oCausaIndirecta.CausaIndirecta1 = item1;
+                                    entity.CausaIndirecta.Add(oCausaIndirecta);
+                                    entity.SaveChanges();
+                                }
+
+                            //}
+                            //else
+                            //{
+                            //    CausaIndirecta oCausaIndirecta = new CausaIndirecta();
+                            //    oCausaIndirecta.IdCausa = oCausa1.IdCausa;
+                            //    oCausaIndirecta.CausaIndirecta1 = item1;
+                            //    entity.CausaIndirecta.Add(oCausaIndirecta);
+                            //    entity.SaveChanges();
+                            //}
+                            contador1++;
+                        }
+                    }
+                    contador++;
                 }
             }
 
-            foreach (var item in oArbolDTO.Efectos)
-            {
-                if (item.Efecto != "")
-                {
-                    EfectoDirecto oEfecto = new EfectoDirecto();
-                    oEfecto.IdArbolProblema = ArbolProyecto.IdArbolProblema;
-                    oEfecto.Efecto = item.Efecto;
-                    entity.EfectoDirecto.Add(oEfecto);
-                    entity.SaveChanges();
 
-                    var efecto = (from i in entity.EfectoDirecto
-                                  orderby i.IdEfecto descending
-                                  select i).FirstOrDefault();
-
-                    foreach (var item1 in item.EfectoIndirecta)
-                    {
-                        EfectoIndirecto oEfectoIndirecto = new EfectoIndirecto();
-                        oEfectoIndirecto.IdEfecto = efecto.IdEfecto;
-                        oEfectoIndirecto.EfectoIndirecto1 = item1;
-                        entity.EfectoIndirecto.Add(oEfectoIndirecto);
-                        entity.SaveChanges();
-                    }
-                }
-            }
-
-            var proyecto = (from i in entity.Proyecto
-                            where i.IdProyecto == oArbolDTO.IdProyecto
-                            select i).FirstOrDefault();
-
-            proyecto.Etapa = 3;
-            entity.SaveChanges();
         }
 
         public ArbolProblemaDTO ConsultarArbolFinal(int IdProyecto)

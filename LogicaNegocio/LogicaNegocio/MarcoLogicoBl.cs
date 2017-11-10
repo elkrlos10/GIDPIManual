@@ -122,9 +122,6 @@ namespace LogicaNegocio.LogicaNegocio
                 marco.Actividad4 = oMarco.Actividad4;
                 entity.SaveChanges();
 
-
-
-               
             }
         }
 

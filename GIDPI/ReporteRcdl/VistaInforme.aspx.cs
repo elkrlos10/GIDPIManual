@@ -29,6 +29,12 @@ namespace GIDPI.ReporteRcdl
             SqlDataSource13.SelectParameters["IdProyecto"].DefaultValue = IdProyecto;
             //SqlDataSource2.SelectParameters["IdProyecto"].DefaultValue = IdProyecto;
 
+            //string deviceInfo = "";
+            //deviceInfo = "<DeviceInfo><OutputFormat>PDF</OutputFormat> <PageWidth>21cm</PageWidth>  <PageHeight>29.7cm</PageHeight> <MarginTop>0.5cm</MarginTop>  <MarginLeft>1.1cm</MarginLeft> <MarginRight>0.5cm</MarginRight> <MarginBottom>0.5cm</MarginBottom></DeviceInfo>";
+            ////ReportViewer1.ServerReport.SetParameters(parametros);
+            //ReportViewer1.ServerReport.Refresh();
+            //helper.ExportPdf(ReportViewer1, deviceInfo);
+
         }
     }
 }
