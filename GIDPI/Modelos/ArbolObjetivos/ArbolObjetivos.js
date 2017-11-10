@@ -682,6 +682,7 @@
 
                 $("#guardar").hide();
                 $("#tipArbolObjetivos").hide();
+                $(".borrarElemento").hide();
                 
                 setTimeout(function () {  
                 html2canvas($("#arbolContenedor"), {

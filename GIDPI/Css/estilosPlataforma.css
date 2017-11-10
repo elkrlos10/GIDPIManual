@@ -519,7 +519,7 @@ z-index:997;
 
 #contenido{
     background:rgba(192,192,192,0.15); 
-    height:110vh;
+    height:100%;
 }
 
 .player{
@@ -674,7 +674,7 @@ z-index:997;
 
 #contenido{
     background:rgba(192,192,192,0.15);  
-    height:140vh;
+    height:100%;
 }
 
 .player{
@@ -833,7 +833,7 @@ z-index:997;
 
 #contenido{
     background:rgba(192,192,192,0.15);  
-    height:110vh;
+    height:100%;
 }
 
 .player{
@@ -1024,7 +1024,7 @@ z-index:997;
 
 #contenido{
     background:rgba(192,192,192,0.15); 
-    height:100vh;
+    height:100%;
 }
 
 .audioVester{
@@ -1275,7 +1275,7 @@ z-index:997;
 
 #contenido{
     background:rgba(192,192,192,0.15); 
-    height:130vh;
+    height:100%;
 }
 
 .audioVester{
@@ -1419,7 +1419,7 @@ z-index:997;
 
 #contenido{
     background:rgba(192,192,192,0.15);  
-    height:100vh;
+    height:100%;
 }
 
 
@@ -1509,7 +1509,7 @@ z-index:997;
 }
 
 
-@media (max-width: 1280px) and (min-width: 1153px) {
+  @media (max-width: 1280px) and (min-width: 1153px) {
 
     #grafica {
         margin-left: -18%;
@@ -1534,7 +1534,7 @@ z-index:997;
 
     #contenido {
         background: rgba(192,192,192,0.15);
-        height: 147vh;
+        height: 120%;
     }
 
     .player {
@@ -1589,7 +1589,7 @@ z-index:997;
 }
 
 #nombreProyectoMenu{
-    margin-top:31%;
+    margin-top:39%;
     color:#238276;
 }
 
@@ -1746,7 +1746,7 @@ z-index:997;
 
 #contenido{
     background:rgba(192,192,192,0.15); 
-    height:115vh;
+    height:100%;
 }
 
 
@@ -1951,7 +1951,7 @@ z-index:997;
 
 #contenido{
     background:rgba(192,192,192,0.15); 
-    height:130vh;
+    height:100%;
 }
 
 .audioVester{

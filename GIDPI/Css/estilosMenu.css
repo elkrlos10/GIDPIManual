@@ -1118,7 +1118,7 @@ body{
 @media (max-width: 1360px) and (max-height: 1281px) {
 
 #menu{
-    margin-top: -6%;
+    margin-top: -2%;
     width: 550px;
     height: 550px;
   }
@@ -1193,7 +1193,7 @@ body{
 @media (max-width: 1280px) and (min-width: 1153px){
 
   #menu{
-    margin-top: -7%;
+    margin-top: -3%;
     width: 565px;
     height: 565px;
   }
@@ -1202,7 +1202,7 @@ body{
     width:25%;
     position:absolute;
     transform:translateX(-55%);
-    margin-top:2%;
+    margin-top:4%;
 }
   .campo{
     width: 12%;

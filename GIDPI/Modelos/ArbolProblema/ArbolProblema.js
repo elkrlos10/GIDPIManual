@@ -560,21 +560,21 @@
                         //}
                     }
                     case 2: {
-                        letra = "font-size:10px;";
+                        letra = "font-size:60%;";
                         $(".txtBloque3").css({ "font-size": "font-size:150px;" })
                
                         return letra;
                     }
                     case 3: {
-                        letra = "font-size:10px;";
+                        letra = "font-size:50%;";
                         return letra;
                     }
                     case 4: {
-                        letra = "font-size:8px;";
+                        letra = "font-size:60%;";
                         return letra;
                     }
                     case 5: {
-                        letra = "font-size:6.5px;";
+                        letra = "font-size:30%;";
                         return letra;
                     }
                 }

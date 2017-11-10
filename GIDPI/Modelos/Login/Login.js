@@ -201,6 +201,7 @@
                         if (response.success) {
 
                             swal({
+                                title: 'Respuesta de solicitud',
                                 text: response.Mensaje,
                                 confirmButtonColor: '#238276',
                                 width: '25%',
