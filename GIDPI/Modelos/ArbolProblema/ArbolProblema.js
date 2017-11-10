@@ -761,6 +761,7 @@
                
                 $("#guardar").hide();
                 $("#tipsArbolProblema").hide();
+                $(".borrarElemento").hide();
                 setTimeout(function () { 
                 html2canvas($("#arbolContenedor"), {
                     onrendered: function (canvas) {
