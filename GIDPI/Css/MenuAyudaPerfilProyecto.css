@@ -116,7 +116,7 @@
 @media (max-width: 1280px) and (min-width: 1153px) {
 
 .lineaTab {
-    margin-top: 18%;
+    margin-top: 21%;
     margin-left: 0%;
 }
 
@@ -133,6 +133,8 @@
     position: fixed;
     z-index: 300;
 }
+
+
 
 }
 

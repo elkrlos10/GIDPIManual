@@ -320,7 +320,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 6vh;"><p class="textos">METODOLOGÍA</p></div>
 
 
-                <table class="table table-bordered">
+                <table class="table ">
                     <tbody>
                         <tr>
                             <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
@@ -376,7 +376,7 @@
                 </table>
 
 
-                <table class="table table-bordered">
+                <table class="table ">
                     <tbody>
                         <tr>
                             <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -435,7 +435,7 @@
                         </div>
 
 
-                        <div id="editarPerfil2" ng-click="editarPerfilProyectoParte2()" style=" margin-left:105%; margin-top:-5%;">
+                        <div id="editarPerfil2" ng-click="editarPerfilProyectoParte2()" style="margin-left:105%; margin-top:-5%;">
                             <i id="iconEditar" class="fa fa-pencil-square-o" title="Editar" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
                             <p style="font-size:10px; text-align:center; margin-left:-25%;">Editar</p>
                         </div>
@@ -471,8 +471,8 @@
 
 
         <!-- TERMINA CONTAINER DE PERFIL PROYECTO -->
-
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="position:relative; height: 12vh; margin-top:-1%  ">
+        <!--MENU DE ABAJO-->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="menuTabs" style="position:relative;  height: 12vh; ">
 
 
             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height: 12vh;">
@@ -500,6 +500,21 @@
 
 </div>
 
+<style>
+    @media (max-width: 1280px) and (max-height: 961px) {
+        #menuTabs{
+             margin-top: -6%;
+        }
+    }
+
+    @media (max-width: 1280px) and (min-width: 1153px) {
+
+        #menuTabs{
+             margin-top: 6%;
+        }
+    }
+
+</style>
 <script src="../scripts/AnimacionTextoVideoAudio.js"></script>
 <script src="../scripts/audioAyuda.js"></script>
 <script src="../scripts/audioAyuda2.js"></script>
