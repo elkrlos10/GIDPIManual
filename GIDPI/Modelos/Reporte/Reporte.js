@@ -9,5 +9,9 @@
             var IdProyecto = $rootScope.proyecto.datos.id;
             console.log(IdProyecto);
             $scope.url = $sce.trustAsResourceUrl('http://localhost:61609/ReporteRcdl/VistaInforme.aspx?IdProyecto=' + IdProyecto);
+
+            //var IdProyecto = $rootScope.proyecto.datos.id;
+            //console.log(IdProyecto);
+            //$scope.url = $sce.trustAsResourceUrl('https://www.gidpi.com/ReporteRcdl/VistaInforme.aspx?IdProyecto=' + IdProyecto);
      
         }]);

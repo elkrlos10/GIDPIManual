@@ -69,8 +69,6 @@
 
             $scope.AgregarCampos = function () {
 
-
-
                 if ($scope.Problemas.length < 25) {
                     $scope.Problemas.push({
                         Problema: "",

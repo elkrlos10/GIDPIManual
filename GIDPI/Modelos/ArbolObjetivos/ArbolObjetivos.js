@@ -902,9 +902,6 @@
 
                     }
                 })
-
-                
-                console.log($scope.ObjetivosFinales1)
                 $scope.ObjetivosFinales.Objetivos = $scope.ObjetivosFinales1;
 
                 var con = 0;
