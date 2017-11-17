@@ -181,7 +181,7 @@ $(function () {
 //------------- INICIA INVOLUCRADOS----------------------
 
 $(function () {
-
+   
     $('.ayudaTextoSiete').svgpopup({
         figure: 'rectangle',
         fill: '#238276',
@@ -194,6 +194,8 @@ $(function () {
         fill: '#238276',
         randomize: false
     });
+
+   
 }());
 
 

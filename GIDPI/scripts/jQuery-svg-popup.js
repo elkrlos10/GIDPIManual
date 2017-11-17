@@ -130,12 +130,22 @@
 									'overflow-x': 'hidden'									
 								}).addClass('svg-popup-max-height');
 							};
-							setTimeout(function(){
+							setTimeout(function () {
+							    var state = 'hide';
 								popup.content.css({
 									'top': '50%'
 								}).append('<span class="svg-popup-close">'+ config.closeButtonText +'</span>');
-								$('.svg-popup-close').on('click', function(){
-									popup.destroyPolygon($(this));
+								$('.svg-popup-close').on('click', function () {
+								    popup.destroyPolygon($(this));
+								    //var state = 'hide';
+								    
+								    //var div = document.getElementById("ayudaVideoSiete");
+								    //var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+								    //div.style.display = state == 'hide' ? 'none' : '';
+								    //func = state == 'hide' ? 'pauseVideo' : 'playVideo';
+								    //iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+								    var iframeID = $('iframe').attr('class');
+								    $('.' + iframeID).attr('src', function (i, val) { return val; });
 								});
 								config.onAnimationComplate(that);
 							},config.speed*1000);

@@ -745,12 +745,8 @@
                                     $.each(response.Especificos, function (index, value) {
 
                                         $scope.medios1.push({ medio: value });
-
                                     })
                                 }
-                                
-
-                               
                             }
                         })
                     } else {
@@ -763,20 +759,15 @@
                                 $.each(response.Especificos, function (index, value) {
 
                                     $scope.medios1.push({ medio: value.ObjetivoEsp });
-
                                 })
-                               
                             }
                         })
 
                         $("#verbo").hide();
                         $("#campoObjetivoGeneral").css({ "margin-left": "-10%" });
                         $("#tituloObjetivoGeneral").css({ "margin-left": "18%" });
-                       
                     }
-
                 }
-
             }
 
 
@@ -820,17 +811,13 @@
 
                                     for (var i = 0; i < 3; i++) {
                                         if (value.MediosIndirectos[i] != "") {
-                                           
                                             $scope.mediosIndirectos.push({ idMedio:index, medioIndirectos: value.MediosIndirectos[i], Resultado: "", Herramienta: "", Producto: "" })
-
                                         } else {
                                             $scope.mediosIndirectos.push({ idMedio: value.Medio, medioIndirectos: "", Resultado: "", Herramienta: "", Producto: "" })
-
                                         }
-
                                     }
                                 })
-                                  console.log($scope.mediosIndirectos);
+                                  //console.log($scope.mediosIndirectos);
                                   $("#Btnguardar").css({ "display": "block" });
                             }
                         })
@@ -842,24 +829,25 @@
                                 $scope.prueba = response.DatosObjetivos.Objetivos
                              
                                 $scope.medios = [];
-                              
-                                $.each(response.Especificos, function (index, value) {
-
-                                    $scope.medios.push({ Medio: value.ObjetivoEsp, MediosIndirectos: [index] });
-
-                                })
-
                                 $scope.mediosIndirectos = [];
-
                               
-                                $.each($scope.prueba, function (index, value) {
-                                    if (value.ObjetivoEsp != null) {
-                                        $scope.mediosIndirectos.push({ idMedio: value.ObjetivoEsp, medioIndirectos: value.Resultado1, Resultado: value.MedidaResultado, Herramienta: value.HerramientaResultado, Producto: value.ProductoResultado })
+                                $.each(response.Especificos, function (index, value1) {
 
-                                    }
+                                    $scope.medios.push({ Medio: value1.ObjetivoEsp, MediosIndirectos: index });
+                                    
+                                    $.each($scope.prueba, function (index1, value) {
+
+                                        if (value.ObjetivoEsp == value1.ObjetivoEsp) {
+
+                                            $scope.mediosIndirectos.push({ idMedio: index, medioIndirectos: value.Resultado1, Resultado: value.MedidaResultado, Herramienta: value.HerramientaResultado, Producto: value.ProductoResultado })
+
+                                        }
+                                    })
                                 })
-
-                                console.log($scope.prueba);
+                                //console.log($scope.prueba);
+                                //console.log(response.Especificos);
+                                //console.log($scope.medios);
+                                //console.log($scope.mediosIndirectos);
                                 $("#Btnguardar").css({ "display": "none" });
                             }
                         })

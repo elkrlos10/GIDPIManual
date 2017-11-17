@@ -1,7 +1,7 @@
 ﻿ManualApp.controller('PerfilProyectoController',
     ['$scope', '$rootScope', '$location', 'PerfilProyectoService', '$cookies', '$cookieStore', 'MenuService', '$routeParams', '$sce',
         function ($scope, $rootScope, $location, PerfilProyectoService, $cookies, $cookieStore, MenuService, $routeParams, $sce) {
-
+            $("#Perfil2").attr("disabled", "disabled");
             $("#containerNombre").show
             $("#containerPerfilProyect").hide();
             $("#btnEditarPerfil").hide();
@@ -265,6 +265,7 @@
                                 }, 500);
                             }
                         })
+                        $("#Perfil2").attr("disabled", false);
                         $("#btnGuardarPerfil").hide();
                         $("#btnEditarPerfil").show();
                     }
@@ -289,13 +290,10 @@
                                 width: '25%'
 
                             })
-                           
-                            //$location.url("/Menu");
+                            $("#Perfil2").attr("disabled", false);
                         }
-
                     })
                 }
-               
             }
 
 

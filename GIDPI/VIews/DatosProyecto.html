@@ -48,7 +48,7 @@
 <div id="ayudaVideoUno">
     <div class="svg-popup-content" style="width:auto;">
         <h3 class="title-plagin">Video</h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/7pRE2ATdWaU" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" class="cierre" src="https://www.youtube.com/embed/7pRE2ATdWaU" frameborder="0" allowfullscreen></iframe>
     </div>
 </div>
 
@@ -91,7 +91,7 @@
             <li><a class="fa fa-power-off menuAyuda" style="font-size:22px;" ng-click="cerrarSesion()" title="Cerrar sesión"></a></li>
             <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" ng-click="atras()" style="font-size:22px;"></a></li>
             <li><a class="fa fa-file button demo-btn ayudaTextoUno menuAyuda" title="Leer ayuda" data-svg-popup="ayudaTextoUno" style="font-size:22px;"></a></li>
-            <li><a class="fa fa-video-camera button demo-btn ayudaVideoUno menuAyuda" title="Ver ayuda" data-svg-popup="ayudaVideoUno" style="font-size:22px;"></a></li>
+            <li><a class="fa fa-video-camera button demo-btn ayudaVideoUno menuAyuda" title="Ver ayuda" data-svg-popup="ayudaVideoUno" ng-click="refresh()" style="font-size:22px;"></a></li>
             <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="ayudaAudioUno" style="font-size:22px;"></a></li>
             <li><a class="fa fa-book button menuAyuda" title="Sobre nosotros" style="font-size:22px;"></a></li>
 

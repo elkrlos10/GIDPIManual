@@ -41,7 +41,7 @@
 <div id="ayudaVideoSiete">
     <div class="svg-popup-content" style="width:auto;">
         <h3 class="title-plagin">Video</h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/QA6eLUTgAFE" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" class="cierre" height="315" src="https://www.youtube.com/embed/QA6eLUTgAFE?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
     </div>
 </div>
 
@@ -192,6 +192,16 @@
 
 </div>
 
+<script>
+function toggleVideo(state) {
+    // if state == 'hide', hide. Else: show video
+    var div = document.getElementById("popupVid");
+    var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+    div.style.display = state == 'hide' ? 'none' : '';
+    func = state == 'hide' ? 'pauseVideo' : 'playVideo';
+    iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+}
+</script>
 
 <script src="../scripts/AnimacionTextoVideoAudio.js"></script>
 <script src="../scripts/AnimacionTips.js"></script>

@@ -135,6 +135,10 @@
             "VIVIENDA, CIUDAD Y TERRITORIO"
             ]
 
+            //$scope.refresh = function () {
+            //    $("#div1").load("url que quieres cargar")
+            //}
+
             $scope.ValidacionDatos = function () {
                 if ($scope.DatosProyecto.TipoProyecto == "" || $scope.DatosProyecto.TipoProyecto == null || $scope.DatosProyecto.AccionProyecto == "" || $scope.DatosProyecto.AccionProyecto == null ||
                     $scope.DatosProyecto.Sector == "" || $scope.DatosProyecto.Sector == null || $scope.DatosProyecto.IdMunicipio == "" || $scope.DatosProyecto.IdMunicipio == null ||
