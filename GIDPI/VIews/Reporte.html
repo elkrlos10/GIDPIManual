@@ -1,4 +1,6 @@
-﻿<style>
+﻿<link href="../Css/MenuAyudaReporte.css" rel="stylesheet" />
+
+<style>
 
     /*body{
         overflow-y:hidden;
@@ -28,9 +30,22 @@
 }
 
 </style>
+<nav class="vertical" id="menuAyuda">
+    <input type="checkbox" id="toggle3" />
+    <label id="menuToggle" for="toggle3">
+        <span class="fa fa-bars" style="font-size:22px;"></span>
+    </label>
+    <menu style="margin-top:-6%;">
 
+        <li><a class="fa fa-power-off menuAyuda" style="font-size:22px;" ng-click="cerrarSesion()" title="Cerrar sesión"></a></li>
+        <li><a class="fa fa-arrow-left menuAyuda" title="Regresar al menú" ng-click="Regresar()" style="font-size:22px;"></a></li>
+
+    </menu>
+</nav>
 <!--<div id="container" ej-reportviewer e-reportserviceurl="reportServiceUrl" e-processingmode="remoteMode" e-isresponsive="true" e-reportpath="rdlReportPath" style="width:100%;height:100vh"></div>-->
+
 <div>
+   
     <!--<div ng-repeat="report in reports">
         <input type="button" ng-click="openReport(report.id)" value="{{report.name}}" />
     </div>-->

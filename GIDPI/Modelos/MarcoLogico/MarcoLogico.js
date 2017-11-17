@@ -3,6 +3,7 @@
         function ($scope, $rootScope, $location, MarcoLogicoService, $cookies, $cookieStore, $routeParams, $sce) {
             
             $("#ContainerFinal ").hide();
+            $("#menuAyuda2 ").hide();
             //$("#ContainerFinal").hide();
             $("#btnFinalizar").hide();
             $("#btnEditarMarco").hide();
@@ -99,6 +100,7 @@
                 $("#containerMarcoLogico ").hide();
                 $("#menuAyuda").hide();
                 $("#ContainerFinal ").show();
+                $("#menuAyuda2 ").show();
                 
             }
 
