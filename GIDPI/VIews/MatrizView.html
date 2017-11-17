@@ -33,7 +33,7 @@
 <div id="audioAyudaDos" style="display:none">
     <div class="player audioVester">
         <div class="control-row">
-            <div id="pause-button">
+            <div class="pauseButton"  id="pause-button">
                 <i class="icon icon-play"></i>
                 <i class="icon"></i>
             </div>
@@ -124,7 +124,7 @@
 
             <div class="col-lg-8 col-md-8 col-sm-8" style="height:auto;">
 
-                <label class="form-check-label" style="margin-top:4%; width:100%; margin-left:50%;">
+                <label class="form-check-label" style="margin-top:4%; width:45%; margin-left:50%;">
 
                     <input style="width:16px;height: 16px; " class="form-check-input" title="Sin ralación" type="radio" name={{$index+1}} ng-model="Cantidad" value="4"><span><p style="font-size:16px">5</p></span> 
 
@@ -142,10 +142,11 @@
             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="height:5vh;">
 
                 <center>
-                    <div id="agregar_btn" ng-click="Agregar(Cantidad)" style="margin-left:3%;">
+                    <div id="agregar_btn" ng-click="Agregar(Cantidad)" style="margin-left:3%; z-index:9999;width:50px; height:50px; cursor:pointer;">
                         <i id="iconEditar" class="fa fa-plus-square-o" style="cursor:pointer; font-size:30px; color:#238276;" aria-hidden="true"></i>
+                        <p style="font-size:10px;">Agregar</p>
                     </div>
-                    <p style="font-size:10px;">Agregar</p>
+                    
                 </center>
 
             </div>
