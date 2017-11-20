@@ -13,5 +13,10 @@
             //var IdProyecto = $rootScope.proyecto.datos.id;
             //console.log(IdProyecto);
             //$scope.url = $sce.trustAsResourceUrl('https://www.gidpi.com/ReporteRcdl/VistaInforme.aspx?IdProyecto=' + IdProyecto);
+
+            $scope.Regresar = function () {
+                $location.url("/Menu");
+            }
+
      
         }]);

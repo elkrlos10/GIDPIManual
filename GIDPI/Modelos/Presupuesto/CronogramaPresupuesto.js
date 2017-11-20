@@ -13,7 +13,6 @@
                 FechaFin: ""
             }]
 
-
             $scope.Presupuesto = [{
                 IdProyecto: $rootScope.proyecto.datos.id,
                 Item: "",
@@ -26,7 +25,6 @@
 
             }]
 
-
             $scope.AIU = {
                 A: "",
                 I: "",
@@ -36,6 +34,19 @@
                 IdProyecto: ""
             }
 
+            $scope.PauseAudio = function () {
+                setTimeout(function () {
+                    var audio = document.getElementById("audio-player");
+                    audio.pause();
+                }, 1000);
+
+                setTimeout(function () {
+                    var audio = document.getElementById("audio-player1");
+                    audio.pause();
+                }, 1000);
+            }
+
+
             $scope.MostrarCronograma = function () {
                 $("#containerCronograma").show();
                 $("#containerPresupuesto").hide();
@@ -43,7 +54,6 @@
                 var audio1 = document.getElementById("audio-player1");
                 audio1.pause();
             }
-
 
             $scope.MostrarPresupuesto = function () {
                 $("#containerCronograma").hide();
@@ -65,7 +75,6 @@
                 })
             }
 
-
             $scope.EliminarCamposCrononograma = function () {
 
                 if ($scope.Cronograma[($scope.Cronograma.length - 1)].Actividad == "" && $scope.Cronograma[($scope.Cronograma.length - 1)].FechaInicio == ""
@@ -77,7 +86,6 @@
                 }
 
             };
-
 
             var update = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
                         window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
@@ -116,9 +124,6 @@
 
             }
 
-
-
-
             $scope.EliminarCamposPresupuesto = function () {
 
                 if ($scope.Presupuesto[($scope.Presupuesto.length - 1)].Item == "" && $scope.Presupuesto[($scope.Presupuesto.length - 1)].Concepto == ""
@@ -134,9 +139,6 @@
 
             $scope.GuardarCronograma = function () {
                 var cont = 0;
-            
-
-
 
                 $.each($scope.Cronograma, function (index, value) {
                     if (value.Actividad == "" || value.FechaInicio == "" || value.FechaFin == "" ) {
@@ -203,8 +205,6 @@
                     }
                 }
             })
-
-
 
             $scope.total = 0;
 
@@ -286,7 +286,6 @@
                 $scope.total = ($scope.total  + A + I + U).toFixed(2);
 
             }
-
 
             $scope.GuardarPresupuesto = function () {
                 $scope.Presupuesto1 = [];
@@ -384,7 +383,6 @@
                     }
                 }
             })
-
 
             $scope.atras = function () {
 

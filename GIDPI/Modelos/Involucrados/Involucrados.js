@@ -12,7 +12,14 @@
               
             }]
 
-         
+            //Funciòn para pausar el audio cuando se abra el video
+            $scope.PauseAudio = function () {
+                setTimeout(function () {
+                    var audio = document.getElementById("audio-player");
+                    audio.pause();
+                }, 1000);
+            }
+
             //FUNCIÓN PARA AGREGAR MAS FILAS DE INVOLUCRADOS
             $scope.AgregarCampos1 = function () {
 

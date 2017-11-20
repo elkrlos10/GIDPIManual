@@ -92,6 +92,24 @@
                     ProductoResultado: ""
                 }
             }
+
+            //Funciòn para pausar el audio cuando se abra el video
+            $scope.PauseAudio = function () {
+                setTimeout(function () {
+                    var audio = document.getElementById("audio-player");
+                    audio.pause();
+                }, 1000);
+
+                setTimeout(function () {
+                    var audio = document.getElementById("audio-player1");
+                    audio.pause();
+                }, 1000);
+
+                setTimeout(function () {
+                    var audio = document.getElementById("audio-player2");
+                    audio.pause();
+                }, 1000);
+            }
             //-----------------------------------------------------------------------------------------------------
 
             //VARIABLE PARA ACTIVAR CICLO INFINITO

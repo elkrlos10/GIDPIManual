@@ -159,7 +159,6 @@ ManualApp.controller('MenuController',
 
             //------------------------------------------------------------//
 
-
             $(".icono-menu").click(function () {
 
                 $(".sobre-menu-principal").fadeIn();

@@ -135,9 +135,13 @@
             "VIVIENDA, CIUDAD Y TERRITORIO"
             ]
 
-            //$scope.refresh = function () {
-            //    $("#div1").load("url que quieres cargar")
-            //}
+            //Funciòn para pausar el audio cuando se abra el video
+            $scope.PauseAudio = function () {
+                setTimeout(function () {
+                    var audio = document.getElementById("audio-player");
+                    audio.pause();
+                }, 1000);
+            }
 
             $scope.ValidacionDatos = function () {
                 if ($scope.DatosProyecto.TipoProyecto == "" || $scope.DatosProyecto.TipoProyecto == null || $scope.DatosProyecto.AccionProyecto == "" || $scope.DatosProyecto.AccionProyecto == null ||

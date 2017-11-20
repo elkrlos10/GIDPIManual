@@ -1,5 +1,6 @@
 ﻿//-------------INICIA MENÚ PRINCIPAL---------------------
 
+
 $('#menu-toggle').click(function () {
      $('#wrapper').slideToggle({
          direction: "up"
@@ -44,7 +45,7 @@ $(function() {
 //------------- INICIA DATOS PROYECTO----------------------
 
 $(function () {
-
+   
     $('.ayudaTextoUno').svgpopup({
         figure: 'rectangle',
         fill: '#238276',

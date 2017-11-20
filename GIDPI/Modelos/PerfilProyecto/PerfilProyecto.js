@@ -37,7 +37,6 @@
                 }
             }
 
-
             $scope.ValidarPerfilProyecto2 = function () {
 
                 if ($scope.PerfilProyecto2.Planteamiento == "" || $scope.PerfilProyecto2.Impacto == "" || $scope.PerfilProyecto2.Poblacion == "" || $scope.PerfilProyecto2.Variables == "" ||
@@ -46,6 +45,19 @@
                     alertify.success("Faltan campos por completar");
                     return false;
                 }
+            }
+
+            //Funciòn para pausar el audio cuando se abra el video
+            $scope.PauseAudio = function () {
+                setTimeout(function () {
+                    var audio = document.getElementById("audio-player");
+                    audio.pause();
+                }, 1000);
+
+                setTimeout(function () {
+                    var audio = document.getElementById("audio-player1");
+                    audio.pause();
+                }, 1000);
             }
 
             //FUNCIONES DE CAMBIO DE TAP

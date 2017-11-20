@@ -7,6 +7,15 @@
             //$("#ContainerFinal").hide();
             $("#btnFinalizar").hide();
             $("#btnEditarMarco").hide();
+
+            //Funciòn para pausar el audio cuando se abra el video
+            $scope.PauseAudio = function () {
+                setTimeout(function () {
+                    var audio = document.getElementById("audio-player");
+                    audio.pause();
+                }, 1000);
+            }
+
             $scope.Marco = {
                 IdMarco:"", 
                 IdProyecto: "",
@@ -27,10 +36,6 @@
                 Fin3 :"",
                 Fin4 :""
             }
-
-            console.log($scope.Marco);
-
-            
 
             $scope.guardarMarco = function () {
                 console.log($scope.Marco);
@@ -70,7 +75,6 @@
                
             }
 
-
             MarcoLogicoService.AbrirProyecto($rootScope.proyecto.datos.id, function (response) {
                 if (response.success) {
                     $rootScope.proyecto.datos.Etapa = response.proyecto.Etapa;
@@ -104,21 +108,12 @@
                 
             }
 
-
-
             $scope.Regresar = function () {
-
                 $location.url("/Menu");
-
             }
 
             $scope.abrirReporte= function () {
                 $location.url("/Reporte");
             }
-
-
-           
-
-
 
         }]);

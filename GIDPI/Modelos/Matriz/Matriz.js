@@ -33,6 +33,14 @@
 
             $scope.SeriesPuntos = [];
 
+            //Funciòn para pausar el audio cuando se abra el video
+            $scope.PauseAudio = function () {
+                setTimeout(function () {
+                    var audio = document.getElementById("audio-player");
+                    audio.pause();
+                }, 1000);
+            }
+
 
             if ($rootScope.proyecto != undefined) {
                 MatrizService.ConsultarMatriz($rootScope.proyecto.datos.id, function (response) {
@@ -131,9 +139,7 @@
             };
 
             //Función para empezar a comparar los problemas
-            $scope.mostrar = function () {
-
-               
+            $scope.mostrar = function () {               
                 $scope.ProblemasCalificar = [];
 
                 //-------------DESCOMENTARIAR -------------------------
