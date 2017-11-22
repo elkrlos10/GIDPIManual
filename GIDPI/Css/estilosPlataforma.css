@@ -515,13 +515,17 @@ z-index:997;
     color:#238276;
 }
 
-@media (max-width: 1600px) and (max-height: 1500px) {
+   @media (max-width: 1600px) and (max-height: 1500px) {
 
 #contenido{
     background:rgba(192,192,192,0.15); 
     height:100%;
 }
 
+ #nombreProyectoMenu{
+    margin-top:35%;
+    color:#238276;
+}
 .player{
   position: absolute;
   background-color: #fff;
@@ -559,10 +563,7 @@ z-index:997;
    z-index: 999;
 }
 
-#nombreProyectoMenu{
-    margin-top:30%;
-    color:#238276;
-}
+
 
 .audioArbolObjetivos{
   position: absolute;
@@ -1136,11 +1137,16 @@ z-index:997;
 
 }
 
-@media (max-width: 1366px) and (min-width: 1361px) {
+@media (max-width: 1366px) and (max-height: 768px) {
     #grafica{
     margin-left: -18%;
     margin-top: -29%;
     }
+
+    #nombreProyectoMenu{
+    margin-top:31%;
+    color:#238276;
+}
 
 #personajeDos{
   
@@ -1252,12 +1258,18 @@ z-index:997;
 
 }
 
-@media (max-width: 1360px) and (max-width: 1281px) {
+@media (max-width: 1360px) and (max-height: 768px) {
 
 #grafica{
     margin-left: -18%;
     margin-top: -30%;
     }
+
+
+#nombreProyectoMenu{
+    margin-top:31%;
+    color:#238276;
+}
 
 #personajeDos{
     width:5.6%;
@@ -1504,12 +1516,226 @@ z-index:997;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
+  
 }
 
 }
 
+@media (max-width: 1280px) and (max-height: 1024px) {
+    
+  #grafica {
+        margin-left: -18%;
+        margin-top: -29%;
+    }
+  #personajeDos{
+  
+    width:5.8%;
+}
 
-  @media (max-width: 1280px) and (min-width: 1153px) {
+#personajeHombre{
+  
+    width:5.8%;
+}
+  
+
+    #btn_regresar {
+        margin-left: 75%;
+        margin-top: -3%;
+        width: 7%;
+    }
+
+    #contenido {
+        background: rgba(192,192,192,0.15);
+        height: 120%;
+    }
+
+    .player {
+        position: absolute;
+        background-color: #fff;
+        width: 580px;
+        height: 120px;
+        margin-top: 60%;
+        margin-left: 26%;
+        border-radius: 3px;
+        box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+    }
+
+    #lineaDos{
+    margin-top:78vh;
+    position:fixed;
+    margin-left:88%;
+}
+
+.audioVester{
+  position: absolute;
+  background-color: #fff;
+  width: 530px;
+  height: 120px;
+  margin-top:90%;
+  margin-left:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#matrizVester{
+    font-size:20px;
+}
+
+#tipMatrizVesterDos{
+    margin-left:41%;
+}
+
+.audioArbolProblemas{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top: 75%;
+  margin-left:26%;
+  margin-bottom:3%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#nombreProyectoMenu{
+    margin-top:36%;
+    color:#238276;
+}
+
+.audioObjetivos{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:35%;
+  margin-left:30%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.audioResultados{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:65%;
+  margin-left:27%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.audioInvolucrados{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:37%;
+  margin-left:26%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#tituloInvolucrados{
+    font-size:24px;
+}
+
+
+.audioNombreProyecto{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:55%;
+  margin-left:20%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.audioPerfilProyecto{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:95%;
+  margin-left:24%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+   z-index: 999;
+}
+
+.audioCronograma{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:45%;
+  margin-left:25%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.audioPresupuesto{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:45%;
+  margin-left:20%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+
+.audioMarcoLogico{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:110%;
+  margin-left:20%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+
+.audioMarcoLogico{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:80%;
+  margin-left:26%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#textoMarcoLogico{
+    font-size:22px;
+}
+
+}
+
+@media (max-width: 1280px) and (max-height: 960px) {
 
     #grafica {
         margin-left: -18%;
@@ -1589,7 +1815,863 @@ z-index:997;
 }
 
 #nombreProyectoMenu{
-    margin-top:39%;
+    margin-top:45%;
+    color:#238276;
+}
+
+.audioObjetivos{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:35%;
+  margin-left:30%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.audioResultados{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:65%;
+  margin-left:27%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.audioInvolucrados{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:37%;
+  margin-left:26%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#tituloInvolucrados{
+    font-size:24px;
+}
+
+
+.audioNombreProyecto{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:55%;
+  margin-left:20%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.audioPerfilProyecto{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:95%;
+  margin-left:24%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+   z-index: 999;
+}
+
+.audioCronograma{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:45%;
+  margin-left:25%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.audioPresupuesto{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:45%;
+  margin-left:20%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+
+.audioMarcoLogico{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:110%;
+  margin-left:20%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+
+.audioMarcoLogico{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:80%;
+  margin-left:26%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#textoMarcoLogico{
+    font-size:22px;
+}
+
+}
+
+@media (max-width: 1280px) and (max-height: 800px) {
+
+    #grafica {
+        margin-left: -18%;
+        margin-top: -29%;
+    }
+  #personajeDos{
+  
+    width:5.8%;
+}
+
+#personajeHombre{
+  
+    width:5.8%;
+}
+  
+
+    #btn_regresar {
+        margin-left: 75%;
+        margin-top: -3%;
+        width: 7%;
+    }
+
+    #contenido {
+        background: rgba(192,192,192,0.15);
+        height: 120%;
+    }
+
+    .player {
+        position: absolute;
+        background-color: #fff;
+        width: 580px;
+        height: 120px;
+        margin-top: 60%;
+        margin-left: 26%;
+        border-radius: 3px;
+        box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+    }
+
+    #lineaDos{
+    margin-top:78vh;
+    position:fixed;
+    margin-left:88%;
+}
+
+.audioVester{
+  position: absolute;
+  background-color: #fff;
+  width: 530px;
+  height: 120px;
+  margin-top:90%;
+  margin-left:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#matrizVester{
+    font-size:20px;
+}
+
+#tipMatrizVesterDos{
+    margin-left:41%;
+}
+
+.audioArbolProblemas{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top: 75%;
+  margin-left:26%;
+  margin-bottom:3%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#nombreProyectoMenu{
+    margin-top:-13%;
+    color:#238276;
+}
+
+.audioObjetivos{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:35%;
+  margin-left:30%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.audioResultados{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:65%;
+  margin-left:27%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.audioInvolucrados{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:37%;
+  margin-left:26%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#tituloInvolucrados{
+    font-size:24px;
+}
+
+
+.audioNombreProyecto{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:55%;
+  margin-left:20%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.audioPerfilProyecto{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:95%;
+  margin-left:24%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+   z-index: 999;
+}
+
+.audioCronograma{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:45%;
+  margin-left:25%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.audioPresupuesto{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:45%;
+  margin-left:20%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+
+.audioMarcoLogico{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:110%;
+  margin-left:20%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+
+.audioMarcoLogico{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:80%;
+  margin-left:26%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#textoMarcoLogico{
+    font-size:22px;
+}
+
+}
+
+@media (max-width: 1280px) and (max-height: 768px) {
+
+    #grafica {
+        margin-left: -18%;
+        margin-top: -29%;
+    }
+  #personajeDos{
+  
+    width:5.8%;
+}
+
+#personajeHombre{
+  
+    width:5.8%;
+}
+  
+
+    #btn_regresar {
+        margin-left: 75%;
+        margin-top: -3%;
+        width: 7%;
+    }
+
+    #contenido {
+        background: rgba(192,192,192,0.15);
+        height: 120%;
+    }
+
+    .player {
+        position: absolute;
+        background-color: #fff;
+        width: 580px;
+        height: 120px;
+        margin-top: 60%;
+        margin-left: 26%;
+        border-radius: 3px;
+        box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+    }
+
+    #lineaDos{
+    margin-top:78vh;
+    position:fixed;
+    margin-left:88%;
+}
+
+.audioVester{
+  position: absolute;
+  background-color: #fff;
+  width: 530px;
+  height: 120px;
+  margin-top:90%;
+  margin-left:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#matrizVester{
+    font-size:20px;
+}
+
+#tipMatrizVesterDos{
+    margin-left:41%;
+}
+
+.audioArbolProblemas{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top: 75%;
+  margin-left:26%;
+  margin-bottom:3%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#nombreProyectoMenu{
+    margin-top:-13%;
+    color:#238276;
+}
+
+.audioObjetivos{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:35%;
+  margin-left:30%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.audioResultados{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:65%;
+  margin-left:27%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.audioInvolucrados{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:37%;
+  margin-left:26%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#tituloInvolucrados{
+    font-size:24px;
+}
+
+
+.audioNombreProyecto{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:55%;
+  margin-left:20%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.audioPerfilProyecto{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:95%;
+  margin-left:24%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+   z-index: 999;
+}
+
+.audioCronograma{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:45%;
+  margin-left:25%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.audioPresupuesto{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:45%;
+  margin-left:20%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+
+.audioMarcoLogico{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:110%;
+  margin-left:20%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+
+.audioMarcoLogico{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:80%;
+  margin-left:26%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#textoMarcoLogico{
+    font-size:22px;
+}
+
+}
+
+@media (max-width: 1280px) and (max-height: 720px) {
+
+    #grafica {
+        margin-left: -18%;
+        margin-top: -29%;
+    }
+  #personajeDos{
+  
+    width:5.8%;
+}
+
+#personajeHombre{
+  
+    width:5.8%;
+}
+  
+
+    #btn_regresar {
+        margin-left: 75%;
+        margin-top: -3%;
+        width: 7%;
+    }
+
+    #contenido {
+        background: rgba(192,192,192,0.15);
+        height: 120%;
+    }
+
+    .player {
+        position: absolute;
+        background-color: #fff;
+        width: 580px;
+        height: 120px;
+        margin-top: 60%;
+        margin-left: 26%;
+        border-radius: 3px;
+        box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+    }
+
+    #lineaDos{
+    margin-top:78vh;
+    position:fixed;
+    margin-left:88%;
+}
+
+.audioVester{
+  position: absolute;
+  background-color: #fff;
+  width: 530px;
+  height: 120px;
+  margin-top:90%;
+  margin-left:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#matrizVester{
+    font-size:20px;
+}
+
+#tipMatrizVesterDos{
+    margin-left:41%;
+}
+
+.audioArbolProblemas{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top: 75%;
+  margin-left:26%;
+  margin-bottom:3%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#nombreProyectoMenu{
+    margin-top:-13%;
+    color:#238276;
+}
+
+.audioObjetivos{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:35%;
+  margin-left:30%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.audioResultados{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:65%;
+  margin-left:27%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.audioInvolucrados{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:37%;
+  margin-left:26%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#tituloInvolucrados{
+    font-size:24px;
+}
+
+
+.audioNombreProyecto{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:55%;
+  margin-left:20%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.audioPerfilProyecto{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:95%;
+  margin-left:24%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+   z-index: 999;
+}
+
+.audioCronograma{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:45%;
+  margin-left:25%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.audioPresupuesto{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:45%;
+  margin-left:20%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+
+.audioMarcoLogico{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:110%;
+  margin-left:20%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+
+.audioMarcoLogico{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top:80%;
+  margin-left:26%;
+  margin-bottom:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#textoMarcoLogico{
+    font-size:22px;
+}
+
+}
+
+@media (max-width: 1176px){ 
+
+    #grafica {
+        margin-left: -18%;
+        margin-top: -29%;
+    }
+  #personajeDos{
+  
+    width:5.8%;
+}
+
+#personajeHombre{
+  
+    width:5.8%;
+}
+  
+
+    #btn_regresar {
+        margin-left: 75%;
+        margin-top: -3%;
+        width: 7%;
+    }
+
+    #contenido {
+        background: rgba(192,192,192,0.15);
+        height: 120%;
+    }
+
+    .player {
+        position: absolute;
+        background-color: #fff;
+        width: 580px;
+        height: 120px;
+        margin-top: 60%;
+        margin-left: 26%;
+        border-radius: 3px;
+        box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+    }
+
+    #lineaDos{
+    margin-top:78vh;
+    position:fixed;
+    margin-left:88%;
+}
+
+.audioVester{
+  position: absolute;
+  background-color: #fff;
+  width: 530px;
+  height: 120px;
+  margin-top:90%;
+  margin-left:1%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#matrizVester{
+    font-size:20px;
+}
+
+#tipMatrizVesterDos{
+    margin-left:41%;
+}
+
+.audioArbolProblemas{
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  margin-top: 75%;
+  margin-left:26%;
+  margin-bottom:3%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#nombreProyectoMenu{
+    margin-top:-14%;
     color:#238276;
 }
 

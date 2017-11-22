@@ -373,7 +373,7 @@ h2.resp-accordion {
 }
 @media(max-width:1366px){
 	.inset input[type="text"],.inset input[type="password"],.inset input[type="email"] {
-		width: 91.3%;
+		width: 100%;
 	}
 	.right-section-w3ls {
 		width: 38.2%;
@@ -394,7 +394,7 @@ h2.resp-accordion {
 		width: 46%;
 	}
 	.inset input[type="text"], .inset input[type="password"], .inset input[type="email"] {
-		width: 90.7%;
+		width: 100%;
 	}
 	.message.warning {
 		width: 71.6%;
@@ -461,7 +461,7 @@ h2.resp-accordion {
 		width: 46%;
 	}
 	.inset input[type="text"], .inset input[type="password"], .inset input[type="email"] {
-		width: 91.4%;
+		width: 100%;
 	}
 }
 @media(max-width:991px){
@@ -486,7 +486,7 @@ h2.resp-accordion {
 		width: 38.01%;
 	}
 	.inset input[type="text"], .inset input[type="password"], .inset input[type="email"] {
-		width: 90.6%;
+		width: 100%;
 	}
 }
 @media(max-width:800px){
@@ -494,7 +494,7 @@ h2.resp-accordion {
 		padding: 2.1em;
 	}
 	.inset input[type="text"], .inset input[type="password"], .inset input[type="email"] {
-		width: 89.6%;
+		width: 100%;
 	}
 	.right-section-w3ls {
 		width: 37.86%;
@@ -520,7 +520,7 @@ h2.resp-accordion {
 }
 @media(max-width:768px){
 	.inset input[type="text"], .inset input[type="password"], .inset input[type="email"] {
-		width: 89%;
+		width: 100%;
 	}
 	.right-section-w3ls {
 		width: 37%;
