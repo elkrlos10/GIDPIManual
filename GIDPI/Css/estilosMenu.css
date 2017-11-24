@@ -1664,12 +1664,17 @@ body{
   margin-left:78%;
   margin-top:-9.5%;
 }
+#menu{
+    margin-top: 2%;
+    width: 515px;
+    height: 515px;
+  }
 
 #logoMenu{
     width:30%;
     position:absolute;
     transform:translateX(-55%);
-    margin-top:12%;
+    margin-top:7%;
 }
 
 #menuAyuda {

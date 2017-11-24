@@ -216,7 +216,7 @@
 @media (max-width: 1280px) and (min-width: 1153px) {
 
 #menuAyuda{
-    margin-top:-6%;
+    margin-top:-7%;
     margin-left:94%;
     position:fixed;
     z-index:300;
@@ -260,7 +260,7 @@
 @media(max-width:1152px) {
 
 #menuAyuda{
-    margin-top:-5.3%;
+    margin-top:-6.3%;
     margin-left:94%;
     position:fixed;
     z-index:300;

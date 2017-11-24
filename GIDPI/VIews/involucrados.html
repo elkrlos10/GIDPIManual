@@ -193,6 +193,9 @@
 </div>
 
 <script>
+    
+
+
 function toggleVideo(state) {
     // if state == 'hide', hide. Else: show video
     var div = document.getElementById("popupVid");
@@ -202,6 +205,14 @@ function toggleVideo(state) {
     iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
 }
 </script>
+
+<style>
+     ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+
+</style>
 
 <script src="../scripts/AnimacionTextoVideoAudio.js"></script>
 <script src="../scripts/AnimacionTips.js"></script>
