@@ -307,7 +307,7 @@
                 <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height:8vh;"></div>
 
                 <div id="impactoStyle" style="margin-top:-2%; position:relative; margin-bottom:2%">
-                    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height: 6vh;"><p class="textos">IMPACTO</p></div>
+                    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" id="tituloImpacto"  style="height: 6vh;"><p class="textos">IMPACTO</p></div>
 
                     <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height: 20vh;">
                         <textarea class="form-control" rows="9" maxlength="5000" ng-model="PerfilProyecto2.Impacto"></textarea>
@@ -321,7 +321,7 @@
 
                 <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" id="metodologiaStyle " style="height:8vh; margin-top:2%"></div>
 
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="height: 6vh;"><p class="textos">METODOLOGÍA</p></div>
+                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" id="tituloMetodologia" style="height: 6vh;"><p class="textos">METODOLOGÍA</p></div>
 
 
                 <table class="table col-lg-11 col-md-11 col-sm-11 col-xs-11 ">
@@ -528,6 +528,13 @@
      @media (max-width:1176px){
          #menuTabs{
              margin-top: 8%;
+        }
+
+         #tituloImpacto{
+             margin-top:5%;
+         }
+        #tituloMetodologia {
+            margin-top:5%;
         }
     }
 

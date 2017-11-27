@@ -539,11 +539,11 @@
                 var elemento, txtArea, elemento2;
 
                 if (tipo === "vacio" || tipo === undefined) { //validar si el select de tipo viene vacio
-                    alerta1("Recuerda.", "Debes seleccionar un efecto o una causa.", 3);
+                    alerta1("Recuerda.", "Debes seleccionar un fin o un medio.", 3);
                 }
 
                 if (indirecto == "vacio" && tipo == "efectoIndirecto" || tipo == "causaIndirecta") {
-                    alerta1("Recuerda.", "Debes seleccionar un efecto o una causa primero.", 3);
+                    alerta1("Recuerda.", "Debes seleccionar un fin o un medio primero.", 3);
                 }
 
                 //crear efectos
@@ -565,7 +565,7 @@
                     document.querySelector("#imgEfecto3").appendChild(img3);
                     document.querySelector("#efectoIndirecto").appendChild(elemento2);
                 } else if (tipo == "efecto" && efectos.length >= 5) {
-                    alerta1("Recuerda.", "Ya tienes 5 efectos.", 2);
+                    alerta1("Recuerda.", "Ya tienes 5 fines.", 2);
                 }
 
                 // crear causas
@@ -586,7 +586,7 @@
                     document.querySelector("#imgCausa3").appendChild(img3);
                     document.querySelector("#causaIndirecta").appendChild(elemento2);
                 } else if (tipo == "causa" && causas.length >= 5) {
-                    alerta1("Recuerda.", "Ya tienes 5 causas.", 2);
+                    alerta1("Recuerda.", "Ya tienes 5 medios.", 2);
                 }
 
                 if (indirecto != "vacio") {
@@ -604,7 +604,7 @@
                         efectoIndirectoUl.querySelector("li:nth-child(" + indirecto + ") div:last-child").appendChild(borrar);
 
                     } else if (document.querySelectorAll("#efectoIndirecto li:nth-child(" + indirecto + ") div").length >= 3) {
-                        alerta1("Recuerda.", "Ya tienes 3 efectos indirectos.", 2);
+                        alerta1("Recuerda.", "Ya tienes 3 fines indirectos.", 2);
                     }
 
                     // crear causa indirecta
@@ -621,7 +621,7 @@
                         causaIndirectaUl.querySelector("li:nth-child(" + indirecto + ")").appendChild(bloque).appendChild(txtArea);
                         causaIndirectaUl.querySelector("li:nth-child(" + indirecto + ") div:last-child").appendChild(borrar);
                     } else if (document.querySelectorAll("#causaIndirecta li:nth-child(" + indirecto + ") div").length >= 3) {
-                        alerta1("Recuerda.", "Ya tienes 3 causas indirectas.", 2);
+                        alerta1("Recuerda.", "Ya tienes 3 medios indirectos.", 2);
                     }
                 }
             }
