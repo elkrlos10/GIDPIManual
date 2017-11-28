@@ -17,7 +17,7 @@ namespace LogicaNegocio.LogicaNegocio
             MatrizVester oMatriz = new MatrizVester();
 
             oMatriz.IdProyecto = oMatrizDetalle.IdProyecto;
-            oMatriz.ProblemaGeneral = oMatrizDetalle.ProblemaGeneral;
+            oMatriz.ProblemaGeneral = oMatrizDetalle.ProblemaGeneral.ToLower();
             entity.MatrizVester.Add(oMatriz);
             entity.SaveChanges();
 
@@ -42,7 +42,7 @@ namespace LogicaNegocio.LogicaNegocio
                 DetalleMatriz oDetalle = new DetalleMatriz();
 
                 oDetalle.IdMatriz = matriz.IdMatriz;
-                oDetalle.Problema = item.Problema;
+                oDetalle.Problema = item.Problema.ToLower();
                 oDetalle.EjeX = item.EjeX;
                 oDetalle.EjeY = item.EjeY;
                 oDetalle.Criterio = item.Criterio;

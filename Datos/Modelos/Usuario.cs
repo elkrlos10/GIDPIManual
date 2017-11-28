@@ -19,7 +19,7 @@ namespace Datos.Modelos
         public string Usuario1 { get; set; }
 
         [Required]
-        [StringLength(20)]
+    
         public string Contrasena { get; set; }
 
         public int TipoUsuario { get; set; }

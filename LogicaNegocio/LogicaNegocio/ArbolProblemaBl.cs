@@ -42,10 +42,10 @@ namespace LogicaNegocio.LogicaNegocio
         public void GuardarDatosArbol(ArbolProblemaDTO oArbolDTO)
         {
             var ArbolProyecto1 = (from i in entity.ArbolProblema
-                                 where i.IdProyecto == oArbolDTO.IdProyecto
-                                 select i).FirstOrDefault();
+                                  where i.IdProyecto == oArbolDTO.IdProyecto
+                                  select i).FirstOrDefault();
 
-            if (ArbolProyecto1== null)
+            if (ArbolProyecto1 == null)
             {
                 string base64 = oArbolDTO.imagen.Split(',')[1];
                 ArbolProblema oArbol = new ArbolProblema();
@@ -134,6 +134,18 @@ namespace LogicaNegocio.LogicaNegocio
                               where i.IdArbolProblema == ArbolProyecto.IdArbolProblema
                               select i).ToList();
 
+                var cantidadCausas = (oArbolDTO.Causas.Count - 1);
+                if (causas.Count < cantidadCausas)
+                {
+                    foreach (var item in causas)
+                    {
+                        //if (item)
+                        //{
+
+                        //}
+                    }
+                }
+
                 var contador = 0;
                 foreach (var item in oArbolDTO.Causas)
                 {
@@ -141,15 +153,15 @@ namespace LogicaNegocio.LogicaNegocio
                     {
                         CausaDirecta oCausa1 = new CausaDirecta();
 
-                        if ((contador-1) < causas.Count)
+                        if ((contador - 1) < causas.Count)
                         {
-                                causas[contador-1].IdArbolProblema = ArbolProyecto.IdArbolProblema;
-                                causas[contador-1].Causa = item.Causa;
-                                entity.SaveChanges();
+                            causas[contador - 1].IdArbolProblema = ArbolProyecto.IdArbolProblema;
+                            causas[contador - 1].Causa = item.Causa;
+                            entity.SaveChanges();
 
                             var idCausa = causas[contador - 1].IdCausa;
                             oCausa1 = (from i in entity.CausaDirecta
-                                         where i.IdCausa == idCausa
+                                       where i.IdCausa == idCausa
                                        select i).FirstOrDefault();
                         }
                         else
@@ -161,37 +173,101 @@ namespace LogicaNegocio.LogicaNegocio
                             entity.SaveChanges();
 
                             oCausa1 = (from i in entity.CausaDirecta
-                                         orderby i.IdCausa descending
-                                         select i).FirstOrDefault();
+                                       orderby i.IdCausa descending
+                                       select i).FirstOrDefault();
                         }
 
                         List<CausaIndirecta> oLista = new List<CausaIndirecta>();
-                  
-                            oLista= (from i in entity.CausaIndirecta
-                                     where i.IdCausa == oCausa1.IdCausa
-                                     select i).ToList();
-                        
+
+                        oLista = (from i in entity.CausaIndirecta
+                                  where i.IdCausa == oCausa1.IdCausa
+                                  select i).ToList();
+
 
                         var contador1 = 0;
                         foreach (var item1 in item.CausaIndirecta)
                         {
-                            
-                            //if (oLista.Count != 0 )
-                            //{
-                                if (contador1 < oLista.Count)
-                                {
-                                    oLista[contador1].IdCausa = oCausa1.IdCausa;
-                                    oLista[contador1].CausaIndirecta1 = item1;
-                                    entity.SaveChanges();
-                                }
-                                else
-                                {
-                                    CausaIndirecta oCausaIndirecta = new CausaIndirecta();
-                                    oCausaIndirecta.IdCausa = oCausa1.IdCausa;
-                                    oCausaIndirecta.CausaIndirecta1 = item1;
-                                    entity.CausaIndirecta.Add(oCausaIndirecta);
-                                    entity.SaveChanges();
-                                }
+                            if (contador1 < oLista.Count)
+                            {
+                                oLista[contador1].IdCausa = oCausa1.IdCausa;
+                                oLista[contador1].CausaIndirecta1 = item1;
+                                entity.SaveChanges();
+                            }
+                            else
+                            {
+                                CausaIndirecta oCausaIndirecta = new CausaIndirecta();
+                                oCausaIndirecta.IdCausa = oCausa1.IdCausa;
+                                oCausaIndirecta.CausaIndirecta1 = item1;
+                                entity.CausaIndirecta.Add(oCausaIndirecta);
+                                entity.SaveChanges();
+                            }
+
+                            contador1++;
+                        }
+                    }
+                    contador++;
+                }
+
+                var Efectos = (from i in entity.EfectoDirecto
+                               where i.IdArbolProblema == ArbolProyecto.IdArbolProblema
+                               select i).ToList();
+
+                var contEfecto = 0;
+                foreach (var item in oArbolDTO.Efectos)
+                {
+                    if (item.Efecto != "")
+                    {
+                        EfectoDirecto oEfecto1 = new EfectoDirecto();
+
+                        if ((contEfecto - 1) < Efectos.Count)
+                        {
+                            Efectos[contEfecto - 1].IdArbolProblema = ArbolProyecto.IdArbolProblema;
+                            Efectos[contEfecto - 1].Efecto = item.Efecto;
+                            entity.SaveChanges();
+
+                            var idEfecto = Efectos[contEfecto - 1].IdEfecto;
+                            oEfecto1 = (from i in entity.EfectoDirecto
+                                        where i.IdEfecto == idEfecto
+                                        select i).FirstOrDefault();
+                        }
+                        else
+                        {
+                            EfectoDirecto oEfecto = new EfectoDirecto();
+                            oEfecto.IdArbolProblema = ArbolProyecto.IdArbolProblema;
+                            oEfecto.Efecto = item.Efecto;
+                            entity.EfectoDirecto.Add(oEfecto);
+                            entity.SaveChanges();
+
+                            oEfecto = (from i in entity.EfectoDirecto
+                                       orderby i.IdEfecto descending
+                                       select i).FirstOrDefault();
+                        }
+
+                        List<EfectoIndirecto> oLista = new List<EfectoIndirecto>();
+
+                        oLista = (from i in entity.EfectoIndirecto
+                                  where i.IdEfecto == oEfecto1.IdEfecto
+                                  select i).ToList();
+
+
+                        var contador1 = 0;
+                        foreach (var item1 in item.EfectoIndirecta)
+                        {
+
+                            if (contador1 < oLista.Count)
+                            {
+                                oLista[contador1].IdEfecto = oEfecto1.IdEfecto;
+                                oLista[contador1].EfectoIndirecto1 = item1;
+                                entity.SaveChanges();
+                            }
+                            else
+                            {
+                                EfectoIndirecto oEfectoIndirecto = new EfectoIndirecto();
+                                oEfectoIndirecto.IdEfecto = oEfecto1.IdEfecto;
+                                oEfectoIndirecto.EfectoIndirecto1 = item1;
+                                entity.EfectoIndirecto.Add(oEfectoIndirecto);
+                                entity.SaveChanges();
+                            }
 
                             //}
                             //else
@@ -205,8 +281,9 @@ namespace LogicaNegocio.LogicaNegocio
                             contador1++;
                         }
                     }
-                    contador++;
+                    contEfecto++;
                 }
+
             }
 
 

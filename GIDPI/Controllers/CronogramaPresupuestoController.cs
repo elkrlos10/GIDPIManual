@@ -51,6 +51,26 @@ namespace GIDPI.Controllers
         }
 
         [HttpPost]
+        public IHttpActionResult eliminarItemCronograma(ParametrosDTO oParametros)
+        {
+            try
+            {
+                CronogramaPresupuestoBL oCronogramaPresupuestoBl = new CronogramaPresupuestoBL();
+                 oCronogramaPresupuestoBl.eliminarItemCronograma(int.Parse(oParametros.Parametro1));
+
+                return Ok(new { success = true });
+
+            }
+            catch (Exception e)
+            {
+
+                return Ok(new { success = false, e.Message });
+
+            }
+        }
+
+
+        [HttpPost]
         public IHttpActionResult GuardarPresupuesto(List<Presupuesto> oListaPresupuesto)
         {
             try

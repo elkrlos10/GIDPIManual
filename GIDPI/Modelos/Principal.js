@@ -107,7 +107,7 @@ ManualApp.config(function ($routeProvider) {
                         $location.url("/Admin");
                     }
 
-                    if ($rootScope.proyecto.datos.Etapa < 10 && $location.path() == '/Reporte') {
+                    if ($rootScope.proyecto.datos.Etapa < 11 && $location.path() == '/Reporte') {
                         $location.url("/Menu");
 
                     }
@@ -138,11 +138,11 @@ ManualApp.config(function ($routeProvider) {
                         $location.url("/Menu");
                         return;
                     }
-                    if ($rootScope.proyecto.datos.Etapa == 7 && ($location.path() == '/Reporte' || $location.path() == '/MarcoL')) {
+                    if ($rootScope.proyecto.datos.Etapa == 8 && ($location.path() == '/Reporte' || $location.path() == '/MarcoL')) {
                         $location.url("/Menu");
                         return;
                     }
-                    if ($rootScope.proyecto.datos.Etapa == 9 && ($location.path() == '/Reporte')) {
+                    if ($rootScope.proyecto.datos.Etapa == 10 && ($location.path() == '/Reporte')) {
                         $location.url("/Menu");
                         return;
                     }

@@ -8,10 +8,14 @@ function borrarElemento(e) {
     elementoBorrar.parentNode.removeChild(elementoBorrar);
     imgBorrar.parentNode.removeChild(imgBorrar);
     indirectoBorrar.parentNode.removeChild(indirectoBorrar);
+    console.log(idElementoBorrar);
 }
 
 function borrarElemento2(e) {
     elementoBorrar = e.parentNode.parentNode;
     var idElementoPadre = elementoBorrar.parentNode.getAttribute("id");
     document.querySelector("#" + idElementoPadre).removeChild(elementoBorrar);
+    console.log(idElementoPadre);
 }
+
+

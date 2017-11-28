@@ -39,8 +39,8 @@
         </div>
     </div>
 
-    <audio id="audio-player" ontimeupdate="SeekBar()" ondurationchange="CreateSeekBar()" preload="auto" loop>
-        <source src="../audios/Don Tetto - Yo Estaré Bien (Con Letra).mp3" type="audio/mpeg">
+    <audio id="audio-player" ontimeupdate="SeekBar()" ondurationchange="CreateSeekBar()" preload="auto" >
+        <source src="../audios/8.Cronograma.wav" type="audio/mpeg">
     </audio>
 </div>
 <!--FINALIZA AYUDA AUDIO-->
@@ -61,7 +61,7 @@
 
     <div class="container" style="min-height:100vh; background-color:rgba(192,192,192,0.15);">
 
-        <div id="containerCronograma">
+        <div id="containerCronograma" >
 
             <nav class="verticalSeis" id="menuAyudaSeis">
                 <input type="checkbox" id="toggle6" />
@@ -90,8 +90,8 @@
                     <table class="table table-responsive " style="width:80%;">
                         <thead>
                             <tr>
-
-                                <th class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">Actividad</th>
+                               <th class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center">#</th>
+                                <th class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-center">Actividad</th>
                                 <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">Fecha inicio</th>
                                 <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">Fecha fin</th>
                             </tr>
@@ -99,6 +99,8 @@
 
                         <tbody>
                             <tr ng-repeat="crono in Cronograma">
+
+                                <td><h4 style="text-align:center">{{$index+1}}</h4></td>
                                 <td><textarea class="form-control" maxlength="500" ng-model="crono.Actividad"></textarea></td>
                                 <td class="input-daterange">
 
@@ -209,8 +211,8 @@
                 </div>
             </div>
 
-            <audio id="audio-player1" ontimeupdate="SeekBar1()" ondurationchange="CreateSeekBar1()" preload="auto" loop>
-                <source src="../audios/Don Tetto - Yo Estaré Bien (Con Letra).mp3" type="audio/mpeg">
+            <audio id="audio-player1" ontimeupdate="SeekBar1()" ondurationchange="CreateSeekBar1()" preload="auto" >
+                <source src="../audios/9.Presupuesto.wav" type="audio/mpeg">
             </audio>
         </div>
         <!--FINALIZA AYUDA AUDIO-->
@@ -228,7 +230,7 @@
 
 
 
-        <div id="containerPresupuesto" class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+        <div id="containerPresupuesto" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
             <nav class="verticalSiete" id="menuAyudaSiete">
                 <input type="checkbox" id="toggle7" />
@@ -246,7 +248,7 @@
                 </menu>
             </nav>
 
-            <div style="height: 12vh; margin-left:5%;">
+            <div style="height: 12vh;">
                 <h1 class="titulovistaObjetivos">PRESUPUESTO</h1>
             </div>
 
@@ -271,7 +273,7 @@
                             <td><input class="form-control" type="text" style="margin-top:5%; " maxlength="100" ng-model="presu.Concepto" /></td>
                             <td><textarea class="form-control" type="text" maxlength="200" ng-model="presu.Descripcion"></textarea> </td>
                             <td><input class="form-control" type="text" style="margin-top:10%; " maxlength="50" ng-model="presu.Unidad" /></td>
-                            <td><input class="form-control" type="number" style="margin-top:10%;text-align:right " placeholder="#" ng-keyup="CalcularValorTotal()" ng-model="presu.Cantidad" format="number" /></td>
+                            <td><input class="form-control" type="number" style="margin-top:10%;text-align:right "  placeholder="#" ng-keyup="CalcularValorTotal()" ng-model="presu.Cantidad" format="number" /></td>
                             <td>
                                 <input placeholder="$" class="form-control" type="text" style="margin-top:4.5%; text-align:right " ng-keyup="CalcularValorTotal()" ng-model="presu.ValorUnitario" format="number" />
                             </td>

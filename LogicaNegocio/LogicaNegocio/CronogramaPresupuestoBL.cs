@@ -44,9 +44,9 @@ namespace LogicaNegocio.LogicaNegocio
                             where i.IdProyecto == id
                             select i).FirstOrDefault();
 
-            if (Proyecto.Etapa <=8)
+            if (Proyecto.Etapa <=9)
             {
-                Proyecto.Etapa = 8;
+                Proyecto.Etapa = 9;
                 entity.SaveChanges();
             }
 
@@ -96,9 +96,9 @@ namespace LogicaNegocio.LogicaNegocio
                             where i.IdProyecto == id
                             select i).FirstOrDefault();
 
-            if (Proyecto.Etapa <= 9)
+            if (Proyecto.Etapa <= 10)
             {
-                Proyecto.Etapa = 9;
+                Proyecto.Etapa = 10;
                 entity.SaveChanges();
             }
 
@@ -144,5 +144,16 @@ namespace LogicaNegocio.LogicaNegocio
             return aiu;
         }
 
+
+
+        public void eliminarItemCronograma(int idCronograma)
+        {
+            var Consulta = (from i in entity.Cronograma
+                            where i.IdCronograma == idCronograma
+                            select i).FirstOrDefault();
+
+            entity.Cronograma.Remove(Consulta);
+            entity.SaveChanges();
+        }
     }
 }

@@ -47,11 +47,16 @@ namespace LogicaNegocio.LogicaNegocio
                    
                     if (oMarco.Resultado1 == "" || oMarco.Resultado1 == null)
                     {
-                        oMarco.Resultado1 = contadorRes.ToString() + "- " + item.ObjetivoEsp;
+                        oMarco.Resultado1 = contadorRes.ToString() + "- " + item1.Resultado;
+                        //oMarco.Resultado1 = contadorRes.ToString() + "- " + item.ObjetivoEsp;
+                        oMarco.Resultado2 = contadorRes.ToString() + "- " + item1.MedidaResultado;
+                        oMarco.Resultado3 = contadorRes.ToString() + "- " + item1.HerramientaResultado;
                     }
                     else
                     {
                         oMarco.Resultado1 = oMarco.Resultado1 + " \n" + contadorRes.ToString() + "- " + item1.Resultado;
+                        oMarco.Resultado2 = oMarco.Resultado2 + " \n" + contadorRes.ToString() + "- " + item1.MedidaResultado;
+                        oMarco.Resultado3 = oMarco.Resultado3 + " \n" + contadorRes.ToString() + "- " + item1.HerramientaResultado;
                     }
 
                 }
@@ -78,6 +83,8 @@ namespace LogicaNegocio.LogicaNegocio
                 }
 
             }
+
+         
             oMarco.Fin1 = ObjetivoGeneral.ObjetivoCentral;
 
             return oMarco;
@@ -96,7 +103,7 @@ namespace LogicaNegocio.LogicaNegocio
                                 where i.IdProyecto == oMarco.IdProyecto
                                 select i).FirstOrDefault();
 
-                Proyecto.Etapa = 10;
+                Proyecto.Etapa = 11;
                 entity.SaveChanges();
             }
             else
@@ -131,6 +138,8 @@ namespace LogicaNegocio.LogicaNegocio
             var marco = (from i in entity.MarcoLogico
                          where i.IdProyecto == idProyecto
                          select i).FirstOrDefault();
+            var vstring = marco.Actividad1.Length;
+
             return marco;
         }
     }

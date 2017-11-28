@@ -15,7 +15,7 @@ namespace Datos.Modelos
 
         public int IdProyecto { get; set; }
 
-        [StringLength(140)]
+        [StringLength(150)]
         public string ObjetivoCentral { get; set; }
 
         public byte[] Imagen { get; set; }

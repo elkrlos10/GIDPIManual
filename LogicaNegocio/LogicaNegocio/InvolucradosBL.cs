@@ -62,6 +62,15 @@ namespace LogicaNegocio.LogicaNegocio
             return involucrados;
         }
 
+        public void EliminarInvolucrado(int idInvolucrado)
+        {
+           var Involucrado = (from i in entity.Involucrados
+                            where i.IdInvolucrado == idInvolucrado
+                            select i).FirstOrDefault();
 
+            entity.Involucrados.Remove(Involucrado);
+            entity.SaveChanges();
+
+        }
     }
 }

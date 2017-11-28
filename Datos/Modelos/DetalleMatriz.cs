@@ -16,7 +16,7 @@ namespace Datos.Modelos
 
         public int IdMatriz { get; set; }
 
-        [StringLength(100)]
+
         public string Problema { get; set; }
 
         public int EjeX { get; set; }

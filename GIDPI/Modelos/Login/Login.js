@@ -89,7 +89,6 @@
 
                             })
                             location.reload();
-
                         }
                     });
                 }
@@ -113,7 +112,6 @@
                 }else  if ($scope.PersonaJuridica.Responsable == null || $scope.PersonaJuridica.Responsable == ""  ) {
                     alertify.success("El campo Responsable no puede estar vacio");
                     return false;
-                
              
                 } else if ($scope.PersonaJuridica.Email == null || $scope.PersonaJuridica.Email == "") {
                     alertify.success("El campo Email no puede estar vacio o debe tener una direccion correcta");

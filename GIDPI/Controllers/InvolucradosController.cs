@@ -48,5 +48,26 @@ namespace GIDPI.Controllers
 
             }
         }
+
+
+        [HttpPost]
+        public IHttpActionResult EliminarInvolucrado(ParametrosDTO oParametros)
+        {
+            try
+            {
+                InvolucradosBL oInvolucradosBL = new InvolucradosBL();
+                oInvolucradosBL.EliminarInvolucrado(int.Parse(oParametros.Parametro1));
+
+                return Ok(new { success = true });
+
+            }
+            catch (Exception e)
+            {
+
+                return Ok(new { success = false, e.Message });
+
+            }
+        }
+
     }
 }

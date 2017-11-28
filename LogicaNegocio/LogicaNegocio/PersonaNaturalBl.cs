@@ -22,8 +22,8 @@ namespace LogicaNegocio.LogicaNegocio
             if (usuario == null)
             {
 
-                //var Encriptar = SecurityEncode.SecurityEncode.Encriptar(oUsuario.Contrasena);
-                //oUsuario.Contrasena= Encriptar:
+                var Encriptar = SecurityEncode.SecurityEncode.Encriptar(oUsuario.Contrasena);
+                oUsuario.Contrasena = Encriptar;
                 entity.Usuario.Add(oUsuario);
                 entity.SaveChanges();
 
@@ -56,8 +56,8 @@ namespace LogicaNegocio.LogicaNegocio
 
             if (usuario == null)
             {
-                //var Encriptar = SecurityEncode.SecurityEncode.Encriptar(oUsuario.Contrasena);
-                //oUsuario.Contrasena= Encriptar:
+                var Encriptar = SecurityEncode.SecurityEncode.Encriptar(oUsuario.Contrasena);
+                oUsuario.Contrasena = Encriptar;
                 entity.Usuario.Add(oUsuario);
                 entity.SaveChanges();
 

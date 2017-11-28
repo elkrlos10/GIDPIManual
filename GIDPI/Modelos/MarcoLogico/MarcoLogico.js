@@ -79,7 +79,7 @@
                 if (response.success) {
                     $rootScope.proyecto.datos.Etapa = response.proyecto.Etapa;
 
-                    if ($rootScope.proyecto.datos.Etapa == 9) {
+                    if ($rootScope.proyecto.datos.Etapa == 10) {
                         MarcoLogicoService.LLenarMarco($rootScope.proyecto.datos.id, function (response) {
 
                             if (response.success) {

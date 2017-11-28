@@ -31,6 +31,17 @@
             });
         };
 
+
+        service.EliminarInvolucrado = function (IdProyecto, callback) {
+            item = {
+                Parametro1: IdProyecto
+            }
+            $http.post(URLServices + "Involucrados/EliminarInvolucrado/", item)
+            .success(function (response) {
+                callback(response);
+            });
+        };
+
         return service;
 
     }]);

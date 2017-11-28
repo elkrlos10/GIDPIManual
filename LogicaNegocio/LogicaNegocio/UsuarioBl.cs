@@ -1,6 +1,7 @@
 ﻿using Datos;
 using Datos.Modelos;
 using LogicaNegocio.Mail;
+using LogicaNegocio.SecurityEncode;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +14,10 @@ namespace LogicaNegocio.LogicaNegocio
     {
         public Usuario ConsutarUsuario(Usuario oUsuario)
         {
+
             Model1 entity = new Model1();
-            //var Encriptar = SecurityEncode.SecurityEncode.Encriptar(oUsuario.Contrasena);
+            var desencriptar = SecurityEncode.SecurityEncode.Encriptar(oUsuario.Contrasena);
+            oUsuario.Contrasena = desencriptar;
             var usuario = (from i in entity.Usuario
                            where i.Usuario1 == oUsuario.Usuario1
                            && i.Contrasena == oUsuario.Contrasena

@@ -46,7 +46,7 @@
                 }, 1000);
             }
 
-
+           
             $scope.MostrarCronograma = function () {
                 $("#containerCronograma").show();
                 $("#containerPresupuesto").hide();
@@ -66,6 +66,17 @@
             $scope.agregarCronograma = function (index) {
 
                 //$("#FechaInicio0").remove();
+                if ($scope.Cronograma.length >= 15) {
+                    swal({
+                        text: 'EL maximo de actividad es de 15',
+                        type: 'warning',
+                        confirmButtonColor: '#238276',
+                        width: '25%',
+                        allowOutsideClick: false
+
+                    })
+                    return false;
+                }
 
                 $scope.Cronograma.push({
                     IdProyecto: $rootScope.proyecto.datos.id,
@@ -76,14 +87,66 @@
             }
 
             $scope.EliminarCamposCrononograma = function () {
+                   
 
-                if ($scope.Cronograma[($scope.Cronograma.length - 1)].Actividad == "" && $scope.Cronograma[($scope.Cronograma.length - 1)].FechaInicio == ""
-                    && $scope.Cronograma[($scope.Cronograma.length - 1)].FechaFin == "") {
 
-                    if ($scope.Cronograma.length > 1) {
+
+                if ($scope.Cronograma.length > 1) {
+                    console.log($scope.Cronograma);
+                    if ($scope.Cronograma[$scope.Cronograma.length - 1].IdCronograma == undefined) {
                         $scope.Cronograma.splice(($scope.Cronograma.length - 1), 1);
+                    } else {
+                        swal({
+                            title: '¿Esta seguro?',
+                            text: "¿Esta seguro de eliminar la ultima actividad?",
+                            type: 'warning',
+                            showCancelButton: true,
+                            confirmButtonColor: '#238276',
+                            cancelButtonColor: '#d33',
+                            confirmButtonText: 'Si, Eliminar',
+                            cancelButtonText: 'No, Cancelar!',
+                            confirmButtonClass: 'btn btn-success',
+                            cancelButtonClass: 'btn btn-danger',
+                            //preConfirm: function () {
+
+                            //}
+
+                        }).then(function () {
+                            CronogramaPresupuestoService.eliminarItemCronograma( $scope.Cronograma[$scope.Cronograma.length -1 ].IdCronograma, function (response) {
+                                if (response.success) {
+                                    swal({
+
+                                        confirmButtonColor: '#238276',
+                                        title: 'Borrado!',
+                                        text: 'se borro la ultima actividad',
+                                        type: 'success'
+                                    }).then(function () {
+                                    })
+
+                                    $scope.Cronograma.splice(($scope.Cronograma.length - 1), 1);
+                                   
+                                } else {
+                                    alert("salio mal");
+                                }
+                            })
+                        }), function (dismiss) {
+                            // dismiss can be 'cancel', 'overlay',
+                            // 'close', and 'timer'
+                            if (dismiss === 'cancel') {
+                                swal({
+                                    confirmButtonColor: '#238276',
+                                    title: 'Eliminado',
+                                    text: 'El proyecto ha sido eliminado!',
+                                    type: 'error',
+                                })
+                            }
+                        }
                     }
+
                 }
+
+                
+               
 
             };
 
@@ -139,10 +202,11 @@
 
             $scope.GuardarCronograma = function () {
                 var cont = 0;
-
+                var cantidadString = "";
+                var errorFechas = "";
                 $.each($scope.Cronograma, function (index, value) {
+                    cantidadString += value.Actividad;
                     if (value.Actividad == "" || value.FechaInicio == "" || value.FechaFin == "" ) {
-
                         cont++;
                     } else {
                         var x = value.FechaInicio.split('/');
@@ -155,16 +219,34 @@
                                 confirmButtonColor: '#238276',
                                 width: '25%',
                                 allowOutsideClick: false
-
                             })
-                            return;
+                            errorFechas += ' - ' + (index + 1).toString() + '\n';
                         }
                     }
-                  
-
                 })
                 if (cont == 0) {
+                    //if (errorFechas.length > 15) {
+                    //    swal({
+                    //        text: 'EL maximo de actividad es de 15',
+                    //        type: 'warning',
+                    //        confirmButtonColor: '#238276',
+                    //        width: '25%',
+                    //        allowOutsideClick: false
 
+                    //    })
+                    //    return false;
+                    //}
+                    if (errorFechas!="") {
+                        swal({
+                            title:'Error fechas',
+                            text: "La fecha inicio de las posiciones:  " + errorFechas + " sobrepasan la fecha final.",
+                            confirmButtonColor: '#238276',
+                            width: '25%',
+                            allowOutsideClick: false
+
+                        })
+                        return false;
+                    }
                     
                     CronogramaPresupuestoService.GuardarCronograma($scope.Cronograma, function (response) {
                         if (response.success) {
@@ -172,13 +254,10 @@
                                 text: 'Registro Exitoso',
                                 confirmButtonColor: '#238276',
                                 width: '25%'
-
                             })
-                        
                             $("#btnPresupuesto").removeAttr("disabled", "disabled");
                             $("#containerPresupuesto").show();
                             $("#containerCronograma").hide();
-
                         }
                     })
                 } else {
@@ -191,13 +270,13 @@
                 if (response.success) {
                     $rootScope.proyecto.datos.Etapa = response.proyecto.Etapa;
 
-                    if ($rootScope.proyecto.datos.Etapa >= 8) {
+                    if ($rootScope.proyecto.datos.Etapa >= 9) {
                         $("#btnPresupuesto").removeAttr("disabled", "disabled");
                         CronogramaPresupuestoService.ConsultarCronograma($rootScope.proyecto.datos.id, function (response) {
 
                             if (response.success) {
                                 $scope.Cronograma = response.Cronograma;
-
+                                console.log($scope.Cronograma)
 
                             }
 
@@ -292,7 +371,7 @@
 
                 var contador1 = 0;
                 $.each($scope.Presupuesto, function (index, value) {
-                    
+                    console.log($scope.Presupuesto.ValorUnitario);
                     if (value.Item == "" || value.Concepto == "" || value.Descripcion == "" || value.Unidad=="" || value.Cantidad=="" || value.ValorUnitario=="") {
                         alertify.success("Ups! Faltan campos por completar");
                         contador1++;
@@ -349,13 +428,14 @@
                 if (response.success) {
                     $rootScope.proyecto.datos.Etapa = response.proyecto.Etapa;
 
-                    if ($rootScope.proyecto.datos.Etapa >= 9) {
+                    if ($rootScope.proyecto.datos.Etapa >= 10) {
 
                         CronogramaPresupuestoService.ConsultarPresupuesto($rootScope.proyecto.datos.id, function (response) {
                             if (response.success) {
                                 $scope.total = 0;
                                 //$scope.Presupuesto = [];
 
+                                
                                 $scope.Presupuesto = response.Presupuesto;
                                 $.each($scope.Presupuesto, function (index, value) {
                                     value.ValorTotal = value.Cantidad * value.ValorUnitario;

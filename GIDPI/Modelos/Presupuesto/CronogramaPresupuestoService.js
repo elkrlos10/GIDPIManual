@@ -24,6 +24,20 @@
         };
 
 
+        service.eliminarItemCronograma = function (idCronograma, callback) {
+
+            item =
+            {
+                Parametro1: idCronograma
+            }
+            $http.post(URLServices + "CronogramaPresupuesto/eliminarItemCronograma/", item)
+            .success(function (response) {
+                callback(response);
+            });
+        };
+
+
+
         service.AbrirProyecto = function (IdProyecto, callback) {
             item = {
                 Parametro1: IdProyecto

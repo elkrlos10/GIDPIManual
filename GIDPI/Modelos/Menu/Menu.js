@@ -262,12 +262,12 @@ ManualApp.controller('MenuController',
 
             //Función para colocar opacos los circulos
             $scope.DeshabilitarCirculos = function () {
-
+                //matriz de vester
                 $("#circuloDos").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
                 $("#iconoDos").attr("src", "images/lluviaIdeas.png");
                 $("#iconoDos").attr('value', 1);
                 $("#flechaDos").fadeOut("fast");
-
+                //arbol de problemas
                 $("#circuloTres").css({ 'background-color': 'rgb(255,255,255)', 'z-index': '1', 'border-radius': '50%' });
                 $("#iconoTres").attr("src", "images/arbolProb.png");
                 $("#iconoTres").attr('value', 1);
@@ -362,7 +362,7 @@ ManualApp.controller('MenuController',
                     $(".campo:nth-child(11)").css({ 'left': '5%' })
                 }
 
-                if (Etapa >= 7) {
+                if (Etapa >= 8) {
                     $("#circuloSiete").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
                     $("#iconoSiete").attr("src", "images/calendarioAct.png");
                     $("#iconoSiete").attr('value', 2);
@@ -370,7 +370,7 @@ ManualApp.controller('MenuController',
                     $("#circuloSiete").addClass("animated rotateIn");
                     $(".campo:nth-child(13)").css({ 'left': '-7%' })
                 }
-                if (Etapa >= 9) {
+                if (Etapa >= 10) {
                     $("#circuloOcho").css({ 'background-color': 'rgba(13, 132, 126, 0.24)', 'z-index': '1', 'border-radius': '50%' });
                     $("#iconoOcho").attr("src", "images/matrizAct.png");
                     $("#iconoOcho").attr('value', 2);

@@ -57,8 +57,8 @@
                 </div>
             </div>
 
-            <audio id="audio-player" ontimeupdate="SeekBar()" ondurationchange="CreateSeekBar()" preload="auto" loop>
-                <source src="../audios/Don Tetto - Yo Estaré Bien (Con Letra).mp3" type="audio/mpeg">
+            <audio id="audio-player" ontimeupdate="SeekBar()" ondurationchange="CreateSeekBar()" preload="auto">
+                <source src="../audios/6.Área del conocimiento.mp3" type="audio/mpeg">
             </audio>
         </div>
         <!--FINALIZA AYUDA AUDIO-->
@@ -99,7 +99,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 6vh;"><p class="textos">NOMBRE DEL PROYECTO</p></div>
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 6vh;">
-                    <input class="form-control" style="text-transform:uppercase;" maxlength="100" type="text" ng-model="PerfilProyecto.NombreProyecto" />
+                    <input class="form-control" style="text-transform:uppercase;" maxlength="150" type="text" ng-model="PerfilProyecto.NombreProyecto" />
                 </div>
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 3vh;"></div>
@@ -257,8 +257,8 @@
                 </div>
             </div>
 
-            <audio id="audio-player1" ontimeupdate="SeekBar1()" ondurationchange="CreateSeekBar1()" preload="auto" loop>
-                <source src="../audios/Don Tetto - Yo Estaré Bien (Con Letra).mp3" type="audio/mpeg">
+            <audio id="audio-player1" ontimeupdate="SeekBar1()" ondurationchange="CreateSeekBar1()" preload="auto">
+                <source src="../audios/7.PERFIL DEL PROYECTO.mp3" type="audio/mpeg">
             </audio>
         </div>
         <!--FINALIZA AYUDA AUDIO-->
@@ -344,18 +344,18 @@
                         </tr>
 
                         <tr>
-                            <th class="col-lg-6 col-md-3 col-sm-3 col-xs-3">
+                            <th class="col-lg-2 col-md-3 col-sm-3 col-xs-3">
                                 <p>Tipo de investigación</p>
                             </th>
 
-                            <th class="col-lg-6 col-md-3 col-sm-3 col-xs-3">
+                            <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                 <select class="form-control" id="tipoInve" ng-change="CambioTipoInvesticacion(TipoInvesticion.significado)" ng-model="TipoInvesticion.significado">
                                     <option value="{{t.significado}}" ng-repeat="t in TipoInvesticion">{{t.id}}</option>
 
                                 </select>
                             </th>
 
-                            <th class="col-lg-2 col-md-3 col-sm-3 col-xs-3">
+                            <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                 <p style="font-size:10px;" id="significado" ng-model="Sig">{{Sig}}</p>
                             </th>
                         </tr>
