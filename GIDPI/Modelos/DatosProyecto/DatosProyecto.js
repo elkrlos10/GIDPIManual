@@ -143,6 +143,13 @@
                 }, 1000);
             }
 
+            $scope.cerrarAudio = function () {
+                setTimeout(function () {
+                    var audio = document.getElementById("audio-player");
+                    audio.pause();
+                }, 1000);
+            }
+
             $scope.ValidacionDatos = function () {
                 if ($scope.DatosProyecto.TipoProyecto == "" || $scope.DatosProyecto.TipoProyecto == null || $scope.DatosProyecto.AccionProyecto == "" || $scope.DatosProyecto.AccionProyecto == null ||
                     $scope.DatosProyecto.Sector == "" || $scope.DatosProyecto.Sector == null || $scope.DatosProyecto.IdMunicipio == "" || $scope.DatosProyecto.IdMunicipio == null ||

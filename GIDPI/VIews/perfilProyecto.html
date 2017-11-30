@@ -54,6 +54,10 @@
                     <div class="volume-field">
                         <input type="range" min="0" max="100" value="100" step="1" oninput="audio.volume = this.value/100" onchange="this.oninput()">
                     </div>
+                    <div>
+                        <button class="fa fa-close " id="closePerfil1" style="float:right; border:none; background:none ;color:#238276; margin-right:1%; font-size:18px;">  </button>
+                    </div>
+
                 </div>
             </div>
 
@@ -253,6 +257,9 @@
                     </div>
                     <div class="volume-field">
                         <input type="range" min="0" max="100" value="100" step="1" oninput="audio.volume = this.value/100" onchange="this.oninput()">
+                    </div>
+                    <div>
+                        <button class="fa fa-close " id="closePerfil2" ng-click="PauseAudio()" style="float:right; border:none; background:none ;color:#238276; margin-right:1%; font-size:18px;">  </button>
                     </div>
                 </div>
             </div>

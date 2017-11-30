@@ -349,11 +349,11 @@ z-index:997;
 
 
 .player{
-  position: absolute;
+  position: fixed;
   background-color: #fff;
   width: 580px;
   height: 120px;
-  margin-top:47%;
+  margin-top:50%;
   margin-left:32%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -453,16 +453,16 @@ z-index:997;
 }
 
 .audioPerfilProyecto{
-  position: absolute;
+  position: fixed;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:90%;
+  margin-top:50%;
   margin-left:15%;
   margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    z-index: 99999999;
 }
 
 .audioCronograma{

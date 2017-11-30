@@ -4,39 +4,77 @@ $('#ayudaAudioUno').click(function () {
     $('#audioAyudaUno').toggle();
     $(this).toggleClass('clientsClose');
 });
+$('.cerrarAudio').click(function () {
+    $('#audioAyudaUno').toggle();
+    $(this).toggleClass('clientsClose');
+});
 
 $('#ayudaAudioDos').click(function () {
     $('#audioAyudaDos').toggle();
     $(this).toggleClass('clientsClose');
 });
+$('.cerrarAudio').click(function () {
+    $('#audioAyudaDos').toggle();
+    audio.pause();
+    $(this).toggleClass('clientsClose');
+});
+
 
 $('#ayudaAudioTres').click(function () {
+    $('#audioAyudaTres').toggle();
+    audio.pause();
+    $(this).toggleClass('clientsClose');
+});
+$('.cerrarAudio').click(function () {
     $('#audioAyudaTres').toggle();
     $(this).toggleClass('clientsClose');
 });
 
 $('#ayudaAudioCuatro').click(function () {
     $('#audioAyudaCuatro').toggle();
+});
+$('#closeObj1').click(function () {
+    $('#audioAyudaCuatro').toggle();
+    audio.pause();
     $(this).toggleClass('clientsClose');
 });
+
 
 $('#ayudaAudioCinco').click(function () {
     $('#audioAyudaCinco').toggle();
     $(this).toggleClass('clientsClose');
 });
-
+$('#closeObj2').click(function () {
+    $('#audioAyudaCinco').toggle();
+    $(this).toggleClass('clientsClose');
+});
 $('#ayudaAudioSeis').click(function () {
+    $('#audioAyudaSeis').toggle();
+    $(this).toggleClass('clientsClose');
+});
+$('#closeObj3').click(function () {
     $('#audioAyudaSeis').toggle();
     $(this).toggleClass('clientsClose');
 });
 
 $('#ayudaAudioSiete').click(function () {
     $('#audioAyudaSiete').toggle();
+    audio.pause();
+    $(this).toggleClass('clientsClose');
+});
+$('.cerrarAudio').click(function () {
+    $('#audioAyudaSiete').toggle();
+    audio.pause();
     $(this).toggleClass('clientsClose');
 });
 
 $('#ayudaAudioOcho').click(function () {
     $('#audioAyudaOcho').toggle();
+    $(this).toggleClass('clientsClose');
+});
+$('#closePerfil1').click(function () {
+    $('#audioAyudaOcho').toggle();
+    audio.pause();
     $(this).toggleClass('clientsClose');
 });
 
@@ -46,8 +84,19 @@ $('#ayudaAudioNueve').click(function () {
     $(this).toggleClass('clientsClose');
 });
 
+$('#closePerfil2').click(function () {
+    audio.pause();
+    $('#audioAyudaNueve').toggle();
+    $(this).toggleClass('clientsClose');
+});
+
 $('#ayudaAudioDiez').click(function () {
     $('#audioAyudaDiez').toggle();
+    $(this).toggleClass('clientsClose');
+});
+$('#closeCrono1').click(function () {
+    $('#audioAyudaDiez').toggle();
+    audio.pause();
     $(this).toggleClass('clientsClose');
 });
 
@@ -57,8 +106,18 @@ $('#ayudaAudioOnce').click(function () {
 
 });
 
+$('#closeCrono2').click(function () {
+    $('#audioAyudaOnce').toggle();
+    $(this).toggleClass('clientsClose');
+
+});
 $('#ayudaAudioDoce').click(function () {
     $('#audioAyudaDoce').toggle();
+    $(this).toggleClass('clientsClose');
+});
+$('.cerrarAudio').click(function () {
+    $('#audioAyudaDoce').toggle();
+    audio.pause();
     $(this).toggleClass('clientsClose');
 });
 
