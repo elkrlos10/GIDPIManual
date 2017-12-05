@@ -174,6 +174,18 @@
             update(repetir);
 
             $scope.agregarPresupuesto = function () {
+                if ($scope.Presupuesto.length >= 14) {
+                    swal({
+                        text: 'EL maximo de items en el presupuesto es de 15',
+                        type: 'warning',
+                        confirmButtonColor: '#238276',
+                        width: '25%',
+                        allowOutsideClick: false
+
+                    })
+                    return false;
+                }
+            
                 $scope.Presupuesto.push({
                     IdProyecto: $rootScope.proyecto.datos.id,
                     Item: "",
@@ -289,6 +301,7 @@
 
             $scope.CalcularValorTotal = function () {
                 //$scope.Presupuesto[0].ValorTotal = $scope.Presupuesto[0].Cantidad * $scope.Presupuesto[0].ValorUnitario;
+            
                 $scope.total = 0;
                 $.each($scope.Presupuesto, function (index, value) {
                     value.ValorTotal = value.Cantidad * value.ValorUnitario;
@@ -362,7 +375,9 @@
                 $scope.I = I.toFixed(2);
                 $scope.U = U.toFixed(2);
                 $scope.Subtotal = $scope.total.toFixed(2);
-                $scope.total = ($scope.total  + A + I + U).toFixed(2);
+                $scope.total = ($scope.total + A + I + U).toFixed(2);
+
+               
 
             }
 
@@ -371,11 +386,12 @@
 
                 var contador1 = 0;
                 $.each($scope.Presupuesto, function (index, value) {
-                    console.log($scope.Presupuesto.ValorUnitario);
-                    if (value.Item == "" || value.Concepto == "" || value.Descripcion == "" || value.Unidad=="" || value.Cantidad=="" || value.ValorUnitario=="") {
+                   
+                    if (value.Item == "" || value.Concepto == "" || value.Descripcion == "" || value.Unidad=="") {
                         alertify.success("Ups! Faltan campos por completar");
                         contador1++;
                     }
+                  
                     $scope.Presupuesto1.push({
                         IdProyecto: $rootScope.proyecto.datos.id,
                         IdPresupuesto: value.IdPresupuesto,
@@ -390,9 +406,18 @@
 
                 })
 
-
                
                 if (contador1 == 0) {
+                    if ($scope.total > 99999999999) {
+                        swal({
+                            text: 'EL costo total no puede superar los 99.999.999.999 millones',
+                            confirmButtonColor: '#238276',
+                            width: '25%'
+
+                        })
+
+                        return false;
+                    }
                     CronogramaPresupuestoService.GuardarPresupuesto($scope.Presupuesto1, function (response) {
                         if (response.success) {
 
@@ -416,11 +441,7 @@
                             })
                         }
                     })
-                } else {
-                    alertify.success("Ups! Faltan campos por completar");
-                    return;
                 }
-
                 
             }
 

@@ -380,7 +380,7 @@
                                         modalOn("#crearProblemaCentral");
 
                                         //ASIGNAR EL PROBLEMA CENTRAL PRIMERA VEZ
-                                        document.querySelector("#btnProblemaCentral").addEventListener("click", function () {
+                                        $scope.AsignarProblemaCentral = function () {
                                             var txtInicial = document.querySelector("#txtProblemaInicial").value; //capturar texto del problema central en modal
                                             if (txtInicial.length == 0 || txtInicial == " ") { //validar si viene vacio
                                                 swal({
@@ -390,13 +390,30 @@
 
                                                 })
 
-                                                
+
                                             } else {
                                                 document.querySelector("#txtProblema").value = txtInicial;
                                                 modalOff();
                                                 alerta1("Consejo.", "En el panel de la izquierda podras crear las causas y efectos.", 5);
                                             }
-                                        });
+                                        }
+                                        //document.querySelector("#btnProblemaCentral").addEventListener("click", function () {
+                                        //    var txtInicial = document.querySelector("#txtProblemaInicial").value; //capturar texto del problema central en modal
+                                        //    if (txtInicial.length == 0 || txtInicial == " ") { //validar si viene vacio
+                                        //        swal({
+                                        //            text: 'Debes ingresar un problema central',
+                                        //            confirmButtonColor: '#238276',
+                                        //            width: '25%'
+
+                                        //        })
+
+                                                
+                                        //    } else {
+                                        //        document.querySelector("#txtProblema").value = txtInicial;
+                                        //        modalOff();
+                                        //        alerta1("Consejo.", "En el panel de la izquierda podras crear las causas y efectos.", 5);
+                                        //    }
+                                        //});
                                     }
                                 }
                             })

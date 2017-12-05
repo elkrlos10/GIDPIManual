@@ -76,7 +76,7 @@
 
                 PerfilProyectoService.ConsultarProyecto($rootScope.proyecto.datos.id, function (response) {
                     if (response.success) {
-                        if (response.Proyecto.Etapa >= 7) {
+                        if (response.Proyecto.Etapa > 7) {
                             $("#guardarPerfil2").hide();
                             $("#editarPerfil2").show();
                             PerfilProyectoService.ConsultarPerfil2($rootScope.proyecto.datos.id, function (response) {

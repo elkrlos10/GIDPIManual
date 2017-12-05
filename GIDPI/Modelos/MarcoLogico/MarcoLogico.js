@@ -112,7 +112,7 @@
                 $location.url("/Menu");
             }
 
-            $scope.abrirReporte= function () {
+            $scope.abrirReporte1= function () {
                 $location.url("/Reporte");
             }
 

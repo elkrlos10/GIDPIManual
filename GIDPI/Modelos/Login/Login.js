@@ -162,9 +162,9 @@
                     return false;
                 } else {
                     LoginService.ConsultarUsuario($scope.Usuario, function (response) {
-                        if (response.usuario != null) {
+                        if (response.success == true) {
 
-                            if (response.success) {
+                            if (response.usuario != null) {
                                 alertify.success("Bienvenido a GIDPI");
 
                                 $rootScope.globals = {

@@ -958,9 +958,9 @@
         <MIMEType>image/png</MIMEType>
         <Sizing>FitProportional</Sizing>
         <Top>15.90161cm</Top>
-        <Left>0.78936cm</Left>
+        <Left>0.04808cm</Left>
         <Height>10.84808cm</Height>
-        <Width>15.45518cm</Width>
+        <Width>16.83146cm</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>
@@ -974,9 +974,9 @@
         <MIMEType>image/png</MIMEType>
         <Sizing>FitProportional</Sizing>
         <Top>30.45753cm</Top>
-        <Left>0.78936cm</Left>
+        <Left>0.04808cm</Left>
         <Height>10.84518cm</Height>
-        <Width>15.45518cm</Width>
+        <Width>16.83146cm</Width>
         <ZIndex>15</ZIndex>
         <Style>
           <Border>
@@ -1711,7 +1711,7 @@
         <Top>78.58084cm</Top>
         <Left>0.8178cm</Left>
         <Height>11.31562cm</Height>
-        <Width>15.33388cm</Width>
+        <Width>16.06174cm</Width>
         <ZIndex>27</ZIndex>
         <Style>
           <Border>
@@ -3215,7 +3215,9 @@
               <TextRun>
                 <Value>=First(Fields!subtotal.Value, "Presupuesto")</Value>
                 <Style>
-                  <Format>'$'#,0,.00;('$'#,0,.00)</Format>
+                  <FontSize>8pt</FontSize>
+                  <Format>'$'#,0.00;('$'#,0.00)</Format>
+                  <rd:FormatSymbolCulture>af-NA</rd:FormatSymbolCulture>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -3284,7 +3286,9 @@
               <TextRun>
                 <Value>=First(Fields!ValorTotal.Value, "Presupuesto")</Value>
                 <Style>
-                  <Format>'$'#,0,.00;('$'#,0,.00)</Format>
+                  <FontSize>8pt</FontSize>
+                  <Format>#,0.00;(#,0.00)</Format>
+                  <rd:FormatSymbolCulture>af-NA</rd:FormatSymbolCulture>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -3308,7 +3312,6 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
-          <rd:FormatSymbolCulture>es-CO</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox170">
@@ -3739,7 +3742,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Cantidad.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -3770,7 +3775,9 @@
                             <TextRun>
                               <Value>=Fields!ValorUnitario.Value</Value>
                               <Style>
-                                <Format>'$'#,0,.00;('$'#,0,.00)</Format>
+                                <FontSize>8pt</FontSize>
+                                <Format>'$'#,0.00;('$'#,0.00)</Format>
+                                <rd:FormatSymbolCulture>af-NA</rd:FormatSymbolCulture>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -3805,7 +3812,8 @@
                             <TextRun>
                               <Value>=Fields!ValorXcantidad.Value</Value>
                               <Style>
-                                <Format>'$'#,0,.00;('$'#,0,.00)</Format>
+                                <FontSize>8pt</FontSize>
+                                <Format>'$'#,0.00;('$'#,0.00)</Format>
                                 <rd:FormatSymbolCulture>es-CO</rd:FormatSymbolCulture>
                               </Style>
                             </TextRun>
@@ -3908,7 +3916,8 @@
               <TextRun>
                 <Value>=First(Fields!A.Value, "Presupuesto")</Value>
                 <Style>
-                  <Format>'$'#,0,.00;('$'#,0,.00)</Format>
+                  <FontSize>8pt</FontSize>
+                  <Format>'$'#,0.00;('$'#,0.00)</Format>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -3977,7 +3986,9 @@
               <TextRun>
                 <Value>=First(Fields!I.Value, "Presupuesto")</Value>
                 <Style>
-                  <Format>'$'#,0,.00;('$'#,0,.00)</Format>
+                  <FontSize>8pt</FontSize>
+                  <Format>'$'#,0.00;('$'#,0.00)</Format>
+                  <rd:FormatSymbolCulture>af-NA</rd:FormatSymbolCulture>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -4046,7 +4057,8 @@
               <TextRun>
                 <Value>=First(Fields!U.Value, "Presupuesto")</Value>
                 <Style>
-                  <Format>'$'#,0,.00;('$'#,0,.00)</Format>
+                  <FontSize>8pt</FontSize>
+                  <Format>'$'#,0.00;('$'#,0.00)</Format>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -4115,6 +4127,7 @@
               <TextRun>
                 <Value>=First(Fields!IVA.Value, "Presupuesto")</Value>
                 <Style>
+                  <FontSize>8pt</FontSize>
                   <Format>'$'0,.00;('$'0,.00);'-'</Format>
                 </Style>
               </TextRun>
@@ -5407,7 +5420,7 @@
       <BackgroundColor>White</BackgroundColor>
     </Style>
   </Body>
-  <Width>6.77975in</Width>
+  <Width>6.811in</Width>
   <Page>
     <PageHeader>
       <Height>2.6169cm</Height>

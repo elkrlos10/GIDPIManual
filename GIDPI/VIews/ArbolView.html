@@ -117,12 +117,12 @@
 
 <!-- VENTANAS MODALES -->
 <div id="modal">
-    <div id="crearProblemaCentral" class="contenidoModal">
+    <div id="crearProblemaCentral"  class="contenidoModal">
         <h2 style="font-weight:600;">Define tu problema central</h2>
         <hr>
         <p>Nota: Maximo 140 caracteres.</p>
         <textarea id="txtProblemaInicial" name="name" maxlength="140"></textarea>
-        <input id="btnProblemaCentral" class="btn" type="button" name="problemaCentral" value="Listo">
+        <input id="btnProblemaCentral" ng-click="AsignarProblemaCentral()" class="btn" type="button" name="problemaCentral" value="Listo">
     </div>
 </div>
 

@@ -279,9 +279,10 @@
                             <td><input class="form-control" type="text" style="margin-top:5%; " maxlength="100" ng-model="presu.Concepto" /></td>
                             <td><textarea class="form-control" type="text" maxlength="200" ng-model="presu.Descripcion"></textarea> </td>
                             <td><input class="form-control" type="text" style="margin-top:10%; " maxlength="50" ng-model="presu.Unidad" /></td>
-                            <td><input class="form-control" type="number" style="margin-top:10%;text-align:right "  placeholder="#" ng-keyup="CalcularValorTotal()" ng-model="presu.Cantidad" format="number" /></td>
+                           
+                             <td><input class="form-control" type="number" style="margin-top:10%;text-align:right "  placeholder="#" ng-keyup="CalcularValorTotal()"  ng-model="presu.Cantidad" format="number"  onkeypress="if(this.value.length==3) return false"  /></td>
                             <td>
-                                <input placeholder="$" class="form-control" type="text" style="margin-top:4.5%; text-align:right " ng-keyup="CalcularValorTotal()" ng-model="presu.ValorUnitario" format="number" />
+                                <input placeholder="$" class="form-control" type="text" style="margin-top:4.5%; text-align:right " ng-keyup="CalcularValorTotal()" maxlength="15" ng-model="presu.ValorUnitario" format="number" />
                             </td>
 
                             <td><input ng-model="presu.ValorTotal" disabled class="form-control" style="margin-top:4.5%; text-align:right" type="text" format="number" /></td>

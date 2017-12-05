@@ -5490,7 +5490,6 @@ namespace GIDPI.ReporteRcdl {
                 base.Columns.Add(this.columnValorXcantidad);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIdPresupuesto}, true));
-                this.columnValorTotal.AllowDBNull = false;
                 this.columnA.ReadOnly = true;
                 this.columnI.ReadOnly = true;
                 this.columnU.ReadOnly = true;
@@ -7108,7 +7107,12 @@ namespace GIDPI.ReporteRcdl {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public double ValorTotal {
                 get {
-                    return ((double)(this[this.tablecargarPresupuesto.ValorTotalColumn]));
+                    try {
+                        return ((double)(this[this.tablecargarPresupuesto.ValorTotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ValorTotal\' de la tabla \'cargarPresupuesto\' es DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablecargarPresupuesto.ValorTotalColumn] = value;
@@ -7298,6 +7302,18 @@ namespace GIDPI.ReporteRcdl {
                 set {
                     this[this.tablecargarPresupuesto.ValorXcantidadColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsValorTotalNull() {
+                return this.IsNull(this.tablecargarPresupuesto.ValorTotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetValorTotalNull() {
+                this[this.tablecargarPresupuesto.ValorTotalColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

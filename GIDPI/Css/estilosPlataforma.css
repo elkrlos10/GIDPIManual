@@ -353,7 +353,7 @@ z-index:997;
   background-color: #fff;
   width: 580px;
   height: 120px;
-  margin-top:50%;
+  bottom:0px;
   margin-left:32%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -366,7 +366,7 @@ z-index:997;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:47%;
+   bottom:0px;
   margin-left:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -375,78 +375,72 @@ z-index:997;
 
 
 .audioArbolProblemas{
-  position: absolute;
+  position: fixed;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:58%;
+  bottom:0px;
   margin-left:32%;
-  margin-bottom:3%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
     z-index: 999;
 }
 
 .audioArbolObjetivos{
-  position: absolute;
+  position: fixed;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:58%;
+  bottom:0px;
   margin-left:33%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioObjetivos{
-  position: absolute;
+  position: fixed;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:40%;
+  bottom:0px;
   margin-left:33%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
     z-index: 999;
 }
 
 .audioResultados{
-  position: absolute;
+  position: fixed;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+  bottom:0px;
   margin-left:33%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
    z-index: 999;
 }
 
 .audioInvolucrados{
-  position: absolute;
+  position: fixed;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+  bottom:0px;
   margin-left:33%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
     z-index: 999;
 }
 
 .audioNombreProyecto{
-  position: absolute;
+  position: fixed;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:60%;
+  bottom:0px;
   margin-left:15%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
     z-index: 999;
@@ -457,22 +451,20 @@ z-index:997;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:50%;
+  bottom:0px;
   margin-left:15%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
     z-index: 99999999;
 }
 
 .audioCronograma{
-  position: absolute;
+  position: fixed;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:47%;
+    bottom:0px;
   margin-left:32%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -480,26 +472,24 @@ z-index:997;
 
 
 .audioPresupuesto{
-  position: absolute;
+  position: fixed;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:47%;
+  bottom:0px;
   margin-left:18%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
     z-index: 999;
 }
 
 .audioMarcoLogico{
-  position: absolute;
+  position: fixed;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:68%;
+   bottom:0px;
   margin-left:30%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
     z-index: 999;
@@ -515,7 +505,9 @@ z-index:997;
     color:#238276;
 }
 
-   @media (max-width: 1600px) and (max-height: 1500px) {
+
+
+@media (max-width: 1600px)  {
 
 #contenido{
     background:rgba(192,192,192,0.15); 
@@ -527,11 +519,11 @@ z-index:997;
     color:#238276;
 }
 .player{
-  position: absolute;
+
   background-color: #fff;
   width: 580px;
   height: 120px;
-  margin-top:47%;
+
   margin-left:31%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -539,11 +531,11 @@ z-index:997;
 }
 
 .audioVester{
-  position: fixed;
+
   background-color: #fff;
   width: 530px;
   height: 120px;
-  margin-top:47%;
+  bottom:0px;
   margin-left:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -551,13 +543,13 @@ z-index:997;
 }
 
 .audioArbolProblemas{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top: 70%;
+  bottom:0px;
   margin-left:32%;
-  margin-bottom:3%;
+ 
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
    z-index: 999;
@@ -566,104 +558,99 @@ z-index:997;
 
 
 .audioArbolObjetivos{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:53%;
+  bottom:0px;
   margin-left:32%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
     z-index: 999;
 }
 
 .audioObjetivos{
-  position: absolute;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:35%;
+  bottom:0px;
   margin-left:33%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
     z-index: 999;
 }
 
 .audioResultados{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+  bottom:0px;
   margin-left:33%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
     z-index: 999;
 }
 
 .audioInvolucrados{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:40%;
+  bottom:0px;
   margin-left:33%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
    z-index: 999;
 }
 
 .audioNombreProyecto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:60%;
+  bottom:0px;
   margin-left:15%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPerfilProyecto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:85%;
+  bottom:0px;
   margin-left:14%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;;
 }
 
 .audioPresupuesto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:40%;
+  bottom:0px;
   margin-left:16%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioMarcoLogico{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:70%;
+  bottom:0px;
   margin-left:30%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -671,7 +658,7 @@ z-index:997;
 
 }
 
-@media (max-width: 1499px) and (max-height: 1441px) {
+@media (max-width: 1499px)  {
 
 #contenido{
     background:rgba(192,192,192,0.15);  
@@ -679,11 +666,11 @@ z-index:997;
 }
 
 .player{
-  position: absolute;
+
   background-color: #fff;
   width: 580px;
   height: 120px;
-  margin-top:55%;
+
   margin-left:27%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -691,11 +678,11 @@ z-index:997;
 }
 
 .audioVester{
-  position: absolute;
+  position: fixed;
   background-color: #fff;
   width: 530px;
   height: 120px;
-  margin-top:80%;
+  bottom:0px;
   margin-left:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -711,26 +698,25 @@ z-index:997;
 }
 
 .audioArbolProblemas{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top: 75%;
+  bottom:0px;
   margin-left:30%;
-  margin-bottom:3%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioArbolObjetivos{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:55%;
+  bottom:0px;
   margin-left:30%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -742,24 +728,24 @@ z-index:997;
 }
 
 .audioObjetivos{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:33%;
+  bottom:0px;
   margin-left:30%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioResultados{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:60%;
+  bottom:0px;
   margin-left:28%;
   margin-bottom:1%;
   border-radius: 3px;
@@ -768,11 +754,11 @@ z-index:997;
 }
 
 .audioInvolucrados{
-  position: absolute;
+
   background-color:#fff;
   width: 560px;
   height: 120px;
-  margin-top:40%;
+   bottom:0px;
   margin-left:26%;
   margin-bottom:1%;
   border-radius: 3px;
@@ -781,11 +767,11 @@ z-index:997;
 }
 
 .audioPerfilProyecto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:90%;
+  bottom:0px;
   margin-left:22%;
   margin-bottom:1%;
   border-radius: 3px;
@@ -838,11 +824,11 @@ z-index:997;
 }
 
 .player{
-  position: absolute;
+
   background-color: #fff;
   width: 580px;
   height: 120px;
-  margin-top:50%;
+
   margin-left:28%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -850,11 +836,11 @@ z-index:997;
 }
 
 .audioVester{
-  position: absolute;
+
   background-color: #fff;
   width: 530px;
   height: 120px;
-  margin-top:80%;
+  bottom:0px;
   margin-left:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -866,11 +852,10 @@ z-index:997;
 }
 
 .audioArbolProblemas{
-  position: absolute;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top: 75%;
+  bottom:0px;
   margin-left:30%;
   margin-bottom:3%;
   border-radius: 3px;
@@ -879,26 +864,26 @@ z-index:997;
 }
 
 .audioArbolObjetivos{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:55%;
+  bottom:0px;
   margin-left:30%;
-  margin-bottom:1%;
+ 
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioObjetivos{
-  position: absolute;
+  
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:38%;
+  bottom:0px;
   margin-left:33%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -906,13 +891,13 @@ z-index:997;
 
 
 .audioResultados{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+  bottom:0px;
   margin-left:33%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -920,13 +905,13 @@ z-index:997;
 
 
 .audioInvolucrados{
-  position: absolute;
+ 
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+  bottom:0px;
   margin-left:28%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -934,50 +919,50 @@ z-index:997;
 
 
 .audioNombreProyecto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:60%;
+  bottom:0px;
   margin-left:20%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPerfilProyecto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:90%;
+    bottom:0px;
   margin-left:20%;
-  margin-bottom:1%;
+  bottom:0px;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioCronograma{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:25%;
+   bottom:0px;
   margin-left:25%;
-  margin-bottom:1%;
+  
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPresupuesto{
-  position: absolute;
+  
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+    bottom:0px;
   margin-left:20%;
   margin-bottom:1%;
   border-radius: 3px;
@@ -986,13 +971,13 @@ z-index:997;
 }
 
 .audioMarcoLogico{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:75%;
+  bottom:0px;
   margin-left:30%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -1027,13 +1012,25 @@ z-index:997;
     background:rgba(192,192,192,0.15); 
     height:100%;
 }
+.player{
+
+  background-color: #fff;
+  width: 580px;
+  height: 120px;
+  
+  margin-left:28%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
 
 .audioVester{
-  position: absolute;
+  
   background-color: #fff;
   width: 530px;
   height: 120px;
-  margin-top:47%;
+  bottom:0px;
   margin-left:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -1041,24 +1038,24 @@ z-index:997;
 }
 
 .audioArbolProblemas{
-  position: absolute;
+
   background-color: pink;
   width: 560px;
   height: 120px;
-  margin-top: 75%;
+  bottom:0px;
   margin-left:26%;
-  margin-bottom:3%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioObjetivos{
-  position: absolute;
+ 
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:33%;
+
   margin-left:33%;
   margin-bottom:1%;
   border-radius: 3px;
@@ -1067,65 +1064,65 @@ z-index:997;
 }
 
 .audioResultados{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+
   margin-left:33%;
-  margin-bottom:1%;
+    bottom:0px;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioInvolucrados{
-  position: absolute;
+
   background-color: red;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+  bottom:0px;
   margin-left:33%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioNombreProyecto{
-  position: absolute;
+  
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:55%;
+  bottom:0px;
   margin-left:20%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioCronograma{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:25%;
+  bottom:0px;
   margin-left:25%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioMarcoLogico{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:80%;
+  bottom:0px;
   margin-left:26%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -1170,26 +1167,26 @@ z-index:997;
 }
 
 .audioArbolProblemas{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top: 75%;
+  bottom:0px;
   margin-left:30%;
-  margin-bottom:3%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioObjetivos{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:30%;
+   bottom:0px;
   margin-left:30%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -1197,37 +1194,37 @@ z-index:997;
 
 
 .audioResultados{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:60%;
+  bottom:0px;
   margin-left:28%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioInvolucrados{
-  position: absolute;
+  
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:38%;
+  bottom:0px;
   margin-left:26%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioCronograma{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:25%;
+  bottom:0px;
   margin-left:25%;
   margin-bottom:1%;
   border-radius: 3px;
@@ -1236,26 +1233,26 @@ z-index:997;
 }
 
 .audioPresupuesto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:55%;
+  bottom:0px;
   margin-left:20%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioMarcoLogico{
-  position: absolute;
+  
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:80%;
+   bottom:0px;
   margin-left:26%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -1296,11 +1293,11 @@ z-index:997;
 }
 
 .audioVester{
-  position: absolute;
+
   background-color: #fff;
   width: 530px;
   height: 120px;
-  margin-top:47%;
+  bottom:0px;
   margin-left:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -1308,104 +1305,104 @@ z-index:997;
 }
 
 .audioArbolProblemas{
-  position: absolute;
+
   background-color: red;
   width: 560px;
   height: 120px;
-  margin-top: 75%;
+  bottom:0px;
   margin-left:26%;
-  margin-bottom:3%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioObjetivos{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:30%;
+  bottom:0px;
   margin-left:33%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioResultados{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+  bottom:0px;
   margin-left:33%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioInvolucrados{
-  position: absolute;
+
   background-color: pink;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+  bottom:0px;
   margin-left:33%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPerfilProyecto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:110%;
+  bottom:0px;
   margin-left:15%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPerfilProyecto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:115%;
+  bottom:0px;
   margin-left:24%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioCronograma{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:25%;
+  bottom:0px;
   margin-left:25%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPresupuesto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:50%;
+  bottom:0px;
   margin-left:16%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -1441,11 +1438,11 @@ z-index:997;
 
 
 .audioVester{
-  position: absolute;
+
   background-color: #fff;
   width: 530px;
   height: 120px;
-  margin-top:47%;
+  bottom:0px;
   margin-left:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -1453,13 +1450,13 @@ z-index:997;
 }
 
 .audioArbolProblemas{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top: 75%;
+  bottom:0px;
   margin-left:26%;
-  margin-bottom:3%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -1471,13 +1468,13 @@ z-index:997;
 }
 
 .audioObjetivos{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:35%;
+  bottom:0px;
   margin-left:33%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -1485,39 +1482,39 @@ z-index:997;
 
 
 .audioResultados{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+  bottom:0px;
   margin-left:33%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioInvolucrados{
-  position: absolute;
+
   background-color: black;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+  bottom:0px;
   margin-left:33%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPerfilProyecto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:85%;
+  bottom:0px;
   margin-left:15%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -1555,11 +1552,11 @@ z-index:997;
     }
 
     .player {
-        position: absolute;
+
         background-color: #fff;
         width: 580px;
         height: 120px;
-        margin-top: 60%;
+
         margin-left: 26%;
         border-radius: 3px;
         box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -1573,11 +1570,11 @@ z-index:997;
 }
 
 .audioVester{
-  position: absolute;
+  
   background-color: #fff;
   width: 530px;
   height: 120px;
-  margin-top:90%;
+  bottom:0px;
   margin-left:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -1593,13 +1590,13 @@ z-index:997;
 }
 
 .audioArbolProblemas{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top: 75%;
+  bottom:0px;
   margin-left:26%;
-  margin-bottom:3%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -1611,39 +1608,39 @@ z-index:997;
 }
 
 .audioObjetivos{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:35%;
+  bottom:0px;
   margin-left:30%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioResultados{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:65%;
+    bottom:0px;
   margin-left:27%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioInvolucrados{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:37%;
+    bottom:0px;
   margin-left:26%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -1655,50 +1652,64 @@ z-index:997;
 
 
 .audioNombreProyecto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:55%;
+  bottom:0px;
   margin-left:20%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPerfilProyecto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:95%;
+  bottom:0px;
   margin-left:24%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
    z-index: 999;
 }
 
 .audioCronograma{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+  bottom:0px;
   margin-left:25%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPresupuesto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+  bottom:0px;
+  margin-left:20%;
+
+  border-radius: 3px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+
+.audioMarcoLogico{
+
+  background-color: #fff;
+  width: 560px;
+  height: 120px;
+  bottom:0px;
   margin-left:20%;
   margin-bottom:1%;
   border-radius: 3px;
@@ -1707,32 +1718,7 @@ z-index:997;
 }
 
 
-.audioMarcoLogico{
-  position: absolute;
-  background-color: #fff;
-  width: 560px;
-  height: 120px;
-  margin-top:110%;
-  margin-left:20%;
-  margin-bottom:1%;
-  border-radius: 3px;
-  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
-  z-index: 999;
-}
 
-
-.audioMarcoLogico{
-  position: absolute;
-  background-color: #fff;
-  width: 560px;
-  height: 120px;
-  margin-top:80%;
-  margin-left:26%;
-  margin-bottom:1%;
-  border-radius: 3px;
-  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
-  z-index: 999;
-}
 
 #textoMarcoLogico{
     font-size:22px;
@@ -1769,11 +1755,11 @@ z-index:997;
     }
 
     .player {
-        position: absolute;
+      
         background-color: #fff;
         width: 580px;
         height: 120px;
-        margin-top: 60%;
+   
         margin-left: 26%;
         border-radius: 3px;
         box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -1787,11 +1773,11 @@ z-index:997;
 }
 
 .audioVester{
-  position: absolute;
+
   background-color: #fff;
   width: 530px;
   height: 120px;
-  margin-top:90%;
+  bottom:0px;
   margin-left:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -1807,13 +1793,12 @@ z-index:997;
 }
 
 .audioArbolProblemas{
-  position: absolute;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top: 75%;
+    bottom:0px;
   margin-left:26%;
-  margin-bottom:3%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -1825,39 +1810,39 @@ z-index:997;
 }
 
 .audioObjetivos{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:35%;
+  bottom:0px;
   margin-left:30%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioResultados{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:65%;
+  bottom:0px;
   margin-left:27%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioInvolucrados{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:37%;
+  bottom:0px;
   margin-left:26%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -1869,52 +1854,52 @@ z-index:997;
 
 
 .audioNombreProyecto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:55%;
+  bottom:0px;
   margin-left:20%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPerfilProyecto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:95%;
+  bottom:0px;
   margin-left:24%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
    z-index: 999;
 }
 
 .audioCronograma{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+  bottom:0px;
   margin-left:25%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPresupuesto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+  bottom:0px;
   margin-left:20%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -1922,13 +1907,13 @@ z-index:997;
 
 
 .audioMarcoLogico{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:110%;
+  bottom:0px;
   margin-left:20%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -1936,13 +1921,13 @@ z-index:997;
 
 
 .audioMarcoLogico{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:80%;
+  bottom:0px;
   margin-left:26%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -1983,11 +1968,11 @@ z-index:997;
     }
 
     .player {
-        position: absolute;
+       
         background-color: #fff;
         width: 580px;
         height: 120px;
-        margin-top: 60%;
+       
         margin-left: 26%;
         border-radius: 3px;
         box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -2001,11 +1986,11 @@ z-index:997;
 }
 
 .audioVester{
-  position: absolute;
+
   background-color: #fff;
   width: 530px;
   height: 120px;
-  margin-top:90%;
+
   margin-left:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -2021,13 +2006,13 @@ z-index:997;
 }
 
 .audioArbolProblemas{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top: 75%;
+
   margin-left:26%;
-  margin-bottom:3%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -2039,39 +2024,39 @@ z-index:997;
 }
 
 .audioObjetivos{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:35%;
+
   margin-left:30%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioResultados{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:65%;
+
   margin-left:27%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioInvolucrados{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:37%;
+
   margin-left:26%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -2083,52 +2068,51 @@ z-index:997;
 
 
 .audioNombreProyecto{
-  position: absolute;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:55%;
+
   margin-left:20%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPerfilProyecto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:95%;
+
   margin-left:24%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
    z-index: 999;
 }
 
 .audioCronograma{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+
   margin-left:25%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPresupuesto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+
   margin-left:20%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -2136,13 +2120,13 @@ z-index:997;
 
 
 .audioMarcoLogico{
-  position: absolute;
+  
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:110%;
+
   margin-left:20%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -2150,13 +2134,13 @@ z-index:997;
 
 
 .audioMarcoLogico{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:80%;
+
   margin-left:26%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -2168,7 +2152,7 @@ z-index:997;
 
 }
 
-@media (max-width: 1280px) and (max-height: 768px) {
+@media (max-width: 1280px) and (max-height: 769px) {
 
     #grafica {
         margin-left: -18%;
@@ -2197,11 +2181,11 @@ z-index:997;
     }
 
     .player {
-        position: absolute;
+       
         background-color: #fff;
         width: 580px;
         height: 120px;
-        margin-top: 60%;
+     
         margin-left: 26%;
         border-radius: 3px;
         box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -2215,11 +2199,11 @@ z-index:997;
 }
 
 .audioVester{
-  position: absolute;
+  
   background-color: #fff;
   width: 530px;
   height: 120px;
-  margin-top:90%;
+  
   margin-left:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -2235,13 +2219,13 @@ z-index:997;
 }
 
 .audioArbolProblemas{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top: 75%;
+
   margin-left:26%;
-  margin-bottom:3%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -2253,39 +2237,39 @@ z-index:997;
 }
 
 .audioObjetivos{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:35%;
+
   margin-left:30%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioResultados{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:65%;
+
   margin-left:27%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioInvolucrados{
-  position: absolute;
+ 
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:37%;
+  
   margin-left:26%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -2297,52 +2281,52 @@ z-index:997;
 
 
 .audioNombreProyecto{
-  position: absolute;
+  
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:55%;
+
   margin-left:20%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPerfilProyecto{
-  position: absolute;
+  
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:95%;
+
   margin-left:24%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
    z-index: 999;
 }
 
 .audioCronograma{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+
   margin-left:25%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPresupuesto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
   margin-top:45%;
   margin-left:20%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -2350,13 +2334,13 @@ z-index:997;
 
 
 .audioMarcoLogico{
-  position: absolute;
+  
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:110%;
+
   margin-left:20%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -2364,13 +2348,13 @@ z-index:997;
 
 
 .audioMarcoLogico{
-  position: absolute;
+ 
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:80%;
+
   margin-left:26%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -2411,11 +2395,11 @@ z-index:997;
     }
 
     .player {
-        position: absolute;
+       
         background-color: #fff;
         width: 580px;
         height: 120px;
-        margin-top: 60%;
+   
         margin-left: 26%;
         border-radius: 3px;
         box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -2429,11 +2413,11 @@ z-index:997;
 }
 
 .audioVester{
-  position: absolute;
+
   background-color: #fff;
   width: 530px;
   height: 120px;
-  margin-top:90%;
+ 
   margin-left:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -2449,13 +2433,13 @@ z-index:997;
 }
 
 .audioArbolProblemas{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top: 75%;
+ 
   margin-left:26%;
-  margin-bottom:3%;
+ 
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -2467,39 +2451,39 @@ z-index:997;
 }
 
 .audioObjetivos{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:35%;
+
   margin-left:30%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioResultados{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:65%;
+
   margin-left:27%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioInvolucrados{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:37%;
+
   margin-left:26%;
-  margin-bottom:1%;
+ 
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -2511,52 +2495,52 @@ z-index:997;
 
 
 .audioNombreProyecto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:55%;
+ 
   margin-left:20%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPerfilProyecto{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:95%;
+  
   margin-left:24%;
-  margin-bottom:1%;
+  
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
    z-index: 999;
 }
 
 .audioCronograma{
-  position: absolute;
+  
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+  
   margin-left:25%;
-  margin-bottom:1%;
+  
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPresupuesto{
-  position: absolute;
+  
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+  
   margin-left:20%;
-  margin-bottom:1%;
+  
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -2564,13 +2548,13 @@ z-index:997;
 
 
 .audioMarcoLogico{
-  position: absolute;
+  
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:110%;
+  
   margin-left:20%;
-  margin-bottom:1%;
+  
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -2578,13 +2562,13 @@ z-index:997;
 
 
 .audioMarcoLogico{
-  position: absolute;
+ 
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:80%;
+  
   margin-left:26%;
-  margin-bottom:1%;
+  
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -2595,6 +2579,8 @@ z-index:997;
 }
 
 }
+
+
 
 @media (max-width: 1176px){ 
 
@@ -2625,11 +2611,11 @@ z-index:997;
     }
 
     .player {
-        position: absolute;
+        
         background-color: #fff;
         width: 580px;
         height: 120px;
-        margin-top: 60%;
+       
         margin-left: 26%;
         border-radius: 3px;
         box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -2643,11 +2629,11 @@ z-index:997;
 }
 
 .audioVester{
-  position: absolute;
+  
   background-color: #fff;
   width: 530px;
   height: 120px;
-  margin-top:90%;
+ 
   margin-left:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -2663,13 +2649,13 @@ z-index:997;
 }
 
 .audioArbolProblemas{
-  position: absolute;
+  
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top: 75%;
+  
   margin-left:26%;
-  margin-bottom:3%;
+  
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -2681,39 +2667,39 @@ z-index:997;
 }
 
 .audioObjetivos{
-  position: absolute;
+  
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:35%;
+  
   margin-left:30%;
-  margin-bottom:1%;
+  
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioResultados{
-  position: absolute;
+  
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:65%;
+  
   margin-left:27%;
-  margin-bottom:1%;
+ 
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioInvolucrados{
-  position: absolute;
+  
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:37%;
+  
   margin-left:26%;
-  margin-bottom:1%;
+  
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -2725,52 +2711,52 @@ z-index:997;
 
 
 .audioNombreProyecto{
-  position: absolute;
+  
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:55%;
+  
   margin-left:20%;
-  margin-bottom:1%;
+  
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPerfilProyecto{
-  position: absolute;
+  
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:95%;
+  
   margin-left:24%;
-  margin-bottom:1%;
+  
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
    z-index: 999;
 }
 
 .audioCronograma{
-  position: absolute;
+  
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+  
   margin-left:25%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPresupuesto{
-  position: absolute;
+  
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:45%;
+
   margin-left:20%;
-  margin-bottom:1%;
+  
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -2778,31 +2764,19 @@ z-index:997;
 
 
 .audioMarcoLogico{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:110%;
+
   margin-left:20%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 
-.audioMarcoLogico{
-  position: absolute;
-  background-color: #fff;
-  width: 560px;
-  height: 120px;
-  margin-top:80%;
-  margin-left:26%;
-  margin-bottom:1%;
-  border-radius: 3px;
-  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
-  z-index: 999;
-}
 
 #textoMarcoLogico{
     font-size:22px;
@@ -2838,11 +2812,11 @@ z-index:997;
 
 
 .player{
-  position: absolute;
+
   background-color: #fff;
   width: 580px;
   height: 120px;
-  margin-top:63%;
+
   margin-left:23%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -2850,11 +2824,11 @@ z-index:997;
 }
 
 .audioVester{
-  position: absolute;
+
   background-color: #fff;
   width: 530px;
   height: 120px;
-  margin-top:100%;
+
   margin-left:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -2870,13 +2844,13 @@ z-index:997;
 }
 
 .audioArbolProblemas{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top: 75%;
+
   margin-left:26%;
-  margin-bottom:3%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -2888,39 +2862,39 @@ z-index:997;
 }
 
 .audioObjetivos{
-  position: absolute;
+
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:44%;
+
   margin-left:33%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioResultados{
-  position: absolute;
+
   background-color:#fff;
   width: 560px;
   height: 120px;
-  margin-top:69%;
+
   margin-left:27%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioInvolucrados{
-  position: absolute;
+ 
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:53%;
+  
   margin-left:24%;
-  margin-bottom:1%;
+
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -2931,52 +2905,40 @@ z-index:997;
 }
 
 .audioNombreProyecto{
-  position: absolute;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:65%;
   margin-left:15%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPerfilProyecto{
-  position: absolute;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:110%;
   margin-left:15%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioCronograma{
-  position: absolute;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:55%;
   margin-left:25%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPresupuesto{
-  position: absolute;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:55%;
   margin-left:16%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -2984,13 +2946,10 @@ z-index:997;
 
 
 .audioMarcoLogico{
-  position: absolute;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:95%;
   margin-left:25%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -3025,11 +2984,11 @@ z-index:997;
 }
 
 .player{
-  position: absolute;
+ 
   background-color: #fff;
   width: 580px;
   height: 120px;
-  margin-top:68%;
+
   margin-left:20%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -3042,11 +3001,9 @@ z-index:997;
 }
 
 .audioVester{
-  position: absolute;
   background-color: #fff;
   width: 530px;
   height: 120px;
-  margin-top:110%;
   margin-left:22%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
@@ -3058,13 +3015,10 @@ z-index:997;
 }
 
 .audioArbolProblemas{
-  position: absolute;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top: 80%;
   margin-left:22%;
-  margin-bottom:3%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -3077,91 +3031,70 @@ z-index:997;
 }
 
 .audioObjetivos{
-  position: absolute;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:40%;
   margin-left:33%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioResultados{
-  position: absolute;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:68%;
   margin-left:26%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioInvolucrados{
-  position: absolute;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:53%;
   margin-left:20%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioNombreProyecto{
-  position: absolute;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:65%;
   margin-left:15%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPerfilProyecto{
-  position: absolute;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:110%;
   margin-left:15%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioCronograma{
-  position: absolute;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:55%;
   margin-left:20%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
 .audioPresupuesto{
-  position: absolute;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:60%;
   margin-left:20%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -3169,13 +3102,10 @@ z-index:997;
 
 
 .audioMarcoLogico{
-  position: absolute;
   background-color: #fff;
   width: 560px;
   height: 120px;
-  margin-top:110%;
   margin-left:20%;
-  margin-bottom:1%;
   border-radius: 3px;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   z-index: 999;
