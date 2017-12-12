@@ -90,8 +90,16 @@ namespace GIDPI.Controllers
                 UsuarioBl oUsuarioBl = new UsuarioBl();
                 var usuario = oUsuarioBl.ConsutarUsuario(oUsuario);
 
+                if (usuario==null)
+                {
+                    return Ok(new { success = false });
+                }
+                else
+                {
+                    return Ok(new { success = true, usuario });
+                }
 
-                return Ok(new { success = true, usuario});
+               
             }
             catch (Exception e)
             {

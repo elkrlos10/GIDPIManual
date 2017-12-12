@@ -155,40 +155,50 @@
             $scope.ConsultarUsuario = function () {
                 if ($scope.Usuario.Usuario1 == null || $scope.Usuario.Usuario1 == "") {
                     alertify.success("Necesita ingresar el campo de Usuario");
+                  
                     return false;
 
                 } else if ($scope.Usuario.Contrasena == null || $scope.Usuario.Contrasena == "") {
                     alertify.success("Necesita ingresar el campo de contraseña");
+                   
                     return false;
                 } else {
-                    LoginService.ConsultarUsuario($scope.Usuario, function (response) {
-                        if (response.success == true) {
+                    waitingDialog.show();
+                               
+                        LoginService.ConsultarUsuario($scope.Usuario, function (response) {
 
-                            if (response.usuario != null) {
-                                alertify.success("Bienvenido a GIDPI");
+                            if (response.success == true) {
 
-                                $rootScope.globals = {
-                                    currentUser: {
-                                        id: response.usuario.IdUsuario,
-                                        nombre: response.usuario.Usuario1,
-                                        //apellido: response.usuario.Usuario1.Apellido,
-                                        //cedula: response.usuario.Cedula,
-                                        tipousuario: response.usuario.TipoUsuario,
-                                        //idpersona: response.usuario.IdPersona
-                                    }
-                                };
-                                $cookies.putObject("username", $rootScope.globals);
+                                if (response.usuario != null) {
 
-                                $location.url('/Menu');
+                                    alertify.success("Bienvenido a GIDPI");
+                                    waitingDialog.hide();
+                                    $rootScope.globals = {
+                                        currentUser: {
+                                            id: response.usuario.IdUsuario,
+                                            nombre: response.usuario.Usuario1,
+                                            //apellido: response.usuario.Usuario1.Apellido,
+                                            //cedula: response.usuario.Cedula,
+                                            tipousuario: response.usuario.TipoUsuario,
+                                            //idpersona: response.usuario.IdPersona
+                                        }
+                                    };
+                                    $cookies.putObject("username", $rootScope.globals);
+                                    //waitingDialog.hide();
+                                    $location.url('/Menu');
+                                }
+                    
+                            } else {
+                                waitingDialog.hide();
+                                alertify.success("El usuario o la contraseña es incorrecta");
                             }
-                          
-                        } else {
-                            alertify.success("El usuario o la contraseña es incorrecta");
-                        }
-                        
-                    });
+
+                        });
+
+             
                 }
             }
+           
 
             $scope.ConsultarCorreo = function () {
 

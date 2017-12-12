@@ -188,6 +188,7 @@
     <Content Include="images\fondolineas.png" />
     <Content Include="images\grafica.png" />
     <Content Include="images\graficaAct.png" />
+    <Content Include="images\ITADIR.png" />
     <Content Include="images\lineasDos.png" />
     <Content Include="images\lineasUno.png" />
     <Content Include="images\lluviaIdeas.png" />
@@ -195,8 +196,10 @@
     <Content Include="images\logo.png" />
     <Content Include="images\logoSennova.png" />
     <Content Include="images\logoSena.png" />
+    <Content Include="images\LogoSIPI.png" />
     <Content Include="images\matriz.png" />
     <Content Include="images\matrizAct.png" />
+    <Content Include="images\MERLIN.png" />
     <Content Include="images\mujer.png" />
     <Content Include="images\mute.png" />
     <Content Include="images\pause.png" />

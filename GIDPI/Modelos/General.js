@@ -13,13 +13,7 @@ var waitingDialog = waitingDialog || (function ($) {
 
     // Creating modal dialog's DOM
     var $dialog = $(
-		'<div class="Loading modal fade" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true" style="padding-top:10%; overflow-y:visible;">' +
-			'<div class="loader">' +
-            '  <div class="circle one"></div>' +
-            '  <div class="circle two"></div>' +
-            '  <div class="circle three"></div>' +
-            '</div>' +
-		'</div></div></div>');
+		'<div class="loader">Loading...</div>');
 
     return {
         /**
