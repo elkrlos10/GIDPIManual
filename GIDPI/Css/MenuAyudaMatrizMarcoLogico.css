@@ -1,12 +1,12 @@
 ﻿    #menuAyuda {
         margin-top: 0%;
-        margin-left: 95.5%;
+         right:0px;
         position: fixed;
         z-index: 300;
     }
      #menuAyuda2 {
         margin-top: 0%;
-        margin-left: 94.5%;
+         right:0px;
         position: fixed;
         z-index: 300;
     }
@@ -14,7 +14,7 @@
 @media (max-width: 1440px) and (max-width: 1601px) {
     #menuAyuda2 {
         margin-top: 0%;
-        margin-left: 94%;
+         right:0px;
         position: fixed;
         z-index: 300;
     }
@@ -25,13 +25,13 @@
 
         #menuAyuda {
             margin-top: 0%;
-            margin-left: 95%;
+             right:0px;
             position: fixed;
             z-index: 300;
         }
         #menuAyuda2 {
         margin-top: 0%;
-        margin-left: 93%;
+         right:0px;
         position: fixed;
         z-index: 300;
     }
@@ -42,13 +42,13 @@
 
         #menuAyuda {
             margin-top: 0%;
-            margin-left: 95%;
+             right:0px;
             position: fixed;
             z-index: 300;
         }
         #menuAyuda2 {
         margin-top: 0%;
-        margin-left: 93%;
+         right:0px;
         position: fixed;
         z-index: 300;
     }
@@ -58,13 +58,13 @@
 
         #menuAyuda {
             margin-top: 0%;
-            margin-left: 94%;
+             right:0px;
             position: fixed;
             z-index: 300;
         }
         #menuAyuda2 {
         margin-top: 0%;
-        margin-left: 93%;
+         right:0px;
         position: fixed;
         z-index: 300;
     }
@@ -74,13 +74,13 @@
 
         #menuAyuda {
             margin-top: 0%;
-            margin-left: 94%;
+             right:0px;
             position: fixed;
             z-index: 300;
         }
         #menuAyuda2 {
         margin-top: 0%;
-        margin-left: 92%;
+         right:0px;
         position: fixed;
         z-index: 300;
     }
@@ -90,13 +90,13 @@
 
         #menuAyuda {
             margin-top: 0%;
-            margin-left: 93%;
+             right:0px;
             position: fixed;
             z-index: 300;
         }
         #menuAyuda2 {
         margin-top: 0%;
-        margin-left: 91%;
+         right:0px;
         position: fixed;
         z-index: 300;
     }

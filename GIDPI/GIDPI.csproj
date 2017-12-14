@@ -134,7 +134,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="audios\Don Tetto - Yo Estaré Bien %28Con Letra%29.mp3" />
+    <Content Include="audios\1.Datos Generales.mp3" />
+    <Content Include="audios\10.Objetivos.mp3" />
+    <Content Include="audios\11.Resultado y productos.mp3" />
+    <Content Include="audios\12.AIU.mp3" />
+    <Content Include="audios\13.matris de marco logico.mp3" />
+    <Content Include="audios\2.MATRIZ DE VESTER.wav" />
+    <Content Include="audios\3.ÁRBOL DE PROBLEMAS.mp3" />
+    <Content Include="audios\4.ÁRBOL DE OBJETIVOS.mp3" />
+    <Content Include="audios\5.ANÁLISIS DE INVOLUCRADOS.mp3" />
+    <Content Include="audios\6.Área del conocimiento.mp3" />
+    <Content Include="audios\7.PERFIL DEL PROYECTO.mp3" />
+    <Content Include="audios\8.Cronograma.wav" />
+    <Content Include="audios\9.Presupuesto y AIU.mp3" />
+    <Content Include="audios\9.Presupuesto.wav" />
     <Content Include="Css\alertify.core.css" />
     <Content Include="Css\alertify.default.css" />
     <Content Include="Css\animate.css" />
@@ -157,6 +170,7 @@
     <Content Include="Css\jquery-ui.min.css" />
     <Content Include="Css\jQuery.AudioPlayer.css" />
     <Content Include="Css\MenuAyudaArbolProblemas.css" />
+    <Content Include="Css\MenuAyudaColaboradores.css" />
     <Content Include="Css\MenuAyudaCronogramaPresupuesto.css" />
     <Content Include="Css\MenuAyudaDatosBasicos.css" />
     <Content Include="Css\MenuAyudaInvolucrados.css" />
@@ -305,13 +319,10 @@
     <Content Include="VIews\DatosProyecto.html" />
     <Content Include="VIews\arbol.html" />
     <Content Include="VIews\MarcoLogico.html" />
-    <Content Include="VIews\ingreso.html" />
     <Content Include="VIews\involucrados.html" />
     <Content Include="VIews\login.html" />
     <Content Include="VIews\MatrizView.html" />
     <Content Include="VIews\menuPricinpal.html" />
-    <Content Include="VIews\nombreProyecto.html" />
-    <Content Include="VIews\Objetivos.html" />
     <Content Include="VIews\ObjetivosView.html" />
     <Content Include="VIews\perfilProyecto.html" />
     <Content Include="VIews\Reporte.html" />

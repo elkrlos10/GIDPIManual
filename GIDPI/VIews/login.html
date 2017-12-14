@@ -120,8 +120,9 @@
                                         <input type="text" name="Apellido" ng-model="PersonaNatural.Apellidos" maxlength="50"  required>
 
                                         <p>Documento*</p>
-                                        <input style="outline: none; background:rgb(10,10,10); font-size: 1em; color: #000; padding: .8em 1em; margin: 0;width: 100%; border: none;-webkit-appearance: none; display: block; background: #fff;" type="number"  name="Documento" maxlength="11" ng-model="PersonaNatural.Documento" required>
+                                        <!--<input style="outline: none; background:rgb(10,10,10); font-size: 1em; color: #000; padding: .8em 1em; margin: 0;width: 100%; border: none;-webkit-appearance: none; display: block; background: #fff;" type="number"  name="Documento" maxlength="11" ng-model="PersonaNatural.Documento" required>-->
 
+                                        <input style="outline: none; background:rgb(10,10,10); font-size: 1em; color: #000; padding: .8em 1em; margin: 0;width: 100%; border: none;-webkit-appearance: none; display: block; background: #fff;" name="Documento" type="number" onkeydown="if(this.value.length==12) this.value = this.value.slice(0, - 1);" maxlength="12" ng-model="PersonaNatural.Documento" required="" class="ng-valid-maxlength ng-dirty ng-valid-number ng-valid ng-valid-required ng-touched">
 
                                         <p>Usuario*</p>
                                         <input type="text" name="Usuario_Registro"  maxlength="50"  ng-model="PersonaNatural.Usuario" required>
@@ -133,7 +134,8 @@
                                         <input type="email" name="Email_Registro" maxlength="50"  ng-model="PersonaNatural.Email" required>
 
                                         <p>Teléfono*</p>
-                                        <input type="text" name="Telefono_Registro"  maxlength="50"  ng-model="PersonaNatural.Telefono">
+                                        <!--<input type="text" name="Telefono_Registro"  maxlength="50"  ng-model="PersonaNatural.Telefono">-->
+                                        <input style="outline: none; background:rgb(10,10,10); font-size: 1em; color: #000; padding: .8em 1em; margin: 0;width: 100%; border: none;-webkit-appearance: none; display: block; background: #fff;" name="Telefono_Registro" type="number" onkeydown="if(this.value.length==12) this.value = this.value.slice(0, - 1);" maxlength="12" ng-model="PersonaNatural.Telefono" class="ng-pristine ng-untouched ng-valid ng-valid-maxlength">
 
                                         <input type="checkbox" id="brand1" value="">
 
@@ -151,7 +153,8 @@
                                         <input type="text" name="Nombre_Juridica" maxlength="50" ng-model="PersonaJuridica.RazonSocial" required>
 
                                         <p>NIT*</p>
-                                        <input style="outline: none; font-size: 1em; color: #000; padding: .8em 1em; margin: 0;width: 100%; border: none;-webkit-appearance: none; display: block; background: #fff;" type="number" name="NIT_Juridica" maxlength="11" ng-model="PersonaJuridica.Nit" required>
+                                        <!--<input style="outline: none; font-size: 1em; color: #000; padding: .8em 1em; margin: 0;width: 100%; border: none;-webkit-appearance: none; display: block; background: #fff;" type="number" name="NIT_Juridica" maxlength="11" ng-model="PersonaJuridica.Nit" required>-->
+                                        <input style="outline: none; font-size: 1em; color: #000; padding: .8em 1em; margin: 0;width: 100%; border: none;-webkit-appearance: none; display: block; background: #fff;" name="NIT_Juridica" type="number" onkeydown="if(this.value.length==12) this.value = this.value.slice(0, - 1);" ng-model="PersonaJuridica.Nit" required="" class="ng-dirty ng-valid-number ng-valid ng-valid-required ng-touched">
 
                                         <p>Sector económico*</p>
                                         <input type="text" name="Sector" ng-model="PersonaJuridica.SectorEconomico" maxlength="50" required>
@@ -163,7 +166,8 @@
                                         <input type="email" name="Email_juridica" ng-model="PersonaJuridica.Email" maxlength="50" required>
 
                                         <p>Teléfono</p>
-                                        <input style="outline: none; font-size: 1em; color: #000; padding: .8em 1em; margin: 0;width: 100%; border: none;-webkit-appearance: none; display: block; background: #fff;" type="number" name="Telefono_Juridica" maxlength="50" ng-model="PersonaJuridica.Telefono">
+                                        <!--<input style="outline: none; font-size: 1em; color: #000; padding: .8em 1em; margin: 0;width: 100%; border: none;-webkit-appearance: none; display: block; background: #fff;" type="number" name="Telefono_Juridica" maxlength="50" ng-model="PersonaJuridica.Telefono">-->
+                                        <input style="outline: none; font-size: 1em; color: #000; padding: .8em 1em; margin: 0;width: 100%; border: none;-webkit-appearance: none; display: block; background: #fff;" name="Telefono_Juridica" type="number" onkeydown="if(this.value.length==12) this.value = this.value.slice(0, - 1);" ng-model="PersonaJuridica.Telefono" class="ng-pristine ng-valid ng-touched">
 
                                         <p>Usuario*</p>
                                         <input type="text" name="Usuario_Juridica" ng-model="PersonaJuridica.Usuario" maxlength="50" required>

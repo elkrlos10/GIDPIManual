@@ -1,6 +1,6 @@
 ﻿#menuAyuda {
         margin-top: 0%;
-         right:0px;
+       margin-right:0px;
         position: fixed;
         z-index: 300;
 }
@@ -9,7 +9,7 @@
 
 #menuAyuda{
     margin-top:0%;
-     right:0px;
+    margin-left:95%;
     position:fixed;
     z-index:300;
 }
@@ -21,7 +21,7 @@
 
 #menuAyuda{
     margin-top:0%;
-    margin-left:95%;
+     right:0px;
     position:fixed;
     z-index:300;
 }
@@ -32,7 +32,7 @@
 
 #menuAyuda{
     margin-top:0%;
-     right:0px;
+    right:0px;
     position:fixed;
     z-index:300;
 }
@@ -43,7 +43,7 @@
 
 #menuAyuda{
     margin-top:0%;
-    right:0px;
+     right:0px;
     position:fixed;
     z-index:300;
 }    

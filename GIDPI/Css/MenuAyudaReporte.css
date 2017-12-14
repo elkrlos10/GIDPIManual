@@ -1,6 +1,6 @@
 ﻿ #menuAyuda {
         margin-top: -10%;
-        margin-left: 95.5%;
+         right:0px;
         position: fixed;
         z-index: 300;
     }
@@ -9,7 +9,7 @@
 @media (max-width: 1440px) and (max-width: 1601px) {
    #menuAyuda {
         margin-top: -10%;
-        margin-left: 95.5%;
+         right:0px;
         position: fixed;
         z-index: 300;
     }
@@ -19,7 +19,7 @@
     @media (max-width: 1366px) and (min-width: 1361px) {
  #menuAyuda {
         margin-top: -10%;
-        margin-left: 94.5%;
+         right:0px;
         position: fixed;
         z-index: 300;
     }
@@ -30,7 +30,7 @@
 
       #menuAyuda {
         margin-top: -10%;
-        margin-left: 94.5%;
+         right:0px;
         position: fixed;
         z-index: 300;
     }
@@ -39,7 +39,7 @@
     @media (max-width: 1280px) and (min-width: 1153px) {
          #menuAyuda {
         margin-top: -10%;
-        margin-left: 93.5%;
+         right:0px;
         position: fixed;
         z-index: 300;
     }
@@ -49,7 +49,7 @@
 
     #menuAyuda {
         margin-top: -10%;
-        margin-left: 93.5%;
+        right:0px;
         position: fixed;
         z-index: 300;
     }
@@ -59,7 +59,7 @@
 
        #menuAyuda {
         margin-top: -10%;
-        margin-left: 92.5%;
+        right:0px;
         position: fixed;
         z-index: 300;
     }

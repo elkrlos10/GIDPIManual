@@ -52,7 +52,7 @@
 <div id="ayudaVideoDiez">
     <div class="svg-popup-content" style="width:auto;">
         <h3 class="title-plagin">Video</h3>
-        <iframe width="560" height="315" class="cierre" src="https://www.youtube.com/embed/oelwwaEHm1I" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" class="cierre" src="https://www.youtube.com/embed/3Ir90x7MSYk" frameborder="0" allowfullscreen></iframe>
     </div>
 </div>
 
@@ -77,7 +77,7 @@
                     <li><a class="fa fa-file button demo-btn ayudaTextoDiez menuAyuda" title="Leer ayuda" data-svg-popup="ayudaTextoDiez" style="font-size:22px;"></a></li>
                     <li><a class="fa fa-video-camera button demo-btn ayudaVideoDiez menuAyuda" title="Ver ayuda" data-svg-popup="ayudaVideoDiez" ng-click="PauseAudio()" style="font-size:22px;"></a></li>
                     <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="ayudaAudioDiez" style="font-size:22px;"></a></li>
-                    <li><a class="fa fa-book button menuAyuda" title="Sobre nosotros" style="font-size:22px;"></a></li>
+                    <li><a class="fa fa-book button menuAyuda" title="Sobre nosotros" ng-click="Colaboradores()" style="font-size:22px;"></a></li>
 
                 </menu>
             </nav>
@@ -203,7 +203,7 @@
                         <i class="icon"></i>
                     </div>
                     <div class="seek-field">
-                        <input id="audioSeekBar" min="0" max="334" step="1" value="0" type="range" oninput="audioSeekBar()" onchange="this.oninput()">
+                        <input id="audioSeekBar1" min="0" max="334" step="1" value="0" type="range" oninput="audioSeekBar1()" onchange="this.oninput()">
                     </div>
                     <div class="volume-icon">
                         <i class="icon-volume-up"></i>
@@ -218,7 +218,7 @@
             </div>
 
             <audio id="audio-player1" ontimeupdate="SeekBar1()" ondurationchange="CreateSeekBar1()" preload="auto" >
-                <source src="../audios/9.Presupuesto.wav" type="audio/mpeg">
+                    <source src="../audios/9.Presupuesto%20y%20AIU.mp3" type="audio/mpeg" />
             </audio>
         </div>
         <!--FINALIZA AYUDA AUDIO-->
@@ -227,7 +227,7 @@
         <div id="ayudaVideoOnce">
             <div class="svg-popup-content" style="width:auto;">
                 <h3 class="title-plagin">Video</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/watch?v=K22qJ-VikTo" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/zWXb0_W1xdo" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
 
@@ -249,7 +249,7 @@
                     <li><a class="fa fa-file button demo-btn ayudaTextoOnce menuAyuda" title="Leer ayuda" data-svg-popup="ayudaTextoOnce" style="font-size:22px;"></a></li>
                     <li><a class="fa fa-video-camera button demo-btn ayudaVideoOnce menuAyuda" title="Ver ayuda" data-svg-popup="ayudaVideoOnce" ng-click="PauseAudio()" style="font-size:22px;"></a></li>
                     <li><a class="fa fa-volume-up button menuAyuda" title="Escuchar ayuda" id="ayudaAudioOnce" style="font-size:22px;"></a></li>
-                    <li><a class="fa fa-book button menuAyuda" title="Sobre nosotros" style="font-size:22px;"></a></li>
+                    <li><a class="fa fa-book button menuAyuda" title="Sobre nosotros" ng-click="Colaboradores()" style="font-size:22px;"></a></li>
 
                 </menu>
             </nav>

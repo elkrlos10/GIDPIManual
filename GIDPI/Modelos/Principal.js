@@ -195,6 +195,14 @@ ManualApp.controller('PrincipalController',
             $location.url("/Login");
         }
 
+        $rootScope.Regresar = function () {
+            $location.url("/Menu");
+        }
+
+        $rootScope.Colaboradores = function () {
+            $location.url("/Colaboradores")
+        }
+
         //$scope.UsuarioCambiarPass = {
         //    Password: "",
         //    newPass: ""
