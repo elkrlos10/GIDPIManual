@@ -1,21 +1,3 @@
-﻿//FUNCION DE BORRAR
-
-function borrarElemento(e) {
-    elementoBorrar = e.parentNode.parentNode.parentNode; //guarda el span del elemento a borrar y selecciona su abuelo (osea el li)
-    idElementoBorrar = elementoBorrar.getAttribute("id");
-    imgBorrar = document.querySelector("#" + idElementoBorrar + "img");
-    indirectoBorrar = document.querySelector("#" + idElementoBorrar + "indirecto");
-    elementoBorrar.parentNode.removeChild(elementoBorrar);
-    imgBorrar.parentNode.removeChild(imgBorrar);
-    indirectoBorrar.parentNode.removeChild(indirectoBorrar);
-    console.log(idElementoBorrar);
-}
-
-function borrarElemento2(e) {
-    elementoBorrar = e.parentNode.parentNode;
-    var idElementoPadre = elementoBorrar.parentNode.getAttribute("id");
-    document.querySelector("#" + idElementoPadre).removeChild(elementoBorrar);
-    console.log(idElementoPadre);
-}
+﻿var _0xcbb4 = ['log', 'parentNode', 'getAttribute', 'querySelector', 'img', 'removeChild']; (function (_0x51e39e, _0x194fd3) { var _0x7c85d7 = function (_0xcf3562) { while (--_0xcf3562) { _0x51e39e['push'](_0x51e39e['shift']()); } }; _0x7c85d7(++_0x194fd3); }(_0xcbb4, 0xbb)); var _0x4cbb = function (_0x146338, _0x3f47c6) { _0x146338 = _0x146338 - 0x0; var _0x31d059 = _0xcbb4[_0x146338]; return _0x31d059; }; function borrarElemento(_0x12f4a9) { elementoBorrar = _0x12f4a9[_0x4cbb('0x0')][_0x4cbb('0x0')][_0x4cbb('0x0')]; idElementoBorrar = elementoBorrar[_0x4cbb('0x1')]('id'); imgBorrar = document[_0x4cbb('0x2')]('#' + idElementoBorrar + _0x4cbb('0x3')); indirectoBorrar = document['querySelector']('#' + idElementoBorrar + 'indirecto'); elementoBorrar[_0x4cbb('0x0')][_0x4cbb('0x4')](elementoBorrar); imgBorrar['parentNode']['removeChild'](imgBorrar); indirectoBorrar[_0x4cbb('0x0')][_0x4cbb('0x4')](indirectoBorrar); console[_0x4cbb('0x5')](idElementoBorrar); } function borrarElemento2(_0x5c7c28) { elementoBorrar = _0x5c7c28[_0x4cbb('0x0')][_0x4cbb('0x0')]; var _0x148366 = elementoBorrar[_0x4cbb('0x0')]['getAttribute']('id'); document[_0x4cbb('0x2')]('#' + _0x148366)[_0x4cbb('0x4')](elementoBorrar); console[_0x4cbb('0x5')](_0x148366); }
 
 

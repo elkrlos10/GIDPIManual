@@ -1,4 +1,4 @@
-﻿1/// <reference path="Login/Login.js" />
+﻿/// <reference path="Login/Login.js" />
 /// <reference path="Login/LoginService.js" />
 // script.js
 
@@ -107,10 +107,6 @@ ManualApp.config(function ($routeProvider) {
                         $location.url("/Admin");
                     }
 
-                    if ($rootScope.proyecto.datos.Etapa < 11 && $location.path() == '/Reporte') {
-                        $location.url("/Menu");
-
-                    }
                     if ($rootScope.proyecto.datos.Etapa == 1 && ($location.path() == '/Reporte' || $location.path() == '/Objetivos' || $location.path() == '/Involucrados'
                         || $location.path() == '/PerfilProyecto' || $location.path() == '/Cronograma' || $location.path() == '/MarcoL')) {
 
@@ -142,10 +138,16 @@ ManualApp.config(function ($routeProvider) {
                         $location.url("/Menu");
                         return;
                     }
-                    if ($rootScope.proyecto.datos.Etapa == 10 && ($location.path() == '/Reporte')) {
+                    if ($rootScope.proyecto.datos.etapa == 10 && ($location.path() == '/Reporte')) {
                         $location.url("/Menu");
                         return;
                     }
+
+
+                    //if ($rootScope.proyecto.datos.Etapa < 11 && $location.path() == '/Reporte') {
+                    //    $location.url("/Menu");
+
+                    //}
                 }
 
             } else {

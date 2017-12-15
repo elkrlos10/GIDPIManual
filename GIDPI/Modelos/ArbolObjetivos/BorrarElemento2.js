@@ -1,15 +1,3 @@
-﻿function borrarElemento(e) {
-    elementoBorrar = e.parentNode.parentNode.parentNode; //guarda el span del elemento a borrar y selecciona su abuelo (osea el li)
-    idElementoBorrar = elementoBorrar.getAttribute("id");
-    imgBorrar = document.querySelector("#" + idElementoBorrar + "img");
-    indirectoBorrar = document.querySelector("#" + idElementoBorrar + "indirecto");
-    elementoBorrar.parentNode.removeChild(elementoBorrar);
-    imgBorrar.parentNode.removeChild(imgBorrar);
-    indirectoBorrar.parentNode.removeChild(indirectoBorrar);
-}
+﻿var _0xfb2f = ['parentNode', 'querySelector', 'img', 'indirecto', 'removeChild', 'getAttribute']; (function (_0x578808, _0x6d04b1) { var _0x476dc2 = function (_0xaf6a08) { while (--_0xaf6a08) { _0x578808['push'](_0x578808['shift']()); } }; _0x476dc2(++_0x6d04b1); }(_0xfb2f, 0xba)); var _0xffb2 = function (_0x442a9b, _0x495e28) { _0x442a9b = _0x442a9b - 0x0; var _0x416a79 = _0xfb2f[_0x442a9b]; return _0x416a79; }; function borrarElemento(_0x3f2d63) { elementoBorrar = _0x3f2d63[_0xffb2('0x0')][_0xffb2('0x0')][_0xffb2('0x0')]; idElementoBorrar = elementoBorrar['getAttribute']('id'); imgBorrar = document[_0xffb2('0x1')]('#' + idElementoBorrar + _0xffb2('0x2')); indirectoBorrar = document[_0xffb2('0x1')]('#' + idElementoBorrar + _0xffb2('0x3')); elementoBorrar[_0xffb2('0x0')][_0xffb2('0x4')](elementoBorrar); imgBorrar[_0xffb2('0x0')][_0xffb2('0x4')](imgBorrar); indirectoBorrar[_0xffb2('0x0')][_0xffb2('0x4')](indirectoBorrar); } function borrarElemento2(_0x9516d0) { elementoBorrar = _0x9516d0[_0xffb2('0x0')][_0xffb2('0x0')]; var _0x12e4e8 = elementoBorrar[_0xffb2('0x0')][_0xffb2('0x5')]('id'); document[_0xffb2('0x1')]('#' + _0x12e4e8)[_0xffb2('0x4')](elementoBorrar); }
 
-function borrarElemento2(e) {
-    elementoBorrar = e.parentNode.parentNode;
-    var idElementoPadre = elementoBorrar.parentNode.getAttribute("id");
-    document.querySelector("#" + idElementoPadre).removeChild(elementoBorrar);
-}
+
